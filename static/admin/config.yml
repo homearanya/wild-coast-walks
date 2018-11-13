@@ -1,8 +1,9 @@
 backend:
-  name: github
-  repo: homearanya/wild-coast-walks   # Path to your Github/Gitlab repository
-  branch: master    # Branch to update
-  base_url: https://myownghuboauthprovider.herokuapp.com # Path to ext auth provider
+  backend:
+  name: git-gateway
+  accept_roles: #optional - accepts all users if left out
+    - admin
+    - editor
 
 media_folder: static/img
 public_folder: img
