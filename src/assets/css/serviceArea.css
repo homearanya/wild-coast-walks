@@ -1,0 +1,55 @@
+.single-service {
+    border-left: 1px solid #bcbcbc;
+    border-right: 1px solid #bcbcbc;
+    border-top: 1px solid #bcbcbc;
+    height: 172px;
+    position: relative;
+    width: 170px;
+}
+
+.single-service::before {
+    background: #bcbcbc none repeat scroll 0 0;
+    bottom: 4px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transform: rotate(-6deg);
+    width: 50%;
+}
+
+.single-service::after {
+    background: #bcbcbc none repeat scroll 0 0;
+    bottom: 4px;
+    content: "";
+    height: 1px;
+    right: 0;
+    position: absolute;
+    transform: rotate(6deg);
+    width: 50%;
+}
+
+.single-icon {
+    margin-top: 36px
+}
+
+.single-service h5 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 16px;
+    text-transform: uppercase;
+}
+
+.single-service:hover h5 {
+    color: #ffffff
+}
+
+.single-service:hover {
+    background: #000000 none repeat scroll 0 0;
+    border-color: #000
+}
+
+.single-service:hover::before,
+.single-service:hover::after {
+    display: none
+}

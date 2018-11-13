@@ -1,0 +1,123 @@
+/*  27. Signin Page
+/*----------------------------------------*/
+
+.banner-area.signin-banner {
+    background: rgba(0, 0, 0, 0) url(../img/banner/28.jpg) no-repeat scroll center top / cover;
+    padding-top: 292px;
+}
+
+.banner-area.signin-banner::before {
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0
+}
+
+.signin-banner .breadcrumb {
+    margin: 46px auto 0
+}
+
+.section-title.text-center.title-left {
+    margin-bottom: 22px
+}
+
+.sign-in-buttons a {
+    color: #ffffff;
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    height: 48px;
+    line-height: 48px;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease-in 0s;
+    width: calc(100% - 10px);
+    text-transform: uppercase;
+    margin-bottom: 40px
+}
+
+.sign-in-buttons a.facebook::after {
+    background: #3d5c98 none repeat scroll 0 0
+}
+
+.sign-in-buttons a.twitter::after {
+    background: #1ab2e8 none repeat scroll 0 0
+}
+
+.sign-in-buttons a::after {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 5px;
+    position: absolute;
+    top: 0;
+    transform: skewX(-10deg);
+    width: 100%;
+    z-index: -1;
+}
+
+.sign-in-buttons a.facebook:hover::after {
+    background: rgba(61, 92, 152, 0.9) none repeat scroll 0 0
+}
+
+.sign-in-buttons a.twitter:hover::after {
+    background: rgba(26, 178, 232, 0.9) none repeat scroll 0 0
+}
+
+.sign-in-form .form-box,
+.sign-up-form .form-box {
+    height: 43px;
+    line-height: 43px;
+    border-color: #c1c1c1
+}
+
+.sign-in-settings input {
+    margin: 0 6px 0 0;
+    position: relative;
+    top: 1px
+}
+
+.sign-in-settings>input:focus {
+    outline: medium none
+}
+
+.sign-in-settings>span {
+    color: #2f2f2f;
+    display: inline-block;
+    line-height: 12px;
+}
+
+.sign-in-settings>a {
+    color: #0967B9;
+    float: right;
+    line-height: 15px
+}
+
+.sign-in-settings>a:hover {
+    color: #333333
+}
+
+.sign-in-form .submit-button {
+    background: #0967B9 none repeat scroll 0 0;
+    margin-top: 36px
+}
+
+.sign-in-form .submit-button:hover {
+    background: #212227 none repeat scroll 0 0
+}
+
+.sign-in-area .section-title p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.section-title.title-right {
+    margin-bottom: 37px
+}
+
+.sign-up-form .submit-button {
+    margin-top: 0
+}
+
+.sign-in-area .submit-button {
+    height: 43px;
+    line-height: 43px;
+    width: 170px;
+}

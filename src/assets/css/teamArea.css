@@ -1,0 +1,49 @@
+.single-member {
+    border: 3px solid hsl(0, 0%, 88%);
+}
+
+.member-text.effect-bottom::after {
+    bottom: -40px;
+    top: auto;
+}
+
+.member-text h4 a {
+    font-size: 20px
+}
+
+.member-text h4 a span {
+    font-weight: 300
+}
+
+.member-text h4 a {
+    font-weight: 600
+}
+
+.single-member:hover .member-text p {
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 20px
+}
+
+.member-link>a {
+    font-size: 20px
+}
+
+.member-link {
+    margin-bottom: 13px
+}
+
+.member-text.effect-bottom::after {
+    transform: rotate(5.5deg) scale(1.1);
+    transform-origin: 0 bottom 0;
+    bottom: -30px;
+    top: auto;
+    left: -17px
+}
+
+.single-member:hover .member-text.effect-bottom::after {
+    background: rgba(33, 34, 39, 0.9) none repeat scroll 0 0;
+    left: -31px;
+    top: 38px;
+    transform: rotate(7.5deg) scale(1.75);
+}

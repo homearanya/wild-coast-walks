@@ -1,0 +1,60 @@
+.newsletter-area {
+    background: #edecec url(../img/banner/5.jpg) no-repeat scroll center top / cover;
+    padding-bottom: 179px;
+    padding-top: 100px;
+    position: relative;
+}
+
+.newsletter-area::before {
+    background: rgba(0, 46, 93, 0.65) none repeat scroll 0 0;
+}
+
+.newsletter-area::after {
+    background: rgba(0, 0, 0, 0) url(../img/banner/transparent-bottom-gray.png) no-repeat scroll center top / cover;
+    bottom: 0;
+    content: "";
+    height: 79px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.newsletter-area .title-border::after,
+.trip-pricing-area .title-border::after {
+    background: rgba(0, 0, 0, 0) url(../img/icon/title-icon-3.png) no-repeat scroll 0 0;
+}
+
+.newsletter-content input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    line-height: 46px;
+    opacity: 1;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.newsletter-content button {
+    background: #000000 none repeat scroll 0 0;
+    border: 0 none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 48px;
+    margin: 0;
+    padding: 0 34px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s
+}
+
+.newsletter-content button:hover {
+    background: rgba(0, 0, 0, 0.5) none no-repeat scroll 0 0;
+    color: #ffffff;
+}
+
+.newsletter-content input::placeholder,
+.newsletter-content input::-moz-placeholder,
+.newsletter-content input::-webkit-input-placeholder {
+    opacity: 1;
+    color: white
+}

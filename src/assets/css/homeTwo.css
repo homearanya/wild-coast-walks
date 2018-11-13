@@ -1,0 +1,253 @@
+/*  15.1 Home Two Slider
+/*----------------------------------------*/
+
+.slider-area.home-two-slider .text-content {
+    margin-top: 24%
+}
+
+.home-two-slider .banner-content h1 {
+    font-size: 70px;
+    line-height: 70px;
+    margin: 0;
+    text-shadow: none;
+}
+
+.home-two-slider .banner-content h1.title2 {
+    margin-bottom: 22px
+}
+
+.home-two-slider .banner-content h2.sub-title span {
+    color: #0967B9
+}
+
+.home-two-slider .adventure-cat {
+    background: rgba(0, 0, 0, 0) url(../img/icon/home-two-select-bg-one.png) no-repeat scroll 0 0;
+}
+
+.home-two-slider .adventure-cat.destination {
+    background: rgba(0, 0, 0, 0) url(../img/icon/home-two-select-bg-two.png) no-repeat scroll 0 0;
+}
+
+.button-yellow {
+    background: #0967B9 none repeat scroll 0 0 !important
+}
+
+.button-yellow:hover {
+    background: rgba(255, 174, 0, 0.8) none repeat scroll 0 0 !important
+}
+
+
+/*----------------------------------------*/
+
+
+/*  15.3 Home Two Portfolio Area
+/*----------------------------------------*/
+
+.portfolio-two .single-portfolio:hover .portfolio-text::after,
+.team-two .single-member:hover .member-text.effect-bottom::after {
+    background: rgba(255, 174, 0, 0.9) none repeat scroll 0 0;
+}
+
+
+/*----------------------------------------*/
+
+
+/*  15.4 Home Two Fun Factor Area
+/*----------------------------------------*/
+
+.fun-factor-two.fun-factor-area {
+    background: rgba(0, 0, 0, 0) url(../img/banner/8.jpg) no-repeat scroll center top / cover;
+    padding-bottom: 202px;
+    padding-top: 120px;
+}
+
+.fun-factor-two.fun-factor-area::before {
+    background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0
+}
+
+.fun-factor-area.fun-factor-two::after {
+    background: rgba(0, 0, 0, 0) url(../img/banner/transparent-2.png) no-repeat scroll center top / cover;
+    bottom: 0;
+    transform: rotate(0deg);
+}
+
+.fun-factor-two .section-title.title-two .title-border::after,
+.newsletter-two .section-title.title-two .title-border::after {
+    background: rgba(0, 0, 0, 0) url(../img/icon/title2-icon-2.png) no-repeat scroll 0 0;
+}
+
+.fun-factor-two .section-title h1::before,
+.fun-factor-two .section-title h1::after,
+.newsletter-two .section-title h1::before,
+.newsletter-two .section-title h1::after {
+    background: #fff none repeat scroll 0 0;
+}
+
+.fun-factor-two .single-fun-factor::before {
+    border-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+
+.fun-factor-two .single-fun-factor::after {
+    border-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0.5);
+    border-width: 5px 43px;
+}
+
+.fun-factor-two .fun-border-left::after {
+    bottom: -47px;
+    transform: rotate(97deg)
+}
+
+.fun-factor-two .fun-border-right::after {
+    bottom: -47px;
+    transform: rotate(83deg);
+}
+
+.fun-factor-two .single-fun-factor:hover::after,
+.fun-factor-two .single-fun-factor:hover::before,
+.fun-factor-two .single-fun-factor:hover .fun-border-left::after,
+.fun-factor-two .single-fun-factor:hover .fun-border-right::after {
+    display: none
+}
+
+
+/*.fun-factor-two .single-fun-factor:hover::before {border-color: #000000 #000000 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0)}*/
+
+.fun-factor-two .single-fun-factor {
+    height: 171px
+}
+
+.fun-factor-area .title-two .title-border::after,
+.partner-area .title-two .title-border::after {
+    bottom: 0;
+}
+
+
+/*----------------------------------------*/
+
+
+/*  15.5 Home Two Best Sell Area
+/*----------------------------------------*/
+
+.best-sell-two .title-container h3,
+.best-sell-three .title-container h3 {
+    color: #2f2f2f;
+}
+
+.best-sell-two .carousel-style-one .owl-controls .owl-buttons div:hover::after {
+    border-color: #0967B9
+}
+
+.best-sell-two .carousel-style-one .owl-controls .owl-buttons div:hover i {
+    color: #0967B9;
+}
+
+.newsletter-area.newsletter-two {
+    background: #edecec url(../img/banner/10.jpg) no-repeat scroll center top / cover;
+    padding-bottom: 188px;
+}
+
+.newsletter-area.newsletter-two::before {
+    background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0
+}
+
+.newsletter-area.newsletter-two::after {
+    background: rgba(0, 0, 0, 0) url(../img/banner/transparent-2-gray.png) no-repeat scroll center top / cover;
+}
+
+.best-sell-two .best-sell-slider .box-hover>a span::after {
+    width: 100%
+}
+
+.best-sell-two .best-sell-slider .box-hover>a span {
+    padding: 0 22px 0 9px;
+    width: auto;
+}
+
+
+/*----------------------------------------*/
+
+
+/*  15.6 Home Two Blog Area
+/*----------------------------------------*/
+
+.blog-two-area .date-time .date,
+.blog-two-area .date-time .date::after,
+.single-blog-post-img .date-time .date,
+.single-blog-post-img .date-time .date::after {
+    background: #0967B9 none repeat scroll 0 0;
+    color: #ffffff;
+}
+
+.blog-area.blog-two-area,
+.blog-area.blog-three-area {
+    padding-top: 100px
+}
+
+.blog-two-area .blog-text::after,
+.blog-three-area .blog-text::after {
+    display: none
+}
+
+.blog-two-area .blog-text,
+.blog-three-area .blog-text {
+    margin: -28px -50px 0 0;
+    padding: 26px 16px 13px 15px;
+}
+
+.blog-two-area .blog-link,
+.blog-three-area .blog-link {
+    margin-bottom: 4px;
+    margin-top: 22px;
+    text-align: left;
+}
+
+.blog-two-area .button-one,
+.blog-three-area .button-one {
+    margin-top: 20px
+}
+
+.best-sell-two .best-sell-link>a:hover,
+.blog-two-area .blog-link>a:hover,
+.footer-widget-two .widget-lists li:hover::after,
+.footer-widget-two .widget-lists li:hover a,
+.footer-widget-two .footer-widget-list.twitter-news li a,
+.footer-two #footer-menu a:hover,
+.blog-two-area .blog-text h4 a:hover,
+.fun-factor-two .single-fun-factor:hover h5,
+.fun-factor-two .single-fun-factor:hover h4 {
+    color: #0967B9;
+}
+
+
+/*----------------------------------------*/
+
+
+/*  15.7 Home Two Footer
+/*----------------------------------------*/
+
+.footer-widget-area.footer-widget-two {
+    background: rgba(0, 0, 0, 0) url(../img/banner/11.jpg) no-repeat scroll center top / cover;
+    padding-top: 177px;
+}
+
+.footer-widget-two.footer-widget-area::before {
+    background: rgba(33, 34, 39, 0.8) none repeat scroll 0 0
+}
+
+.footer-widget-two.footer-widget-area::after {
+    background: rgba(0, 0, 0, 0) url(../img/banner/transparent-2.png) no-repeat scroll center top / cover;
+    height: 85px;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+.footer-widget-two .footer-widget-list.twitter-news li a:hover,
+.footer-widget-three .footer-widget-list.twitter-news li a:hover {
+    color: #fff
+}
+
+.footer-widget-two .footer-link a:hover,
+.footer-area.footer-two span a:hover {
+    border-color: #0967B9;
+    color: #0967B9;
+}

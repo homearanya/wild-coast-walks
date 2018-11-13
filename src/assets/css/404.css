@@ -1,0 +1,52 @@
+.error-area {
+    background: #edecec url(../img/banner/27.png) no-repeat scroll right top / 50% 100%;
+    padding-bottom: 107px;
+    padding-top: 250px;
+}
+
+.error-text-container>h1,
+.error-text-container>h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.error-text-container>h2 {
+    font-size: 50px;
+    margin-bottom: 44px;
+}
+
+.error-text-container {
+    padding-left: 13px
+}
+
+.error-area .col-md-6 {
+    padding-right: 0
+}
+
+.error-text-container>p {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-top: 31px;
+}
+
+.error-area #text-search {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+
+.error-text-container>a {
+    background: #0967B9 none repeat scroll 0 0;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 43px;
+    margin-top: 23px;
+    padding: 0 23px;
+    text-transform: uppercase;
+}
+
+.error-text-container>a:hover {
+    background: #212227 none repeat scroll 0 0
+}

@@ -1,0 +1,258 @@
+/*  22.1 Blog Page Sidebar
+/*----------------------------------------*/
+
+.blog-post-area .widget-categories a {
+    padding-left: 0
+}
+
+.blog-post-area .widget-categories a:hover {
+    color: #0967B9
+}
+
+#text-search {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #bcbcbc;
+    height: 48px;
+    line-height: 47px;
+    position: relative;
+}
+
+.blog-page-area .sidebar-single-widget {
+    margin-bottom: 30px
+}
+
+.blog-post-area .single-sidebar-widget>h4 {
+    line-height: 17px
+}
+
+#text-search input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    color: #4e4e4e;
+    outline: medium none;
+    padding: 0 9px;
+    width: 82%;
+}
+
+#text-search .submit {
+    background: #0967B9 none repeat scroll 0 0;
+    border: 0 none;
+    color: #ffffff;
+    font-size: 25px;
+    height: 48px;
+    position: absolute;
+    right: -1px;
+    text-align: center;
+    top: -1px;
+    transition: all 0.3s ease-in 0s;
+    width: 50px;
+}
+
+#text-search .submit:hover {
+    color: #0967B9;
+    background: transparent
+}
+
+.blog-post-area .widget-categories a {
+    line-height: 16px;
+    margin-bottom: 14px
+}
+
+.posts-text a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+.post-img {
+    float: left;
+    margin-right: 9px;
+}
+
+.post-img a {
+    display: block
+}
+
+.single-widget-posts {
+    margin-bottom: 30px;
+    overflow: hidden
+}
+
+.posts-text a:hover {
+    color: #0967B9
+}
+
+.posts-text {
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.posts-text>p {
+    color: #6b6b6b
+}
+
+.posts-text>h4 {
+    margin-bottom: 7px
+}
+
+.posts-text p i {
+    margin-right: 4px
+}
+
+.blog-post-area .tooltip-icons .widget-icon a {
+    display: block
+}
+
+.blog-post-area .tooltip-icons .widget-icon>span {
+    margin-bottom: 40px
+}
+
+.widget-gallery a {
+    display: block;
+    margin-bottom: 30px
+}
+
+
+/*----------------------------------------*/
+
+
+/*  22.2 Blog Page Content
+/*----------------------------------------*/
+
+.single-blog-post {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.single-blog-post-img .date-time .date {
+    font-weight: 700;
+    line-height: 68px;
+    margin-bottom: 5px;
+    padding-left: 18px;
+    width: 99px;
+}
+
+.single-blog-post-img .date-time {
+    right: 3px;
+    top: 3px;
+    text-transform: uppercase;
+    padding-left: 2px
+}
+
+.single-blog-post-img .date-time .date::after {
+    left: -10px;
+    transform: skewX(15deg);
+    width: 20px;
+}
+
+.single-blog-post-img .date-time .month {
+    font-size: 20px;
+    line-height: 58px;
+    padding-left: 0;
+    position: relative;
+    width: 71px;
+    z-index: 9999;
+}
+
+.single-blog-post-img .date-time .month::after {
+    left: -19px;
+    transform: skewX(16deg);
+    width: 28px;
+    z-index: -1;
+}
+
+.single-blog-post-img {
+    border: 3px solid #e1e1e1
+}
+
+.single-blog-post-text h4 a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+}
+
+.author-comments span {
+    color: #696969;
+    margin-right: 30px;
+}
+
+.author-comments span i {
+    margin-right: 7px
+}
+
+.single-blog-post-text {
+    margin-top: 36px
+}
+
+.single-blog-post-text h4 a:hover {
+    color: #0967B9
+}
+
+.single-blog-post-text>p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.author-comments {
+    margin-bottom: 30px
+}
+
+.blog-button,
+.submit-button {
+    background: #0967B9 none repeat scroll 0 0;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 38px;
+    padding: 0 27px;
+    text-transform: uppercase;
+}
+
+.blog-links a {
+    border: 1px solid #606060;
+    color: #858585;
+    display: inline-block;
+    font-size: 24px;
+    height: 38px;
+    line-height: 38px;
+    margin-left: 5px;
+    position: relative;
+    text-align: center;
+    width: 42px;
+}
+
+.blog-links {
+    /* display: inline-block; */
+    float: right;
+}
+
+.blog-links>a:hover::after {
+    animation: 500ms ease-in-out 0s normal none 1 running zoomIn;
+    background: #0967B9 none repeat scroll 0 0;
+    border-color: #0967B9;
+    color: #ffffff;
+    content: "";
+    height: 38px;
+    left: 0;
+    position: absolute;
+    top: -1px;
+    transform: skewX(-9deg);
+    width: 42px;
+}
+
+.blog-links>a:hover {
+    border-color: rgba(0, 0, 0, 0)
+}
+
+.blog-links>a i {
+    position: relative;
+    z-index: 9;
+}
+
+.blog-links>a:hover {
+    color: #ffffff;
+}
+
+.blog-button-links {
+    margin-top: 38px
+}

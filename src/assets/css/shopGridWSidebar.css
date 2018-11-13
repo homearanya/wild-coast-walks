@@ -1,0 +1,172 @@
+/*  18. Shop Grid With Sidebar Page
+/*----------------------------------------*/
+
+.grid-two {
+    background: rgba(0, 0, 0, 0) url(../img/banner/16.jpg) no-repeat scroll center top / cover;
+    padding-top: 314px;
+    padding-bottom: 13px
+}
+
+.adventures-grid.grid-two-tab .adventure-cat.box-small {
+    height: 46px;
+    line-height: 46px;
+    margin: 1px 3px;
+    width: 172px;
+}
+
+.grid-two .title-border::after {
+    background: rgba(0, 0, 0, 0) url(../img/icon/title2-icon-2.png) no-repeat scroll 0 0;
+    bottom: 17px;
+}
+
+.grid-two .section-title h1 {
+    padding-bottom: 45px
+}
+
+
+/*  18.1 Shop Grid Sidebar
+/*----------------------------------------*/
+
+.single-sidebar-widget {
+    display: block
+}
+
+.widget-icon span {
+    display: block;
+    float: left;
+    height: 36px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 25%;
+}
+
+.icon-bottom .widget-icon>span img {
+    bottom: 0;
+    position: absolute;
+}
+
+.single-sidebar-widget>h4,
+h4.blog-title {
+    color: #181818;
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: 400
+}
+
+.single-sidebar-widget>h4 span,
+h4.blog-title span {
+    color: #0967B9;
+    font-weight: 700;
+}
+
+.country-select .widget-icon>span {
+    margin-bottom: 10px;
+    width: 100%
+}
+
+.country-select .widget-icon a {
+    line-height: 36px;
+    margin-left: 11px
+}
+
+.country-select .widget-icon a:hover {
+    color: #0967B9
+}
+
+.widget-categories>li {
+    margin-bottom: 6px;
+    position: relative
+}
+
+.widget-categories li span input {
+    display: inline-block;
+    margin-right: 7px;
+    top: 2px;
+}
+
+.widget-categories li span input:focus {
+    outline: 0
+}
+
+.widget-categories a {
+    color: #181818;
+    display: block;
+    padding-left: 28px;
+}
+
+.widget-categories a span {
+    float: right
+}
+
+.widget-categories>li>span {
+    left: 0;
+    position: absolute;
+    top: -2px;
+}
+
+.price_filter {
+    margin-right: 5px;
+    margin-top: 10px
+}
+
+#slider-range {
+    background: #c1c1c1 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0;
+    height: 10px;
+}
+
+.ui-slider-range.ui-widget-header.ui-corner-all {
+    background: #0967B9 none repeat scroll 0 0 !important;
+    border: medium none !important;
+    height: 10px;
+    margin-top: 0;
+}
+
+.price_filter .ui-slider-handle.ui-state-default.ui-corner-all {
+    background: #c1c1c1 none repeat scroll 0 0;
+    border: 3px solid #ffffff;
+    border-radius: 0;
+    height: 20px;
+    margin-top: 0;
+    outline: 1px solid #c1c1c1;
+    width: 20px !important;
+}
+
+.ui-slider-handle.ui-state-default.ui-corner-all.ui-state-active,
+.ui-slider-handle.ui-state-default.ui-corner-all.ui-state-focus {
+    transform: skewX(-12deg)
+}
+
+.widget-icon .slider-values>input {
+    border: 1px solid #bcbcbc;
+    color: #4e4e4e;
+    margin-top: 20px;
+    padding: 6px;
+    text-align: center;
+    width: 50%;
+}
+
+.single-sidebar-widget {
+    display: block;
+    margin-bottom: 62px;
+    overflow: hidden;
+}
+
+.single-sidebar-widget:last-child {
+    margin-bottom: 0
+}
+
+
+/*----------------------------------------*/
+
+
+/*  18.2 Shop Grid Content
+/*----------------------------------------*/
+
+.grid-two-tab p {
+    color: #212227;
+    font-size: 16px;
+    font-weight: 300;
+}

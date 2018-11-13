@@ -1,0 +1,148 @@
+/*  21. Product Details Two Page
+/*----------------------------------------*/
+
+header.fixed {
+    position: inherit
+}
+
+header.fixed .header-top {
+    background: #0d0e10 none repeat scroll 0 0;
+    padding: 10px 0 27px;
+}
+
+header.fixed .currency-menu ul>li>a,
+header.fixed .language-menu ul>li>a,
+header.fixed .header-r-cart>li>a,
+header.fixed .account>a,
+header.fixed .login>a {
+    color: #ffffff;
+}
+
+header.fixed .currency-menu ul>li>a:hover,
+header.fixed .language-menu ul>li>a:hover,
+header.fixed .header-r-cart>li>a:hover,
+header.fixed .account>a:hover,
+header.fixed .login>a:hover {
+    color: #777777 !important;
+}
+
+header.fixed .currency-dropdown li a,
+header.fixed .language-dropdown li a {
+    color: #000000 !important
+}
+
+header.fixed .currency-dropdown li a:hover,
+header.fixed .language-dropdown li a:hover {
+    color: #888888 !important
+}
+
+header.fixed .logo-menu-bg {
+    background: #212227 none repeat scroll 0 0
+}
+
+header.fixed .header-logo-menu {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 49px;
+}
+
+.details-two .trip-info-left-text {
+    padding-top: 112px
+}
+
+.details-two .trip-booking-info {
+    padding-top: 171px
+}
+
+.trip-information.details-two {
+    background: #edecec url(../img/banner/24.png) no-repeat scroll right top / 57% 100%
+}
+
+
+/*----------------------------------------*/
+
+
+/*  21.1 Trip Gallery
+/*----------------------------------------*/
+
+.trip-gallery .section-title {
+    margin-bottom: 62px
+}
+
+.single-gallery-item.hover-effect {
+    margin-bottom: 20px
+}
+
+.gallery-image {
+    overflow: hidden
+}
+
+.gallery-image.box-hover a::after {
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gallery-text h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.gallery-text h2 a {
+    color: #0967B9
+}
+
+.gallery-text h2 a:hover {
+    color: #fff
+}
+
+.gallery-text h4 {
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 33px;
+}
+
+.gallery-link a {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 0 4px;
+}
+
+.gallery-link a:hover {
+    color: #0967B9
+}
+
+.gallery-text {
+    bottom: 0;
+    content: "";
+    height: calc(100% - 40px);
+    left: 20px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: calc(100% - 40px);
+}
+
+.single-gallery-item.hover-effect {
+    position: relative
+}
+
+.gallery-image.box-hover a {
+    display: block
+}
+
+.middle-text {
+    position: relative;
+    text-align: center;
+    top: 35.7%;
+    transition: all 0.3s ease-in 0s;
+    opacity: 0
+}
+
+.single-gallery-item:hover .middle-text {
+    opacity: 1
+}

@@ -1,0 +1,616 @@
+.best-sell-area .section-title {
+    margin-bottom: 45px
+}
+
+.single-adventure:hover .adventure-text a:hover,
+.single-adventure:hover .adventure-text .adventure-link a:hover {
+    color: #000000;
+}
+
+.single-adventure {
+    overflow: hidden;
+    position: relative
+}
+
+.adventure-text {
+    background: transparent;
+    height: auto;
+    left: 0;
+    padding: 5px 12px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s ease-in-out 0s
+}
+
+.adventure-text::after {
+    background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
+    content: "";
+    height: 135px;
+    left: -7px;
+    opacity: 1;
+    position: absolute;
+    top: -76px;
+    transform: rotate(4deg) scale(1.1);
+    transform-origin: 0 bottom 0;
+    width: 100%;
+}
+
+.adventure-text p,
+.adventure-text h4 a,
+.adventure-text .adventure-price-link,
+.single-adventure:hover .adventure-price-link span,
+.single-adventure:hover .transparent-overlay span {
+    z-index: 9;
+    position: relative
+}
+
+.single-adventure:hover .adventure-text p {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.single-adventure:hover .adventure-text p,
+.single-adventure:hover .adventure-text h4 a,
+.single-adventure:hover .adventure-text .adventure-link a,
+.single-adventure:hover .adventure-price-link span,
+.single-adventure:hover .adventure-price-link span,
+.trip-time,
+.trip-level {
+    color: #fff
+}
+
+.adventure-text.effect-bottom {
+    bottom: 0;
+    top: auto;
+}
+
+.single-adventure:hover .adventure-text {
+    animation: 1500ms ease-in-out 0s normal none 1 running flipInX;
+}
+
+.single-adventure {
+    border: 3px solid #e1e1e1;
+    margin-bottom: 40px
+}
+
+.adventure-text {
+    padding: 0
+}
+
+.adventure-text.effect-bottom::after {
+    background: rgba(255, 255, 255, 0.85) none repeat scroll 0 0;
+    border: 0 none;
+    bottom: -70px;
+    height: 165px;
+    left: -18px;
+    top: auto;
+    transform: rotate(5deg) scale(1.1);
+}
+
+.transparent-overlay {
+    padding: 0 14px
+}
+
+.adventure-price-link {
+    padding: 0 14px 11px
+}
+
+.transparent-overlay>h4 {
+    margin-bottom: 14px
+}
+
+.adventure-text h4 a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.adventure-text h4 a span {
+    font-size: 16px;
+    font-weight: 300
+}
+
+.adventure-price-link .trip-price {
+    color: #4e4f54;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.adventure-price-link .trip-person {
+    color: #4e4f54;
+    font-size: 18px;
+    padding-left: 4px;
+    position: relative;
+    text-transform: uppercase;
+    top: -4px;
+}
+
+.adventure-link {
+    /* display: inline-block; */
+    float: right
+}
+
+.adventure-link>a {
+    font-size: 20px;
+    margin-right: 5px
+}
+
+.adventure-link>a:last-child {
+    margin-right: 0
+}
+
+.single-adventure:hover .adventure-price-link span,
+.single-adventure:hover .transparent-overlay span {
+    display: inline-block
+}
+
+.single-adventure:hover .adventure-price-link {
+    background: #212227 none repeat scroll 0 0;
+    padding-bottom: 14px;
+    padding-top: 20px;
+}
+
+.adventure-text p,
+.adventure-text .trip-time,
+.adventure-text .trip-level {
+    display: none;
+    margin-bottom: 8px
+}
+
+.transparent-overlay span i {
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.trip-time {
+    padding-right: 20px;
+    position: relative
+}
+
+.trip-time::after {
+    content: "/";
+    position: absolute;
+    right: 7px;
+    top: 0;
+}
+
+.single-adventure:hover .transparent-overlay>h4 {
+    margin-bottom: 7px
+}
+
+.single-adventure:hover .trip-time,
+.single-adventure:hover .trip-level {
+    margin-bottom: 25px
+}
+
+.single-adventure:hover .transparent-overlay {
+    margin-bottom: 16px
+}
+
+.single-adventure:hover .adventure-text.effect-bottom::after {
+    background: rgba(33, 34, 39, 0.8) none repeat scroll 0 0;
+    bottom: 69px;
+    left: -59px;
+    top: auto;
+    transform: rotate(9.5deg) scale(1.4);
+}
+
+.grid-two-tab p {
+    color: #212227;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.adventure-price-link-two .adventure-link,
+.adventure-text-container>a,
+.adventure-text-container>span,
+.adventure-text-container>p {
+    display: none;
+}
+
+.adventure-text-container h4 a {
+    color: #212227;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.adventure-text-container h4 a span {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.adventure-price-link-two span.trip-price,
+.adventure-price-link-two span.trip-person {
+    color: #4e4f54;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.adventure-price-link-two span.trip-person {
+    font-size: 18px;
+    font-weight: 300;
+    position: relative;
+    top: -3px;
+}
+
+.adventure-price-link-two .adventure-link,
+.adventure-text-container>a,
+.adventure-text-container>span,
+.adventure-text-container>p {
+    display: none;
+}
+
+.adventure-text-two {
+    background: #ffffff none repeat scroll 0 0;
+    bottom: 0;
+    left: 0;
+    padding: 16px 21px 17px 20px;
+    position: absolute;
+    width: 100%;
+}
+
+.single-adventure-two {
+    border: 3px solid #e1e1e1;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.single-adventure-two:hover {
+    border: 3px solid #fff
+}
+
+.single-adventure-two::before {
+    border: 1px solid #ffae00;
+    bottom: -3px;
+    content: "";
+    display: block;
+    left: -3px;
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    z-index: 1;
+    opacity: 0
+}
+
+.single-adventure-two:hover:before {
+    opacity: 1
+}
+
+.single-blog:hover .adventure-price-link-two {
+    left: 0;
+    position: absolute
+}
+
+.single-adventure-two:hover .adventure-price-link-two {
+    background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0;
+    border: 3px solid #ffae00;
+    left: 16px;
+    padding: 27px 0 20px;
+    position: absolute;
+    text-align: center;
+    top: 34%;
+    width: calc(100% - 32px);
+    z-index: 9;
+}
+
+.single-adventure-two:hover .adventure-price-link-two span.trip-price,
+.single-adventure-two:hover .adventure-price-link-two span.trip-person {
+    color: #000000;
+    font-size: 27px;
+}
+
+.single-adventure-two:hover .adventure-price-link-two span.trip-person {
+    font-size: 17px
+}
+
+.single-adventure-two:hover .adventure-price-link-two .adventure-link {
+    display: block;
+    padding-top: 9px
+}
+
+.adventure-price-link-two .adventure-link {
+    float: none;
+    text-align: center
+}
+
+.adventure-price-link-two .adventure-link>a {
+    color: #000000;
+    margin-right: 14px
+}
+
+.adventure-price-link-two .adventure-link a:last-child {
+    margin-right: 0
+}
+
+.single-adventure-two:hover .adventure-text-container p {
+    display: block
+}
+
+.single-adventure-two:hover .adventure-text-container {
+    background: rgba(255, 174, 0, 0.9) none repeat scroll 0 0;
+    border-bottom: 4px solid #181818;
+    height: 255px;
+    left: calc(100% - 19px);
+    padding: 21px 0 20px 9px;
+    position: absolute;
+    top: 12.25%;
+    width: 275px;
+    z-index: 9;
+}
+
+.single-adventure-two:hover .adventure-text-container span,
+.single-adventure-two:hover .adventure-text-container>a {
+    display: inline-block;
+}
+
+.single-adventure-two .adventure-text-container a.button-one {
+    background: #181818 none repeat scroll 0 0;
+    font-size: 14px;
+    line-height: 31px;
+    margin-bottom: 0;
+    margin-top: 8px;
+    padding: 0 17px;
+}
+
+.single-adventure-two .adventure-text-container a.button-one:hover {
+    color: #181818;
+    background: #fff
+}
+
+.grid-two-tab .single-adventure-two .adventure-text-container>p {
+    color: #181818;
+    font-size: 14px
+}
+
+.single-adventure-two:hover .adventure-text-container h4 a {
+    color: #181818;
+    font-size: 20px;
+}
+
+.single-adventure-two:hover .adventure-text-container h4 a span {
+    font-size: 16px
+}
+
+.single-adventure-two:hover .trip-time,
+.single-adventure-two:hover .trip-level {
+    color: #181818 !important
+}
+
+.single-adventure-two:hover .adventure-text-container>h4 {
+    margin-bottom: 6px
+}
+
+.single-adventure-two .adventure-text-container>span {
+    margin-bottom: 13px
+}
+
+.single-adventure-two .adventure-text-container>span i {
+    margin-right: 4px
+}
+
+.single-adventure-two:hover .adventure-text-two {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    bottom: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.adventure-price-link-two .adventure-link>a:hover {
+    color: #ffae00
+}
+
+.single-adventure-two:hover .adventure-text-container h4 a:hover {
+    color: #fff
+}
+
+.single-adventure-two:hover .adventure-text-container::after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(255, 174, 0, 0) rgba(0, 0, 0, 0) rgba(255, 174, 0, 0.9) rgba(255, 174, 0, 0.9);
+    border-image: none;
+    border-style: solid;
+    border-width: 15px 128px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -143px;
+    top: 113px;
+    transform: rotate(90deg);
+    width: 0;
+}
+
+.adventure-grid-two-area .row .col-md-4:nth-child(3) .single-adventure-two:hover .adventure-text-container,
+.adventure-grid-two-area .row .col-md-4:nth-child(6) .single-adventure-two:hover .adventure-text-container,
+.adventure-grid-two-area .row .col-md-4:nth-child(9) .single-adventure-two:hover .adventure-text-container,
+.adventure-grid-two-area .row .col-md-4:nth-child(12) .single-adventure-two:hover .adventure-text-container {
+    left: auto;
+    padding-right: 13px;
+    right: calc(100% - 19px);
+    text-align: right;
+}
+
+.adventure-grid-two-area .row .col-md-4:nth-child(3) .single-adventure-two:hover .adventure-text-container::after,
+.adventure-grid-two-area .row .col-md-4:nth-child(6) .single-adventure-two:hover .adventure-text-container::after,
+.adventure-grid-two-area .row .col-md-4:nth-child(9) .single-adventure-two:hover .adventure-text-container::after,
+.adventure-grid-two-area .row .col-md-4:nth-child(12) .single-adventure-two:hover .adventure-text-container::after {
+    border-color: rgba(0, 0, 0, 0) rgba(255, 174, 0, 0.9) rgba(255, 174, 0, 0.9) rgba(0, 0, 0, 0);
+    left: -143px;
+    transform: rotate(-90deg);
+}
+
+
+/* Large desktop :1920px. */
+
+@media (min-width: 1920px) {
+    .adventure-price-link-two .adventure-link>a {
+        margin-right: 20px
+    }
+    .single-adventure-two:hover .adventure-price-link-two span.trip-price,
+    .single-adventure-two:hover .adventure-price-link-two span.trip-person {
+        font-size: 30px;
+    }
+    .single-adventure-two:hover .adventure-price-link-two span.trip-person {
+        font-size: 20px
+    }
+}
+
+
+/* Normal desktop :992px. */
+
+@media (min-width: 992px) and (max-width: 1169px) {
+    .best-sell-area .section-title {
+        margin-bottom: 20px
+    }
+    .adventure-price-link .trip-price {
+        font-size: 22px;
+        width: auto;
+    }
+    .adventure-price-link .trip-person {
+        font-size: 16px;
+        padding-left: 5px;
+        top: -2px;
+    }
+    .adventure-price-link {
+        padding: 0 6px 11px
+    }
+    .transparent-overlay {
+        padding: 0 7px
+    }
+    .adventure-link>a {
+        font-size: 17px
+    }
+    .single-adventure:hover .trip-time,
+    .single-adventure:hover .trip-level {
+        margin-bottom: 15px
+    }
+    .single-adventure:hover .adventure-text.effect-bottom::after {
+        bottom: 54px
+    }
+    .single-adventure-two:hover .adventure-text-container {
+        top: 1.75%
+    }
+    .single-adventure-two:hover .adventure-price-link-two {
+        top: 29.5%
+    }
+    .adventure-text-two {
+        padding: 16px 8px 17px 7px
+    }
+    .adventure-text-container h4 a {
+        font-size: 16px
+    }
+}
+
+
+/* Tablet desktop :768px. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .single-adventure-two img {
+        width: 100%
+    }
+    .adventure-grid-two-area .row .col-md-4:nth-child(odd) .single-adventure-two:hover .adventure-text-container {
+        left: calc(100% - 19px);
+        right: auto;
+        text-align: left
+    }
+    .adventure-grid-two-area .row .col-md-4:nth-child(odd) .single-adventure-two:hover .adventure-text-container::after {
+        border-color: rgba(255, 174, 0, 0) rgba(0, 0, 0, 0) rgba(255, 174, 0, 0.9) rgba(255, 174, 0, 0.9);
+        right: -143px;
+        transform: rotate(90deg);
+        left: auto;
+    }
+    .adventure-grid-two-area .row .col-md-4:nth-child(even) .single-adventure-two:hover .adventure-text-container {
+        right: calc(100% - 19px);
+        left: auto;
+        text-align: right
+    }
+    .adventure-grid-two-area .row .col-md-4:nth-child(even) .single-adventure-two:hover .adventure-text-container::after {
+        border-color: rgba(0, 0, 0, 0) rgba(255, 174, 0, 0.9) rgba(255, 174, 0, 0.9) rgba(0, 0, 0, 0);
+        left: -143px;
+        transform: rotate(-90deg);
+        right: auto;
+    }
+    .single-adventure-two:hover .adventure-text-container {
+        top: 20.25%;
+        padding: 21px 8px 20px 9px;
+    }
+    .single-adventure-two:hover .adventure-price-link-two {
+        top: 37.5%
+    }
+}
+
+
+/* small mobile :320px. */
+
+@media (max-width: 767px) {
+    .single-adventure-two:hover .adventure-text-container {
+        display: none;
+    }
+    .adventure-price-link .trip-price {
+        font-size: 21px;
+        width: auto;
+    }
+    .adventure-price-link .trip-person {
+        font-size: 15px;
+        padding-left: 2px;
+        top: -1px;
+    }
+    .adventure-link>a {
+        font-size: 17px;
+        margin-right: 3px;
+    }
+    .adventure-price-link {
+        padding: 0 5px 11px
+    }
+    .transparent-overlay {
+        padding: 0 7px
+    }
+    .single-adventure:hover .adventure-price-link {
+        padding-bottom: 7px;
+        padding-top: 9px;
+    }
+    .single-adventure:hover .trip-time,
+    .single-adventure:hover .trip-level {
+        margin-bottom: 10px
+    }
+    .single-adventure:hover .transparent-overlay {
+        margin-bottom: 7px
+    }
+    .single-adventure:hover .adventure-text.effect-bottom::after {
+        bottom: 33px
+    }
+    .adventure-text h4 a {
+        font-size: 18px
+    }
+    .similar-area .single-adventure {
+        margin-bottom: 40px !important
+    }
+}
+
+
+/* Large Mobile :480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .single-adventure img,
+    .grid-two-tab .single-adventure-two a img {
+        width: 100%;
+    }
+    .single-adventure:hover .transparent-overlay {
+        margin-bottom: 15px
+    }
+    .single-adventure:hover .adventure-text.effect-bottom::after {
+        bottom: 11px
+    }
+    .single-adventure-two:hover .adventure-price-link-two {
+        top: 39%
+    }
+}

@@ -1,0 +1,26 @@
+.about-adventures {
+    background: #edecec url(../img/banner/29.png) no-repeat scroll right top / 56% 100%
+}
+
+.about-adventures p {
+    line-height: 30px;
+    margin-top: 12px;
+    text-align: left;
+}
+
+.about-adventures .section-title {
+    margin-bottom: 0
+}
+
+.about-adventures .details-social-link>a {
+    border-color: #858585
+}
+
+.about-adventures .details-social-link>a:hover {
+    border-color: #212227;
+    color: #212227
+}
+
+.about-adventures .button-one:hover {
+    background: #0967B9
+}

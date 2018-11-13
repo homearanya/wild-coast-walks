@@ -1,0 +1,336 @@
+.logo-menu-bg {
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0
+}
+
+.logo,
+.mainmenu {
+    margin-left: 20px;
+    position: relative;
+    z-index: 9;
+}
+
+.logo {
+    padding-bottom: 20px;
+    padding-top: 20px
+}
+
+.logo>a {
+    display: inline-block
+}
+
+.logo img {
+    height: 80px;
+}
+
+.logo img.logo-white {
+    display: inline;
+}
+
+.logo img.logo-dark {
+    display: none;
+}
+
+.header-three .logo-menu-bg {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+
+.header-three .header-logo-menu {
+    border-bottom: 1px solid #e9e9e9;
+    border-top: 1px solid #e9e9e9;
+}
+
+.header-three .logo {
+    margin-left: 1px;
+    padding: 13px 0
+}
+
+.header-three.list .header-logo-menu {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0
+}
+
+header.fixed .logo-menu-bg {
+    background: #212227 none repeat scroll 0 0
+}
+
+header.fixed .header-logo-menu {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 49px;
+}
+
+.mainmenu {
+    margin-left: 28px
+}
+
+.mainmenu ul#nav {
+    position: relative
+}
+
+.mainmenu ul#nav li {
+    display: inline-block;
+    margin: 0 12px
+}
+
+.mainmenu ul#nav li:first-child {
+    margin-left: 0
+}
+
+.mainmenu ul#nav li:last-child {
+    margin-right: 0
+}
+
+.mainmenu ul#nav li.drop-down {
+    position: relative
+}
+
+.mainmenu ul#nav li a {
+    color: #ffffff;
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    line-height: 112px;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+
+/* .mainmenu ul#nav>li:hover>a {
+    color: #888
+} */
+
+.mainmenu ul.sub-menu {
+    left: 0;
+    margin: 0;
+    padding: 25px 0 25px 17px;
+    position: absolute;
+    text-align: left;
+    transition: all 0.3s ease 0s;
+    visibility: visible;
+    width: 218px;
+    z-index: 999;
+    background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    right: auto;
+    top: 100%;
+}
+
+.mainmenu ul#nav li ul.sub-menu>li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.mainmenu ul#nav li .megamenu {
+    background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    left: -428px;
+    padding-bottom: 20px;
+    position: absolute;
+    right: auto;
+    top: 100%;
+    transition: all 0.3s ease 0s;
+    visibility: visible;
+    width: 1170px;
+    z-index: 999;
+}
+
+.mainmenu ul#nav li .megamenu span {
+    float: left;
+    margin-bottom: 25px;
+    margin-top: 32px;
+    width: 25%;
+}
+
+.mainmenu ul#nav li .megamenu span>a,
+.mainmenu ul#nav li ul.sub-menu li a {
+    color: #000
+}
+
+.mainmenu ul#nav li .megamenu span>a,
+.mainmenu ul#nav li ul.sub-menu li a {
+    color: #4e4f54;
+    display: block;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 35px;
+    padding: 7px 0;
+    position: relative;
+    text-align: left;
+    text-transform: capitalize;
+    z-index: 99;
+}
+
+.mainmenu ul#nav li ul.sub-menu li a {
+    padding: 9px 0 !important;
+    margin-left: 15px
+}
+
+.mega-title {
+    color: #000 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    position: relative;
+    text-transform: uppercase !important;
+}
+
+.mainmenu ul#nav li a {
+    font-weight: 600;
+}
+
+.mainmenu li:hover>a,
+.mainmenu .megamenu a:hover {
+    color: #0967B9 !important;
+}
+
+.menu-item-active {
+    color: #0967B9 !important;
+}
+
+
+/* Fade animation styles */
+
+.fade-enter {
+    opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.fade-leave {
+    opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+
+
+/* reponsive behaviour */
+
+@media only screen and (min-width: 992px) {
+    .sticky-menu {
+        min-height: 80px;
+    }
+    .header-logo-menu.sticky-menu {
+        background: #f8f8f8;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .sticky-menu .logo-menu-bg {
+        background: #f8f8f8;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .sticky-menu .mainmenu ul#nav li a {
+        color: #5c5e62;
+        line-height: 80px;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .sticky-menu .logo {
+        padding-bottom: 10px !important;
+        padding-top: 10px !important;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .sticky-menu .logo img {
+        height: 60px;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .sticky-menu .logo img.logo-white {
+        display: none;
+    }
+    .sticky-menu .logo img.logo-dark {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    header .sticky {
+        position: static !important;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .mainmenu ul#nav li a {
+        font-size: 15px !important;
+    }
+}
+
+
+/* Large desktop :1920px. */
+
+@media (min-width: 1920px) {
+    .mainmenu ul#nav li .megamenu {
+        left: -437px;
+        width: 1199px;
+    }
+}
+
+
+/* Normal desktop :992px. */
+
+@media (min-width: 992px) and (max-width: 1169px) {
+    .mainmenu {
+        margin-left: 10px
+    }
+    .mainmenu ul#nav li {
+        margin: 0 12px
+    }
+    .mainmenu ul#nav li .megamenu {
+        left: -333px;
+        width: 940px;
+    }
+    .mainmenu ul#nav li .megamenu span>a,
+    .mainmenu ul#nav li ul.sub-menu li a {
+        margin: 0 16px;
+    }
+    .mainmenu ul.sub-menu {
+        padding: 25px 0 25px 14px;
+        width: 200px;
+    }
+}
+
+
+/* Tablet desktop :768px. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .logo {
+        margin-left: 0;
+        text-align: center;
+    }
+    .header-logo-menu {
+        background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0
+    }
+    .logo-menu-bg,
+    .header-three .header-logo-menu {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0
+    }
+    header.fixed .header-logo-menu {
+        background: #212227 none repeat scroll 0 0;
+        position: inherit;
+    }
+}
+
+
+/* small mobile :320px. */
+
+@media (max-width: 767px) {
+    .logo-menu-bg,
+    .header-three .header-logo-menu {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    }
+    .header-logo-menu {
+        background: #333333 none repeat scroll 0 0
+    }
+    .logo {
+        margin-left: 0;
+        text-align: center
+    }
+    header.fixed .header-logo-menu {
+        background: #212227 none repeat scroll 0 0;
+        position: inherit;
+    }
+}
