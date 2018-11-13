@@ -7,6 +7,12 @@ module.exports = {
             options: {
                 component: require.resolve(`./src/components/Layout`)
             }
+        },
+        {
+            resolve: 'gatsby-plugin-netlify-identity-widget',
+            options: {
+                container: '#netlify-modal'
+            }
         }
     ]
 }
