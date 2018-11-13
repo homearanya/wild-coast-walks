@@ -8,11 +8,11 @@ module.exports = {
                 component: require.resolve(`./src/components/Layout`)
             }
         },
-        {
-            resolve: 'gatsby-plugin-netlify-identity-widget',
-            options: {
-                container: '#netlify-modal'
-            }
-        }
+        // {
+        //     resolve: 'gatsby-plugin-netlify-identity-widget',
+        //     options: {
+        //         container: '#netlify-modal'
+        //     }
+        // }
     ]
 }
