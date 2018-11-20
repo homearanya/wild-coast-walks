@@ -11,9 +11,6 @@ import '../assets/css/slick.css'
 import '../assets/css/banner.css'
 import '../assets/css/sliderArea.css'
 
-import slider_1 from '../assets/img/slider/wild-coast-min.jpg'
-import slider_2 from '../assets/img/slider/midlands-cycling-min.jpg'
-
 const settings = {
   dots: false,
   infinite: true,
@@ -24,6 +21,33 @@ const settings = {
   slidesToScroll: 1
 };
 
+const Slide = (props) => {
+  return (
+    <div>
+      <img
+        src={props.imageSrc}
+        ref={props.reference}
+        alt={props.imageAlt}
+        title={props.imageTitle}
+      />
+      <div className="nivo-caption" style={{ display: 'block' }}>
+        <div className="banner-content slider-1">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="text-content">
+                  <h1 className="title1"><span style={{ color: '#0967B9' }}>{props.heading1}</span> <span style={{ color: '#98F339' }}>{props.heading2}</span></h1>
+                  <h2 className="sub-title">{props.subheading1}</h2>
+                  <h2 className="sub-title"><span>{props.subheading2}</span></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default class SliderArea extends Component {
   constructor(props) {
@@ -42,52 +66,35 @@ export default class SliderArea extends Component {
   }
 
   render() {
-    console.log('slider area / slider1', props.slider1)
     return (
       <div className="slider-area">
         <div className="preview-2">
           <Slider {...settings}>
-            <div>
-              <MyContext.Consumer>
-                {({ set }) => {
-                  this.set = set;
-                  return <img src={slider_1} ref={this.image} alt="" title="#slider-1-caption1" />
-                }}
-              </MyContext.Consumer>
-              <div className="nivo-caption" style={{ display: 'block' }}>
-                <div className="banner-content slider-1">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="text-content">
-                          <h1 className="title1"><span style={{ color: '#0967B9' }}> WILD COAST</span> <span style={{ color: '#98F339' }}>SLACKPACKING</span></h1>
-                          <h2 className="sub-title">Take a Walk on the</h2>
-                          <h2 className="sub-title"><span>wild side</span></h2>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <img src={slider_2} alt="" title="#slider-1-caption1" />
-              <div className="nivo-caption" style={{ display: 'block' }}>
-                <div className="banner-content slider-1">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="text-content">
-                          <h1 className="title1"><span style={{ color: '#0967B9' }}>MIDLANDS</span> <span style={{ color: '#98F339' }}>WALKS & Cycling TOURS</span></h1>
-                          <h2 className="sub-title">Meandering through the</h2>
-                          <h2 className="sub-title"><span>Natal Midlands</span></h2>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <MyContext.Consumer>
+              {({ set }) => {
+                this.set = set;
+                return <Slide
+                  imageSrc={this.props.slider.slide1.image.image}
+                  imageAlt={this.props.slider.slide1.image.alt}
+                  imageTitle={this.props.slider.slide1.heading1 + ' ' + this.props.slider.slide1.heading2}
+                  reference={this.image}
+                  heading1={this.props.slider.slide1.heading1}
+                  heading2={this.props.slider.slide1.heading2}
+                  subheading1={this.props.slider.slide1.subheading1}
+                  subheading2={this.props.slider.slide1.subheading2}
+                />
+              }}
+            </MyContext.Consumer>
+            <Slide
+              imageSrc={this.props.slider.slide2.image.image}
+              imageAlt={this.props.slider.slide2.image.alt}
+              imageTitle={this.props.slider.slide2.heading1 + ' ' + this.props.slider.slide2.heading2}
+              reference={null}
+              heading1={this.props.slider.slide2.heading1}
+              heading2={this.props.slider.slide2.heading2}
+              subheading1={this.props.slider.slide2.subheading1}
+              subheading2={this.props.slider.slide2.subheading2}
+            />
           </Slider>
         </div>
       </div>

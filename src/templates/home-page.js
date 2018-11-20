@@ -26,8 +26,7 @@ export default function index({ data }) {
                     }}
                 </MyContext.Consumer>
                 <SliderArea
-                    slide1={frontmatter.slide1}
-                    slide2={frontmatter.slide2}
+                    slider={frontmatter.slider}
                 />
                 <AboutArea />
                 <Products />
@@ -47,16 +46,20 @@ export const homePageQuery = graphql`
                 heading2
                 subheading1
                 subheading2
-                image
-                alt
+                image {
+                    image
+                    alt
+                }
             }
             slide2 {
                 heading1
                 heading2
                 subheading1
                 subheading2
-                image
-                alt
+                image {
+                    image
+                    alt
+                }
             }
         }
       }
