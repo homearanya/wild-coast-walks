@@ -1,8 +1,7 @@
 ---
 templateKey: contact-page
-path: /contact
 contact-details:
   email: paul.hideaways@gmail.com
-  phone: 082 323 4022
+  phone: 082 323 4023
 ---
 
