@@ -48,6 +48,19 @@ collections:
     - {label: "Body", name: "body", widget: "markdown"}
     - {label: "Tags", name: "tags", widget: "list"}    
 
+- name: "general"
+  label: "General"
+  files:
+    - file: "src/general/contact.md"
+      label: "Contact Details"
+      name: "contact"
+      fields:
+        - label: Contact Details
+          name: contact-details
+          widget: object
+          fields:
+            - {label: Email Address, name: email, widget: string}
+            - {label: Phone Number, name: phone, widget: string}
 - name: "pages"
   label: "Pages"
   files:

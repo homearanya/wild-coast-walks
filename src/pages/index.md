@@ -1,5 +1,6 @@
 ---
 templateKey: home-page
+path: /
 slider:
   slide1:
     heading1: WILD COAST
