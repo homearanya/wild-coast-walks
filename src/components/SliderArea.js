@@ -78,8 +78,8 @@ export default class SliderArea extends Component {
                       <div className="col-md-12">
                         <div className="text-content">
                           <h1 className="title1"><span style={{ color: '#0967B9' }}>MIDLANDS</span> <span style={{ color: '#98F339' }}>WALKS & Cycling TOURS</span></h1>
-                          <h2 className="sub-title">Meandering</h2>
-                          <h2 className="sub-title">through the <span>Natal Midlands</span></h2>
+                          <h2 className="sub-title">Meandering through the</h2>
+                          <h2 className="sub-title"><span>Natal Midlands</span></h2>
                         </div>
                       </div>
                     </div>

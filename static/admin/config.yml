@@ -55,9 +55,39 @@ collections:
       label: "Home Page"
       name: "homepage"
       fields:
-        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Body", name: "body", widget: "markdown"}
+        - {label: "Template Key", name: templateKey, widget: hidden, default: "home-page"}
+        - label: Slider
+          name: slider
+          widget: object
+          fields: 
+            - label: "Slide 1"
+              name: slide1
+              widget: object
+              fields: 
+                - {label: Heading 1, name: heading1, widget: string}
+                - {label: Heading 2, name: heading2, widget: string}
+                - {label: Subheading 1, name: subheading1, widget: string}
+                - {label: Subheading 2, name: subheading2, widget: string}
+                - label: "Image"
+                  name: image
+                  widget: object
+                  fields: 
+                    - {label: Image, name: image, widget: image}
+                    - {label: Alt, name: all, widget: string}
+            - label: "Slide 2"
+              name: slide2
+              widget: object
+              fields: 
+                - {label: Heading 1, name: heading1, widget: string}
+                - {label: Heading 2, name: heading2, widget: string}
+                - {label: Subheading 1, name: subheading1, widget: string}
+                - {label: Subheading 2, name: subheading2, widget: string}
+                - label: "Image"
+                  name: image
+                  widget: object
+                  fields: 
+                    - {label: Image, name: image, widget: image}
+                    - {label: Alt, name: all, widget: string}
     - file: "src/pages/about/index.md"
       label: "About Page"
       name: "about"
