@@ -100,7 +100,7 @@ collections:
       name: "contact"
       fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
-        - label: Contact Details
+        - label: "Contact Details"
           name: contact-details
           widget: object
           fields:
