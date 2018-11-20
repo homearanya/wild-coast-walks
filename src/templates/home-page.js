@@ -40,7 +40,7 @@ export const homePageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        slider {
+        slider {    
             slide1 {
                 heading1
                 heading2
