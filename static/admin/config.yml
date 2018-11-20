@@ -10,12 +10,26 @@ media_folder: static/img
 public_folder: img
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+- name: "blog"
+  label: "Blog"
+  folder: "src/pages/blog"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  fields:
+    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Publish Date", name: "date", widget: "datetime"}
+    - {label: "Description", name: "description", widget: "text"}
+    - {label: "Body", name: "body", widget: "markdown"}
+    - {label: "Tags", name: "tags", widget: "list"}
+
+- name: "pages"
+  label: "Pages"
+  files:
+    - file: "src/pages/index.md"
+      label: "Home Page"
+      name: "homepage"
+      fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Body", name: "body", widget: "markdown"}
