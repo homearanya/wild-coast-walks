@@ -49,9 +49,7 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ edge, node, actions, getNode }) => {
     const { createNodeField } = actions
     if (node.internal.type === `MarkdownRemark`) {
-        console.log('node', node)
         const value = createFilePath({ node, getNode })
-        console.log('value', value)
         createNodeField({
             name: `slug`,
             node,
