@@ -1,5 +1,5 @@
 ---
 templateKey: 'tour-calendar-page'
-path: /calendar
+path: /tour-calendar
 title: Tour Calendar
 ---
