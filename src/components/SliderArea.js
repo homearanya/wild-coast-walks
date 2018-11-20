@@ -26,8 +26,8 @@ const settings = {
 
 
 export default class SliderArea extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.image = React.createRef();
     this.set = null;
   }
@@ -42,6 +42,7 @@ export default class SliderArea extends Component {
   }
 
   render() {
+    console.log('slider area / slider1', props.slider1)
     return (
       <div className="slider-area">
         <div className="preview-2">

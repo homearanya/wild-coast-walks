@@ -25,7 +25,10 @@ export default function index({ data }) {
                         return data.loadSpinner ? <Spinner /> : null;
                     }}
                 </MyContext.Consumer>
-                <SliderArea />
+                <SliderArea
+                    slide1={frontmatter.slide1}
+                    slide2={frontmatter.slide2}
+                />
                 <AboutArea />
                 <Products />
                 <BlogArea />
@@ -39,7 +42,7 @@ export const homePageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         slider {
-            slider1 {
+            slide1 {
                 heading1
                 heading2
                 subheading1
@@ -47,7 +50,7 @@ export const homePageQuery = graphql`
                 image
                 alt
             }
-            slider2 {
+            slide2 {
                 heading1
                 heading2
                 subheading1
