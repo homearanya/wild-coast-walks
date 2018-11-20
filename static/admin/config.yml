@@ -47,20 +47,7 @@ collections:
     - {label: "Description", name: "description", widget: "text"}
     - {label: "Body", name: "body", widget: "markdown"}
     - {label: "Tags", name: "tags", widget: "list"}    
-
-- name: "general"
-  label: "General"
-  files:
-    - file: "src/general/contact.md"
-      label: "Contact Details"
-      name: "contact"
-      fields:
-        - label: Contact Details
-          name: contact-details
-          widget: object
-          fields:
-            - {label: Email Address, name: email, widget: string}
-            - {label: Phone Number, name: phone, widget: string}
+           
 - name: "pages"
   label: "Pages"
   files:
@@ -114,4 +101,9 @@ collections:
       fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
         - {label: "Title", name: "title", widget: "string"}
-        - {label: "Body", name: "body", widget: "markdown"}              
+        - label: Contact Details
+          name: contact-details
+          widget: object
+          fields:
+            - {label: Email Address, name: email, widget: string}
+            - {label: Phone Number, name: phone, widget: string}
