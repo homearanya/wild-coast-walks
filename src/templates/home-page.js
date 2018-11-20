@@ -37,7 +37,7 @@ export default function index({ data }) {
 }
 
 export const homePageQuery = graphql`
-  query AboutPage($id: String!) {
+  query HomePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         slider {    
