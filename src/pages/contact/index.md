@@ -1,5 +1,5 @@
 ---
-templateKey: 'contact'
+templateKey: 'contact-page'
 path: /contact
 title: Contact us
 ---

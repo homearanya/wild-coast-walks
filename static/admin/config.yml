@@ -1,5 +1,4 @@
 backend:
-  backend:
   name: git-gateway
   branch: master
   accept_roles: #optional - accepts all users if left out
@@ -23,6 +22,32 @@ collections:
     - {label: "Body", name: "body", widget: "markdown"}
     - {label: "Tags", name: "tags", widget: "list"}
 
+- name: "events"
+  label: "Events"
+  folder: "src/pages/tour-calendar/events"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  fields:
+    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-page"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Publish Date", name: "date", widget: "datetime"}
+    - {label: "Description", name: "description", widget: "text"}
+    - {label: "Body", name: "body", widget: "markdown"}
+    - {label: "Tags", name: "tags", widget: "list"}
+
+- name: "tours"
+  label: "Tours"
+  folder: "src/pages/tours"
+  create: true
+  slug: "{{slug}}"
+  fields:
+    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-page"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Publish Date", name: "date", widget: "datetime"}
+    - {label: "Description", name: "description", widget: "text"}
+    - {label: "Body", name: "body", widget: "markdown"}
+    - {label: "Tags", name: "tags", widget: "list"}    
+
 - name: "pages"
   label: "Pages"
   files:
@@ -33,3 +58,17 @@ collections:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Body", name: "body", widget: "markdown"}
+    - file: "src/pages/about/index.md"
+      label: "About Page"
+      name: "about"
+      fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Body", name: "body", widget: "markdown"}
+    - file: "src/pages/contact/index.md"
+      label: "Contact Page"
+      name: "contact"
+      fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Body", name: "body", widget: "markdown"}              

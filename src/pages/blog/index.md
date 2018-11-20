@@ -1,5 +1,5 @@
 ---
-templateKey: 'blog'
+templateKey: 'blog-list'
 path: /blog
 title: Blog
 ---

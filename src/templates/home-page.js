@@ -10,7 +10,8 @@ import Products from "../components/Products";
 import BlogArea from "../components/BlogArea";
 
 
-export default function index() {
+export default function index({ data }) {
+    const { frontmatter } = data.markdownRemark
     return (
         <div>
             <Helmet>
