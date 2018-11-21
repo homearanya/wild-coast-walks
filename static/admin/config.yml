@@ -123,7 +123,7 @@ collections:
                 - {label: Alt, name: alt, widget: string}       
             - {label: Blur, name: blur, widget: text}     
         - label: "Tours Area"
-          name: tourdarea
+          name: toursarea
           widget: object
           fields:
             - {label: Heading 1, name: heading1, widget: string}
