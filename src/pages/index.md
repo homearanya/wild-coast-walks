@@ -61,6 +61,6 @@ toursarea:
 blogarea:
   heading1: 'Latest '
   heading2: Blog Posts
-  switch: true
+  switch: false
 ---
 
