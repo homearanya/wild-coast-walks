@@ -29,6 +29,8 @@ aboutarea:
 tourdarea:
   block1:
     heading1: Wild Coast Slackpack
+    tours:
+      tour1: Meander Hike
   heading1: 'Best '
   heading2: Selling Trips
   introduction: >-
