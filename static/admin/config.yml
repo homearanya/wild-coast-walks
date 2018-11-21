@@ -50,7 +50,8 @@ collections:
     - {label: "Publish Date", name: "date", widget: "datetime"}
     - {label: "Description", name: "description", widget: "text"}
     - {label: "Body", name: "body", widget: "markdown"}
-    - {label: "Tags", name: "tags", widget: "list"}    
+    - {label: "Tags", name: "tags", widget: "list"} 
+    - {label: "Destination", name: "destination", widget: "relation", collection:} 
   editor:
     preview: false
            
@@ -117,23 +118,15 @@ collections:
           fields:
             - {label: Email Address, name: email, widget: string}
             - {label: Phone Number, name: phone, widget: string}
-    - file: "src/config/config-destinations.md"
-      label: "Destinations"
-      name: "destinations"
-      fields:
-        - {label: Destination, name: destination, widget: list}
   editor:
     preview: false
 
-- name: "events"
-  label: "Events"
-  folder: "src/pages/tour-calendar/events"
+- name: "Destinations"
+  label: "destination"
+  folder: "src/config/destinations"
   create: true
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  slug: "config-{{slug}}"
   fields:
-    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-page"}
     - {label: "Title", name: "title", widget: "string"}
-    - {label: "Publish Date", name: "date", widget: "datetime"}
-    - {label: "Description", name: "description", widget: "text"}
-    - {label: "Body", name: "body", widget: "markdown"}
-    - {label: "Tags", name: "tags", widget: "list"}    
+  editor:
+    preview: false    
