@@ -55,9 +55,9 @@ collections:
       name: "destination"
       widget: "relation"
       collection: "destinations"
-      searchFields: ["name"] 
-      valueField: "name"
-      displayFields: ["name"]
+      searchFields: ["title"] 
+      valueField: "title"
+      displayFields: ["title"]
   editor:
     preview: false
            
