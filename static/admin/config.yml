@@ -21,6 +21,8 @@ collections:
     - {label: "Description", name: "description", widget: "text"}
     - {label: "Body", name: "body", widget: "markdown"}
     - {label: "Tags", name: "tags", widget: "list"}
+  editor:
+    preview: false
 
 - name: "events"
   label: "Events"
@@ -34,6 +36,8 @@ collections:
     - {label: "Description", name: "description", widget: "text"}
     - {label: "Body", name: "body", widget: "markdown"}
     - {label: "Tags", name: "tags", widget: "list"}
+  editor:
+    preview: false
 
 - name: "tours"
   label: "Tours"
@@ -47,6 +51,8 @@ collections:
     - {label: "Description", name: "description", widget: "text"}
     - {label: "Body", name: "body", widget: "markdown"}
     - {label: "Tags", name: "tags", widget: "list"}    
+  editor:
+    preview: false
            
 - name: "pages"
   label: "Pages"
@@ -95,6 +101,8 @@ collections:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Body", name: "body", widget: "markdown"}
+  editor:
+    preview: false
 
 - name: "config"
   label: "Configuration"
@@ -109,3 +117,5 @@ collections:
           fields:
             - {label: Email Address, name: email, widget: string}
             - {label: Phone Number, name: phone, widget: string}
+  editor:
+    preview: false

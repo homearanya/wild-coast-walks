@@ -137,7 +137,7 @@ export default ({ data }) => {
 }
 
 export const contactPageQuery = graphql`
-  query ContactPage($id: String!) {
+  query ContactPage {
 	markdownRemark (fields: {slug : {eq: "/config-contact/"}}) {
         frontmatter {
           contact_details {

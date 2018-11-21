@@ -25,10 +25,10 @@ export default function HeaderTop() {
                             <div className="col-12">
                                 <div className="contact-details">
                                     <div className="email-address">
-                                        <i className="fa fa-envelope"></i>{data.file.childMarkdownRemark.frontmatter.contact_details.email}
+                                        <i className="fa fa-envelope"></i>{data.markdownRemark.frontmatter.contact_details.email}
                                     </div>
                                     <div className="phone-number">
-                                        <i className="fa fa-phone-square"></i>{data.file.childMarkdownRemark.frontmatter.contact_details.phone}
+                                        <i className="fa fa-phone-square"></i>{data.markdownRemark.frontmatter.contact_details.phone}
                                     </div>
                                 </div   >
                             </div>
