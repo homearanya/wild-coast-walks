@@ -28,9 +28,15 @@ export default function index({ data }) {
                 <SliderArea
                     slider={frontmatter.slider}
                 />
-                <AboutArea />
-                <Products />
-                <BlogArea />
+                <AboutArea
+                    aboutArea={frontmatter.aboutarea}
+                />
+                <Products
+                    toursArea={frontmatter.toursarea}
+                />
+                <BlogArea
+                    blogArea={frontmatter.blogarea}
+                />
             </ContextProviderComponent>
         </div>
     )
@@ -70,7 +76,7 @@ export const homePageQuery = graphql`
                 alt
               }
             }
-            tourdarea {
+            toursarea {
               heading1
               heading2
               introduction
@@ -108,6 +114,7 @@ export const homePageQuery = graphql`
               }
             }
             blogarea {
+              switch
               heading1
               heading2
             }

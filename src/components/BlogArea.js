@@ -6,7 +6,10 @@ import '../assets/css/blogArea.css'
 import blog_1 from '../assets/img/blog/1.jpg'
 import blog_2 from '../assets/img/blog/2.jpg'
 
-export default function BlogArea() {
+export default function BlogArea(props) {
+    if (!props.blogArea.switch) {
+        return null
+    }
     return (
         <div className="blog-area section-padding">
             <div className="container">
