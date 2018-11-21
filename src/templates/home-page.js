@@ -63,7 +63,6 @@ export const homePageQuery = graphql`
               }      
             }
             aboutarea {
-              heading1
               heading2
               blur
               image {
@@ -77,7 +76,6 @@ export const homePageQuery = graphql`
               introduction
               block1 {
                 heading1
-                heading2
                 tours {
                   tour1
                   tour2
@@ -86,7 +84,6 @@ export const homePageQuery = graphql`
               }
               block2 {
                 heading1
-                heading2
                 tours {
                   tour1
                   tour2
@@ -95,7 +92,6 @@ export const homePageQuery = graphql`
               }
               block3 {
                 heading1
-                heading2
                 tours {
                   tour1
                   tour2
@@ -104,7 +100,6 @@ export const homePageQuery = graphql`
               }
               block4 {
                 heading1
-                heading2
                 tours {
                   tour1
                   tour2
@@ -113,7 +108,6 @@ export const homePageQuery = graphql`
               }
             }
             blogarea {
-              switch
               heading1
               heading2
             }
