@@ -185,6 +185,7 @@ collections:
           name: blogarea
           widget: object
           fields: 
+            - {label: Switch, name: switch, widget: boolean}
             - {label: Heading 1, name: heading1, widget: string}
             - {label: Heading 2, name: heading2, widget: string}
     - file: "src/pages/about/index.md"
@@ -214,150 +215,174 @@ collections:
       label: "Main Menu"
       name: "mainmenu"
       fields:
-        - label: "Block 1"
-          name: block1
+        - label: "Home Item"
+          name: "homeitem"
           widget: object
           fields:
-            - {label: Heading, name: heading, widget: string}
-            - label: "Image"
-              name: image
-              widget: object
-              fields: 
-                - {label: Image, name: image, widget: image}
-                - {label: Alt, name: alt, widget: string}
-            - label: "Links"
-              name: "links"
-              widget: object
-              fields:
-                - label: "Link 1"
-                  name: "link1"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
-                - label: "Link 2"
-                  name: "link2"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
-                - label: "Link 3"
-                  name: "link3"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
-        - label: "Block 2"
-          name: block2
+            - {label: Label, name: label, widget: string}
+            - {label: Path, name: path, widget: string}
+        - label: "Tours Item"
+          name: "toursitem"
           widget: object
           fields:
-            - {label: Heading, name: heading, widget: string}
-            - label: "Image"
-              name: image
-              widget: object
-              fields: 
-                - {label: Image, name: image, widget: image}
-                - {label: Alt, name: alt, widget: string}
-            - label: "Links"
-              name: "links"
+            - {label: Label, name: label, widget: string}
+            - label: "Block 1"
+              name: block1
               widget: object
               fields:
-                - label: "Link 1"
-                  name: "link1"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
-                - label: "Link 2"
-                  name: "link2"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
-                - label: "Link 3"
-                  name: "link3"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
-        - label: "Block 3"
-          name: block3
+                - {label: Heading, name: heading, widget: string}
+                - label: "Image"
+                  name: image
+                  widget: object
+                  fields: 
+                    - {label: Image, name: image, widget: image}
+                    - {label: Alt, name: alt, widget: string}
+                - label: "Links"
+                  name: "links"
+                  widget: object
+                  fields:
+                    - label: "Link 1"
+                      name: "link1"
+                      widget: "relation"
+                      collection: "tours"
+                      searchFields: ["title"] 
+                      valueField: "title"
+                      displayFields: ["title"]
+                    - label: "Link 2"
+                      name: "link2"
+                      widget: "relation"
+                      collection: "tours"
+                      searchFields: ["title"] 
+                      valueField: "title"
+                      displayFields: ["title"]
+                    - label: "Link 3"
+                      name: "link3"
+                      widget: "relation"
+                      collection: "tours"
+                      searchFields: ["title"] 
+                      valueField: "title"
+                      displayFields: ["title"]
+            - label: "Block 2"
+              name: block2
+              widget: object
+              fields:
+                - {label: Heading, name: heading, widget: string}
+                - label: "Image"
+                  name: image
+                  widget: object
+                  fields: 
+                    - {label: Image, name: image, widget: image}
+                    - {label: Alt, name: alt, widget: string}
+                - label: "Links"
+                  name: "links"
+                  widget: object
+                  fields:
+                    - label: "Link 1"
+                      name: "link1"
+                      widget: "relation"
+                      collection: "tours"
+                      searchFields: ["title"] 
+                      valueField: "title"
+                      displayFields: ["title"]
+                    - label: "Link 2"
+                      name: "link2"
+                      widget: "relation"
+                      collection: "tours"
+                      searchFields: ["title"] 
+                      valueField: "title"
+                      displayFields: ["title"]
+                    - label: "Link 3"
+                      name: "link3"
+                      widget: "relation"
+                      collection: "tours"
+                      searchFields: ["title"] 
+                      valueField: "title"
+                      displayFields: ["title"]
+            - label: "Block 3"
+              name: block3
+              widget: object
+              fields:
+                - {label: Heading, name: heading, widget: string}
+                - label: "Image"
+                  name: image
+                  widget: object
+                  fields: 
+                    - {label: Image, name: image, widget: image}
+                    - {label: Alt, name: alt, widget: string}
+                - label: "Links"
+                  name: "links"
+                  widget: object
+                  fields:
+                    - label: "Link 1"
+                      name: "link1"
+                      widget: "relation"
+                      collection: "tours"
+                      searchFields: ["title"] 
+                      valueField: "title"
+                      displayFields: ["title"]
+                    - label: "Link 2"
+                      name: "link2"
+                      widget: "relation"
+                      collection: "tours"
+                      searchFields: ["title"] 
+                      valueField: "title"
+                      displayFields: ["title"]
+                    - label: "Link 3"
+                      name: "link3"
+                      widget: "relation"
+                      collection: "tours"
+                      searchFields: ["title"] 
+                      valueField: "title"
+                      displayFields: ["title"]
+            - label: "Block 4"
+              name: block4
+              widget: object
+              fields:
+                - {label: Heading, name: heading, widget: string}
+                - label: "Image"
+                  name: image
+                  widget: object
+                  fields: 
+                    - {label: Image, name: image, widget: image}
+                    - {label: Alt, name: alt, widget: string}
+                - label: "Links"
+                  name: "links"
+                  widget: object
+                  fields:
+                    - label: "Link 1"
+                      name: "link1"
+                      widget: "relation"
+                      collection: "tours"
+                      searchFields: ["title"] 
+                      valueField: "title"
+                      displayFields: ["title"]
+                    - label: "Link 2"
+                      name: "link2"
+                      widget: "relation"
+                      collection: "tours"
+                      searchFields: ["title"] 
+                      valueField: "title"
+                      displayFields: ["title"]
+                    - label: "Link 3"
+                      name: "link3"
+                      widget: "relation"
+                      collection: "tours"
+                      searchFields: ["title"] 
+                      valueField: "title"
+                      displayFields: ["title"]
+        - label: "Tour Calendar Item"
+          name: "tourcalendaritem"
           widget: object
           fields:
-            - {label: Heading, name: heading, widget: string}
-            - label: "Image"
-              name: image
-              widget: object
-              fields: 
-                - {label: Image, name: image, widget: image}
-                - {label: Alt, name: alt, widget: string}
-            - label: "Links"
-              name: "links"
-              widget: object
-              fields:
-                - label: "Link 1"
-                  name: "link1"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
-                - label: "Link 2"
-                  name: "link2"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
-                - label: "Link 3"
-                  name: "link3"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
-        - label: "Block 4"
-          name: block4
+            - {label: Label, name: label, widget: string}
+            - {label: Path, name: path, widget: string}
+        - label: "Blog Item"
+          name: "blogitem"
           widget: object
           fields:
-            - {label: Heading, name: heading, widget: string}
-            - label: "Image"
-              name: image
-              widget: object
-              fields: 
-                - {label: Image, name: image, widget: image}
-                - {label: Alt, name: alt, widget: string}
-            - label: "Links"
-              name: "links"
-              widget: object
-              fields:
-                - label: "Link 1"
-                  name: "link1"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
-                - label: "Link 2"
-                  name: "link2"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
-                - label: "Link 3"
-                  name: "link3"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
+            - {label: Switch, name: switch, widget: boolean}
+            - {label: Label, name: label, widget: string}
+            - {label: Path, name: path, widget: string}
   editor:
     preview: false
 
