@@ -110,9 +110,9 @@ collections:
 - name: "config"
   label: "Configuration"
   files:
-    - file: "src/config/contact.md"
+    - file: "src/config/config-contact.md"
       label: "Contact Details"
-      name: "configcontact"
+      name: "contact"
       fields:
         - label: "Contact Details"
           name: contact-details
