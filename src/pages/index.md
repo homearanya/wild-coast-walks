@@ -30,7 +30,27 @@ tourdarea:
   block1:
     heading1: Wild Coast Slackpack
     tours:
-      tour1: Meander Hike
+      tour1: Meander hike
+      tour2: Sunshine Hike
+      tour3: 'Mini Break '
+  block2:
+    heading1: Drakensberg Slackpack
+    tours:
+      tour1: Giants Cup
+      tour2: Amphitheatre
+      tour3: Mehloding
+  block3:
+    heading1: Midlands Slackpack
+    tours:
+      tour1: Karkloof Falls2Fallls
+      tour2: Dargle Samango
+      tour3: Nhlosane Hike
+  block4:
+    heading1: Midlands Cycle Tours
+    tours:
+      tour1: Battlefields
+      tour2: Midlands Meander
+      tour3: Trappist Monastery
   heading1: 'Best '
   heading2: Selling Trips
   introduction: >-
