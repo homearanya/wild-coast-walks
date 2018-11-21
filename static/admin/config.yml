@@ -45,6 +45,9 @@ collections:
   create: true
   slug: "{{slug}}"
   fields:
+    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-page"}
+    - {label: "Slug", name: "slug", default: "{{slug}}"}
+    - {label: "Featured?", name: "featured", widget: "boolean", default: false}
     - label: "Destination"
       name: "destination"
       widget: "relation"
@@ -59,7 +62,6 @@ collections:
       searchFields: ["title"] 
       valueField: "title"
       displayFields: ["title"]
-    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-page"}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Publish Date", name: "date", widget: "datetime"}
     - {label: "Description", name: "description", widget: "text"}
