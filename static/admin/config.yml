@@ -45,12 +45,6 @@ collections:
   create: true
   slug: "{{slug}}"
   fields:
-    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-page"}
-    - {label: "Title", name: "title", widget: "string"}
-    - {label: "Publish Date", name: "date", widget: "datetime"}
-    - {label: "Description", name: "description", widget: "text"}
-    - {label: "Body", name: "body", widget: "markdown"}
-    - {label: "Tags", name: "tags", widget: "list"} 
     - label: "Destination"
       name: "destination"
       widget: "relation"
@@ -58,6 +52,19 @@ collections:
       searchFields: ["title"] 
       valueField: "title"
       displayFields: ["title"]
+    - label: "Activity"
+      name: "activity"
+      widget: "relation"
+      collection: "activities"
+      searchFields: ["title"] 
+      valueField: "title"
+      displayFields: ["title"]
+    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-page"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Publish Date", name: "date", widget: "datetime"}
+    - {label: "Description", name: "description", widget: "text"}
+    - {label: "Body", name: "body", widget: "markdown"}
+    - {label: "Tags", name: "tags", widget: "list"} 
   editor:
     preview: false
            
@@ -130,6 +137,16 @@ collections:
 - name: "destinations"
   label: "Destinations"
   folder: "src/config/config-destinations"
+  create: true
+  slug: "{{slug}}"
+  fields:
+    - {label: "Title", name: "title", widget: "string"}
+  editor:
+    preview: false    
+
+- name: "activities"
+  label: "Activities"
+  folder: "src/config/config-activities"
   create: true
   slug: "{{slug}}"
   fields:
