@@ -26,7 +26,7 @@ aboutarea:
   image:
     alt: Wild Coast Walks
     image: /img/about.jpg
-tourdarea:
+toursarea:
   block1:
     heading1: Wild Coast Slackpack
     tours:
@@ -38,7 +38,7 @@ tourdarea:
     tours:
       tour1: Giants Cup
       tour2: Amphitheatre
-      tour3: Mehloding
+      tour3: 'Mehloding '
   block3:
     heading1: Midlands Slackpack
     tours:
@@ -49,17 +49,18 @@ tourdarea:
     heading1: Midlands Cycle Tours
     tours:
       tour1: Battlefields
-      tour2: Midlands Meander
-      tour3: Trappist Monastery
-  heading1: 'Best '
+      tour2: 'Midlands Meander '
+      tour3: 'Trappist Monastery '
+  heading1: Best
   heading2: Selling Trips
   introduction: >-
     Not sure what you’re looking for and need a little inspiration? We can help.
     Check out our handpicked
 
-    lists of tipical trips you can take right now.
+    lists of topical trips you can take right now.
 blogarea:
   heading1: 'Latest '
   heading2: Blog Posts
+  switch: true
 ---
 
