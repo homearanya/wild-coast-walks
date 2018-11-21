@@ -1,11 +1,19 @@
 ---
-destination: Midlands
-activity: Cycle Tour
 templateKey: tour-page
-title: My first Tour
+featured: true
+destination: Wild Coast
+activity: Slackpack
+title: Meander hike
 date: 2018-11-21T12:24:12.501Z
-description: This is my first tour
+description: >
+  Easy walking along wide sandy beaches running south from Kob Inn and
+  completing at Morgan Bay after 4 days of hiking. Dinner, bed and breakfast
+  with packed lunches at hotels, fully guided and shuttle service.  Bags
+  transported by porters at own cost.
+
+
+  Price:  From R 6900 per person sharing 
 tags:
-  - treavel
+  - travel
 ---
 my first tour tra-la-la
