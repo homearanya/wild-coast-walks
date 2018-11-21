@@ -46,7 +46,7 @@ collections:
   slug: "{{slug}}"
   fields:
     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-page"}
-    - {label: "Slug", name: "slug", default: "{{slug}}"}
+    - {label: "Slug", name: "slug", default: {{slug}}}
     - {label: "Featured?", name: "featured", widget: "boolean", default: false}
     - label: "Destination"
       name: "destination"
