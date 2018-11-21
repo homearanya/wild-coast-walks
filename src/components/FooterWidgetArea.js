@@ -8,7 +8,7 @@ const ContactDetails = (props) => {
     return (
         <StaticQuery
             query={graphql`
-                query HeadingQuery {
+                query FooterQuery {
                     markdownRemark (fields: {slug : {eq: "/config-contact/"}}) {
                         frontmatter {
                           contact_details {
