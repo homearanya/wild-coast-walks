@@ -95,17 +95,6 @@ collections:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Body", name: "body", widget: "markdown"}
-    - file: "src/pages/contact/index.md"
-      label: "Contact Page"
-      name: "contact"
-      fields:
-        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
-        - label: "Contact Details"
-          name: contact-details
-          widget: object
-          fields:
-            - {label: Email Address, name: email, widget: string}
-            - {label: Phone Number, name: phone, widget: string}
 
 - name: "config"
   label: "Configuration"
