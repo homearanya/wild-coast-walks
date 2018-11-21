@@ -34,6 +34,7 @@ exports.createPages = ({ actions, graphql }) => {
                 const slug = edge.node.fields.slug
                 const config = slug.substring(1, 8)
                 if (config !== 'config-') {
+                    console.log('config: ', config)
                     createPage({
                         path: edge.node.fields.slug,
                         // tags: edge.node.frontmatter.tags,

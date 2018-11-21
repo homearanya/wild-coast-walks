@@ -51,7 +51,13 @@ collections:
     - {label: "Description", name: "description", widget: "text"}
     - {label: "Body", name: "body", widget: "markdown"}
     - {label: "Tags", name: "tags", widget: "list"} 
-    - {label: "Destination", name: "destination", widget: "relation", collection:} 
+    - label: "Destination"
+      name: "destination"
+      widget: "relation"
+      collection: "destinations"
+      searchFields: ["name"] 
+      valueField: "name"
+      displayFields: ["name"]
   editor:
     preview: false
            
@@ -121,11 +127,11 @@ collections:
   editor:
     preview: false
 
-- name: "Destinations"
-  label: "destination"
-  folder: "src/config/destinations"
+- name: "destinations"
+  label: "Destinations"
+  folder: "src/config/config-destinations"
   create: true
-  slug: "config-{{slug}}"
+  slug: "{{slug}}"
   fields:
     - {label: "Title", name: "title", widget: "string"}
   editor:
