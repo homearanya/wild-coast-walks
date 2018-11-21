@@ -106,3 +106,17 @@ collections:
           fields:
             - {label: Email Address, name: email, widget: string}
             - {label: Phone Number, name: phone, widget: string}
+
+- name: "config"
+  label: "Configuration"
+  files:
+    - file: "src/config/contact.md"
+      label: "Contact Details"
+      name: "contact"
+      fields:
+        - label: "Contact Details"
+          name: contact-details
+          widget: object
+          fields:
+            - {label: Email Address, name: email, widget: string}
+            - {label: Phone Number, name: phone, widget: string}
