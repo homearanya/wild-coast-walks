@@ -112,7 +112,7 @@ collections:
   files:
     - file: "src/config/contact.md"
       label: "Contact Details"
-      name: "contact"
+      name: "configcontact"
       fields:
         - label: "Contact Details"
           name: contact-details
