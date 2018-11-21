@@ -39,30 +39,85 @@ export default function index({ data }) {
 export const homePageQuery = graphql`
   query HomePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      frontmatter {
-        slider {    
-            slide1 {
+        frontmatter {
+            slider {
+              slide1 {
                 heading1
                 heading2
                 subheading1
                 subheading2
                 image {
-                    image
-                    alt
+                  image
+                  alt
                 }
+              }
+              slide2 {
+                heading1
+                heading2
+                subheading1
+                subheading2
+                image {
+                  image
+                  alt
+                }
+              }      
             }
-            slide2 {
+            aboutarea {
+              heading1
+              heading2
+              blur
+              image {
+                image
+                alt
+              }
+            }
+            tourdarea {
+              heading1
+              heading2
+              introduction
+              block1 {
                 heading1
                 heading2
-                subheading1
-                subheading2
-                image {
-                    image
-                    alt
+                tours {
+                  tour1
+                  tour2
+                  tour3
                 }
+              }
+              block2 {
+                heading1
+                heading2
+                tours {
+                  tour1
+                  tour2
+                  tour3
+                }
+              }
+              block3 {
+                heading1
+                heading2
+                tours {
+                  tour1
+                  tour2
+                  tour3
+                }
+              }
+              block4 {
+                heading1
+                heading2
+                tours {
+                  tour1
+                  tour2
+                  tour3
+                }
+              }
+            }
+            blogarea {
+              switch
+              heading1
+              heading2
             }
         }
-      }
     }
   }
 `
