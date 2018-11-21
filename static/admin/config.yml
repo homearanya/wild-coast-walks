@@ -137,7 +137,7 @@ collections:
                 - {label: Heading 2, name: heading2, widget: string}
                 - label: Tours
                   name: tours 
-                  widget: object,
+                  widget: object
                   fields:
                     - {label: Tour 1, name: tour1, widget: string}
                     - {label: Tour 2, name: tour2, widget: string}
@@ -150,7 +150,7 @@ collections:
                 - {label: Heading 2, name: heading2, widget: string}
                 - label: Tours
                   name: tours 
-                  widget: object,
+                  widget: object
                   fields:
                     - {label: Tour 1, name: tour1, widget: string}
                     - {label: Tour 2, name: tour2, widget: string}
@@ -163,7 +163,7 @@ collections:
                 - {label: Heading 2, name: heading2, widget: string}
                 - label: Tours
                   name: tours 
-                  widget: object,
+                  widget: object
                   fields:
                     - {label: Tour 1, name: tour1, widget: string}
                     - {label: Tour 2, name: tour2, widget: string}
@@ -176,7 +176,7 @@ collections:
                 - {label: Heading 2, name: heading2, widget: string}
                 - label: Tours
                   name: tours 
-                  widget: object,
+                  widget: object
                   fields:
                     - {label: Tour 1, name: tour1, widget: string}
                     - {label: Tour 2, name: tour2, widget: string}
