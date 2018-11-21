@@ -13,7 +13,7 @@ description: >
 
 
   Price:  From R 6900 per person sharing 
-tags:
-  - travel
+duration: 5 days
+price: From R 6900 per person sharing
 ---
-my first tour tra-la-la
+
