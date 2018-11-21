@@ -109,6 +109,84 @@ collections:
                   fields: 
                     - {label: Image, name: image, widget: image}
                     - {label: Alt, name: alt, widget: string}
+        - label: "About Area"
+          name: aboutarea
+          widget: object
+          fields: 
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
+            - label: "Image"
+              name: image
+              widget: object
+              fields: 
+                - {label: Image, name: image, widget: image}
+                - {label: Alt, name: alt, widget: string}       
+            - {label: Blur, name: blur, widget: text}     
+        - label: "Tours Area"
+          name: tourdarea
+          widget: object
+          fields:
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
+            - {label: Introduction, name: introduction, widget: text}
+            - label: "Block 1"
+              name: block1
+              widget: object
+              fields:
+                - {label: Heading 1, name: heading1, widget: string}
+                - {label: Heading 2, name: heading2, widget: string}
+                - label: Tours
+                  name: tours 
+                  widget: object,
+                  fields:
+                    - {label: Tour 1, name: tour1, widget: string}
+                    - {label: Tour 2, name: tour2, widget: string}
+                    - {label: Tour 3, name: tour3, widget: string}
+            - label: "Block 2"
+              name: block2
+              widget: object
+              fields:
+                - {label: Heading 1, name: heading1, widget: string}
+                - {label: Heading 2, name: heading2, widget: string}
+                - label: Tours
+                  name: tours 
+                  widget: object,
+                  fields:
+                    - {label: Tour 1, name: tour1, widget: string}
+                    - {label: Tour 2, name: tour2, widget: string}
+                    - {label: Tour 3, name: tour3, widget: string}
+            - label: "Block 3"
+              name: block3
+              widget: object
+              fields:
+                - {label: Heading 1, name: heading1, widget: string}
+                - {label: Heading 2, name: heading2, widget: string}
+                - label: Tours
+                  name: tours 
+                  widget: object,
+                  fields:
+                    - {label: Tour 1, name: tour1, widget: string}
+                    - {label: Tour 2, name: tour2, widget: string}
+                    - {label: Tour 3, name: tour3, widget: string}
+            - label: "Block 4"
+              name: block4
+              widget: object
+              fields:
+                - {label: Heading 1, name: heading1, widget: string}
+                - {label: Heading 2, name: heading2, widget: string}
+                - label: Tours
+                  name: tours 
+                  widget: object,
+                  fields:
+                    - {label: Tour 1, name: tour1, widget: string}
+                    - {label: Tour 2, name: tour2, widget: string}
+                    - {label: Tour 3, name: tour3, widget: string}
+        - label: "Blog Area"
+          name: blogarea
+          widget: object
+          fields: 
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
     - file: "src/pages/about/index.md"
       label: "About Page"
       name: "about"
