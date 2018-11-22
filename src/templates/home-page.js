@@ -61,6 +61,10 @@ export const homePageQuery = graphql`
               duration
               price
               description
+              imagethumbnail {
+                image
+                alt
+              }
             }
           }
         }
