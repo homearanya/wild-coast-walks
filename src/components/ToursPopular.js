@@ -26,7 +26,7 @@ const Tour = (props) => {
     return (
         <div className="col-md-4 col-sm-6 col-xs-12">
             <div className="single-adventure">
-                <Link to="/tour/"><img src={advlist_1} alt="" /></Link>
+                <Link to="/tour/"><img src={tourDetails.thumbnail.image} alt="" /></Link>
                 <div className="adventure-text effect-bottom">
                     <div className="transparent-overlay">
                         <h4><Link to="/tour/">{tourDetails.title} | <span>{tourDetails.destination}</span></Link></h4>
