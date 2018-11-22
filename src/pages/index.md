@@ -38,7 +38,7 @@ toursarea:
     tours:
       tour1: Giants Cup
       tour2: Amphitheatre
-      tour3: 'Mehloding '
+      tour3: Mehloding
   block3:
     heading1: Midlands Slackpack
     tours:
@@ -49,8 +49,8 @@ toursarea:
     heading1: Midlands Cycle Tours
     tours:
       tour1: Battlefields
-      tour2: 'Midlands Meander '
-      tour3: 'Trappist Monastery '
+      tour2: Midlands Meander
+      tour3: Trappist Monastery
   heading1: Best
   heading2: Selling Trips
   introduction: >-
