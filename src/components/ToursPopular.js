@@ -12,9 +12,9 @@ const Block = (props) => {
             <div className="section-title text-center">
                 <h2>{props.blockDetails.heading1}<span></span></h2>
             </div>
-            <Tour tourDetails={props.toursObject[tours.tour1]} />
-            <Tour tourDetails={props.toursObject[tours.tour2]} />
-            <Tour tourDetails={props.toursObject[tours.tour3]} />
+            <Tour tourDetails={props.toursObject[tours.tour1].frontmatter} />
+            <Tour tourDetails={props.toursObject[tours.tour2].frontmatter} />
+            <Tour tourDetails={props.toursObject[tours.tour3].frontmatter} />
         </div>
     )
 }
@@ -22,10 +22,11 @@ const Tour = (props) => {
     if (!props.tourDetails) {
         return null
     }
+    console.log('tourDetails', props.tourDetails)
     return (
         <div className="col-md-4 col-sm-6 col-xs-12">
             <div className="single-adventure">
-                <Link to="/tour/"><img src={props.tourDetails.imgSrc} alt="" /></Link>
+                <Link to="/tour/"><img src={props.tourDetails.imagethumbnail.image} alt="" /></Link>
                 <div className="adventure-text effect-bottom">
                     <div className="transparent-overlay">
                         <h4><Link to="/tour/">{props.tourDetails.title} | <span>{props.tourDetails.destination}</span></Link></h4>
