@@ -12,9 +12,9 @@ const Block = (props) => {
             <div className="section-title text-center">
                 <h2>{props.blockDetails.heading1}<span></span></h2>
             </div>
-            <Tour tourDetails={props.toursObject[tours.tour1].frontmatter} />
-            <Tour tourDetails={props.toursObject[tours.tour2].frontmatter} />
-            <Tour tourDetails={props.toursObject[tours.tour3].frontmatter} />
+            <Tour tourDetails={props.toursObject[tours.tour1]} />
+            <Tour tourDetails={props.toursObject[tours.tour2]} />
+            <Tour tourDetails={props.toursObject[tours.tour3]} />
         </div>
     )
 }
@@ -22,20 +22,20 @@ const Tour = (props) => {
     if (!props.tourDetails) {
         return null
     }
-    console.log('tourDetails', props.tourDetails)
+    const tourDetails = props.tourDetails.frontmatter;
     return (
         <div className="col-md-4 col-sm-6 col-xs-12">
             <div className="single-adventure">
-                <Link to="/tour/"><img src={props.tourDetails.imagethumbnail.image} alt="" /></Link>
+                <Link to="/tour/"><img src={advlist_1} alt="" /></Link>
                 <div className="adventure-text effect-bottom">
                     <div className="transparent-overlay">
-                        <h4><Link to="/tour/">{props.tourDetails.title} | <span>{props.tourDetails.destination}</span></Link></h4>
-                        <span className="trip-time"><i className="fa fa-clock-o"></i>{props.tourDetails.duration}</span>
-                        <span className="trip-level"><i className="fa fa-send-o"></i>{props.tourDetails.level}</span>
-                        <p>{props.tourDetails.description}</p>
+                        <h4><Link to="/tour/">{tourDetails.title} | <span>{tourDetails.destination}</span></Link></h4>
+                        <span className="trip-time"><i className="fa fa-clock-o"></i>{tourDetails.duration}</span>
+                        <span className="trip-level"><i className="fa fa-send-o"></i>{tourDetails.level}</span>
+                        <p>{tourDetails.description}</p>
                     </div>
                     <div className="adventure-price-link">
-                        <span className="trip-price">{props.tourDetails.price}</span>
+                        <span className="trip-price">{tourDetails.price}</span>
                         <span className="trip-person">Per Person</span>
                         <div className="adventure-link">
                             <a href="#"><i className="fa fa-facebook"></i></a>
