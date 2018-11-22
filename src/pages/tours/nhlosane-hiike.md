@@ -11,5 +11,7 @@ description: >-
   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 duration: 1 day
 price: From R800 per person sharing
+imagethumbnail:
+  image: /img/27.jpg
 ---
 
