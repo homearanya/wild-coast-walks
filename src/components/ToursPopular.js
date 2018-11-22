@@ -52,7 +52,6 @@ const Tour = (props) => {
 
 
 export default function Tours(props) {
-    console.log('popular tours', props)
     return (
         <div className="best-sell-area section-padding">
             <div className="container">
