@@ -273,7 +273,7 @@ collections:
 - name: "config"
   label: "Configuration"
   files:
-    - file: "src/config/config-contact.md"
+    - file: "src/config/contact.md"
       label: "Contact Details"
       name: "contact"
       fields:
@@ -283,7 +283,7 @@ collections:
           fields:
             - {label: Email Address, name: email, widget: string}
             - {label: Phone Number, name: phone, widget: string}
-    - file: "src/config/config-mainmenu.md"
+    - file: "src/config/mainmenu.md"
       label: "Main Menu"
       name: "mainmenu"
       fields:
@@ -460,7 +460,7 @@ collections:
 
 - name: "destinations"
   label: "Destinations"
-  folder: "src/config/config-destinations"
+  folder: "src/config/destinations"
   create: true
   slug: "{{slug}}"
   fields:
@@ -470,7 +470,7 @@ collections:
 
 - name: "activities"
   label: "Activities"
-  folder: "src/config/config-activities"
+  folder: "src/config/activities"
   create: true
   slug: "{{slug}}"
   fields:

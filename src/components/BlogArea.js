@@ -7,7 +7,6 @@ import blog_1 from '../assets/img/blog/1.jpg'
 import blog_2 from '../assets/img/blog/2.jpg'
 
 export default function BlogArea(props) {
-    console.log('Blog Area', props)
     if (!props.blogArea.switch) {
         return null
     }

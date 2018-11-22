@@ -12,6 +12,12 @@ import BlogArea from "../components/BlogArea";
 
 export default function index({ data }) {
   const { frontmatter } = data.markdownRemark
+  const { tours } = data.markdownRemark.fields
+  const toursObject = tours.reduce((obj, tour) => {
+    obj[tour.frontmatter.title] = tour
+    return obj;
+  }, {});
+
   return (
     <div>
       <Helmet>
@@ -32,6 +38,7 @@ export default function index({ data }) {
           aboutArea={frontmatter.aboutarea}
         />
         <ToursPopular
+          toursObject={toursObject}
           toursArea={frontmatter.toursarea}
         />
         <BlogArea
@@ -45,6 +52,18 @@ export default function index({ data }) {
 export const homePageQuery = graphql`
   query HomePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
+        fields {
+          tours {
+            frontmatter {
+              title
+              destination
+              activity
+              duration
+              price
+              description
+            }
+          }
+        }
         frontmatter {
             slider {
               slide1 {

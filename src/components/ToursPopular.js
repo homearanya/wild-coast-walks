@@ -5,20 +5,36 @@ import '../assets/css/product.css'
 
 import advlist_1 from '../assets/img/adventure-list/27.jpg'
 
-const Product = (props) => {
+const Block = (props) => {
+    const tours = props.blockDetails.tours
+    return (
+        <div className="row">
+            <div className="section-title text-center">
+                <h2>{props.blockDetails.heading1}<span></span></h2>
+            </div>
+            <Tour tourDetails={props.toursObject[tours.tour1]} />
+            <Tour tourDetails={props.toursObject[tours.tour2]} />
+            <Tour tourDetails={props.toursObject[tours.tour3]} />
+        </div>
+    )
+}
+const Tour = (props) => {
+    if (!props.tourDetails) {
+        return null
+    }
     return (
         <div className="col-md-4 col-sm-6 col-xs-12">
             <div className="single-adventure">
-                <Link to="/tour/"><img src={props.imgSrc} alt="" /></Link>
+                <Link to="/tour/"><img src={props.tourDetails.imgSrc} alt="" /></Link>
                 <div className="adventure-text effect-bottom">
                     <div className="transparent-overlay">
-                        <h4><Link to="/tour/">{props.title} | <span>{props.destination}</span></Link></h4>
-                        <span className="trip-time"><i className="fa fa-clock-o"></i>{props.duration}</span>
-                        <span className="trip-level"><i className="fa fa-send-o"></i>{props.level}</span>
-                        <p>{props.description}</p>
+                        <h4><Link to="/tour/">{props.tourDetails.title} | <span>{props.tourDetails.destination}</span></Link></h4>
+                        <span className="trip-time"><i className="fa fa-clock-o"></i>{props.tourDetails.duration}</span>
+                        <span className="trip-level"><i className="fa fa-send-o"></i>{props.tourDetails.level}</span>
+                        <p>{props.tourDetails.description}</p>
                     </div>
                     <div className="adventure-price-link">
-                        <span className="trip-price">{props.price}</span>
+                        <span className="trip-price">{props.tourDetails.price}</span>
                         <span className="trip-person">Per Person</span>
                         <div className="adventure-link">
                             <a href="#"><i className="fa fa-facebook"></i></a>
@@ -36,6 +52,7 @@ const Product = (props) => {
 
 
 export default function Tours(props) {
+    console.log('popular tours', props)
     return (
         <div className="best-sell-area section-padding">
             <div className="container">
@@ -49,147 +66,10 @@ export default function Tours(props) {
                         </div>
                     </div>
                 </div>
-
-                <div className="row">
-                    <div className="section-title text-center">
-                        <h2><span>Wild Coast</span> Slackpack</h2>
-                    </div>
-                    <Product
-                        imgSrc={advlist_1}
-                        imgAlt=""
-                        title="Meander Hike"
-                        destination="Wild Coast"
-                        duration="5 nights"
-                        level="Level: Basic"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare ut est in molestie. Vestibulum convallis congue velit, et facilisis lorem efficitur et. Morbi vitae pellentesque nulla."
-                        price="$659"
-                    />
-                    <Product
-                        imgSrc={advlist_1}
-                        imgAlt=""
-                        title="Sunshine Hike"
-                        destination="Wild Coast"
-                        duration="5 nights"
-                        level="Level: Basic"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare ut est in molestie. Vestibulum convallis congue velit, et facilisis lorem efficitur et. Morbi vitae pellentesque nulla."
-                        price="$559"
-                    />
-                    <Product
-                        imgSrc={advlist_1}
-                        imgAlt=""
-                        title="Mini Break Hike"
-                        destination="Wild Coast"
-                        duration="3 nights"
-                        level="Level: Basic"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare ut est in molestie. Vestibulum convallis congue velit, et facilisis lorem efficitur et. Morbi vitae pellentesque nulla."
-                        price="$359"
-                    />
-                </div>
-                <div className="row">
-                    <div className="section-title text-center">
-                        <h2><span>Drakensberg</span> Slackpack</h2>
-                    </div>
-                    <Product
-                        imgSrc={advlist_1}
-                        imgAlt=""
-                        title="Giants Cup"
-                        destination="Drakensberg"
-                        duration="4 nights"
-                        level="Level: Basic"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare ut est in molestie. Vestibulum convallis congue velit, et facilisis lorem efficitur et. Morbi vitae pellentesque nulla."
-                        price="$659"
-                    />
-                    <Product
-                        imgSrc={advlist_1}
-                        imgAlt=""
-                        title="Amphitheatre "
-                        destination="Drakensberg"
-                        duration="4 nights"
-                        level="Level: Basic"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare ut est in molestie. Vestibulum convallis congue velit, et facilisis lorem efficitur et. Morbi vitae pellentesque nulla."
-                        price="$559"
-                    />
-                    <Product
-                        imgSrc={advlist_1}
-                        imgAlt=""
-                        title="Mehloding"
-                        destination="Drakensberg"
-                        duration="4 nights"
-                        level="Level: Basic"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare ut est in molestie. Vestibulum convallis congue velit, et facilisis lorem efficitur et. Morbi vitae pellentesque nulla."
-                        price="$359"
-                    />
-                </div>
-                <div className="row">
-                    <div className="section-title text-center">
-                        <h2><span>Midlands</span> Slackpack</h2>
-                    </div>
-                    <Product
-                        imgSrc={advlist_1}
-                        imgAlt=""
-                        title="Karkloof Falls2Falls"
-                        destination="Midlands"
-                        duration="3 nights"
-                        level="Level: Basic"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare ut est in molestie. Vestibulum convallis congue velit, et facilisis lorem efficitur et. Morbi vitae pellentesque nulla."
-                        price="$659"
-                    />
-                    <Product
-                        imgSrc={advlist_1}
-                        imgAlt=""
-                        title="Dargle Samango"
-                        destination="Midlands"
-                        duration="3 nights"
-                        level="Level: Basic"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare ut est in molestie. Vestibulum convallis congue velit, et facilisis lorem efficitur et. Morbi vitae pellentesque nulla."
-                        price="$559"
-                    />
-                    <Product
-                        imgSrc={advlist_1}
-                        imgAlt=""
-                        title="Nhlosane Hike"
-                        destination="Midlands"
-                        duration="3 nights"
-                        level="Level: Basic"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare ut est in molestie. Vestibulum convallis congue velit, et facilisis lorem efficitur et. Morbi vitae pellentesque nulla."
-                        price="$359"
-                    />
-                </div>
-                <div className="row">
-                    <div className="section-title text-center">
-                        <h2><span>Midlands</span> Cycle Tours</h2>
-                    </div>
-                    <Product
-                        imgSrc={advlist_1}
-                        imgAlt=""
-                        title="Battlefields"
-                        destination="Midlands"
-                        duration="7 nights"
-                        level="Level: Basic"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare ut est in molestie. Vestibulum convallis congue velit, et facilisis lorem efficitur et. Morbi vitae pellentesque nulla."
-                        price="$659"
-                    />
-                    <Product
-                        imgSrc={advlist_1}
-                        imgAlt=""
-                        title="Midlands Meander"
-                        destination="Midlands"
-                        duration="3 nights"
-                        level="Level: Basic"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare ut est in molestie. Vestibulum convallis congue velit, et facilisis lorem efficitur et. Morbi vitae pellentesque nulla."
-                        price="$559"
-                    />
-                    <Product
-                        imgSrc={advlist_1}
-                        imgAlt=""
-                        title="Trappist Monastery"
-                        destination="Midlands"
-                        duration="5 nights"
-                        level="Level: Basic"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare ut est in molestie. Vestibulum convallis congue velit, et facilisis lorem efficitur et. Morbi vitae pellentesque nulla."
-                        price="$359"
-                    />
-                </div>
+                <Block blockDetails={props.toursArea.block1} toursObject={props.toursObject}></Block>
+                <Block blockDetails={props.toursArea.block2} toursObject={props.toursObject}></Block>
+                <Block blockDetails={props.toursArea.block3} toursObject={props.toursObject}></Block>
+                <Block blockDetails={props.toursArea.block4} toursObject={props.toursObject}></Block>
             </div>
         </div>
     )

@@ -9,11 +9,13 @@ const ContactDetails = (props) => {
         <StaticQuery
             query={graphql`
                 query FooterQuery {
-                    markdownRemark (fields: {slug : {eq: "/config-contact/"}}) {
-                        frontmatter {
-                          contact_details {
-                            email
-                            phone
+                    file (relativePath : {eq: "contact.md"}) {
+                        childMarkdownRemark {
+                          frontmatter {
+                            contact_details {
+                              email
+                              phone
+                            }
                           }
                         }
                     }
@@ -25,8 +27,8 @@ const ContactDetails = (props) => {
                         <h4>Contact Us</h4>
                         <div className="footer-widget-list">
                             <ul>
-                                <li className="icon envelope">{data.markdownRemark.frontmatter.contact_details.email}</li>
-                                <li className="icon phone">{data.markdownRemark.frontmatter.contact_details.phone}</li>
+                                <li className="icon envelope">{data.file.childMarkdownRemark.frontmatter.contact_details.email}</li>
+                                <li className="icon phone">{data.file.childMarkdownRemark.frontmatter.contact_details.phone}</li>
                             </ul>
                         </div>
                     </div>

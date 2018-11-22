@@ -10,6 +10,7 @@ exports.createPages = ({ actions, graphql }) => {
       allMarkdownRemark(limit: 1000) {
         edges {
           node {
+            fileAbsolutePath
             id
             fields {
                 slug
@@ -31,9 +32,8 @@ exports.createPages = ({ actions, graphql }) => {
 
             posts.forEach(edge => {
                 const id = edge.node.id
-                const slug = edge.node.fields.slug
-                const config = slug.substring(1, 8)
-                if (config !== 'config-') {
+                const fileAbsolutePath = edge.node.fileAbsolutePath
+                if (fileAbsolutePath.includes('/src/pages/')) {
                     createPage({
                         path: edge.node.fields.slug,
                         // tags: edge.node.frontmatter.tags,
@@ -60,4 +60,50 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             value,
         })
     }
+}
+
+// we use sourceNodes instead of onCreateNode because
+//  at this time plugins will have created all nodes already
+
+exports.sourceNodes = ({ actions, getNodes, getNode }) => {
+    const { createNodeField } = actions
+    let homeToursTitles = [];
+    let homeToursIds = [];
+    let toursObject = new Object();
+    let homeNodeId;
+
+    // iterate thorugh all markdown nodes to link books to author
+    // and build author index
+    getNodes()
+        .filter(node => node.internal.type === `MarkdownRemark`)
+        .forEach(node => {
+            if (node.frontmatter.templateKey &&
+                node.frontmatter.templateKey.includes('home-page')) {
+                homeNodeId = node.id;
+                const toursArea = node.frontmatter.toursarea;
+                Object.keys(toursArea)
+                    .filter(field => field.includes('block'))
+                    .forEach(block => {
+                        Object.keys(toursArea[block].tours)
+                            .forEach(tour => homeToursTitles.push(toursArea[block].tours[tour]))
+                    })
+            } else {
+                if (node.frontmatter.templateKey &&
+                    node.frontmatter.templateKey.includes('tour-page')) {
+                    toursObject[node.frontmatter.title] = node.id;
+                }
+            }
+        })
+
+    homeToursTitles.forEach(tour => {
+        if (toursObject[tour]) {
+            homeToursIds.push(toursObject[tour])
+        }
+    })
+
+    createNodeField({
+        node: getNode(homeNodeId),
+        name: `tours`,
+        value: homeToursIds,
+    })
 }

@@ -13,7 +13,7 @@ import contact_4_hover from '../assets/img/icon/contact-4-hover.png'
 
 
 export default ({ data }) => {
-    const { frontmatter } = data.markdownRemark
+    const { frontmatter } = data.file.childMarkdownRemark
     return (
         <div>
             <Helmet>
@@ -138,11 +138,13 @@ export default ({ data }) => {
 
 export const contactPageQuery = graphql`
   query ContactPage {
-	markdownRemark (fields: {slug : {eq: "/config-contact/"}}) {
-        frontmatter {
-          contact_details {
-            email
-            phone
+    file (relativePath : {eq: "contact.md"}) {
+        childMarkdownRemark {
+          frontmatter {
+            contact_details {
+              email
+              phone
+            }
           }
         }
     }

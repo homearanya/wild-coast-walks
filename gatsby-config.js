@@ -24,5 +24,9 @@ module.exports = {
             },
         },
         `gatsby-transformer-remark`,
-    ]
+    ],
+    mapping: {
+        'MarkdownRemark.fields.homepage': `MarkdownRemark`,
+        'MarkdownRemark.fields.tours': `MarkdownRemark`,
+    },
 }
