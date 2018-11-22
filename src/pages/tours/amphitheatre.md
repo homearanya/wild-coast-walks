@@ -11,5 +11,8 @@ description: >-
   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 duration: 4 nights
 price: From R 6900 per person sharing
+imagethumbnail:
+  alt: Drakensberg Slackpack
+  image: /img/27.jpg
 ---
 
