@@ -52,14 +52,14 @@ collections:
       widget: "relation"
       collection: "destinations"
       searchFields: ["title"] 
-      valueField: "slug"
+      valueField: "title"
       displayFields: ["title"]
     - label: "Activity"
       name: "activity"
       widget: "relation"
       collection: "activities"
       searchFields: ["title"] 
-      valueField: "slug"
+      valueField: "title"
       displayFields: ["title"]
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -144,21 +144,21 @@ collections:
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Tour 2"
                       name: "tour2"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Tour 3"
                       name: "tour3"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
             - label: "Block 2"
               name: block2
@@ -175,21 +175,21 @@ collections:
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Tour 2"
                       name: "tour2"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Tour 3"
                       name: "tour3"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
             - label: "Block 3"
               name: block3
@@ -206,21 +206,21 @@ collections:
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Tour 2"
                       name: "tour2"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Tour 3"
                       name: "tour3"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
             - label: "Block 4"
               name: block4
@@ -237,21 +237,21 @@ collections:
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Tour 2"
                       name: "tour2"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Tour 3"
                       name: "tour3"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
         - label: "Blog Area"
           name: blogarea
@@ -318,21 +318,21 @@ collections:
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Link 2"
                       name: "link2"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Link 3"
                       name: "link3"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
             - label: "Block 2"
               name: block2
@@ -354,21 +354,21 @@ collections:
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Link 2"
                       name: "link2"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Link 3"
                       name: "link3"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
             - label: "Block 3"
               name: block3
@@ -390,21 +390,21 @@ collections:
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Link 2"
                       name: "link2"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Link 3"
                       name: "link3"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
             - label: "Block 4"
               name: block4
@@ -426,21 +426,21 @@ collections:
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Link 2"
                       name: "link2"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
                     - label: "Link 3"
                       name: "link3"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
-                      valueField: "slug"
+                      valueField: "title"
                       displayFields: ["title"]
         - label: "Tour Calendar Item"
           name: "tourcalendaritem"
