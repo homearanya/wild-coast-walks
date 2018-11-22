@@ -4,12 +4,6 @@ import { Link } from "gatsby"
 import '../assets/css/product.css'
 
 import advlist_1 from '../assets/img/adventure-list/27.jpg'
-import advlist_2 from '../assets/img/adventure-list/27.jpg'
-import advlist_3 from '../assets/img/adventure-list/27.jpg'
-import advlist_4 from '../assets/img/adventure-list/27.jpg'
-import advlist_5 from '../assets/img/adventure-list/27.jpg'
-import advlist_6 from '../assets/img/adventure-list/27.jpg'
-
 
 const Product = (props) => {
     return (
@@ -41,7 +35,7 @@ const Product = (props) => {
 }
 
 
-export default function Tours() {
+export default function Tours(props) {
     return (
         <div className="best-sell-area section-padding">
             <div className="container">

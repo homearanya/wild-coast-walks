@@ -6,40 +6,40 @@ import MyContext, { ContextProviderComponent } from "../components/Context"
 import Spinner from '../components/Spinner'
 import SliderArea from "../components/SliderArea";
 import AboutArea from "../components/AboutArea";
-import Products from "../components/Products";
+import ToursPopular from "../components/ToursPopular";
 import BlogArea from "../components/BlogArea";
 
 
 export default function index({ data }) {
-    const { frontmatter } = data.markdownRemark
-    return (
-        <div>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>Wild Coast Walks</title>
-            </Helmet>
+  const { frontmatter } = data.markdownRemark
+  return (
+    <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Wild Coast Walks</title>
+      </Helmet>
 
-            <ContextProviderComponent>
-                <MyContext.Consumer>
-                    {({ data }) => {
-                        return data.loadSpinner ? <Spinner /> : null;
-                    }}
-                </MyContext.Consumer>
-                <SliderArea
-                    slider={frontmatter.slider}
-                />
-                <AboutArea
-                    aboutArea={frontmatter.aboutarea}
-                />
-                <Products
-                    toursArea={frontmatter.toursarea}
-                />
-                <BlogArea
-                    blogArea={frontmatter.blogarea}
-                />
-            </ContextProviderComponent>
-        </div>
-    )
+      <ContextProviderComponent>
+        <MyContext.Consumer>
+          {({ data }) => {
+            return data.loadSpinner ? <Spinner /> : null;
+          }}
+        </MyContext.Consumer>
+        <SliderArea
+          slider={frontmatter.slider}
+        />
+        <AboutArea
+          aboutArea={frontmatter.aboutarea}
+        />
+        <ToursPopular
+          toursArea={frontmatter.toursarea}
+        />
+        <BlogArea
+          blogArea={frontmatter.blogarea}
+        />
+      </ContextProviderComponent>
+    </div>
+  )
 }
 
 export const homePageQuery = graphql`
