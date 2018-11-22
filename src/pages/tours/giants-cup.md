@@ -10,5 +10,7 @@ description: >-
   incididunt ut labore et dolore magna aliqua. 
 duration: 5 nights
 price: From R 6900 per person sharing
+imagethumbnail:
+  image: /img/27.jpg
 ---
 
