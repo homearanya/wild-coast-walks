@@ -14,7 +14,7 @@ export default function index({ data }) {
   const { frontmatter } = data.markdownRemark
   const { tours } = data.markdownRemark.fields
   const toursObject = tours.reduce((obj, tour) => {
-    obj[tour.frontmatter.title] = tour
+    obj[tour.frontmatter.title.trim()] = tour
     return obj;
   }, {});
 

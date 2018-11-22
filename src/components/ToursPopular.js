@@ -12,9 +12,9 @@ const Block = (props) => {
             <div className="section-title text-center">
                 <h2>{props.blockDetails.heading1}<span></span></h2>
             </div>
-            <Tour tourDetails={props.toursObject[tours.tour1]} />
-            <Tour tourDetails={props.toursObject[tours.tour2]} />
-            <Tour tourDetails={props.toursObject[tours.tour3]} />
+            <Tour tourDetails={props.toursObject[tours.tour1.trim()]} />
+            <Tour tourDetails={props.toursObject[tours.tour2.trim()]} />
+            <Tour tourDetails={props.toursObject[tours.tour3.trim()]} />
         </div>
     )
 }
