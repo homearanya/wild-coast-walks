@@ -23,10 +23,16 @@ const Tour = (props) => {
         return null
     }
     const tourDetails = props.tourDetails.frontmatter;
+    let imageSrc = '';
+    let imageAlt = '';
+    if (tourDetails.imagethumbnail) {
+        imageSrc = tourDetails.imagethumbnail.image;
+        imageAlt = tourDetails.imagethumbnail.alt;
+    }
     return (
         <div className="col-md-4 col-sm-6 col-xs-12">
             <div className="single-adventure">
-                <Link to="/tour/"><img src={tourDetails.thumbnail.image} alt="" /></Link>
+                <Link to="/tour/"><img src={imageSrc} alt={imageAlt} /></Link>
                 <div className="adventure-text effect-bottom">
                     <div className="transparent-overlay">
                         <h4><Link to="/tour/">{tourDetails.title} | <span>{tourDetails.destination}</span></Link></h4>
