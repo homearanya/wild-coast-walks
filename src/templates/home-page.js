@@ -1,13 +1,13 @@
 import React from 'react'
+import MyContext, { ContextProviderComponent } from "../components/Context"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 
-import MyContext, { ContextProviderComponent } from "../components/Context"
+import BlogArea from "../components/BlogArea";
 import Spinner from '../components/Spinner'
 import SliderArea from "../components/SliderArea";
 import AboutArea from "../components/AboutArea";
 import ToursPopular from "../components/ToursPopular";
-import BlogArea from "../components/BlogArea";
 
 
 export default function index({ data }) {
@@ -28,22 +28,30 @@ export default function index({ data }) {
       <ContextProviderComponent>
         <MyContext.Consumer>
           {({ data }) => {
-            return data.loadSpinner ? <Spinner /> : null;
+            return data.loadSpinner ? <Spinner /> : null
           }}
         </MyContext.Consumer>
+
         <SliderArea
           slider={frontmatter.slider}
         />
-        <AboutArea
-          aboutArea={frontmatter.aboutarea}
-        />
-        <ToursPopular
-          toursObject={toursObject}
-          toursArea={frontmatter.toursarea}
-        />
-        <BlogArea
-          blogArea={frontmatter.blogarea}
-        />
+        <MyContext.Consumer>
+          {({ data }) => {
+            return data.loadSpinner ? null :
+              <div>
+                <AboutArea
+                  aboutArea={frontmatter.aboutarea}
+                />
+                <ToursPopular
+                  toursObject={toursObject}
+                  toursArea={frontmatter.toursarea}
+                />
+                <BlogArea
+                  blogArea={frontmatter.blogarea}
+                />
+              </div>
+          }}
+        </MyContext.Consumer>
       </ContextProviderComponent>
     </div>
   )

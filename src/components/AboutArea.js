@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from "gatsby"
 
-
 import '../assets/css/aboutArea.css'
 
 export default function AboutArea(props) {
@@ -20,7 +19,6 @@ export default function AboutArea(props) {
                                 </div>
                             </div>
                             <div className="about-text">
-                                {/* <h1>This is your planet. Introduce yourself.</h1> */}
                                 <p>{props.aboutArea.blur}</p>
                                 <Link to="/about">Learn more</Link>
                             </div>
