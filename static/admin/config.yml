@@ -125,7 +125,7 @@ collections:
               name: image
               widget: object
               fields: 
-                - {label: Image, name: image, widget: image}
+                - {label: Image, name: image, widget: image, hint: "size 786 x 426"}
                 - {label: Alt, name: alt, widget: string}       
             - {label: Blur, name: blur, widget: text}     
         - label: "Tours Area"
@@ -461,6 +461,16 @@ collections:
             - {label: Switch, name: switch, widget: boolean}
             - {label: Label, name: label, widget: string}
             - {label: Path, name: path, widget: string}
+    - file: "src/config/footer.md"
+      label: "Footer"
+      name: "footer"
+      fields:
+        - label: "Background Image"
+          name: image
+          widget: object
+          fields: 
+            - {label: Image, name: image, widget: image, hint: "size 1600 x 553"}
+            - {label: Alt, name: alt, widget: string}
   editor:
     preview: false
 
