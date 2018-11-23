@@ -65,24 +65,44 @@ const Newsletter = (props) => {
 
 export default function FooterWidgetArea() {
     return (
-        <div className="footer-widget-area">
-            <div className="container">
-                <div className="row">
-                    <ContactDetails />
-                    <Newsletter />
-                </div>
-                <div className="row">
-                    <div className="col-sm-12">
-                        <div className={"footer-link " + footerStyles.footerSocial}>
-                            <a href="#"><i className="fa fa-facebook"></i></a>
-                            <a href="#"><i className="fa fa-twitter"></i></a>
-                            <a href="#"><i className="fa fa-google-plus"></i></a>
-                            <a href="#"><i className="fa fa-linkedin"></i></a>
-                            <a href="#"><i className="fa fa-rss"></i></a>
+        <StaticQuery
+            query={graphql`
+            query FooterQuery {
+                file (relativePath : {eq: "footer.md"}) {
+                    childMarkdownRemark {
+                      frontmatter {
+                        image {
+                          image
+                          alt
+                        }
+                      }
+                    }
+                }
+            }
+        `}
+            render={data => (
+                <div className="footer-widget-area"
+                    style={{ backgroundImage: `url($(data.file.childMarkdownRemark.frontmatter.Image.Image))` }}>
+                    <div className="container">
+                        <div className="row">
+                            <ContactDetails />
+                            <Newsletter />
+                        </div>
+                        <div className="row">
+                            <div className="col-sm-12">
+                                <div className={"footer-link " + footerStyles.footerSocial}>
+                                    <a href="#"><i className="fa fa-facebook"></i></a>
+                                    <a href="#"><i className="fa fa-twitter"></i></a>
+                                    <a href="#"><i className="fa fa-google-plus"></i></a>
+                                    <a href="#"><i className="fa fa-linkedin"></i></a>
+                                    <a href="#"><i className="fa fa-rss"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            )}
+        />
+
     )
 }
