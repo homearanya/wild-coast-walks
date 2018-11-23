@@ -80,28 +80,32 @@ export default function FooterWidgetArea() {
                 }
             }
         `}
-            render={data => (
-                <div className="footer-widget-area"
-                    style={{ backgroundImage: `url($(data.file.childMarkdownRemark.frontmatter.Image.Image))` }}>
-                    <div className="container">
-                        <div className="row">
-                            <ContactDetails />
-                            <Newsletter />
-                        </div>
-                        <div className="row">
-                            <div className="col-sm-12">
-                                <div className={"footer-link " + footerStyles.footerSocial}>
-                                    <a href="#"><i className="fa fa-facebook"></i></a>
-                                    <a href="#"><i className="fa fa-twitter"></i></a>
-                                    <a href="#"><i className="fa fa-google-plus"></i></a>
-                                    <a href="#"><i className="fa fa-linkedin"></i></a>
-                                    <a href="#"><i className="fa fa-rss"></i></a>
+            render={data => {
+                console.log('footer background image', data.file.childMarkdownRemark.frontmatter.Image.Image)
+                return (
+                    <div className="footer-widget-area"
+                        style={{ backgroundImage: `url($(data.file.childMarkdownRemark.frontmatter.Image.Image))` }}>
+                        <div className="container">
+                            <div className="row">
+                                <ContactDetails />
+                                <Newsletter />
+                            </div>
+                            <div className="row">
+                                <div className="col-sm-12">
+                                    <div className={"footer-link " + footerStyles.footerSocial}>
+                                        <a href="#"><i className="fa fa-facebook"></i></a>
+                                        <a href="#"><i className="fa fa-twitter"></i></a>
+                                        <a href="#"><i className="fa fa-google-plus"></i></a>
+                                        <a href="#"><i className="fa fa-linkedin"></i></a>
+                                        <a href="#"><i className="fa fa-rss"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            )}
+                )
+            }
+            }
         />
 
     )
