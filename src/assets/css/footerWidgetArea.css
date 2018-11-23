@@ -1,5 +1,5 @@
 .footer-widget-area {
-    background: rgba(0, 0, 0, 0) url(../img/banner/footer-bg.jpg) no-repeat scroll center top / cover;
+    /* background: rgba(0, 0, 0, 0) url(../img/banner/footer-bg.jpg) no-repeat scroll center top / cover; */
     padding-top: 180px;
     position: relative;
 }
@@ -208,8 +208,4 @@
 .newsletter-content input::-webkit-input-placeholder {
     opacity: 1;
     color: white
-}
-
-.footer-widget-area {
-    background: url(../img/footer/midlands-min.jpg) no-repeat scroll center top / cover !important;
 }

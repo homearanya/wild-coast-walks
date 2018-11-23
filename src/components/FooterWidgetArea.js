@@ -49,10 +49,17 @@ export default function FooterWidgetArea() {
             }
         `}
             render={data => {
-                console.log('footer background image', data.file.childMarkdownRemark.frontmatter.Image.Image)
+                console.log('footer background image', data.file.childMarkdownRemark.frontmatter.image.image)
                 return (
                     <div className="footer-widget-area"
-                        style={{ backgroundImage: `url($(data.file.childMarkdownRemark.frontmatter.Image.Image))` }}>
+                        style={{
+                            backgroundColor: 'rgba(0, 0, 0, 0)',
+                            backgroundImage: `url(${data.file.childMarkdownRemark.frontmatter.image.image})`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundAttachment: 'scroll',
+                            backgroundPosition: 'center top',
+                            backgroundSize: 'cover'
+                        }}>
                         <div className="container">
                             <div className="row">
                                 <FooterContactDetails />
