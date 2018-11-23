@@ -11,6 +11,7 @@ description: >-
 duration: 5 nights
 price: R 6900
 imagethumbnail:
-  image: /img/27.jpg
+  alt: Giants Cup Trail
+  image: /img/giants-cup375x375-min.jpg
 ---
 
