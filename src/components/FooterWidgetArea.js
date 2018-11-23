@@ -4,39 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 import '../assets/css/footerWidgetArea.css'
 import footerStyles from '../assets/css/footerWidgetArea.module.css'
 
-const ContactDetails = (props) => {
-    return (
-        <StaticQuery
-            query={graphql`
-                query FooterContactQuery {
-                    file (relativePath : {eq: "contact.md"}) {
-                        childMarkdownRemark {
-                          frontmatter {
-                            contact_details {
-                              email
-                              phone
-                            }
-                          }
-                        }
-                    }
-                }
-            `}
-            render={data => (
-                <div className="col-md-4 col-sm-12">
-                    <div className="single-footer-widget contact-text-info">
-                        <h4>Contact Us</h4>
-                        <div className="footer-widget-list">
-                            <ul>
-                                <li className="icon envelope">{data.file.childMarkdownRemark.frontmatter.contact_details.email}</li>
-                                <li className="icon phone">{data.file.childMarkdownRemark.frontmatter.contact_details.phone}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            )}
-        />
-    )
-}
+import FooterContactDetails from './FooterContactDetails'
 
 const Newsletter = (props) => {
     return (
@@ -87,7 +55,7 @@ export default function FooterWidgetArea() {
                         style={{ backgroundImage: `url($(data.file.childMarkdownRemark.frontmatter.Image.Image))` }}>
                         <div className="container">
                             <div className="row">
-                                <ContactDetails />
+                                <FooterContactDetails />
                                 <Newsletter />
                             </div>
                             <div className="row">
