@@ -17,6 +17,7 @@ description: >
 duration: 3 days
 price: R 5400
 imagethumbnail:
-  image: /img/27.jpg
+  alt: Mini Break
+  image: /img/mini-break375x375-min.jpg
 ---
 

@@ -12,6 +12,7 @@ description: >-
 duration: 1 day
 price: R800
 imagethumbnail:
-  image: /img/27.jpg
+  alt: Nhlosane Hike
+  image: /img/nhlosane-hike375x375-min.jpg
 ---
 

@@ -16,6 +16,7 @@ description: >
 duration: 5 days
 price: R 6900
 imagethumbnail:
-  image: /img/27.jpg
+  alt: Meander Hike
+  image: /img/meander-hike375x375-min.jpg
 ---
 

@@ -16,6 +16,7 @@ description: >
 duration: 5 days
 price: R 6900
 imagethumbnail:
-  image: /img/27.jpg
+  alt: Sunshine Hike
+  image: /img/sunshine-hike375x375-min.jpg
 ---
 

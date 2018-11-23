@@ -25,7 +25,7 @@ aboutarea:
   heading2: Wild Coast Walks
   image:
     alt: Wild Coast Walks
-    image: /img/about.jpg
+    image: /img/hikers-and-porters786x426-min.jpg
 toursarea:
   block1:
     heading1: Wild Coast Slackpack

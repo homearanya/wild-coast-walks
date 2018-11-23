@@ -12,6 +12,7 @@ description: >-
 duration: 3 nights
 price: R 5400
 imagethumbnail:
-  image: /img/27.jpg
+  alt: Dargle Samango
+  image: /img/dargle-samango375x375-min.jpg
 ---
 
