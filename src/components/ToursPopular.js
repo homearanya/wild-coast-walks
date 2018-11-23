@@ -3,8 +3,6 @@ import { Link } from "gatsby"
 
 import '../assets/css/product.css'
 
-import advlist_1 from '../assets/img/adventure-list/27.jpg'
-
 const Block = (props) => {
     const tours = props.blockDetails.tours
     return (
@@ -38,18 +36,19 @@ const Tour = (props) => {
                         <h4><Link to="/tour/">{tourDetails.title} | <span>{tourDetails.destination}</span></Link></h4>
                         <span className="trip-time"><i className="fa fa-clock-o"></i>{tourDetails.duration}</span>
                         <span className="trip-level"><i className="fa fa-send-o"></i>{tourDetails.level}</span>
-                        <p>{tourDetails.description}</p>
+                        <p>{tourDetails.description.substring(0, 230) + '...'}</p>
                     </div>
                     <div className="adventure-price-link">
-                        <span className="trip-price">{tourDetails.price}</span>
-                        <span className="trip-person">Per Person</span>
-                        <div className="adventure-link">
+                        {/* <span className="trip-price">{tourDetails.price}</span> */}
+                        {/* <span className="trip-person">Per Person</span> */}
+                        <span className="trip-person">{tourDetails.price}</span>
+                        {/* <div className="adventure-link">
                             <a href="#"><i className="fa fa-facebook"></i></a>
                             <a href="#"><i className="fa fa-twitter"></i></a>
                             <a href="#"><i className="fa fa-google-plus"></i></a>
                             <a href="#"><i className="fa fa-linkedin"></i></a>
                             <a href="#"><i className="fa fa-rss"></i></a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
