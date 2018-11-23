@@ -39,9 +39,10 @@ const Tour = (props) => {
                         <p>{tourDetails.description.substring(0, 230) + '...'}</p>
                     </div>
                     <div className="adventure-price-link">
-                        {/* <span className="trip-price">{tourDetails.price}</span> */}
-                        {/* <span className="trip-person">Per Person</span> */}
-                        <span className="trip-person">{tourDetails.price}</span>
+                        <span className="trip-person">From</span>
+                        <span className="trip-person"><span>{tourDetails.price}</span></span>
+                        <span className="trip-person">per person</span>
+                        <span className="trip-price">&nbsp;</span>
                         {/* <div className="adventure-link">
                             <a href="#"><i className="fa fa-facebook"></i></a>
                             <a href="#"><i className="fa fa-twitter"></i></a>

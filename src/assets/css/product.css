@@ -93,7 +93,7 @@
 }
 
 .adventure-price-link {
-    padding: 0 14px 11px
+    padding: 0 14px 11px 10px;
 }
 
 .transparent-overlay>h4 {
@@ -125,6 +125,10 @@
     position: relative;
     text-transform: uppercase;
     top: -4px;
+}
+
+.adventure-price-link .trip-person span {
+    font-weight: 700;
 }
 
 .adventure-link {

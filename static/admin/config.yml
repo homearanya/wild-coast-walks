@@ -99,7 +99,7 @@ collections:
                   name: image
                   widget: object
                   fields: 
-                    - {label: Image, name: image, widget: image}
+                    - {label: Image, name: image, widget: image, hint: "size 1600 x 987"}
                     - {label: Alt, name: alt, widget: string}
             - label: "Slide 2"
               name: slide2
@@ -113,7 +113,7 @@ collections:
                   name: image
                   widget: object
                   fields: 
-                    - {label: Image, name: image, widget: image}
+                    - {label: Image, name: image, widget: image, hint: "size 1600 x 987"}
                     - {label: Alt, name: alt, widget: string}
         - label: "About Area"
           name: aboutarea
