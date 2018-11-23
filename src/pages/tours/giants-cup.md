@@ -9,7 +9,7 @@ description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. 
 duration: 5 nights
-price: From R 6900 per person sharing
+price: R 6900
 imagethumbnail:
   image: /img/27.jpg
 ---

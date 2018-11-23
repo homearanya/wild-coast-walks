@@ -10,7 +10,7 @@ description: >-
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 duration: 7 nights
-price: From R 15 400 per person sharing
+price: R 15 400
 imagethumbnail:
   image: /img/27.jpg
 ---
