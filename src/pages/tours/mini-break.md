@@ -15,7 +15,7 @@ description: >
 
   Price:  From R 5400 per person sharing
 duration: 3 days
-price: From R 5400 per person sharing
+price: R 5400
 imagethumbnail:
   image: /img/27.jpg
 ---
