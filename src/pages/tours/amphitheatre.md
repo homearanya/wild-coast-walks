@@ -12,7 +12,7 @@ description: >-
 duration: 4 nights
 price: R 6900
 imagethumbnail:
-  alt: Drakensberg Slackpack
-  image: /img/27.jpg
+  alt: Tugela Falls
+  image: /img/amphitheatre375x375-min.jpg
 ---
 
