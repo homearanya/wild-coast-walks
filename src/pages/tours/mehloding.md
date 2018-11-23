@@ -12,6 +12,7 @@ description: >-
 duration: 4 nights
 price: R 6900
 imagethumbnail:
-  image: /img/27.jpg
+  alt: Mehloding
+  image: /img/mehloding375x375-min.jpg
 ---
 
