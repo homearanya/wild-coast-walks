@@ -12,6 +12,7 @@ description: >-
 duration: 7 nights
 price: R 15 400
 imagethumbnail:
-  image: /img/27.jpg
+  alt: Battlefields
+  image: /img/battlefields375x375-min.jpg
 ---
 
