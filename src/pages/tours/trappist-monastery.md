@@ -12,6 +12,7 @@ description: >-
 duration: 5 nights
 price: R 6900
 imagethumbnail:
-  image: /img/27.jpg
+  alt: Trappist Monastery
+  image: /img/trappist-monastery375x375-min.jpg
 ---
 
