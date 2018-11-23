@@ -8,7 +8,7 @@ const ContactDetails = (props) => {
     return (
         <StaticQuery
             query={graphql`
-                query FooterQuery {
+                query FooterContactQuery {
                     file (relativePath : {eq: "contact.md"}) {
                         childMarkdownRemark {
                           frontmatter {
