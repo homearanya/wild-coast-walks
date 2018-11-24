@@ -84,14 +84,16 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
             } else if (node.fileAbsolutePath &&
                 node.fileAbsolutePath.includes('/src/config/mainmenu.md')) {
                 mainMenuNodeId = node.id;
-                console.log('mainmenunodeId', mainMenuNodeId)
-                const toursItem = node.frontmatter.toursitem;
-                Object.keys(toursItem)
-                    .filter(field => field.includes('block'))
-                    .forEach(block => {
-                        Object.keys(toursItem[block].tours)
-                            .forEach(tour => tourItemTitles.push(toursItem[block].tours[tour]))
-                    })
+                // console.log('mainmenunodeId', mainMenuNodeId)
+                // console.log('mainmenunode - frontmatter', node.frontmatter)
+                // const toursItem = node.frontmatter.toursitem;
+                // console.log('toursItem', toursItem)
+                // Object.keys(toursItem)
+                //     .filter(field => field.includes('block'))
+                //     .forEach(block => {
+                //         Object.keys(toursItem[block].tours)
+                //             .forEach(tour => tourItemTitles.push(toursItem[block].tours[tour]))
+                //     })
             }
         })
 

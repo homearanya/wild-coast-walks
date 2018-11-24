@@ -297,12 +297,13 @@ collections:
           name: "homeitem"
           widget: object
           fields:
-            - {label: Label, name: label, widget: string}
+            - {label: "Title", name: "title", widget: string}
             - {label: Path, name: path, widget: string}
         - label: "Tours Item"
           name: "toursitem"
           widget: object
           fields:
+            - {label: "Title", name: "title", widget: string}
             - label: "Block 1"
               name: block1
               widget: object
