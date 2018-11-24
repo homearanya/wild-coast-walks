@@ -303,7 +303,6 @@ collections:
           name: "toursitem"
           widget: object
           fields:
-            - {label: Label, name: label, widget: string}
             - label: "Block 1"
               name: block1
               widget: object
@@ -315,26 +314,26 @@ collections:
                   fields: 
                     - {label: Image, name: image, widget: image}
                     - {label: Alt, name: alt, widget: string}
-                - label: "Links"
-                  name: "links"
+                - label: "Tours"
+                  name: "tours"
                   widget: object
                   fields:
-                    - label: "Link 1"
-                      name: "link1"
+                    - label: "Tour 1"
+                      name: "tour1"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
                       valueField: "title"
                       displayFields: ["title"]
-                    - label: "Link 2"
-                      name: "link2"
+                    - label: "Tour 2"
+                      name: "tour2"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
                       valueField: "title"
                       displayFields: ["title"]
-                    - label: "Link 3"
-                      name: "link3"
+                    - label: "Tour 3"
+                      name: "tour3"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
@@ -351,26 +350,26 @@ collections:
                   fields: 
                     - {label: Image, name: image, widget: image}
                     - {label: Alt, name: alt, widget: string}
-                - label: "Links"
-                  name: "links"
+                - label: "Tours"
+                  name: "tours"
                   widget: object
                   fields:
-                    - label: "Link 1"
-                      name: "link1"
+                    - label: "Tour 1"
+                      name: "tour1"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
                       valueField: "title"
                       displayFields: ["title"]
-                    - label: "Link 2"
-                      name: "link2"
+                    - label: "Tour 2"
+                      name: "tour2"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
                       valueField: "title"
                       displayFields: ["title"]
-                    - label: "Link 3"
-                      name: "link3"
+                    - label: "Tour 3"
+                      name: "tour3"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
@@ -387,26 +386,26 @@ collections:
                   fields: 
                     - {label: Image, name: image, widget: image}
                     - {label: Alt, name: alt, widget: string}
-                - label: "Links"
-                  name: "links"
+                - label: "Tours"
+                  name: "tours"
                   widget: object
                   fields:
-                    - label: "Link 1"
-                      name: "link1"
+                    - label: "Tour 1"
+                      name: "tour1"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
                       valueField: "title"
                       displayFields: ["title"]
-                    - label: "Link 2"
-                      name: "link2"
+                    - label: "Tour 2"
+                      name: "tour2"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
                       valueField: "title"
                       displayFields: ["title"]
-                    - label: "Link 3"
-                      name: "link3"
+                    - label: "Tour 3"
+                      name: "tour3"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
@@ -423,26 +422,26 @@ collections:
                   fields: 
                     - {label: Image, name: image, widget: image}
                     - {label: Alt, name: alt, widget: string}
-                - label: "Links"
-                  name: "links"
+                - label: "Tours"
+                  name: "tours"
                   widget: object
                   fields:
-                    - label: "Link 1"
-                      name: "link1"
+                    - label: "Tour 1"
+                      name: "tour1"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
                       valueField: "title"
                       displayFields: ["title"]
-                    - label: "Link 2"
-                      name: "link2"
+                    - label: "Tour 2"
+                      name: "tour2"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
                       valueField: "title"
                       displayFields: ["title"]
-                    - label: "Link 3"
-                      name: "link3"
+                    - label: "Tour 3"
+                      name: "tour3"
                       widget: "relation"
                       collection: "tours"
                       searchFields: ["title"] 
