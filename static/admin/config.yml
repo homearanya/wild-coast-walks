@@ -299,6 +299,12 @@ collections:
           fields:
             - {label: "Title", name: "title", widget: string}
             - {label: Path, name: path, widget: string}
+        - label: "About Item"
+          name: "aboutitem"
+          widget: object
+          fields:
+            - {label: "Title", name: "title", widget: string}
+            - {label: Path, name: path, widget: string}
         - label: "Tours Item"
           name: "toursitem"
           widget: object
@@ -452,14 +458,14 @@ collections:
           name: "tourcalendaritem"
           widget: object
           fields:
-            - {label: Label, name: label, widget: string}
+            - {label: "Title", name: "title", widget: string}
             - {label: Path, name: path, widget: string}
         - label: "Blog Item"
           name: "blogitem"
           widget: object
           fields:
             - {label: Switch, name: switch, widget: boolean}
-            - {label: Label, name: label, widget: string}
+            - {label: "Title", name: "title", widget: string}
             - {label: Path, name: path, widget: string}
     - file: "src/config/footer.md"
       label: "Footer"
