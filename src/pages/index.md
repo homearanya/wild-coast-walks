@@ -1,5 +1,5 @@
 ---
-templateKey: 'home-page'
+templateKey: home-page
 slider:
   - slide:
       heading1: WILD COAST
@@ -57,6 +57,10 @@ toursarea:
 
     lists of topical trips you can take right now.
 blogarea:
+  blur: >-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor
+    turpis, pulvinar varius dui id, convallis iaculis eros. Praesent porta
+    lacinia elementum.
   heading1: Latest
   heading2: Blog Posts
 ---
