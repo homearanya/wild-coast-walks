@@ -149,35 +149,33 @@ collections:
   editor:
     preview: false
 
-- name: "tourmenu"
-  label: "Tour Menu"
-  file: "src/general/tourMenu.md"
-  widget: list
-  fields:
-    - {label: Heading, name: heading, widget: string, default: ""}
-    - label: "Image"
-      name: image
-      widget: object
-      fields: 
-        - {label: Image, name: image, widget: image}
-        - {label: Alt, name: alt, widget: string}
-        - label: "Tours"
-          name: "tours"
-          widget: list
-          fields:
-            - label: "Tour"
-              name: "tour"
-              widget: "relation"
-              collection: "tours"
-              searchFields: ["title"] 
-              valueField: "title"
-              displayFields: ["title"]
-  editor:
-    preview: false
 
 - name: "general"
   label: "General"
   files:
+    - file: "src/general/tourMenu.md"
+      label: "Tour Menu"
+      name: "tourmenu"
+      widget: list
+      fields:
+        - {label: Heading, name: heading, widget: string, default: ""}
+        - label: "Image"
+          name: image
+          widget: object
+          fields: 
+            - {label: Image, name: image, widget: image}
+            - {label: Alt, name: alt, widget: string}
+            - label: "Tours"
+              name: "tours"
+              widget: list
+              fields:
+                - label: "Tour"
+                  name: "tour"
+                  widget: "relation"
+                  collection: "tours"
+                  searchFields: ["title"] 
+                  valueField: "title"
+                  displayFields: ["title"]
     - file: "src/general/contact.md"
       label: "Contact Details"
       name: "contact"
@@ -201,7 +199,7 @@ collections:
             - {label: Alt, name: alt, widget: string}
   editor:
     preview: false
-    
+
 - name: "destinations"
   label: "Destinations"
   folder: "src/general/destinations"
