@@ -1,8 +1,6 @@
 ---
-<<<<<<< HEAD
 templateKey: 'home-page'
 path: /
-=======
 slider:
   - slide:
       heading1: WILD COAST
@@ -62,6 +60,5 @@ toursarea:
 blogarea:
   heading1: Latest
   heading2: Blog Posts
->>>>>>> a06aa1978eada9c1df3cd678cc2280c437134c46
 ---
 
