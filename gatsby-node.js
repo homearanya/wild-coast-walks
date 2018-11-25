@@ -62,8 +62,7 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
     let toursObject = new Object();
     let homeNodeId, mainMenuNodeId;
 
-    // iterate thorugh all markdown nodes to link books to author
-    // and build author index
+    // iterate thorugh all markdown nodes to link tours to home page and tours menu
     getNodes()
         .filter(node => node.internal.type === `MarkdownRemark`)
         .forEach(node => {
