@@ -91,8 +91,10 @@ collections:
               name: slide
               widget: object
               fields: 
-                - {label: Heading, name: heading, widget: "markdown"}
-                - {label: Subheading, name: subheading, widget: "markdown"}
+                - {label: Heading 1, name: heading1, widget: string, default: ""}
+                - {label: Heading 2, name: heading2, widget: string, default: ""}
+                - {label: Subheading 1, name: subheading1, widget: string, default: ""}
+                - {label: Subheading 2, name: subheading2, widget: string, default: ""}
                 - label: Image
                   name: image
                   widget: object
@@ -103,7 +105,8 @@ collections:
           name: aboutarea
           widget: object
           fields: 
-            - {label: Heading, name: heading, widget: "markdown"}
+            - {label: Heading 1, name: heading1, widget: string, default: ""}
+            - {label: Heading 2, name: heading2, widget: string, default: ""}
             - label: "Image"
               name: image
               widget: object
@@ -115,13 +118,15 @@ collections:
           name: toursarea
           widget: object
           fields:
-            - {label: Heading, name: heading, widget: "markdown"}
+            - {label: Heading 1, name: heading1, widget: string, default: ""}
+            - {label: Heading 2, name: heading2, widget: string, default: ""}
             - {label: Introduction, name: introduction, widget: text}
             - label: "Block"
               name: block
               widget: list
               fields:
-                - {label: Heading, name: heading, widget: "markdown"}
+                - {label: Heading 1, name: heading1, widget: string, default: ""}
+                - {label: Heading 2, name: heading2, widget: string, default: ""}
                 - label: Tours
                   name: tours 
                   widget: list
@@ -138,7 +143,8 @@ collections:
           widget: object
           fields: 
             - {label: Switch, name: switch, widget: boolean}
-            - {label: Heading, name: heading, widget: "markdown"}
+            - {label: Heading 1, name: heading1, widget: string, default: ""}
+            - {label: Heading 2, name: heading2, widget: string, default: ""}
     - file: "src/pages/about/index.md"
       label: "About Page"
       name: "about"
@@ -158,7 +164,8 @@ collections:
       name: "tourmenu"
       widget: list
       fields:
-        - {label: Heading, name: heading, widget: string, default: ""}
+        - {label: Heading 1, name: heading1, widget: string, default: ""}
+        - {label: Heading 2, name: heading2, widget: string, default: ""}
         - label: "Image"
           name: image
           widget: object
