@@ -145,6 +145,8 @@ collections:
             - {label: Switch, name: switch, widget: boolean}
             - {label: Heading 1, name: heading1, widget: string, default: ""}
             - {label: Heading 2, name: heading2, widget: string, default: ""}
+            - {label: Blur, name: blur, widget: text}     
+
     - file: "src/pages/about/index.md"
       label: "About Page"
       name: "about"
