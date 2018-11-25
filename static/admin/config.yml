@@ -83,21 +83,21 @@ collections:
       name: "homepage"
       fields:
         - {label: "Template Key", name: templateKey, widget: hidden, default: "home-page"}
+        - label: "Testimonials"
+          name: "testimonials"
+          widget: "list"
+          fields:
+            - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
+            - label: Author
+              name: author
+              widget: object
+              fields:
+                - {label: Name, name: name, widget: string}
+                - {label: Avatar, name: avatar, widget: image}
         - label: Slider
           name: slider
           widget: list
           fields: 
-            - label: "Testimonials"
-              name: "testimonials"
-              widget: "list"
-              fields:
-                - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
-                - label: Author
-                  name: author
-                  widget: object
-                  fields:
-                    - {label: Name, name: name, widget: string}
-                    - {label: Avatar, name: avatar, widget: image}
             - label: Slide
               name: slide
               widget: object
