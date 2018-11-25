@@ -199,21 +199,25 @@ collections:
           fields: 
             - {label: Image, name: image, widget: image, hint: "size 1600 x 553"}
             - {label: Alt, name: alt, widget: string}
-  folders:
-    - name: "destinations"
-      label: "Destinations"
-      folder: "src/general/destinations"
-      create: true
-      slug: "{{slug}}"
-      fields:
-        - {label: "Title", name: "title", widget: "string"}
-
-    - name: "activities"
-      label: "Activities"
-      folder: "src/general/activities"
-      create: true
-      slug: "{{slug}}"
-      fields:
-        - {label: "Title", name: "title", widget: "string"}
   editor:
     preview: false
+    
+- name: "destinations"
+  label: "Destinations"
+  folder: "src/general/destinations"
+  create: true
+  slug: "{{slug}}"
+  fields:
+    - {label: "Title", name: "title", widget: "string"}
+  editor:
+    preview: false    
+
+- name: "activities"
+  label: "Activities"
+  folder: "src/general/activities"
+  create: true
+  slug: "{{slug}}"
+  fields:
+    - {label: "Title", name: "title", widget: "string"}
+  editor:
+    preview: false 
