@@ -44,11 +44,11 @@ const Logo = () => {
 const SubMenuDest = (props) => {
     return (
         <div>
-            <span className="border-hover">
+            {/* <span className="border-hover">
                 <Link to={props.target} className="mega-image" onClick={props.handleLeave}>
                     <img src={props.image} alt={props.imageAlt} />
                 </Link>
-            </span>
+            </span> */}
             <span>
                 <Link
                     to={props.target}
@@ -89,8 +89,8 @@ const SubMenu = (props) => {
                     tour2="Dargle Samango (3 nights)"
                     tour3="Nhlosane Hike (TBA)"
                 />
-            </div>
-            <div className="megamenu-list clearfix">
+                {/* </div>
+            <div className="megamenu-list clearfix"> */}
                 <SubMenuDest
                     target="/tours/"
                     image={wild_coast}

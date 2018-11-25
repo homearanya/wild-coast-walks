@@ -82,7 +82,7 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
                 node.frontmatter.templateKey.includes('tour-page')) {
                 toursObject[node.frontmatter.title] = node.id;
             } else if (node.fileAbsolutePath &&
-                node.fileAbsolutePath.includes('/src/config/mainmenu.md')) {
+                node.fileAbsolutePath.includes('/src/general/tourMenu.md')) {
                 mainMenuNodeId = node.id;
                 // console.log('mainmenunodeId', mainMenuNodeId)
                 // console.log('mainmenunode - frontmatter', node.frontmatter)
