@@ -199,7 +199,7 @@ collections:
           fields: 
             - {label: Image, name: image, widget: image, hint: "size 1600 x 553"}
             - {label: Alt, name: alt, widget: string}
-            
+  folders:
     - name: "destinations"
       label: "Destinations"
       folder: "src/general/destinations"
@@ -207,8 +207,6 @@ collections:
       slug: "{{slug}}"
       fields:
         - {label: "Title", name: "title", widget: "string"}
-      editor:
-        preview: false    
 
     - name: "activities"
       label: "Activities"
@@ -217,7 +215,5 @@ collections:
       slug: "{{slug}}"
       fields:
         - {label: "Title", name: "title", widget: "string"}
-      editor:
-        preview: false 
   editor:
     preview: false
