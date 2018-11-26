@@ -88,10 +88,10 @@ collections:
               name: slide
               widget: object
               fields: 
-                - {label: Heading 1, name: heading1, widget: string, default: " "}
-                - {label: Heading 2, name: heading2, widget: string, default: " "}
-                - {label: Subheading 1, name: subheading1, widget: string, default: " "}
-                - {label: Subheading 2, name: subheading2, widget: string, default: " "}
+                - {label: Heading 1, name: heading1, widget: string}
+                - {label: Heading 2, name: heading2, widget: string}
+                - {label: Subheading 1, name: subheading1, widget: string}
+                - {label: Subheading 2, name: subheading2, widget: string}
                 - label: Image
                   name: image
                   widget: object
@@ -102,8 +102,8 @@ collections:
           name: aboutarea
           widget: object
           fields: 
-            - {label: Heading 1, name: heading1, widget: string, default: " "}
-            - {label: Heading 2, name: heading2, widget: string, default: " "}
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
             - label: "Image"
               name: image
               widget: object
@@ -115,15 +115,15 @@ collections:
           name: toursarea
           widget: object
           fields:
-            - {label: Heading 1, name: heading1, widget: string, default: " "}
-            - {label: Heading 2, name: heading2, widget: string, default: " "}
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
             - {label: Introduction, name: introduction, widget: text}
             - label: "Section"
               name: section
               widget: list
               fields:
-                - {label: Heading 1, name: heading1, widget: string, default: " "}
-                - {label: Heading 2, name: heading2, widget: string, default: " "}
+                - {label: Heading 1, name: heading1, widget: string}
+                - {label: Heading 2, name: heading2, widget: string}
                 - label: Tours
                   name: tours 
                   widget: list
@@ -140,8 +140,8 @@ collections:
           widget: object
           fields: 
             - {label: Switch, name: switch, widget: boolean}
-            - {label: Heading 1, name: heading1, widget: string, default: " "}
-            - {label: Heading 2, name: heading2, widget: string, default: " "}
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
             - {label: Blur, name: blur, widget: text}     
 
     - file: "src/pages/about/index.md"
@@ -166,8 +166,8 @@ collections:
           name: section
           widget: list
           fields:
-            - {label: Heading 1, name: heading1, widget: string, default: " "}
-            - {label: Heading 2, name: heading2, widget: string, default: " "}
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
             - label: "Image"
               name: image
               widget: object
