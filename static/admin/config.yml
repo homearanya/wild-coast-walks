@@ -164,6 +164,12 @@ collections:
       fields:
         - {label: Heading 1, name: heading1, widget: string}
         - {label: Heading 2, name: heading2, widget: string}
+        - label: "Section"
+          name: section
+          widget: list
+          fields:
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
     - file: "src/general/tour-menu.md"
       label: "Tour Menu"
       name: "tourmenu"
