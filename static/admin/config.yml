@@ -158,7 +158,7 @@ collections:
 - name: "general"
   label: "General"
   files:
-    - file: "src/general/tourMenu.md"
+    - file: "src/general/tour-menu.md"
       label: "Tour Menu"
       name: "tourmenu"
       fields:
