@@ -60,7 +60,12 @@ const SubMenuDest = (props) => {
                     {/* <span>{props.section.heading2}</span> */}
                 </a>
                 {props.section.tours.map((tour, index) =>
-                    <Link key={index} to={tour.slug} onClick={props.handleLeave}>{tour.tour}</Link>
+                    <Link
+                        key={index}
+                        to={tour.slug}
+                        onClick={props.handleLeave}>
+                        {tour.tour + " (" + tour.duration + ")"}
+                    </Link>
                 )}
             </span>
         </div>

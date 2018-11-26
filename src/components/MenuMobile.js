@@ -27,7 +27,11 @@ class ToursMenuSection extends Component {
                         <ul style={{ display: 'block' }}>
                             {this.props.tourMenuSections.tours.map((tour, index) => {
                                 return <li key={index}>
-                                    <Link to={tour.slug} onClick={this.toggleMenu}>{tour.tour}</Link>
+                                    <Link
+                                        to={tour.slug}
+                                        onClick={this.toggleMenu}>
+                                        {tour.tour + " (" + tour.duration + ")"}
+                                    </Link>
                                 </li>
                             })}
                         </ul>

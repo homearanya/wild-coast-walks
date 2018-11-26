@@ -20,6 +20,7 @@ export default function Menu() {
                                 }
                                 frontmatter {
                                     title
+                                    duration
                                 }
                             }
                         }
@@ -43,12 +44,13 @@ export default function Menu() {
                 const { section } = data.markdownRemark.frontmatter
                 const { tours } = data.markdownRemark.fields
                 const toursObject = tours.reduce((obj, tour) => {
-                    obj[tour.frontmatter.title.trim().toLowerCase()] = tour.fields.slug
+                    obj[tour.frontmatter.title.trim().toLowerCase()] = tour
                     return obj;
                 }, {});
                 section.forEach(section => {
                     section.tours.forEach((tour, index) => {
-                        section.tours[index]['slug'] = toursObject[tour.tour.trim().toLowerCase()]
+                        section.tours[index]['slug'] = toursObject[tour.tour.trim().toLowerCase()].fields.slug
+                        section.tours[index]['duration'] = toursObject[tour.tour.trim().toLowerCase()].frontmatter.duration
                     });
                 })
                 return <div>
