@@ -1,7 +1,6 @@
 ---
 section:
   - heading1: Wild Coast Slackpack
-    heading2: ''
     image:
       alt: Midlands Walk
       image: /img/tm-450x300-12.jpg

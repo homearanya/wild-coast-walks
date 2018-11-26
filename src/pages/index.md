@@ -2,28 +2,26 @@
 templateKey: home-page
 slider:
   - slide:
-      heading1: WILD COAST
-      heading2: SLACKPACKING
-      image:
-        alt: Wild Coast Slackpacking
-        image: /img/wild-coast-min.jpg
-      subheading1: TAKE A WALK ON THE
-      subheading2: WILD SIDE
-  - slide:
-      heading1: MIDLANDS
-      heading2: WALKS & CYCLE TOURS
-      image:
-        alt: Midlands Cycle Tours
-        image: /img/midlands-cycling-min.jpg
-      subheading1: MEANDERING THROUGH THE
-      subheading2: NATAL MIDLANDS
+      - heading1: WILD COAST
+        heading2: SLACKPACKING
+        image:
+          alt: Wild Coast Slackpacking
+          image: /img/wild-coast-min.jpg
+        subheading1: TAKE A WALK ON THE
+        subheading2: WILD SIDE
+      - heading1: MIDLANDS
+        heading2: WALKS & CYCLE TOURS
+        image:
+          alt: Midlands Cycle Tours
+          image: /img/midlands-cycling-min.jpg
+        subheading1: MEANDERING THROUGH THE
+        subheading2: NATAL MIDLANDS
 aboutarea:
   blur: >-
     We're are one of the oldest and most established luxury slack-packing
     operators in the Transkei, our walks take in some of the most unspoilt and
     picturesque sections of our coastline.
   heading1: WILD COAST WALKS
-  heading2: ' '
   image:
     alt: Wild Coast Slackpacking - Hikers and Porters
     image: /img/hikers-and-porters786x426-min.jpg
@@ -37,25 +35,21 @@ toursarea:
     lists of topical trips you can take right now.
   section:
     - heading1: Wild Coast Slackpack
-      heading2: ' '
       tours:
         - tour: Meander Hike
         - tour: Sunshine Hike
         - tour: 'Mini Break '
     - heading1: Drakensberg Slackpack
-      heading2: ' '
       tours:
         - tour: Giants Cup
         - tour: Amphitheatre
         - tour: Mehloding
     - heading1: Midlands Slackpack
-      heading2: ' '
       tours:
         - tour: Karkloof Falls2Fallls
         - tour: Dargle Samango
         - tour: Nhlosane Hike
     - heading1: Midlands Cycle Tours
-      heading2: ' '
       tours:
         - tour: Battlefields
         - tour: Midlands Meander
