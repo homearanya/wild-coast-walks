@@ -53,75 +53,72 @@ exports.createPages = ({ actions, graphql }) => {
 // we use sourceNodes instead of onCreateNode because
 //  at this time plugins will have created all nodes already
 
-// exports.sourceNodes = ({ actions, getNodes, getNode }) => {
-//     const { createNodeField } = actions
-//     let homeToursTitles = [];
-//     let homeToursIds = [];
-//     let tourItemTitles = [];
-//     let tourItemIds = [];
-//     let toursObject = new Object();
-//     let homeNodeId, mainMenuNodeId;
+exports.sourceNodes = ({ actions, getNodes, getNode }) => {
+    const { createNodeField } = actions
+    let homeTourTitles = [];
+    let homeTourIds = [];
+    let menuTourTitles = [];
+    let menuTourIds = [];
+    let toursObject = new Object();
+    let homeNodeId, tourMenuNodeId;
 
-//     // iterate thorugh all markdown nodes to link tours to home page and tours menu
-//     getNodes()
-//         .filter(node => node.internal.type === `MarkdownRemark`)
-//         .forEach(node => {
-//             console.log('sourceNodes', node.fileAbsolutePath)
-//             if (node.frontmatter.templateKey &&
-//                 node.frontmatter.templateKey.includes('home-page')) {
-//                 homeNodeId = node.id;
-//                 node.frontmatter.toursArea['block'].forEach(block =>
-//                     block.tours.forEach(tour => homeToursTitles.push(tour))
-//                 )
-//             } else if (node.frontmatter.templateKey &&
-//                 node.frontmatter.templateKey.includes('tour-page')) {
-//                 toursObject[node.frontmatter.title] = node.id;
-//             } else if (node.fileAbsolutePath &&
-//                 node.fileAbsolutePath.includes('/src/general/tourMenu.md')) {
-//                 mainMenuNodeId = node.id;
-//                 node.frontmatter.toursArea['block'].forEach(block =>
-//                     block.tours.forEach(tour => homeToursTitles.push(tour))
-//                 )
+    // iterate thorugh all markdown nodes to link tours to home page and tours menu
+    getNodes()
+        .filter(node => node.internal.type === `MarkdownRemark`)
+        .forEach(node => {
+            console.log('sourceNodes', node.fileAbsolutePath)
+            if (node.frontmatter.templateKey &&
+                node.frontmatter.templateKey.includes('home-page')) {
+                homeNodeId = node.id;
+                node.frontmatter.toursArea.section.forEach(section =>
+                    section.tours.forEach(tour => homeTourTitles.push(tour))
+                )
+                console.log('homeNodeId', homeNodeId)
+                console.log('homeTourTitles', homeTourTitles)
+            } else if (node.frontmatter.templateKey &&
+                node.frontmatter.templateKey.includes('tour-page')) {
+                toursObject[node.frontmatter.title] = node.id;
+            } else if (node.fileAbsolutePath &&
+                node.fileAbsolutePath.includes('/src/general/tour-menu.md')) {
+                mainMenuNodeId = node.id;
+                node.frontmatter.section.forEach(section =>
+                    section.tours.forEach(tour => menuTourTitles.push(tour))
+                )
+                console.log('tourmenunodeId', tourMenuNodeId)
+                console.log('menuTourTitles', menuTourTitles)
+            }
+        })
 
+    homeTourTitles.forEach(tour => {
+        if (toursObject[tour]) {
+            homeTourIds.push(toursObject[tour])
+        }
+    })
+    console.log('homeTourIds', homeTourIds)
 
-//                 console.log('mainmenunodeId', mainMenuNodeId)
-//                 console.log('mainmenunode - frontmatter', node.frontmatter)
-//                 const toursItem = node.frontmatter.toursitem;
-//                 console.log('toursItem', toursItem)
-//                 Object.keys(toursItem)
-//                     .filter(field => field.includes('block'))
-//                     .forEach(block => {
-//                         Object.keys(toursItem[block].tours)
-//                             .forEach(tour => tourItemTitles.push(toursItem[block].tours[tour]))
-//                     })
-//             }
-//         })
+    if (homeTourIds.length > 0) {
+        createNodeField({
+            node: getNode(homeNodeId),
+            name: `tours`,
+            value: homeTourIds,
+        })
+    }
 
-//     homeToursTitles.forEach(tour => {
-//         if (toursObject[tour]) {
-//             homeToursIds.push(toursObject[tour])
-//         }
-//     })
+    menuTourTitles.forEach(tour => {
+        if (toursObject[tour]) {
+            menuTourIds.push(toursObject[tour])
+        }
+    })
+    console.log('menuTourIds', menuTourIds)
 
-//     createNodeField({
-//         node: getNode(homeNodeId),
-//         name: `tours`,
-//         value: homeToursIds,
-//     })
-
-//     tourItemTitles.forEach(tour => {
-//         if (toursObject[tour]) {
-//             tourItemIds.push(toursObject[tour])
-//         }
-//     })
-//     console.log('mainMenuNodeId', mainMenuNodeId)
-//     console.log('tourItemIds', tourItemIds)
-//     createNodeField({
-//         node: getNode(mainMenuNodeId),
-//         name: `tours`,
-//         value: tourItemIds,
-//     })
-// }
+    if (menuTourIds.length > 0) {
+        createNodeField({
+            node: getNode(tourMenuNodeId),
+            name: `tours`,
+            value: menuTourIds,
+        })
+    }
+}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions
