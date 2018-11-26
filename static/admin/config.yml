@@ -68,7 +68,7 @@ collections:
       widget: object
       fields: 
         - {label: Image, name: image, widget: image, hint: "size 375 x 375"}
-        - {label: Alt, name: alt, widget: string}    
+        - {label: Alt, name: alt, widget: string,  required: false}    
   editor:
     preview: false
            
@@ -97,7 +97,7 @@ collections:
                   widget: object
                   fields: 
                     - {label: Image, name: image, widget: image, hint: "size 1600 x 987"}
-                    - {label: Alt, name: alt, widget: string}
+                    - {label: Alt, name: alt, widget: string,  required: false}
         - label: "About Area"
           name: aboutarea
           widget: object
@@ -109,7 +109,7 @@ collections:
               widget: object
               fields: 
                 - {label: Image, name: image, widget: image, hint: "size 786 x 426"}
-                - {label: Alt, name: alt, widget: string}       
+                - {label: Alt, name: alt, widget: string,  required: false}       
             - {label: Blur, name: blur, widget: text}     
         - label: "Tours Area"
           name: toursarea
@@ -170,7 +170,7 @@ collections:
           widget: object
           fields: 
             - {label: Image, name: image, widget: image}
-            - {label: Alt, name: alt, widget: string}
+            - {label: Alt, name: alt, widget: string,  required: false}
             - label: "Tours"
               name: "tours"
               widget: list
@@ -202,7 +202,7 @@ collections:
           widget: object
           fields: 
             - {label: Image, name: image, widget: image, hint: "size 1600 x 553"}
-            - {label: Alt, name: alt, widget: string}
+            - {label: Alt, name: alt, widget: string,  required: false}
   editor:
     preview: false
 
