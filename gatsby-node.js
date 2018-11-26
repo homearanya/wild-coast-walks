@@ -12,7 +12,6 @@ let homeNodeId, tourMenuNodeId;
 
 exports.createPages = ({ actions, graphql, getNode }) => {
     const { createPage, createNodeField } = actions
-    console.log('create pages', getNode)
     return graphql(`
     {
       allMarkdownRemark(limit: 1000) {
@@ -57,12 +56,6 @@ exports.createPages = ({ actions, graphql, getNode }) => {
             })
 
             // create node fields for homepage/tours & tourmenu/tours relations
-            console.log('homeNodeId', homeNodeId)
-            console.log('tourMenuNodId', tourMenuNodeId)
-            console.log('homeTourTitles', homeTourTitles)
-            console.log('menuTourTitles', menuTourTitles)
-            console.log('toursObject', toursObject)
-
             homeTourTitles.forEach(tour => {
                 if (toursObject[tour]) {
                     homeTourIds.push(toursObject[tour])
@@ -121,7 +114,6 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
                 toursObject[node.frontmatter.title] = node.id;
             } else if (node.fileAbsolutePath &&
                 node.fileAbsolutePath.includes('/src/general/tour-menu.md')) {
-                console.log('sourceNodes  - tour-menu.md', node.fileAbsolutePath)
                 tourMenuNodeId = node.id;
                 node.frontmatter.section.forEach(section =>
                     section.tours.forEach(tour => menuTourTitles.push(tour.tour))
@@ -160,7 +152,6 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-    console.log('onCreateNode', node.fileAbsolutePath)
     const { createNodeField } = actions
     if (node.internal.type === `MarkdownRemark`) {
         const value = createFilePath({ node, getNode })
@@ -182,7 +173,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             toursObject[node.frontmatter.title] = node.id;
         } else if (node.fileAbsolutePath &&
             node.fileAbsolutePath.includes('/src/general/tour-menu.md')) {
-            console.log('sourceNodes  - tour-menu.md', node.fileAbsolutePath)
             tourMenuNodeId = node.id;
             node.frontmatter.section.forEach(section =>
                 section.tours.forEach(tour => menuTourTitles.push(tour.tour))
