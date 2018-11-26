@@ -23,32 +23,11 @@ aboutarea:
     operators in the Transkei, our walks take in some of the most unspoilt and
     picturesque sections of our coastline.
   heading1: WILD COAST WALKS
-  heading2: ''
+  heading2: ' '
   image:
     alt: Wild Coast Slackpacking - Hikers and Porters
     image: /img/hikers-and-porters786x426-min.jpg
 toursarea:
-  section:
-    - heading1: Wild Coast Slackpack
-      tours:
-        - tour: Meander Hike
-        - tour: Sunshine Hike
-        - tour: 'Mini Break '
-    - heading1: Drakensberg Slackpack
-      tours:
-        - tour: Giants Cup
-        - tour: Amphitheatre
-        - tour: Mehloding
-    - heading1: Midlands Slackpack
-      tours:
-        - tour: Karkloof Falls2Fallls
-        - tour: Dargle Samango
-        - tour: Nhlosane Hike
-    - heading1: Midlands Cycle Tours
-      tours:
-        - tour: Battlefields
-        - tour: Midlands Meander
-        - tour: Trappist Monastery
   heading1: Best
   heading2: Selling Trips
   introduction: >-
@@ -56,6 +35,31 @@ toursarea:
     Check out our handpicked
 
     lists of topical trips you can take right now.
+  section:
+    - heading1: Wild Coast Slackpack
+      heading2: ' '
+      tours:
+        - tour: Meander Hike
+        - tour: Sunshine Hike
+        - tour: 'Mini Break '
+    - heading1: Drakensberg Slackpack
+      heading2: ' '
+      tours:
+        - tour: Giants Cup
+        - tour: Amphitheatre
+        - tour: Mehloding
+    - heading1: Midlands Slackpack
+      heading2: ' '
+      tours:
+        - tour: Karkloof Falls2Fallls
+        - tour: Dargle Samango
+        - tour: Nhlosane Hike
+    - heading1: Midlands Cycle Tours
+      heading2: ' '
+      tours:
+        - tour: Battlefields
+        - tour: Midlands Meander
+        - tour: Trappist Monastery
 blogarea:
   blur: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor
