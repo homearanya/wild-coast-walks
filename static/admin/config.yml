@@ -118,8 +118,8 @@ collections:
             - {label: Heading 1, name: heading1, widget: string, required: false}
             - {label: Heading 2, name: heading2, widget: string, required: false}
             - {label: Introduction, name: introduction, widget: text}
-            - label: "Block"
-              name: block
+            - label: "Section"
+              name: section
               widget: list
               fields:
                 - {label: Heading 1, name: heading1, widget: string, required: false}
@@ -161,27 +161,30 @@ collections:
     - file: "src/general/tourMenu.md"
       label: "Tour Menu"
       name: "tourmenu"
-      widget: list
       fields:
-        - {label: Heading 1, name: heading1, widget: string, required: false}
-        - {label: Heading 2, name: heading2, widget: string, required: false}
-        - label: "Image"
-          name: image
-          widget: object
-          fields: 
-            - {label: Image, name: image, widget: image}
-            - {label: Alt, name: alt, widget: string,  required: false}
-        - label: "Tours"
-          name: "tours"
+        - label: "Section"
+          name: section
           widget: list
           fields:
-            - label: "Tour"
-              name: "tour"
-              widget: "relation"
-              collection: "tours"
-              searchFields: ["title"] 
-              valueField: "title"
-              displayFields: ["title"]
+            - {label: Heading 1, name: heading1, widget: string, required: false}
+            - {label: Heading 2, name: heading2, widget: string, required: false}
+            - label: "Image"
+              name: image
+              widget: object
+              fields: 
+                - {label: Image, name: image, widget: image}
+                - {label: Alt, name: alt, widget: string,  required: false}
+            - label: "Tours"
+              name: "tours"
+              widget: list
+              fields:
+                - label: "Tour"
+                  name: "tour"
+                  widget: "relation"
+                  collection: "tours"
+                  searchFields: ["title"] 
+                  valueField: "title"
+                  displayFields: ["title"]
     - file: "src/general/contact.md"
       label: "Contact Details"
       name: "contact"

@@ -28,7 +28,7 @@ aboutarea:
     alt: Wild Coast Slackpacking - Hikers and Porters
     image: /img/hikers-and-porters786x426-min.jpg
 toursarea:
-  block:
+  section:
     - heading1: Wild Coast Slackpack
       tours:
         - tour: Meander Hike
