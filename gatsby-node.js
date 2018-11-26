@@ -2,9 +2,17 @@ const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.createPages = ({ actions, graphql }) => {
-    const { createPage } = actions
+// variables to collect information for homepage/tours & tourmenu/tours relation
+let homeTourTitles = [];
+let homeTourIds = [];
+let menuTourTitles = [];
+let menuTourIds = [];
+let toursObject = new Object();
+let homeNodeId, tourMenuNodeId;
 
+exports.createPages = ({ actions, graphql, getNode }) => {
+    const { createPage, createNodeField } = actions
+    console.log('create pages', getNode)
     return graphql(`
     {
       allMarkdownRemark(limit: 1000) {
@@ -27,7 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
                 result.errors.forEach(e => console.error(e.toString()))
                 return Promise.reject(result.errors)
             }
-
+            // create pages
             const posts = result.data.allMarkdownRemark.edges
 
             posts.forEach(edge => {
@@ -47,6 +55,42 @@ exports.createPages = ({ actions, graphql }) => {
                     })
                 }
             })
+
+            // create node fields for homepage/tours & tourmenu/tours relations
+            console.log('homeNodeId', homeNodeId)
+            console.log('tourMenuNodId', tourMenuNodeId)
+            console.log('homeTourTitles', homeTourTitles)
+            console.log('menuTourTitles', menuTourTitles)
+            console.log('toursObject', toursObject)
+
+            homeTourTitles.forEach(tour => {
+                if (toursObject[tour]) {
+                    homeTourIds.push(toursObject[tour])
+                }
+            })
+
+            if (homeTourIds.length > 0) {
+                createNodeField({
+                    node: getNode(homeNodeId),
+                    name: `tours`,
+                    value: homeTourIds,
+                })
+            }
+
+            menuTourTitles.forEach(tour => {
+                if (toursObject[tour]) {
+                    menuTourIds.push(toursObject[tour])
+                }
+            })
+
+            if (menuTourIds.length > 0) {
+                createNodeField({
+                    node: getNode(tourMenuNodeId),
+                    name: `tours`,
+                    value: menuTourIds,
+                })
+            }
+
         })
 }
 
@@ -86,7 +130,7 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
         })
 
 
-    homeTourTitles.forEach((tour, index) => {
+    homeTourTitles.forEach(tour => {
         if (toursObject[tour]) {
             homeTourIds.push(toursObject[tour])
         }
@@ -116,6 +160,7 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
+    console.log('onCreateNode', node.fileAbsolutePath)
     const { createNodeField } = actions
     if (node.internal.type === `MarkdownRemark`) {
         const value = createFilePath({ node, getNode })
@@ -124,5 +169,24 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             node,
             value,
         })
+
+        // collect nodes for homepage/tours & tourmenu/tours relation
+        if (node.frontmatter.templateKey &&
+            node.frontmatter.templateKey.includes('home-page')) {
+            homeNodeId = node.id;
+            node.frontmatter.toursarea.section.forEach(section =>
+                section.tours.forEach(tour => homeTourTitles.push(tour.tour))
+            )
+        } else if (node.frontmatter.templateKey &&
+            node.frontmatter.templateKey.includes('tour-page')) {
+            toursObject[node.frontmatter.title] = node.id;
+        } else if (node.fileAbsolutePath &&
+            node.fileAbsolutePath.includes('/src/general/tour-menu.md')) {
+            console.log('sourceNodes  - tour-menu.md', node.fileAbsolutePath)
+            tourMenuNodeId = node.id;
+            node.frontmatter.section.forEach(section =>
+                section.tours.forEach(tour => menuTourTitles.push(tour.tour))
+            )
+        }
     }
 }
