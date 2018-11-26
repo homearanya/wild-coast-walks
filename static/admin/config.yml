@@ -32,10 +32,8 @@ collections:
   fields:
     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-page"}
     - {label: "Title", name: "title", widget: "string"}
-    - {label: "Publish Date", name: "date", widget: "datetime"}
     - {label: "Description", name: "description", widget: "text"}
     - {label: "Body", name: "body", widget: "markdown"}
-    - {label: "Tags", name: "tags", widget: "list"}
   editor:
     preview: false
 
@@ -62,7 +60,6 @@ collections:
       valueField: "title"
       displayFields: ["title"]
     - {label: "Title", name: "title", widget: "string"}
-    - {label: "Publish Date", name: "date", widget: "datetime"}
     - {label: "Description", name: "description", widget: "text"}
     - {label: "Duration", name: "duration", widget: "string"}
     - {label: "Price", name: "price", widget: "string"}
@@ -91,10 +88,10 @@ collections:
               name: slide
               widget: object
               fields: 
-                - {label: Heading 1, name: heading1, widget: string, default: ""}
-                - {label: Heading 2, name: heading2, widget: string, default: ""}
-                - {label: Subheading 1, name: subheading1, widget: string, default: ""}
-                - {label: Subheading 2, name: subheading2, widget: string, default: ""}
+                - {label: Heading 1, name: heading1, widget: string, required: false}
+                - {label: Heading 2, name: heading2, widget: string, required: false}
+                - {label: Subheading 1, name: subheading1, widget: string, required: false}
+                - {label: Subheading 2, name: subheading2, widget: string, required: false}
                 - label: Image
                   name: image
                   widget: object
@@ -105,8 +102,8 @@ collections:
           name: aboutarea
           widget: object
           fields: 
-            - {label: Heading 1, name: heading1, widget: string, default: ""}
-            - {label: Heading 2, name: heading2, widget: string, default: ""}
+            - {label: Heading 1, name: heading1, widget: string, required: false}
+            - {label: Heading 2, name: heading2, widget: string, required: false}
             - label: "Image"
               name: image
               widget: object
@@ -118,15 +115,15 @@ collections:
           name: toursarea
           widget: object
           fields:
-            - {label: Heading 1, name: heading1, widget: string, default: ""}
-            - {label: Heading 2, name: heading2, widget: string, default: ""}
+            - {label: Heading 1, name: heading1, widget: string, required: false}
+            - {label: Heading 2, name: heading2, widget: string, required: false}
             - {label: Introduction, name: introduction, widget: text}
             - label: "Block"
               name: block
               widget: list
               fields:
-                - {label: Heading 1, name: heading1, widget: string, default: ""}
-                - {label: Heading 2, name: heading2, widget: string, default: ""}
+                - {label: Heading 1, name: heading1, widget: string, required: false}
+                - {label: Heading 2, name: heading2, widget: string, required: false}
                 - label: Tours
                   name: tours 
                   widget: list
@@ -143,8 +140,8 @@ collections:
           widget: object
           fields: 
             - {label: Switch, name: switch, widget: boolean}
-            - {label: Heading 1, name: heading1, widget: string, default: ""}
-            - {label: Heading 2, name: heading2, widget: string, default: ""}
+            - {label: Heading 1, name: heading1, widget: string, required: false}
+            - {label: Heading 2, name: heading2, widget: string, required: false}
             - {label: Blur, name: blur, widget: text}     
 
     - file: "src/pages/about/index.md"
@@ -166,8 +163,8 @@ collections:
       name: "tourmenu"
       widget: list
       fields:
-        - {label: Heading 1, name: heading1, widget: string, default: ""}
-        - {label: Heading 2, name: heading2, widget: string, default: ""}
+        - {label: Heading 1, name: heading1, widget: string, required: false}
+        - {label: Heading 2, name: heading2, widget: string, required: false}
         - label: "Image"
           name: image
           widget: object
