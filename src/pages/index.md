@@ -23,6 +23,7 @@ aboutarea:
     operators in the Transkei, our walks take in some of the most unspoilt and
     picturesque sections of our coastline.
   heading1: WILD COAST WALKS
+  heading2: ''
   image:
     alt: Wild Coast Slackpacking - Hikers and Porters
     image: /img/hikers-and-porters786x426-min.jpg
@@ -36,6 +37,7 @@ toursarea:
     lists of topical trips you can take right now.
   section:
     - heading1: Wild Coast Slackpack
+      heading2: ''
       tours:
         - tour: Meander Hike
         - tour: Sunshine Hike
