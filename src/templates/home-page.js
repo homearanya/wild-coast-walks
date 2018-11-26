@@ -61,21 +61,23 @@ export const homePageQuery = graphql`
   query HomePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       fields {
-        slug
         tours {
-              frontmatter {
-                title
-                destination
-                activity
-                duration
-                price
-                description
-                imagethumbnail {
-                  image
-                  alt
-                }
-              }
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            destination
+            activity
+            duration
+            price
+            description
+            imagethumbnail {
+              image
+              alt
             }
+          }
+        }
       }
       frontmatter {
         slider {

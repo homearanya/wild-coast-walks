@@ -20,6 +20,7 @@ const Tour = (props) => {
     if (!props.tourDetails) {
         return null
     }
+    const tourSlug = props.tourDetails.fields.slug;
     const tourDetails = props.tourDetails.frontmatter;
     let imageSrc = '';
     let imageAlt = '';
@@ -30,10 +31,10 @@ const Tour = (props) => {
     return (
         <div className="col-md-4 col-sm-6 col-xs-12">
             <div className="single-adventure">
-                <Link to="/tour/"><img src={imageSrc} alt={imageAlt} /></Link>
+                <Link to={tourSlug}><img src={imageSrc} alt={imageAlt} /></Link>
                 <div className="adventure-text effect-bottom">
                     <div className="transparent-overlay">
-                        <h4><Link to="/tour/">{tourDetails.title} | <span>{tourDetails.destination}</span></Link></h4>
+                        <h4><Link to={tourSlug}>{tourDetails.title} | <span>{tourDetails.destination}</span></Link></h4>
                         <span className="trip-time"><i className="fa fa-clock-o"></i>{tourDetails.duration}</span>
                         <span className="trip-level"><i className="fa fa-send-o"></i>{tourDetails.level}</span>
                         <p>{tourDetails.description.substring(0, 230) + '...'}</p>

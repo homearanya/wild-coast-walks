@@ -42,7 +42,6 @@ export default function Menu() {
             render={data => {
                 const { section } = data.markdownRemark.frontmatter
                 const { tours } = data.markdownRemark.fields
-                console.log('tours', tours)
                 const toursObject = tours.reduce((obj, tour) => {
                     obj[tour.frontmatter.title.trim().toLowerCase()] = tour.fields.slug
                     return obj;
