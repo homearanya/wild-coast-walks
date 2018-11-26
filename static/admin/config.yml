@@ -158,6 +158,11 @@ collections:
 - name: "general"
   label: "General"
   files:
+    - file: "src/general/test-defaults.md"
+      label: "Test Defaults"
+      name: "testdefaults"
+      fields:
+        - {label: Heading 1, name: heading1, widget: string}
     - file: "src/general/tour-menu.md"
       label: "Tour Menu"
       name: "tourmenu"
