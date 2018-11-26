@@ -73,9 +73,16 @@ const SubMenu = (props) => {
             {props.tourMenuSections.map((section, index) => {
                 if (index % 2 === 0) {
                     return <div key={index} className="megamenu-list clearfix">
-                        <SubMenuDest section={section} />
+                        <SubMenuDest
+                            section={section}
+                            handleLeave={props.handleLeave}
+                        />
                         {props.tourMenuSections[index + 1] ?
-                            <SubMenuDest section={props.tourMenuSections[index + 1]} /> : null}
+                            <SubMenuDest
+                                section={props.tourMenuSections[index + 1]}
+                                handleLeave={props.handleLeave}
+                            />
+                            : null}
                     </div>
                 } else {
                     return null
