@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import Sticky from 'react-sticky-el';
 import { Link } from "gatsby"
 import { CSSTransitionGroup } from 'react-transition-group'
+
 import '../assets/css/menuDesktop.css'
 
-import wild_coast from '../assets/img/menu/tm-450x300-12.jpg'
-import midlands from '../assets/img/menu/tm-450x300-12.jpg'
 import logo_white from '../assets/img/logo/logo.png'
 import logo_dark from '../assets/img/logo/logo-dark.png'
 
@@ -18,7 +17,7 @@ const MenuBar = (props) => {
                         <div className="logo-menu-bg">
                             <div className="row">
                                 <Logo />
-                                <MainMenu />
+                                <MainMenu tourMenuSections={props.tourMenuSections} />
                             </div>
                         </div>
                     </div>
@@ -42,76 +41,49 @@ const Logo = () => {
 }
 
 const SubMenuDest = (props) => {
+    let imageSrc = '';
+    let imageAlt = '';
+    if (props.section.image) {
+        imageSrc = props.section.image.image;
+        imageAlt = props.section.image.alt;
+    }
     return (
         <div>
-            {/* <span className="border-hover">
-                <Link to={props.target} className="mega-image" onClick={props.handleLeave}>
-                    <img src={props.image} alt={props.imageAlt} />
-                </Link>
-            </span> */}
+            <span className="border-hover">
+                <a className="mega-image" >
+                    <img src={imageSrc} alt={imageAlt} />
+                </a>
+            </span>
             <span>
-                <Link
-                    to={props.target}
-                    className="mega-title"
-                    onClick={props.handleLeave}>
-                    {props.title}
-                </Link>
-                <Link to="/tour/" onClick={props.handleLeave}>{props.tour1}</Link>
-                <Link to="/tour/" onClick={props.handleLeave}>{props.tour2}</Link>
-                <Link to="/tour/" onClick={props.handleLeave}>{props.tour3}</Link>
+                <a className="mega-title">
+                    {props.section.heading1}
+                    {/* <span>{props.section.heading2}</span> */}
+                </a>
+                {props.section.tours.map((tour, index) =>
+                    <Link key={index} to={tour.slug} onClick={props.handleLeave}>{tour.tour}</Link>
+                )}
             </span>
         </div>
     )
 }
 
 const SubMenu = (props) => {
+    console.log('SubMenuDest - tour Menu Sections', props.tourMenuSections)
 
     return (
         <div className="megamenu">
-            <div className="megamenu-list clearfix">
-                <SubMenuDest
-                    target="/tours/"
-                    image={wild_coast}
-                    imageAlt="Wild Cast Slackpack"
-                    title="Wild Coast Slackpack"
-                    handleLeave={props.handleLeave}
-                    tour1="Meander Hike (5 nights)"
-                    tour2="Sunshine Hike (5 nights)"
-                    tour3="Mini Break Hike (3 nights)"
-                />
-                <SubMenuDest
-                    target="/tours/"
-                    image={midlands}
-                    imageAlt="Slackpacking in the Midlands "
-                    title="Midlands Slackpack"
-                    handleLeave={props.handleLeave}
-                    tour1="Karkloof Falls2Falls (3 nights)"
-                    tour2="Dargle Samango (3 nights)"
-                    tour3="Nhlosane Hike (TBA)"
-                />
-                {/* </div>
-            <div className="megamenu-list clearfix"> */}
-                <SubMenuDest
-                    target="/tours/"
-                    image={wild_coast}
-                    imageAlt="Drakensberg Slackpack"
-                    title="Drakensberg Slackpack"
-                    handleLeave={props.handleLeave}
-                    tour1="Giants Cup (4 nights)"
-                    tour2="Amphitheatre (4 nights)"
-                    tour3="Mehloding (4 nights)"
-                />
-                <SubMenuDest
-                    target="/tours/"
-                    image={midlands}
-                    imageAlt="Cycling in the Midlands"
-                    title="Midlands Cycle Tours"
-                    handleLeave={props.handleLeave}
-                    tour1="Battlefields (7 nights)"
-                    tour2="Midlands Meander (3 nights)"
-                    tour3="Trappist Monastery (5 nights)"
-                />
-            </div>
+            {props.tourMenuSections.map((section, index) => {
+                if (index % 2 === 0) {
+                    console.log('index', index)
+                    return <div key={index} className="megamenu-list clearfix">
+                        <SubMenuDest section={section} />
+                        {props.tourMenuSections[index + 1] ?
+                            <SubMenuDest section={props.tourMenuSections[index + 1]} /> : null}
+                    </div>
+                } else {
+                    return null
+                }
+            })}
         </div>
     )
 }
@@ -149,7 +121,7 @@ class MainMenu extends Component {
                                     transitionEnterTimeout={300}
                                     transitionLeaveTimeout={300}
                                 >
-                                    {this.state.showSubMenu && <SubMenu handleLeave={this.handleLeave} />}
+                                    {this.state.showSubMenu && <SubMenu tourMenuSections={this.props.tourMenuSections} handleLeave={this.handleLeave} />}
                                 </CSSTransitionGroup>
                             </li>
                             <li><Link to="/tour-calendar/" className="menu-item" activeClassName="menu-item-active">Tour Calendar</Link></li>
@@ -185,7 +157,7 @@ export default class MenuDesktop extends Component {
         }
         return (
             <Sticky onFixedToggle={this.onFixedToggle}>
-                <MenuBar menuClass={menuClass} />
+                <MenuBar menuClass={menuClass} tourMenuSections={this.props.sections} />
             </Sticky>
         )
     }

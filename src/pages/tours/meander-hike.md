@@ -4,6 +4,7 @@ featured: true
 destination: Wild Coast
 activity: Slackpack
 title: Meander hike
+date: 2018-11-21T12:24:12.501Z
 description: >
   Easy walking along wide sandy beaches running south from Kob Inn and
   completing at Morgan Bay after 4 days of hiking. Dinner, bed and breakfast
@@ -15,7 +16,7 @@ description: >
 duration: 5 days
 price: R 6900
 imagethumbnail:
-  alt: 'Meander Hike '
+  alt: Meander Hike
   image: /img/meander-hike375x375-min.jpg
 ---
 

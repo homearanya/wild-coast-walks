@@ -70,19 +70,19 @@ export default class SliderArea extends Component {
     return (
       <div className="slider-area">
         <div className="preview-2">
-          <Slider {...settings}>
-            <MyContext.Consumer>
-              {({ set }) => {
-                this.set = set;
-                let reference;
-                slides.forEach((slide, index) => {
+          <MyContext.Consumer>
+            {({ set }) => {
+              this.set = set;
+              let reference;
+              return <Slider {...settings}>
+                {slides.map((slide, index) => {
                   if (index === 0) {
                     reference = this.image
                   } else {
                     reference = null
                   }
-
                   return <Slide
+                    key={index}
                     imageSrc={slide.image.image}
                     imageAlt={slide.image.alt}
                     imageTitle={slide.heading1 + ' ' + slide.heading2}
@@ -92,10 +92,10 @@ export default class SliderArea extends Component {
                     subheading1={slide.subheading1}
                     subheading2={slide.subheading2}
                   />
-                });
-              }}
-            </MyContext.Consumer>
-          </Slider>
+                })}
+              </Slider>
+            }}
+          </MyContext.Consumer>
         </div>
       </div>
     )

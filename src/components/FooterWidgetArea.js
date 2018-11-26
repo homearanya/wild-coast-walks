@@ -49,7 +49,6 @@ export default function FooterWidgetArea() {
             }
         `}
             render={data => {
-                console.log('footer background image', data.file.childMarkdownRemark.frontmatter.image.image)
                 return (
                     <div className="footer-widget-area"
                         style={{

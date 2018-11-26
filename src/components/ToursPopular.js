@@ -8,9 +8,10 @@ const Section = (props) => {
     return (
         <div className="row">
             <div className="section-title text-center">
-                <h2>{props.sectionDetails.heading1}<span>{props.sectionDetails.heading1}</span></h2>
+                <h2>{props.sectionDetails.heading1}<span>{props.sectionDetails.heading2}</span></h2>
             </div>
-            {tours.forEach(tour => <Tour tourDetails={props.toursObject[tour.trim()]} />)}
+            {tours.map((tour, index) =>
+                <Tour key={index} tourDetails={props.toursObject[tour.tour.trim()]} />)}
         </div>
     )
 }
@@ -70,8 +71,8 @@ export default function Tours(props) {
                         </div>
                     </div>
                 </div>
-                {props.toursArea.section.array.forEach(section =>
-                    <Section sectionDetails={section} toursObject={props.toursObject}></Section>
+                {props.toursArea.section.map((section, index) =>
+                    <Section key={index} sectionDetails={section} toursObject={props.toursObject}></Section>
                 )}
             </div>
         </div>
