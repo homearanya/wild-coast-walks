@@ -171,17 +171,17 @@ collections:
           fields: 
             - {label: Image, name: image, widget: image}
             - {label: Alt, name: alt, widget: string,  required: false}
-            - label: "Tours"
-              name: "tours"
-              widget: list
-              fields:
-                - label: "Tour"
-                  name: "tour"
-                  widget: "relation"
-                  collection: "tours"
-                  searchFields: ["title"] 
-                  valueField: "title"
-                  displayFields: ["title"]
+        - label: "Tours"
+          name: "tours"
+          widget: list
+          fields:
+            - label: "Tour"
+              name: "tour"
+              widget: "relation"
+              collection: "tours"
+              searchFields: ["title"] 
+              valueField: "title"
+              displayFields: ["title"]
     - file: "src/general/contact.md"
       label: "Contact Details"
       name: "contact"
