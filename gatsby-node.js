@@ -83,72 +83,7 @@ exports.createPages = ({ actions, graphql, getNode }) => {
                     value: menuTourIds,
                 })
             }
-
         })
-}
-
-// we use sourceNodes instead of onCreateNode because
-//  at this time plugins will have created all nodes already
-
-exports.sourceNodes = ({ actions, getNodes, getNode }) => {
-    const { createNodeField } = actions
-    let homeTourTitles = [];
-    let homeTourIds = [];
-    let menuTourTitles = [];
-    let menuTourIds = [];
-    let toursObject = new Object();
-    let homeNodeId, tourMenuNodeId;
-
-    // iterate thorugh all markdown nodes to link tours to home page and tours menu
-    getNodes()
-        .filter(node => node.internal.type === `MarkdownRemark`)
-        .forEach(node => {
-            if (node.frontmatter.templateKey &&
-                node.frontmatter.templateKey.includes('home-page')) {
-                homeNodeId = node.id;
-                node.frontmatter.toursarea.section.forEach(section =>
-                    section.tours.forEach(tour => homeTourTitles.push(tour.tour))
-                )
-            } else if (node.frontmatter.templateKey &&
-                node.frontmatter.templateKey.includes('tour-page')) {
-                toursObject[node.frontmatter.title] = node.id;
-            } else if (node.fileAbsolutePath &&
-                node.fileAbsolutePath.includes('/src/general/tour-menu.md')) {
-                tourMenuNodeId = node.id;
-                node.frontmatter.section.forEach(section =>
-                    section.tours.forEach(tour => menuTourTitles.push(tour.tour))
-                )
-            }
-        })
-
-
-    homeTourTitles.forEach(tour => {
-        if (toursObject[tour]) {
-            homeTourIds.push(toursObject[tour])
-        }
-    })
-
-    if (homeTourIds.length > 0) {
-        createNodeField({
-            node: getNode(homeNodeId),
-            name: `tours`,
-            value: homeTourIds,
-        })
-    }
-
-    menuTourTitles.forEach(tour => {
-        if (toursObject[tour]) {
-            menuTourIds.push(toursObject[tour])
-        }
-    })
-
-    if (menuTourIds.length > 0) {
-        createNodeField({
-            node: getNode(tourMenuNodeId),
-            name: `tours`,
-            value: menuTourIds,
-        })
-    }
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -166,16 +101,16 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             node.frontmatter.templateKey.includes('home-page')) {
             homeNodeId = node.id;
             node.frontmatter.toursarea.section.forEach(section =>
-                section.tours.forEach(tour => homeTourTitles.push(tour.tour))
+                section.tours.forEach(tour => homeTourTitles.push(tour.tour.trim().toLowerCase()))
             )
         } else if (node.frontmatter.templateKey &&
             node.frontmatter.templateKey.includes('tour-page')) {
-            toursObject[node.frontmatter.title] = node.id;
+            toursObject[node.frontmatter.title.trim().toLowerCase()] = node.id;
         } else if (node.fileAbsolutePath &&
             node.fileAbsolutePath.includes('/src/general/tour-menu.md')) {
             tourMenuNodeId = node.id;
             node.frontmatter.section.forEach(section =>
-                section.tours.forEach(tour => menuTourTitles.push(tour.tour))
+                section.tours.forEach(tour => menuTourTitles.push(tour.tour.trim().toLowerCase()))
             )
         }
     }

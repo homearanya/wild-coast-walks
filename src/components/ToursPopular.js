@@ -10,8 +10,9 @@ const Section = (props) => {
             <div className="section-title text-center">
                 <h2>{props.sectionDetails.heading1}<span>{props.sectionDetails.heading2}</span></h2>
             </div>
-            {tours.map((tour, index) =>
-                <Tour key={index} tourDetails={props.toursObject[tour.tour.trim()]} />)}
+            {tours.map((tour, index) => {
+                return <Tour key={index} tourDetails={props.toursObject[tour.tour.trim().toLowerCase()]} />
+            })}
         </div>
     )
 }

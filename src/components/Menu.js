@@ -42,13 +42,14 @@ export default function Menu() {
             render={data => {
                 const { section } = data.markdownRemark.frontmatter
                 const { tours } = data.markdownRemark.fields
+                console.log('tours', tours)
                 const toursObject = tours.reduce((obj, tour) => {
-                    obj[tour.frontmatter.title.trim()] = tour.fields.slug
+                    obj[tour.frontmatter.title.trim().toLowerCase()] = tour.fields.slug
                     return obj;
                 }, {});
                 section.forEach(section => {
                     section.tours.forEach((tour, index) => {
-                        section.tours[index]['slug'] = toursObject[tour.tour.trim()]
+                        section.tours[index]['slug'] = toursObject[tour.tour.trim().toLowerCase()]
                     });
                 })
                 return <div>
