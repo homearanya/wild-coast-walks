@@ -3,8 +3,7 @@ templateKey: tour-page
 featured: true
 destination: Wild Coast
 activity: Slackpack
-title: 'Mini Break '
-date: 2018-11-21T14:46:13.364Z
+title: Mini Break
 description: >
   A scenic 2 day hike with 3 nights of hotel pampering on the Sunshine Coast.
   Fly into East London on a Thursday and be back home on Sunday with all
