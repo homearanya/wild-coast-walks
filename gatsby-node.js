@@ -70,11 +70,9 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
             if (node.frontmatter.templateKey &&
                 node.frontmatter.templateKey.includes('home-page')) {
                 homeNodeId = node.id;
-                node.frontmatter.toursArea.section.forEach(section =>
-                    section.tours.forEach(tour => homeTourTitles.push(tour))
+                node.frontmatter.toursarea.section.forEach(section =>
+                    section.tours.forEach(tour => homeTourTitles.push(tour.tour))
                 )
-                console.log('homeNodeId', homeNodeId)
-                console.log('homeTourTitles', homeTourTitles)
             } else if (node.frontmatter.templateKey &&
                 node.frontmatter.templateKey.includes('tour-page')) {
                 toursObject[node.frontmatter.title] = node.id;
@@ -82,19 +80,20 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
                 node.fileAbsolutePath.includes('/src/general/tour-menu.md')) {
                 mainMenuNodeId = node.id;
                 node.frontmatter.section.forEach(section =>
-                    section.tours.forEach(tour => menuTourTitles.push(tour))
+                    section.tours.forEach(tour => menuTourTitles.push(tour.tour))
                 )
                 console.log('tourmenunodeId', tourMenuNodeId)
                 console.log('menuTourTitles', menuTourTitles)
             }
         })
 
-    homeTourTitles.forEach(tour => {
+    console.log('toursObject', toursObject)
+
+    homeTourTitles.forEach((tour, index) => {
         if (toursObject[tour]) {
             homeTourIds.push(toursObject[tour])
         }
     })
-    console.log('homeTourIds', homeTourIds)
 
     if (homeTourIds.length > 0) {
         createNodeField({
