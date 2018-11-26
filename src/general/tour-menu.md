@@ -33,6 +33,6 @@ section:
       - tour: Battlefields
       - tour: Midlands Meander
       - tour: Trappist Monastery
-  - heading1: prueba
+  - heading1: prueba 2
 ---
 
