@@ -68,13 +68,10 @@ const SubMenuDest = (props) => {
 }
 
 const SubMenu = (props) => {
-    console.log('SubMenuDest - tour Menu Sections', props.tourMenuSections)
-
     return (
         <div className="megamenu">
             {props.tourMenuSections.map((section, index) => {
                 if (index % 2 === 0) {
-                    console.log('index', index)
                     return <div key={index} className="megamenu-list clearfix">
                         <SubMenuDest section={section} />
                         {props.tourMenuSections[index + 1] ?
