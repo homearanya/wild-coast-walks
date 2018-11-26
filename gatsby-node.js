@@ -66,7 +66,6 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
     getNodes()
         .filter(node => node.internal.type === `MarkdownRemark`)
         .forEach(node => {
-            console.log('sourceNodes', node.fileAbsolutePath)
             if (node.frontmatter.templateKey &&
                 node.frontmatter.templateKey.includes('home-page')) {
                 homeNodeId = node.id;
@@ -78,6 +77,7 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
                 toursObject[node.frontmatter.title] = node.id;
             } else if (node.fileAbsolutePath &&
                 node.fileAbsolutePath.includes('/src/general/tour-menu.md')) {
+                console.log('sourceNodes  - tour-menu.md', node.fileAbsolutePath)
                 tourMenuNodeId = node.id;
                 node.frontmatter.section.forEach(section =>
                     section.tours.forEach(tour => menuTourTitles.push(tour.tour))
@@ -105,9 +105,6 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
             menuTourIds.push(toursObject[tour])
         }
     })
-    console.log('tourmenunodeId', tourMenuNodeId)
-    console.log('menuTourTitles', menuTourTitles)
-    console.log('menuTourIds', menuTourIds)
 
     if (menuTourIds.length > 0) {
         createNodeField({
