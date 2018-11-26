@@ -6,7 +6,6 @@ import '../assets/css/menu.css'
 
 import MenuDesktop from './MenuDesktop'
 import MenuMobile from './MenuMobile'
-import index from '../templates/home-page';
 
 export default function Menu() {
     return (

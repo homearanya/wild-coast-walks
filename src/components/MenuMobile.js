@@ -3,68 +3,81 @@ import { Link } from "gatsby"
 
 import '../assets/css/menuMobile.css'
 
+class ToursMenuSection extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            showTours: false,
+        };
+
+        this.toggleTours = this.toggleTours.bind(this);
+    }
+
+    toggleTours() {
+        this.setState(prevState => { return { showTours: !prevState.showTours } });
+    }
+
+    render() {
+        return (
+            <li>
+                <a onClick={this.toggleTours}>{this.props.tourMenuSections.heading1}</a>
+                {this.state.showTours ? (
+                    <div>
+                        <ul style={{ display: 'block' }}>
+                            {this.props.tourMenuSections.tours.map((tour, index) => {
+                                return <li key={index}>
+                                    <Link to={tour.slug} onClick={this.toggleMenu}>{tour.tour}</Link>
+                                </li>
+                            })}
+                        </ul>
+                        <a className="mean-expand mean-clicked" href="#" style={{ fontSize: '18px' }} onClick={this.toggleTours}>-</a>
+                    </div>
+                ) :
+                    (
+                        <a className="mean-expand" href="#" style={{ fontSize: '18px' }} onClick={this.toggleTours}>+</a>
+                    )
+                }
+            </li>
+        )
+    }
+}
+
+const ToursMenu = (props) => {
+
+    return (
+        <div>
+            <ul style={{ display: 'block' }}>
+                {props.tourMenuSections.map((section, index) => {
+                    return <ToursMenuSection key={index} tourMenuSections={section} />
+                })}
+            </ul>
+            <a className="mean-expand mean-clicked" href="#" style={{ fontSize: '18px' }} onClick={props.toggleToursMenu}>-</a>
+        </div>
+    )
+
+}
+
+
 export default class MenuMobile extends Component {
     constructor() {
         super();
 
         this.state = {
-            displayMenu: false,
-            displayDestinations: false,
-            displayDestination1: false,
-            displayDestination2: false,
+            showMenu: false,
+            showToursMenu: false,
         };
-        this.openMenu = this.openMenu.bind(this);
-        this.closeMenu = this.closeMenu.bind(this);
-        this.openDestinations = this.openDestinations.bind(this);
-        this.closeDestinations = this.closeDestinations.bind(this);
-        this.openDestination1 = this.openDestination1.bind(this);
-        this.closeDestination1 = this.closeDestination1.bind(this);
-        this.openDestination2 = this.openDestination2.bind(this);
-        this.closeDestination2 = this.closeDestination2.bind(this);
+
+        this.toggleMenu = this.toggleMenu.bind(this);
+        this.toggleToursMenu = this.toggleToursMenu.bind(this);
     }
 
-    openMenu() {
-        this.setState({ displayMenu: true });
+    toggleMenu() {
+        this.setState(prevState => { return { showMenu: !prevState.showMenu } });
     }
 
-    closeMenu() {
-        this.setState({
-            displayMenu: false,
-            displayDestinations: false,
-            displayDestination1: false,
-            displayDestination2: false,
-        });
-    }
-
-    openDestinations() {
-        this.setState({ displayDestinations: true });
-    }
-
-    closeDestinations() {
-        this.setState({
-            displayDestinations: false,
-            displayDestination1: false,
-            displayDestination2: false,
-        });
-    }
-    openDestination1() {
-        this.setState({ displayDestination1: true });
-    }
-
-    closeDestination1() {
-        this.setState({
-            displayDestination1: false,
-        });
-    }
-
-    openDestination2() {
-        this.setState({ displayDestination2: true });
-    }
-
-    closeDestination2() {
-        this.setState({
-            displayDestination2: false,
-        });
+    toggleToursMenu() {
+        this.setState(prevState => { return { showToursMenu: !prevState.showToursMenu } });
     }
 
     render() {
@@ -72,75 +85,45 @@ export default class MenuMobile extends Component {
             <div className="mobile-menu-area">
                 <div className="container mean-container">
                     <div className="mean-bar">
-                        {this.state.displayMenu ? (
-                            <a href="#nav" className="meanmenu-reveal meanclose" style={{ right: '0px', left: 'auto', textAlign: 'center', textIndent: '0px', fontSize: '18px' }} onClick={this.closeMenu}>X</a>
+                        {this.state.showMenu ? (
+                            <a href="#nav"
+                                className="meanmenu-reveal meanclose"
+                                style={{
+                                    right: '0px',
+                                    left: 'auto',
+                                    textAlign: 'center',
+                                    textIndent: '0px',
+                                    fontSize: '18px'
+                                }}
+                                onClick={this.toggleMenu}>X</a>
                         ) :
                             (
-                                <a href="#nav" className="meanmenu-reveal" style={{ right: "0", left: "auto" }} onClick={this.openMenu}>
+                                <a href="#nav" className="meanmenu-reveal" style={{ right: "0", left: "auto" }} onClick={this.toggleMenu}>
                                     <span></span><span></span><span></span>
                                 </a>
                             )
                         }
                         <nav className="mean-nav">
-                            {this.state.displayMenu ? (
+                            {this.state.showMenu ? (
                                 <ul style={{ display: 'block' }}>
-                                    <li><Link to="/" onClick={this.closeMenu}>HOME</Link></li>
-                                    <li><Link to="/about/" onClick={this.closeMenu}>About us</Link></li>
+                                    <li><Link to="/" onClick={this.toggleMenu}>HOME</Link></li>
+                                    <li><Link to="/about/" onClick={this.toggleMenu}>About us</Link></li>
                                     <li>
-                                        <a href="#" onClick={this.openDestinations}> Tours </a>
-                                        {this.state.displayDestinations ? (
-                                            <div>
-                                                <ul style={{ display: 'block' }}>
-                                                    <li><Link to="/tours/" onClick={this.closeMenu}>Wild Coast Slackpacking</Link>
-                                                        {this.state.displayDestination1 ? (
-                                                            <div>
-                                                                <ul style={{ display: 'block' }}>
-                                                                    <li><Link to="/tour/" onClick={this.closeMenu}>Tour 1</Link></li>
-                                                                    <li><Link to="/tour/" onClick={this.closeMenu}>Tour 2</Link></li>
-                                                                    <li><Link to="/tour/" onClick={this.closeMenu}>Tour 3</Link></li>
-                                                                    <li><Link to="/tour/" onClick={this.closeMenu}>Tour 4</Link></li>
-                                                                    <li><Link to="/tour/" onClick={this.closeMenu}>Tour 5</Link></li>
-                                                                    <li><Link to="/tour/" onClick={this.closeMenu}>Tour 6</Link></li>
-                                                                </ul>
-                                                                <a className="mean-expand mean-clicked" href="#" style={{ fontSize: '18px' }} onClick={this.closeDestination1}>-</a>
-                                                            </div>
-                                                        ) :
-                                                            (
-                                                                <a className="mean-expand" href="#" style={{ fontSize: '18px' }} onClick={this.openDestination1}>+</a>
-                                                            )
-                                                        }
-                                                    </li>
-                                                    <li><Link to="/tours/" onClick={this.closeMenu}>Midlands Walks & Cycling</Link>
-                                                        {this.state.displayDestination2 ? (
-                                                            <div>
-                                                                <ul style={{ display: 'block' }}>
-                                                                    <li><Link to="/tour/" onClick={this.closeMenu}>Tour 1</Link></li>
-                                                                    <li><Link to="/tour/" onClick={this.closeMenu}>Tour 2</Link></li>
-                                                                    <li><Link to="/tour/" onClick={this.closeMenu}>Tour 3</Link></li>
-                                                                    <li><Link to="/tour/" onClick={this.closeMenu}>Tour 4</Link></li>
-                                                                    <li><Link to="/tour/" onClick={this.closeMenu}>Tour 5</Link></li>
-                                                                    <li><Link to="/tour/" onClick={this.closeMenu}>Tour 6</Link></li>
-                                                                </ul>
-                                                                <a className="mean-expand mean-clicked" href="#" style={{ fontSize: '18px' }} onClick={this.closeDestination2}>-</a>
-                                                            </div>
-                                                        ) :
-                                                            (
-                                                                <a className="mean-expand" href="#" style={{ fontSize: '18px' }} onClick={this.openDestination2}>+</a>
-                                                            )
-                                                        }
-                                                    </li>
-                                                </ul>
-                                                <a className="mean-expand mean-clicked" href="#" style={{ fontSize: '18px' }} onClick={this.closeDestinations}>-</a>
-                                            </div>
+                                        <a onClick={this.toggleToursMenu}> Tours </a>
+                                        {this.state.showToursMenu ? (
+                                            <ToursMenu
+                                                toggleToursMenu={this.toggleToursMenu}
+                                                tourMenuSections={this.props.sections}
+                                            />
                                         ) :
                                             (
-                                                <a className="mean-expand" href="#" style={{ fontSize: '18px' }} onClick={this.openDestinations}>+</a>
+                                                <a className="mean-expand" href="#" style={{ fontSize: '18px' }} onClick={this.toggleToursMenu}>+</a>
                                             )
                                         }
                                     </li>
-                                    <li><Link to="/tour-calendar/" onClick={this.closeMenu}>Tour Calendar</Link></li>
-                                    <li><Link to="/blog/" onClick={this.closeMenu}>Blog</Link></li>
-                                    <li className="mean-last"><Link to="/contact/" onClick={this.closeMenu}>CONTACT</Link></li>
+                                    <li><Link to="/tour-calendar/" onClick={this.toggleMenu}>Tour Calendar</Link></li>
+                                    <li><Link to="/blog/" onClick={this.toggleMenu}>Blog</Link></li>
+                                    <li className="mean-last"><Link to="/contact/" onClick={this.toggleMenu}>CONTACT</Link></li>
                                 </ul>
                             ) :
                                 (
