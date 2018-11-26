@@ -78,7 +78,7 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
                 toursObject[node.frontmatter.title] = node.id;
             } else if (node.fileAbsolutePath &&
                 node.fileAbsolutePath.includes('/src/general/tour-menu.md')) {
-                mainMenuNodeId = node.id;
+                tourMenuNodeId = node.id;
                 node.frontmatter.section.forEach(section =>
                     section.tours.forEach(tour => menuTourTitles.push(tour.tour))
                 )
