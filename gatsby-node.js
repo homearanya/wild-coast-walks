@@ -82,12 +82,9 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
                 node.frontmatter.section.forEach(section =>
                     section.tours.forEach(tour => menuTourTitles.push(tour.tour))
                 )
-                console.log('tourmenunodeId', tourMenuNodeId)
-                console.log('menuTourTitles', menuTourTitles)
             }
         })
 
-    console.log('toursObject', toursObject)
 
     homeTourTitles.forEach((tour, index) => {
         if (toursObject[tour]) {
@@ -108,6 +105,8 @@ exports.sourceNodes = ({ actions, getNodes, getNode }) => {
             menuTourIds.push(toursObject[tour])
         }
     })
+    console.log('tourmenunodeId', tourMenuNodeId)
+    console.log('menuTourTitles', menuTourTitles)
     console.log('menuTourIds', menuTourIds)
 
     if (menuTourIds.length > 0) {
