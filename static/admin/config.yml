@@ -84,20 +84,16 @@ collections:
           name: slider
           widget: list
           fields: 
-            - label: Slide
-              name: slide
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
+            - {label: Subheading 1, name: subheading1, widget: string}
+            - {label: Subheading 2, name: subheading2, widget: string}
+            - label: Image
+              name: image
               widget: object
               fields: 
-                - {label: Heading 1, name: heading1, widget: string}
-                - {label: Heading 2, name: heading2, widget: string}
-                - {label: Subheading 1, name: subheading1, widget: string}
-                - {label: Subheading 2, name: subheading2, widget: string}
-                - label: Image
-                  name: image
-                  widget: object
-                  fields: 
-                    - {label: Image, name: image, widget: image, hint: "size 1600 x 987"}
-                    - {label: Alt, name: alt, widget: string,  required: false}
+                - {label: Image, name: image, widget: image, hint: "size 1600 x 987"}
+                - {label: Alt, name: alt, widget: string,  required: false}
         - label: "About Area"
           name: aboutarea
           widget: object

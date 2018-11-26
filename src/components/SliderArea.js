@@ -66,6 +66,7 @@ export default class SliderArea extends Component {
   }
 
   render() {
+    const slides = this.props.slider
     return (
       <div className="slider-area">
         <div className="preview-2">
@@ -73,28 +74,27 @@ export default class SliderArea extends Component {
             <MyContext.Consumer>
               {({ set }) => {
                 this.set = set;
-                return <Slide
-                  imageSrc={this.props.slider.slide1.image.image}
-                  imageAlt={this.props.slider.slide1.image.alt}
-                  imageTitle={this.props.slider.slide1.heading1 + ' ' + this.props.slider.slide1.heading2}
-                  reference={this.image}
-                  heading1={this.props.slider.slide1.heading1}
-                  heading2={this.props.slider.slide1.heading2}
-                  subheading1={this.props.slider.slide1.subheading1}
-                  subheading2={this.props.slider.slide1.subheading2}
-                />
+                let reference;
+                slides.forEach((slide, index) => {
+                  if (index === 0) {
+                    reference = this.image
+                  } else {
+                    reference = null
+                  }
+
+                  return <Slide
+                    imageSrc={slide.image.image}
+                    imageAlt={slide.image.alt}
+                    imageTitle={slide.heading1 + ' ' + slide.heading2}
+                    reference={reference}
+                    heading1={slide.heading1}
+                    heading2={slide.heading2}
+                    subheading1={slide.subheading1}
+                    subheading2={slide.subheading2}
+                  />
+                });
               }}
             </MyContext.Consumer>
-            <Slide
-              imageSrc={this.props.slider.slide2.image.image}
-              imageAlt={this.props.slider.slide2.image.alt}
-              imageTitle={this.props.slider.slide2.heading1 + ' ' + this.props.slider.slide2.heading2}
-              reference={null}
-              heading1={this.props.slider.slide2.heading1}
-              heading2={this.props.slider.slide2.heading2}
-              subheading1={this.props.slider.slide2.subheading1}
-              subheading2={this.props.slider.slide2.subheading2}
-            />
           </Slider>
         </div>
       </div>

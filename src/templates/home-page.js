@@ -11,12 +11,12 @@ import ToursPopular from "../components/ToursPopular";
 
 
 export default function index({ data }) {
-  // const { frontmatter } = data.markdownRemark
-  // const { tours } = data.markdownRemark.fields
-  // const toursObject = tours.reduce((obj, tour) => {
-  //   obj[tour.frontmatter.title.trim()] = tour
-  //   return obj;
-  // }, {});
+  const { frontmatter } = data.markdownRemark
+  const { tours } = data.markdownRemark.fields
+  const toursObject = tours.reduce((obj, tour) => {
+    obj[tour.frontmatter.title.trim()] = tour
+    return obj;
+  }, {});
 
   return (
     <div>
@@ -25,7 +25,7 @@ export default function index({ data }) {
         <title>Wild Coast Walks</title>
       </Helmet>
 
-      {/* <ContextProviderComponent>
+      <ContextProviderComponent>
         <MyContext.Consumer>
           {({ data }) => {
             return data.loadSpinner ? <Spinner /> : null
@@ -52,7 +52,7 @@ export default function index({ data }) {
               </div>
           }}
         </MyContext.Consumer>
-      </ContextProviderComponent> */}
+      </ContextProviderComponent>
     </div>
   )
 }
@@ -60,106 +60,61 @@ export default function index({ data }) {
 export const homePageQuery = graphql`
   query HomePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-        fields {
-          slug
+      fields {
+        slug
+        tours {
+              frontmatter {
+                title
+                destination
+                activity
+                duration
+                price
+                description
+                imagethumbnail {
+                  image
+                  alt
+                }
+              }
+            }
+      }
+      frontmatter {
+        slider {
+          heading1
+          heading2
+          subheading1
+          subheading2
+          image {
+            alt
+            image
+          }
         }
-    }
+        aboutarea {
+          heading1
+          heading2
+          blur
+          image {
+            alt
+            image
+          }
+        }
+        toursarea {
+          heading1
+          heading2
+          introduction
+          section {
+            heading1
+            heading2
+            tours {
+              tour
+            }
+          }
+        }
+        blogarea {
+          blur
+          heading1
+          heading2
+        }
+      }
+      }
   }
 `
-// export const homePageQuery = graphql`
-//   query HomePage($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//         fields {
-//           slug
-//           tours {
-//             frontmatter {
-//               title
-//               destination
-//               activity
-//               duration
-//               price
-//               description
-//               imagethumbnail {
-//                 image
-//                 alt
-//               }
-//             }
-//           }
-//         }
-//         frontmatter {
-//             slider {
-//               slide1 {
-//                 heading1
-//                 heading2
-//                 subheading1
-//                 subheading2
-//                 image {
-//                   image
-//                   alt
-//                 }
-//               }
-//               slide2 {
-//                 heading1
-//                 heading2
-//                 subheading1
-//                 subheading2
-//                 image {
-//                   image
-//                   alt
-//                 }
-//               }      
-//             }
-//             aboutarea {
-//               heading2
-//               blur
-//               image {
-//                 image
-//                 alt
-//               }
-//             }
-//             toursarea {
-//               heading1
-//               heading2
-//               introduction
-//               block1 {
-//                 heading1
-//                 tours {
-//                   tour1
-//                   tour2
-//                   tour3
-//                 }
-//               }
-//               block2 {
-//                 heading1
-//                 tours {
-//                   tour1
-//                   tour2
-//                   tour3
-//                 }
-//               }
-//               block3 {
-//                 heading1
-//                 tours {
-//                   tour1
-//                   tour2
-//                   tour3
-//                 }
-//               }
-//               block4 {
-//                 heading1
-//                 tours {
-//                   tour1
-//                   tour2
-//                   tour3
-//                 }
-//               }
-//             }
-//             blogarea {
-//               switch
-//               heading1
-//               heading2
-//             }
-//         }
-//     }
-//   }
-// `

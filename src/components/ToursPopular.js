@@ -3,16 +3,14 @@ import { Link } from "gatsby"
 
 import '../assets/css/product.css'
 
-const Block = (props) => {
-    const tours = props.blockDetails.tours
+const Section = (props) => {
+    const tours = props.sectionDetails.tours
     return (
         <div className="row">
             <div className="section-title text-center">
-                <h2>{props.blockDetails.heading1}<span></span></h2>
+                <h2>{props.sectionDetails.heading1}<span>{props.sectionDetails.heading1}</span></h2>
             </div>
-            <Tour tourDetails={props.toursObject[tours.tour1.trim()]} />
-            <Tour tourDetails={props.toursObject[tours.tour2.trim()]} />
-            <Tour tourDetails={props.toursObject[tours.tour3.trim()]} />
+            {tours.forEach(tour => <Tour tourDetails={props.toursObject[tour.trim()]} />)}
         </div>
     )
 }
@@ -72,10 +70,9 @@ export default function Tours(props) {
                         </div>
                     </div>
                 </div>
-                <Block blockDetails={props.toursArea.block1} toursObject={props.toursObject}></Block>
-                <Block blockDetails={props.toursArea.block2} toursObject={props.toursObject}></Block>
-                <Block blockDetails={props.toursArea.block3} toursObject={props.toursObject}></Block>
-                <Block blockDetails={props.toursArea.block4} toursObject={props.toursObject}></Block>
+                {props.toursArea.section.array.forEach(section =>
+                    <Section sectionDetails={section} toursObject={props.toursObject}></Section>
+                )}
             </div>
         </div>
     )
