@@ -62,5 +62,6 @@ blogarea:
     lacinia elementum.
   heading1: Latest
   heading2: Blog Posts
+  switch: true
 ---
 
