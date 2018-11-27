@@ -18,5 +18,8 @@ price: R 5400
 imagethumbnail:
   alt: Mini Break
   image: /img/mini-break375x375-min.jpg
+imagebanner:
+  alt: Mini Break
+  image: /img/mini-break-banner1600x596-min.jpg
 ---
 
