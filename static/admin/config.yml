@@ -63,11 +63,17 @@ collections:
     - {label: "Description", name: "description", widget: "text"}
     - {label: "Duration", name: "duration", widget: "string"}
     - {label: "Price", name: "price", widget: "string"}
-    - label: "Image Thumbnail"
+    - label: "Thumbnail Image"
       name: imagethumbnail
       widget: object
       fields: 
         - {label: Image, name: image, widget: image, hint: "size 375 x 375"}
+        - {label: Alt, name: alt, widget: string,  required: false}    
+    - label: "Banner Image"
+      name: imagebanner
+      widget: object
+      fields: 
+        - {label: Image, name: image, widget: image, hint: "size 1600 x 596"}
         - {label: Alt, name: alt, widget: string,  required: false}    
   editor:
     preview: false
