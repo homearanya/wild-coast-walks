@@ -115,6 +115,7 @@ export const homePageQuery = graphql`
           blur
           heading1
           heading2
+          switch
         }
       }
       }

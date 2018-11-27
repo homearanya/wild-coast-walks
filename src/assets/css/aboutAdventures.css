@@ -24,3 +24,47 @@
 .about-adventures .button-one:hover {
     background: #0967B9
 }
+
+
+/* Large desktop :1920px. */
+
+@media (min-width: 1920px) {
+    .about-adventures {
+        background-size: 49.3% 100%
+    }
+}
+
+
+/* Normal desktop :992px. */
+
+@media (min-width: 992px) and (max-width: 1169px) {
+    .about-adventures p {
+        line-height: 26px
+    }
+    .about-adventures p {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .about-adventures {
+        padding-bottom: 80px;
+        padding-top: 80px;
+    }
+}
+
+
+/* Tablet desktop :768px. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-adventures {
+        background: rgba(33, 34, 39, 0.15) none repeat scroll 0 0
+    }
+}
+
+
+/* small mobile :320px. */
+
+@media (max-width: 767px) {
+    .about-adventures {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    }
+}

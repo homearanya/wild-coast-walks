@@ -52,9 +52,6 @@
         padding-bottom: 127px;
         padding-top: 206px;
     }
-    .about-adventures {
-        background-size: 49.3% 100%
-    }
     .blog-two-text-container {
         padding-bottom: 41px
     }
@@ -270,8 +267,7 @@
     .trip-info-left-text .section-title {
         margin-bottom: 30px
     }
-    .trip-info-left-text p,
-    .about-adventures p {
+    .trip-info-left-text p {
         line-height: 26px
     }
     .trip-booking-info {
@@ -297,14 +293,6 @@
     .contact-text>h4,
     .about-text-container>h4 {
         font-size: 20px
-    }
-    .about-adventures p {
-        font-size: 15px;
-        line-height: 25px;
-    }
-    .about-adventures {
-        padding-bottom: 80px;
-        padding-top: 80px;
     }
     .single-skill-text>h4 {
         font-size: 17px
@@ -522,8 +510,7 @@
         width: 20%
     }
     .trip-information.details-two,
-    .error-area,
-    .about-adventures {
+    .error-area {
         background: rgba(33, 34, 39, 0.15) none repeat scroll 0 0
     }
     .details-two .trip-info-left-text {
@@ -597,7 +584,6 @@
     header.fixed .header-top {
         padding: 10px 0;
     }
-    .about-adventures,
     .trip-information {
         background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     }
