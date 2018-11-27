@@ -145,7 +145,7 @@
 }
 
 .breadcrumb {
-    background: #dadada none repeat scroll 0 0;
+    background: #dadada none repeat scroll 0 0 !important;
     border-radius: 0;
     display: inline-block;
     height: 42px;
