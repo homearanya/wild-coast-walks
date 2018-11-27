@@ -6,6 +6,7 @@ import Banner from "../components/Banner";
 import '../assets/css/tours.css'
 
 import tour_1 from '../assets/img/adventure-list/9.jpg'
+import bannerImage from '../assets/img/banner/15.jpg'
 
 export default () => (
     <div>
@@ -21,7 +22,7 @@ export default () => (
             text1="Three Columns Grid View Adventure Listing"
             text2=""
             breadcrumb="Tours"
-            imageBanner={tour1}
+            imageBanner={bannerImage}
 
         />
         <div className="adventures-grid section-padding">

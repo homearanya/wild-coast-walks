@@ -5,6 +5,9 @@ import Banner from "../components/Banner";
 
 import '../assets/css/blogDetails.css'
 
+import bannerImage from '../assets/img/banner/15.jpg'
+
+
 export default () => (
     <div>
         <Helmet>
@@ -19,6 +22,7 @@ export default () => (
             text1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui"
             text2="id, convallis iaculis eros. Praesent porta lacinia elementum."
             breadcrumb="Blog"
+            imageBanner={bannerImage}
         />
         <div className="blog-post-area section-padding">
             <div className="container">
