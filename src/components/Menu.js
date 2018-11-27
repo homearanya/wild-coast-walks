@@ -14,7 +14,7 @@ export default function Menu() {
                 query TourMenuQuery {
                     markdownRemark (fields : {slug : {eq : "/tour-menu/"}}) {
                         fields {
-                            tours {
+                            menutours {
                                 fields {
                                     slug
                                 }
@@ -42,8 +42,8 @@ export default function Menu() {
             `}
             render={data => {
                 const { section } = data.markdownRemark.frontmatter
-                const { tours } = data.markdownRemark.fields
-                const toursObject = tours.reduce((obj, tour) => {
+                const { menutours } = data.markdownRemark.fields
+                const toursObject = menutours.reduce((obj, tour) => {
                     obj[tour.frontmatter.title.trim().toLowerCase()] = tour
                     return obj;
                 }, {});

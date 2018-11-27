@@ -76,9 +76,25 @@ export default class MenuMobile extends Component {
             showToursMenu: false,
         };
 
+        this.wrapperRef = React.createRef();
+        this.handleClickOutside = this.handleClickOutside.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
         this.toggleMenu = this.toggleMenu.bind(this);
         this.toggleToursMenu = this.toggleToursMenu.bind(this);
+    }
+
+    componentDidMount() {
+        document.addEventListener('mousedown', this.handleClickOutside);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+
+    handleClickOutside(event) {
+        if (this.wrapperRef.current && !this.wrapperRef.current.contains(event.target)) {
+            this.closeMenu();
+        }
     }
 
     closeMenu() {
@@ -95,7 +111,7 @@ export default class MenuMobile extends Component {
 
     render() {
         return (
-            <div className="mobile-menu-area" onMouseLeave={this.closeMenu}>
+            <div className="mobile-menu-area" ref={this.wrapperRef}>
                 <div className="container mean-container">
                     <div className="mean-bar">
                         {this.state.showMenu ? (

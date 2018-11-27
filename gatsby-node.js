@@ -65,7 +65,7 @@ exports.createPages = ({ actions, graphql, getNode }) => {
             if (homeTourIds.length > 0) {
                 createNodeField({
                     node: getNode(homeNodeId),
-                    name: `tours`,
+                    name: `hometours`,
                     value: homeTourIds,
                 })
             }
@@ -79,7 +79,7 @@ exports.createPages = ({ actions, graphql, getNode }) => {
             if (menuTourIds.length > 0) {
                 createNodeField({
                     node: getNode(tourMenuNodeId),
-                    name: `tours`,
+                    name: `menutours`,
                     value: menuTourIds,
                 })
             }

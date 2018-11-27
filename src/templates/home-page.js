@@ -12,8 +12,8 @@ import ToursPopular from "../components/ToursPopular";
 
 export default function index({ data }) {
   const { frontmatter } = data.markdownRemark
-  const { tours } = data.markdownRemark.fields
-  const toursObject = tours.reduce((obj, tour) => {
+  const { hometours } = data.markdownRemark.fields
+  const toursObject = hometours.reduce((obj, tour) => {
     obj[tour.frontmatter.title.trim().toLowerCase()] = tour
     return obj;
   }, {});
@@ -61,7 +61,7 @@ export const homePageQuery = graphql`
   query HomePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       fields {
-        tours {
+        hometours {
           fields {
             slug
           }
