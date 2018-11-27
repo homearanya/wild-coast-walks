@@ -4,7 +4,6 @@ featured: true
 destination: Midlands
 activity: Cycle Tour
 title: Battlefields
-date: 2018-11-21T18:08:43.957Z
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -14,5 +13,8 @@ price: R 15 400
 imagethumbnail:
   alt: Battlefields
   image: /img/battlefields375x375-min.jpg
+imagebanner:
+  alt: Battlefields - Isandlwana
+  image: /img/battlefields-banner1600x596-min.jpg
 ---
 
