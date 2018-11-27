@@ -103,7 +103,7 @@
 }
 
 .banner-area {
-    background: rgba(0, 0, 0, 0) url("../img/banner/15.jpg") no-repeat scroll center top / cover;
+    /* background: rgba(0, 0, 0, 0) url("../img/banner/15.jpg") no-repeat scroll center top / cover; */
     padding-bottom: 0;
     padding-top: 302px;
     position: relative;

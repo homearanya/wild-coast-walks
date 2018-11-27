@@ -5,7 +5,15 @@ import '../assets/css/banner.css'
 
 export default function Banner(props) {
     return (
-        <div className={"banner-area " + props.extraClass}>
+        <div className={"banner-area " + props.extraClass}
+            style={{
+                backgroundColor: 'rgba(0, 0, 0, 0)',
+                backgroundImage: `url(${props.imageBanner.image})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundAttachment: 'scroll',
+                backgroundPosition: 'center top',
+                backgroundSize: 'cover'
+            }}>
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
