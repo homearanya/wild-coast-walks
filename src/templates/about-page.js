@@ -1,6 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-
+import { graphql } from "gatsby"
 
 import Banner from "../components/Banner";
 import AboutInformationArea from "../components/AboutInformationArea";

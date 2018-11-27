@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import { graphql } from "gatsby"
 
 import '../assets/css/tourCalendar.css'
 import Banner from "../components/Banner";

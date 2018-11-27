@@ -21,6 +21,8 @@ export default () => (
             text1="Three Columns Grid View Adventure Listing"
             text2=""
             breadcrumb="Tours"
+            imageBanner={tour1}
+
         />
         <div className="adventures-grid section-padding">
             <div className="container">
