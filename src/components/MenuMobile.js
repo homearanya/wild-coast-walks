@@ -29,7 +29,7 @@ class ToursMenuSection extends Component {
                                 return <li key={index}>
                                     <Link
                                         to={tour.slug}
-                                        onClick={this.toggleMenu}>
+                                        onClick={this.props.toggleMenu}>
                                         {tour.tour + " (" + tour.duration + ")"}
                                     </Link>
                                 </li>
@@ -53,7 +53,11 @@ const ToursMenu = (props) => {
         <div>
             <ul style={{ display: 'block' }}>
                 {props.tourMenuSections.map((section, index) => {
-                    return <ToursMenuSection key={index} tourMenuSections={section} />
+                    return <ToursMenuSection
+                        key={index}
+                        tourMenuSections={section}
+                        toggleMenu={props.toggleMenu}
+                    />
                 })}
             </ul>
             <a className="mean-expand mean-clicked" href="#" style={{ fontSize: '18px' }} onClick={props.toggleToursMenu}>-</a>
@@ -72,8 +76,13 @@ export default class MenuMobile extends Component {
             showToursMenu: false,
         };
 
+        this.closeMenu = this.closeMenu.bind(this);
         this.toggleMenu = this.toggleMenu.bind(this);
         this.toggleToursMenu = this.toggleToursMenu.bind(this);
+    }
+
+    closeMenu() {
+        this.setState({ showMenu: false });
     }
 
     toggleMenu() {
@@ -86,11 +95,11 @@ export default class MenuMobile extends Component {
 
     render() {
         return (
-            <div className="mobile-menu-area">
+            <div className="mobile-menu-area" onMouseLeave={this.closeMenu}>
                 <div className="container mean-container">
                     <div className="mean-bar">
                         {this.state.showMenu ? (
-                            <a href="#nav"
+                            <a
                                 className="meanmenu-reveal meanclose"
                                 style={{
                                     right: '0px',
@@ -102,7 +111,7 @@ export default class MenuMobile extends Component {
                                 onClick={this.toggleMenu}>X</a>
                         ) :
                             (
-                                <a href="#nav" className="meanmenu-reveal" style={{ right: "0", left: "auto" }} onClick={this.toggleMenu}>
+                                <a className="meanmenu-reveal" style={{ right: "0", left: "auto" }} onClick={this.toggleMenu}>
                                     <span></span><span></span><span></span>
                                 </a>
                             )
@@ -116,6 +125,7 @@ export default class MenuMobile extends Component {
                                         <a onClick={this.toggleToursMenu}> Tours </a>
                                         {this.state.showToursMenu ? (
                                             <ToursMenu
+                                                toggleMenu={this.toggleMenu}
                                                 toggleToursMenu={this.toggleToursMenu}
                                                 tourMenuSections={this.props.sections}
                                             />
