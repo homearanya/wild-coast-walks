@@ -14,6 +14,65 @@ import icon_38 from '../assets/img/icon/38.png'
 import icon_39 from '../assets/img/icon/39.png'
 import icon_40 from '../assets/img/icon/40.png'
 
+
+const Filter = (props) => {
+    return (
+        <div className="shop-item-filter">
+            <form action="#" id="banner-searchbox">
+                <div className="row">
+                    <div className="col-lg-4 hidden-md col-sm-12">
+                        <p>Showing Trips 1 to 12 of 19 total</p>
+                    </div>
+                    <div className="col-lg-2 col-md-4 col-sm-4">
+                        <div className="adventure-cat box-small">
+                            <select name="type" className="search-adventure">
+                                <option>Adventure Type</option>
+                                <option>Bungee jumping</option>
+                                <option>Bicycle touring</option>
+                                <option>Jungle tourism</option>
+                                <option>Shark tourism</option>
+                                <option>Mountain biking</option>
+                                <option>Mountaineering</option>
+                                <option>Rock Adventure</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className="col-lg-2 col-md-4 col-sm-5">
+                        <div className="adventure-cat box-small">
+                            <select name="level" className="search-adventure">
+                                <option>Easy Level</option>
+                                <option>Advance Level</option>
+                                <option>Moderate Level</option>
+                                <option>Basic Level</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className="col-md-2 hidden-sm">
+                        <div className="adventure-cat box-small">
+                            <select name="price" className="search-adventure">
+                                <option>Price</option>
+                                <option>$100-$300</option>
+                                <option>$400-$600</option>
+                                <option>$700-$800</option>
+                                <option>$900-$1000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className="col-md-2 col-sm-3">
+                        <div className="adventure-tab clearfix">
+                            <ul className="nav nav-tabs navbar-left">
+                                <li><a href="shop-grid-no-sidebar.html" className="grid-view">Shop Grid No Sidebar</a></li>
+                                <li><a href="shop-grid-with-sidebar.html" className="list-view">Shop Grid With Sidebar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    )
+}
+
+
 export default ({ data }) => {
     const { frontmatter } = data.markdownRemark
     return (
@@ -35,58 +94,7 @@ export default ({ data }) => {
 
             <div className="adventures-grid section-padding list">
                 <div className="container">
-                    <div className="shop-item-filter">
-                        <form action="#" id="banner-searchbox">
-                            <div className="row">
-                                <div className="col-lg-4 hidden-md col-sm-12">
-                                    <p>Showing Trips 1 to 12 of 19 total</p>
-                                </div>
-                                <div className="col-lg-2 col-md-4 col-sm-4">
-                                    <div className="adventure-cat box-small">
-                                        <select name="type" className="search-adventure">
-                                            <option>Adventure Type</option>
-                                            <option>Bungee jumping</option>
-                                            <option>Bicycle touring</option>
-                                            <option>Jungle tourism</option>
-                                            <option>Shark tourism</option>
-                                            <option>Mountain biking</option>
-                                            <option>Mountaineering</option>
-                                            <option>Rock Adventure</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="col-lg-2 col-md-4 col-sm-5">
-                                    <div className="adventure-cat box-small">
-                                        <select name="level" className="search-adventure">
-                                            <option>Easy Level</option>
-                                            <option>Advance Level</option>
-                                            <option>Moderate Level</option>
-                                            <option>Basic Level</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="col-md-2 hidden-sm">
-                                    <div className="adventure-cat box-small">
-                                        <select name="price" className="search-adventure">
-                                            <option>Price</option>
-                                            <option>$100-$300</option>
-                                            <option>$400-$600</option>
-                                            <option>$700-$800</option>
-                                            <option>$900-$1000</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div className="col-md-2 col-sm-3">
-                                    <div className="adventure-tab clearfix">
-                                        <ul className="nav nav-tabs navbar-left">
-                                            <li><a href="shop-grid-no-sidebar.html" className="grid-view">Shop Grid No Sidebar</a></li>
-                                            <li><a href="shop-grid-with-sidebar.html" className="list-view">Shop Grid With Sidebar</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                    <Filter />
                     <div className="clearfix"></div>
                     <div className="row">
                         <div className="col-md-12">

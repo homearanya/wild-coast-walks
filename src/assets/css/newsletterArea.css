@@ -19,8 +19,7 @@
     width: 100%;
 }
 
-.newsletter-area .title-border::after,
-.trip-pricing-area .title-border::after {
+.newsletter-area .title-border::after {
     background: rgba(0, 0, 0, 0) url(../img/icon/title-icon-3.png) no-repeat scroll 0 0;
 }
 

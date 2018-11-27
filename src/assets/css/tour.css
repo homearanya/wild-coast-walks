@@ -21,6 +21,7 @@
     background: #edecec url(../img/banner/26.png) no-repeat scroll right top / 58% 100%;
     padding-bottom: 96px;
     padding-top: 80px;
+    margin-top: 100px;
 }
 
 .adventures-grid form#banner-searchbox.details-form {
@@ -329,4 +330,177 @@ button#booking-button:hover,
     margin-bottom: 10px;
     padding: 0 25px;
     text-transform: uppercase;
+}
+
+
+/* Large desktop :1920px. */
+
+@media (min-width: 1920px) {
+    .trip-information {
+        background-size: 49.8% 100%
+    }
+    .trip-booking-info {
+        position: relative;
+        right: -127px;
+    }
+    .trip-information.details-two {
+        background-size: 49.5% 100%
+    }
+}
+
+
+/* Normal desktop :992px. */
+
+@media (min-width: 992px) and (max-width: 1169px) {
+    .trip-info-left-text .section-title {
+        margin-bottom: 30px
+    }
+    .trip-info-left-text p {
+        line-height: 26px
+    }
+    .trip-booking-info {
+        padding-top: 100px
+    }
+    .trip-status,
+    .trip-price {
+        width: 23%
+    }
+    .trip-action {
+        width: 18%
+    }
+    .details-button button#btn-search-category {
+        padding: 0 30px
+    }
+    .details-info {
+        margin-bottom: 35px
+    }
+    .details-info li span {
+        width: auto;
+        margin-right: 10px;
+    }
+}
+
+
+/* Tablet desktop :768px. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .trip-information {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0
+    }
+    .trip-information {
+        padding: 0
+    }
+    .trip-action {
+        width: 20%
+    }
+    .trip-information.details-two,
+    .details-two .trip-info-left-text {
+        padding-top: 100px;
+        padding-bottom: 100px
+    }
+    .trip-action>div {
+        width: 162px;
+    }
+}
+
+
+/* small mobile :320px. */
+
+@media (max-width: 767px) {
+    .trip-information {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    }
+    .trip-information {
+        padding: 0;
+    }
+    .trip-information.details-two,
+    .error-area {
+        background: rgba(33, 34, 39, 0.15) none repeat scroll 0 0
+    }
+    .details-two .trip-info-left-text {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+    .details-info>li {
+        width: 100%
+    }
+    .details-social-link a {
+        height: 45px;
+        line-height: 45px;
+        margin-right: 5px;
+        width: 45px;
+    }
+    .trip-status>div {
+        width: 120px
+    }
+    .trip-date div {
+        width: 205px
+    }
+    .trip-price>div {
+        width: 144px
+    }
+    .trip-action>div {
+        width: 162px
+    }
+}
+
+
+/* Large Mobile :480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .single-portfolio img,
+    .blog-carousel .blog-image img,
+    .team-image img,
+    .single-gallery-item .gallery-image a img,
+    .list .adventure-img img,
+    .blog-post-two .blog-image a img,
+    .blog-post-two .blog-image a {
+        width: 100%;
+    }
+    .header-top-right {
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+        width: 59%;
+    }
+    .newsletter-area {
+        padding-bottom: 82px
+    }
+    .newsletter-area::after {
+        height: 43px
+    }
+    .footer-widget-area::after {
+        height: 35px
+    }
+    .footer-widget-area,
+    .footer-widget-area.footer-widget-two,
+    .footer-widget-area.footer-widget-three {
+        padding-bottom: 60px;
+        padding-top: 115px;
+    }
+    .single-sidebar-widget .hover-effect a img {
+        display: none
+    }
+    .adventures-grid.grid-two-tab .adventure-cat.box-small {
+        margin-left: 10px;
+        margin-top: 16px;
+    }
+    .list-buttons .button-one {
+        margin-right: 15px
+    }
+    .blog-links,
+    .blog-post-two .blog-links {
+        float: right;
+        margin-top: 0;
+    }
+    .blog-two-text-container {
+        padding: 0 10px 30px
+    }
+    .blog-post-details .blog-links {
+        margin-top: 25px
+    }
+    .contact-container {
+        padding-left: 22%;
+        padding-right: 22%;
+    }
 }

@@ -37,16 +37,6 @@
     .fun-factor-area.fun-factor-three::after {
         height: 63px
     }
-    .trip-information {
-        background-size: 49.8% 100%
-    }
-    .trip-booking-info {
-        position: relative;
-        right: -127px;
-    }
-    .trip-information.details-two {
-        background-size: 49.5% 100%
-    }
     .error-area {
         background-size: 48.5% 100%;
         padding-bottom: 127px;
@@ -254,32 +244,6 @@
     .adventure-list-container::after {
         bottom: -7px
     }
-    .details-button button#btn-search-category {
-        padding: 0 30px
-    }
-    .details-info {
-        margin-bottom: 35px
-    }
-    .details-info li span {
-        width: auto;
-        margin-right: 10px;
-    }
-    .trip-info-left-text .section-title {
-        margin-bottom: 30px
-    }
-    .trip-info-left-text p {
-        line-height: 26px
-    }
-    .trip-booking-info {
-        padding-top: 100px
-    }
-    .trip-status,
-    .trip-price {
-        width: 23%
-    }
-    .trip-action {
-        width: 18%
-    }
     .error-area {
         background-size: 51% 100%;
         padding-bottom: 85px;
@@ -351,9 +315,6 @@
 @media (min-width: 768px) and (max-width: 991px) {
     header {
         position: inherit
-    }
-    .trip-information {
-        background: rgba(0, 0, 0, 0) none repeat scroll 0 0
     }
     .single-service {
         height: 152px;
@@ -503,20 +464,6 @@
     .adventure-list-container {
         padding-left: 20px
     }
-    .trip-information {
-        padding: 0
-    }
-    .trip-action {
-        width: 20%
-    }
-    .trip-information.details-two,
-    .error-area {
-        background: rgba(33, 34, 39, 0.15) none repeat scroll 0 0
-    }
-    .details-two .trip-info-left-text {
-        padding-top: 100px;
-        padding-bottom: 100px
-    }
     .error-area {
         padding-bottom: 80px;
         padding-top: 65px;
@@ -562,9 +509,6 @@
     .error-text-container {
         padding-left: 0px
     }
-    .trip-action>div {
-        width: 162px;
-    }
 }
 
 
@@ -583,9 +527,6 @@
     }
     header.fixed .header-top {
         padding: 10px 0;
-    }
-    .trip-information {
-        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     }
     .nivo-directionNav,
     .blog-text::after,
@@ -687,8 +628,7 @@
         margin-top: 40px
     }
     .payment-image>img,
-    .adventure-list-text,
-    .details-info>li {
+    .adventure-list-text {
         width: 100%
     }
     .footer-widget-area::after {
@@ -776,25 +716,11 @@
     .list .adventure-img {
         border: 3px solid #f0f0f0
     }
-    .trip-information {
-        padding: 0
-    }
-    .details-social-link a {
-        height: 45px;
-        line-height: 45px;
-        margin-right: 5px;
-        width: 45px;
-    }
     .include-item {
         margin-bottom: 25px
     }
-    .trip-information.details-two,
     .error-area {
         background: rgba(33, 34, 39, 0.15) none repeat scroll 0 0
-    }
-    .details-two .trip-info-left-text {
-        padding-bottom: 60px;
-        padding-top: 60px;
     }
     .single-gallery-item {
         margin-bottom: 40px !important
@@ -897,18 +823,6 @@
     }
     .blog-links a:first-child {
         margin-left: 0
-    }
-    .trip-status>div {
-        width: 120px
-    }
-    .trip-date div {
-        width: 205px
-    }
-    .trip-price>div {
-        width: 144px
-    }
-    .trip-action>div {
-        width: 162px
     }
     .table-content.table-responsive {
         border: medium none rgba(0, 0, 0, 0)
