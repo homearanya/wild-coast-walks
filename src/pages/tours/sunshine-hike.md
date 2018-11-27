@@ -4,7 +4,6 @@ featured: true
 destination: Wild Coast
 activity: Slackpack
 title: Sunshine Hike
-date: 2018-11-21T14:44:16.695Z
 description: >
   Takes in the best of Wild Coast scenery over 4 hiking days between Wavecrest
   and Crawfords hotel Chintsa in the south.  Dinner, bed and breakfast with
@@ -18,5 +17,8 @@ price: R 6900
 imagethumbnail:
   alt: Sunshine Hike
   image: /img/sunshine-hike375x375-min.jpg
+imagebanner:
+  alt: Sunshine Hike
+  image: /img/sunshine-hike1600x596-min.jpg
 ---
 
