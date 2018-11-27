@@ -151,8 +151,49 @@ collections:
       name: "about"
       fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Body", name: "body", widget: "markdown"}
+        - {label: Blur, name: blur, widget: text} 
+        - label: "Banner Image"
+          name: imagebanner
+          widget: object
+          fields: 
+            - {label: Image, name: image, widget: image, hint: "size 1600 x 596"}
+            - {label: Alt, name: alt, widget: string,  required: false}    
+    - file: "src/pages/contact/index.md"
+      label: "Contact Page"
+      name: contact
+      fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+        - {label: Blur, name: blur, widget: text} 
+        - label: "Banner Image"
+          name: imagebanner
+          widget: object
+          fields: 
+            - {label: Image, name: image, widget: image, hint: "size 1600 x 596"}
+            - {label: Alt, name: alt, widget: string,  required: false}    
+    - file: "src/pages/tour-calendar/index.md"
+      label: "Tour Calendar Page"
+      name: tourcalendar
+      fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-calendar-page"}
+        - {label: Blur, name: blur, widget: text} 
+        - label: "Banner Image"
+          name: imagebanner
+          widget: object
+          fields: 
+            - {label: Image, name: image, widget: image, hint: "size 1600 x 596"}
+            - {label: Alt, name: alt, widget: string,  required: false}    
+    - file: "src/pages/blog/index.md"
+      label: "Blog Page"
+      name: bloglist
+      fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-list"}
+        - {label: Blur, name: blur, widget: text} 
+        - label: "Banner Image"
+          name: imagebanner
+          widget: object
+          fields: 
+            - {label: Image, name: image, widget: image, hint: "size 1600 x 596"}
+            - {label: Alt, name: alt, widget: string,  required: false}    
   editor:
     preview: false
 
