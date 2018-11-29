@@ -72,7 +72,62 @@ const Filter = (props) => {
     )
 }
 
+const Event = (props) => {
+    return (
+        <div className="col-md-12">
+            <div className="single-list-item">
+                <div className="row">
+                    <div className="col-md-4 col-sm-5">
+                        <div className="adventure-img">
+                            <a href="#"><img src={eventImage} alt="" /></a>
+                        </div>
+                    </div>
+                    <div className="col-md-8 col-sm-7 margin-left-list">
+                        <div className="adventure-list-container">
+                            <div className="adventure-list-text">
+                                <h1><a href="#">Beach Trip in Miami  / 7 Days Trip</a></h1>
+                                <h2>$659<span className="light">/</span><span className="persons">per person</span></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius tortor at placerat rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel condimentum tortor. </p>
+                                <div className="list-buttons">
+                                    <a href="#" className="button-one button-blue">Learn More</a>
+                                    <div className="list-rating">
+                                        <i className="fa fa-star color"></i>
+                                        <i className="fa fa-star color"></i>
+                                        <i className="fa fa-star color"></i>
+                                        <i className="fa fa-star color"></i>
+                                        <i className="fa fa-star-o"></i>
+                                    </div>
+                                    <div className="adventure-list-link">
+                                        <a href="#"><i className="fa fa-facebook"></i></a>
+                                        <a href="#"><i className="fa fa-twitter"></i></a>
+                                        <a href="#"><i className="fa fa-google-plus"></i></a>
+                                        <a href="#"><i className="fa fa-linkedin"></i></a>
+                                        <a href="#"><i className="fa fa-rss"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="adventure-list-image">
+                                <div className="image-top">
+                                    <img src={icon_level} alt="" />
+                                </div>
+                                <h2>Easy level</h2>
+                                <ul className="image-bottom">
+                                    <li><img src={icon_35} alt="" /></li>
+                                    <li><img src={icon_36} alt="" /></li>
+                                    <li><img src={icon_37} alt="" /></li>
+                                    <li><img src={icon_38} alt="" /></li>
+                                    <li><img src={icon_39} alt="" /></li>
+                                    <li><img src={icon_40} alt="" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+    )
+}
 export default ({ data }) => {
     const { frontmatter } = data.markdownRemark
     return (
@@ -94,339 +149,38 @@ export default ({ data }) => {
 
             <div className="adventures-grid section-padding list">
                 <div className="container">
-                    <Filter />
-                    <div className="clearfix"></div>
+                    {/* <Filter />
+                    <div className="clearfix"></div> */}
                     <div className="row">
-                        <div className="col-md-12">
-                            <div className="single-list-item">
-                                <div className="row">
-                                    <div className="col-md-4 col-sm-5">
-                                        <div className="adventure-img">
-                                            <a href="#"><img src={eventImage} alt="" /></a>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-8 col-sm-7 margin-left-list">
-                                        <div className="adventure-list-container">
-                                            <div className="adventure-list-text">
-                                                <h1><a href="#">Beach Trip in Miami  / 7 Days Trip</a></h1>
-                                                <h2>$659<span className="light">/</span><span className="persons">per person</span></h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius tortor at placerat rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel condimentum tortor. </p>
-                                                <div className="list-buttons">
-                                                    <a href="#" className="button-one button-blue">Learn More</a>
-                                                    <div className="list-rating">
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star-o"></i>
-                                                    </div>
-                                                    <div className="adventure-list-link">
-                                                        <a href="#"><i className="fa fa-facebook"></i></a>
-                                                        <a href="#"><i className="fa fa-twitter"></i></a>
-                                                        <a href="#"><i className="fa fa-google-plus"></i></a>
-                                                        <a href="#"><i className="fa fa-linkedin"></i></a>
-                                                        <a href="#"><i className="fa fa-rss"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="adventure-list-image">
-                                                <div className="image-top">
-                                                    <img src={icon_level} alt="" />
-                                                </div>
-                                                <h2>Easy level</h2>
-                                                <ul className="image-bottom">
-                                                    <li><img src={icon_35} alt="" /></li>
-                                                    <li><img src={icon_36} alt="" /></li>
-                                                    <li><img src={icon_37} alt="" /></li>
-                                                    <li><img src={icon_38} alt="" /></li>
-                                                    <li><img src={icon_39} alt="" /></li>
-                                                    <li><img src={icon_40} alt="" /></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <Event />
+                        <Event />
+                        <Event />
+                        <Event />
+                        <Event />
+                        <Event />
+                        <div className="pagination-content">
+                            <div className="pagination-button">
+                                <ul className="pagination">
+                                    <li><a href="#"><i className="fa fa-angle-left"></i></a></li>
+                                    <li className="current"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#"><i className="fa fa-angle-right"></i></a></li>
+                                </ul>
                             </div>
-                        </div>
-                        <div className="col-md-12">
-                            <div className="single-list-item">
-                                <div className="row">
-                                    <div className="col-md-4 col-sm-5">
-                                        <div className="adventure-img">
-                                            <a href="#"><img src={eventImage} alt="" /></a>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-8 col-sm-7 margin-left-list">
-                                        <div className="adventure-list-container">
-                                            <div className="adventure-list-text">
-                                                <h1><a href="#">Beach Trip in Miami  / 7 Days Trip</a></h1>
-                                                <h2>$659<span className="light">/</span><span className="persons">per person</span></h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius tortor at placerat rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel condimentum tortor. </p>
-                                                <div className="list-buttons">
-                                                    <a href="#" className="button-one button-blue">Learn More</a>
-                                                    <div className="list-rating">
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star-o"></i>
-                                                    </div>
-                                                    <div className="adventure-list-link">
-                                                        <a href="#"><i className="fa fa-facebook"></i></a>
-                                                        <a href="#"><i className="fa fa-twitter"></i></a>
-                                                        <a href="#"><i className="fa fa-google-plus"></i></a>
-                                                        <a href="#"><i className="fa fa-linkedin"></i></a>
-                                                        <a href="#"><i className="fa fa-rss"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="adventure-list-image">
-                                                <div className="image-top">
-                                                    <img src={icon_level} alt="" />
-                                                </div>
-                                                <h2>Easy level</h2>
-                                                <ul className="image-bottom">
-                                                    <li><img src={icon_35} alt="" /></li>
-                                                    <li><img src={icon_36} alt="" /></li>
-                                                    <li><img src={icon_37} alt="" /></li>
-                                                    <li><img src={icon_38} alt="" /></li>
-                                                    <li><img src={icon_39} alt="" /></li>
-                                                    <li><img src={icon_40} alt="" /></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-12">
-                            <div className="single-list-item">
-                                <div className="row">
-                                    <div className="col-md-4 col-sm-5">
-                                        <div className="adventure-img">
-                                            <a href="#"><img src={eventImage} alt="" /></a>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-8 col-sm-7 margin-left-list">
-                                        <div className="adventure-list-container">
-                                            <div className="adventure-list-text">
-                                                <h1><a href="#">Beach Trip in Miami  / 7 Days Trip</a></h1>
-                                                <h2>$659<span className="light">/</span><span className="persons">per person</span></h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius tortor at placerat rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel condimentum tortor. </p>
-                                                <div className="list-buttons">
-                                                    <a href="#" className="button-one button-blue">Learn More</a>
-                                                    <div className="list-rating">
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star-o"></i>
-                                                    </div>
-                                                    <div className="adventure-list-link">
-                                                        <a href="#"><i className="fa fa-facebook"></i></a>
-                                                        <a href="#"><i className="fa fa-twitter"></i></a>
-                                                        <a href="#"><i className="fa fa-google-plus"></i></a>
-                                                        <a href="#"><i className="fa fa-linkedin"></i></a>
-                                                        <a href="#"><i className="fa fa-rss"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="adventure-list-image">
-                                                <div className="image-top">
-                                                    <img src={icon_level} alt="" />
-                                                </div>
-                                                <h2>Easy level</h2>
-                                                <ul className="image-bottom">
-                                                    <li><img src={icon_35} alt="" /></li>
-                                                    <li><img src={icon_36} alt="" /></li>
-                                                    <li><img src={icon_37} alt="" /></li>
-                                                    <li><img src={icon_38} alt="" /></li>
-                                                    <li><img src={icon_39} alt="" /></li>
-                                                    <li><img src={icon_40} alt="" /></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-12">
-                            <div className="single-list-item">
-                                <div className="row">
-                                    <div className="col-md-4 col-sm-5">
-                                        <div className="adventure-img">
-                                            <a href="#"><img src={eventImage} alt="" /></a>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-8 col-sm-7 margin-left-list">
-                                        <div className="adventure-list-container">
-                                            <div className="adventure-list-text">
-                                                <h1><a href="#">Beach Trip in Miami  / 7 Days Trip</a></h1>
-                                                <h2>$659<span className="light">/</span><span className="persons">per person</span></h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius tortor at placerat rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel condimentum tortor. </p>
-                                                <div className="list-buttons">
-                                                    <a href="#" className="button-one button-blue">Learn More</a>
-                                                    <div className="list-rating">
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star-o"></i>
-                                                    </div>
-                                                    <div className="adventure-list-link">
-                                                        <a href="#"><i className="fa fa-facebook"></i></a>
-                                                        <a href="#"><i className="fa fa-twitter"></i></a>
-                                                        <a href="#"><i className="fa fa-google-plus"></i></a>
-                                                        <a href="#"><i className="fa fa-linkedin"></i></a>
-                                                        <a href="#"><i className="fa fa-rss"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="adventure-list-image">
-                                                <div className="image-top">
-                                                    <img src={icon_level} alt="" />
-                                                </div>
-                                                <h2>Easy level</h2>
-                                                <ul className="image-bottom">
-                                                    <li><img src={icon_35} alt="" /></li>
-                                                    <li><img src={icon_36} alt="" /></li>
-                                                    <li><img src={icon_37} alt="" /></li>
-                                                    <li><img src={icon_38} alt="" /></li>
-                                                    <li><img src={icon_39} alt="" /></li>
-                                                    <li><img src={icon_40} alt="" /></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-12">
-                            <div className="single-list-item">
-                                <div className="row">
-                                    <div className="col-md-4 col-sm-5">
-                                        <div className="adventure-img">
-                                            <a href="#"><img src={eventImage} alt="" /></a>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-8 col-sm-7 margin-left-list">
-                                        <div className="adventure-list-container">
-                                            <div className="adventure-list-text">
-                                                <h1><a href="#">Beach Trip in Miami  / 7 Days Trip</a></h1>
-                                                <h2>$659<span className="light">/</span><span className="persons">per person</span></h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius tortor at placerat rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel condimentum tortor. </p>
-                                                <div className="list-buttons">
-                                                    <a href="#" className="button-one button-blue">Learn More</a>
-                                                    <div className="list-rating">
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star-o"></i>
-                                                    </div>
-                                                    <div className="adventure-list-link">
-                                                        <a href="#"><i className="fa fa-facebook"></i></a>
-                                                        <a href="#"><i className="fa fa-twitter"></i></a>
-                                                        <a href="#"><i className="fa fa-google-plus"></i></a>
-                                                        <a href="#"><i className="fa fa-linkedin"></i></a>
-                                                        <a href="#"><i className="fa fa-rss"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="adventure-list-image">
-                                                <div className="image-top">
-                                                    <img src={icon_level} alt="" />
-                                                </div>
-                                                <h2>Easy level</h2>
-                                                <ul className="image-bottom">
-                                                    <li><img src={icon_35} alt="" /></li>
-                                                    <li><img src={icon_36} alt="" /></li>
-                                                    <li><img src={icon_37} alt="" /></li>
-                                                    <li><img src={icon_38} alt="" /></li>
-                                                    <li><img src={icon_39} alt="" /></li>
-                                                    <li><img src={icon_40} alt="" /></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-12">
-                            <div className="single-list-item no-margin">
-                                <div className="row">
-                                    <div className="col-md-4 col-sm-5">
-                                        <div className="adventure-img">
-                                            <a href="#"><img src={eventImage} alt="" /></a>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-8 col-sm-7 margin-left-list">
-                                        <div className="adventure-list-container">
-                                            <div className="adventure-list-text">
-                                                <h1><a href="#">Beach Trip in Miami  / 7 Days Trip</a></h1>
-                                                <h2>$659<span className="light">/</span><span className="persons">per person</span></h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius tortor at placerat rutrum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vel condimentum tortor. </p>
-                                                <div className="list-buttons">
-                                                    <a href="#" className="button-one button-blue">Learn More</a>
-                                                    <div className="list-rating">
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star color"></i>
-                                                        <i className="fa fa-star-o"></i>
-                                                    </div>
-                                                    <div className="adventure-list-link">
-                                                        <a href="#"><i className="fa fa-facebook"></i></a>
-                                                        <a href="#"><i className="fa fa-twitter"></i></a>
-                                                        <a href="#"><i className="fa fa-google-plus"></i></a>
-                                                        <a href="#"><i className="fa fa-linkedin"></i></a>
-                                                        <a href="#"><i className="fa fa-rss"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="adventure-list-image">
-                                                <div className="image-top">
-                                                    <img src={icon_level} alt="" />
-                                                </div>
-                                                <h2>Easy level</h2>
-                                                <ul className="image-bottom">
-                                                    <li><img src={icon_35} alt="" /></li>
-                                                    <li><img src={icon_36} alt="" /></li>
-                                                    <li><img src={icon_37} alt="" /></li>
-                                                    <li><img src={icon_38} alt="" /></li>
-                                                    <li><img src={icon_39} alt="" /></li>
-                                                    <li><img src={icon_40} alt="" /></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="pagination-content">
-                        <div className="pagination-button">
-                            <ul className="pagination">
-                                <li><a href="#"><i className="fa fa-angle-left"></i></a></li>
-                                <li className="current"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#"><i className="fa fa-angle-right"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div >
+            </div >
+        </div>
     )
 }
-
 export const CalendarPageQuery = graphql`
   query CalendarPage ($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-        frontmatter {
+                markdownRemark(id: {eq: $id }) {
+                frontmatter {
             imagebanner {
                 image
                 alt
