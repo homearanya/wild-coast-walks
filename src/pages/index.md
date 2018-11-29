@@ -26,8 +26,8 @@ aboutarea:
     alt: Wild Coast Slackpacking - Hikers and Porters
     image: /img/hikers-and-porters786x426-min.jpg
 toursarea:
-  heading1: Best
-  heading2: Selling Trips
+  heading1: Our Popular Tours
+  heading2: ''
   introduction: >-
     Not sure what you’re looking for and need a little inspiration? We can help.
     Check out our handpicked
