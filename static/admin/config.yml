@@ -146,69 +146,69 @@ collections:
             - {label: Heading 1, name: heading1, widget: string}
             - {label: Heading 2, name: heading2, widget: string}
             - {label: Blurb, name: blurb, widget: text}     
-    # - file: "src/pages/about/index.md"
-    #   label: "About Page"
-    #   name: "about"
-    #   fields:
-    #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-    #     - {label: Blurb, name: blurb, widget: text} 
-    #     - label: "Banner Image"
-    #       name: imagebanner
-    #       widget: object
-    #       fields: 
-    #         - {label: Image, name: image, widget: image, hint: "size 1600 x 596"}
-    #         - {label: Alt, name: alt, widget: string,  required: false}    
-    #     - label: "About Area"
-    #       name: aboutarea
-    #       widget: object
-    #       fields: 
-    #         - {label: Heading 1, name: heading1, widget: string}
-    #         - {label: Heading 2, name: heading2, widget: string}
-    #         - label: "Image"
-    #           name: image
-    #           widget: object
-    #           fields: 
-    #             - {label: Image, name: image, widget: image, hint: "size 785 x 647"}
-    #             - {label: Alt, name: alt, widget: string,  required: false}       
-    #         - {label: Text, name: text, widget: text}     
-    #     - label: Destinations Area
-    #       name: destinationsarea
-    #       widget: object
-    #       fields:
-    #         - {label: Heading 1, name: heading1, widget: string}
-    #         - {label: Heading 2, name: heading2, widget: string}
-    #         - {label: Introduction, name: introduction, widget: text}
-    #         - label: "Destination"
-    #           name: destination
-    #           widget: list
-    #           fields:
-    #             - label: "Image"
-    #               name: image
-    #               widget: object
-    #               fields: 
-    #                 - {label: Image, name: image, widget: image, hint: "size 540 x 300"}
-    #                 - {label: Alt, name: alt, widget: string,  required: false}                    
-    #             - {label: Heading 1, name: heading1, widget: string}
-    #             - {label: Heading 2, name: heading2, widget: string}
-    #     - label: Partners Area
-    #       name: partnersarea
-    #       widget: object
-    #       fields:
-    #         - {label: Heading 1, name: heading1, widget: string}
-    #         - {label: Heading 2, name: heading2, widget: string}
-    #         - {label: Introduction, name: introduction, widget: text}
-    #         - label: "Partner"
-    #           name: partner
-    #           widget: list
-    #           fields:
-    #             - label: "Image"
-    #               name: image
-    #               widget: object
-    #               fields: 
-    #                 - {label: Image, name: image, widget: image, hint: "size 540 x 300"}
-    #                 - {label: Alt, name: alt, widget: string,  required: false}                    
-    #             - {label: Heading 1, name: heading1, widget: string}
-    #             - {label: Heading 2, name: heading2, widget: string}
+    - file: "src/pages/about/index.md"
+      label: "About Page"
+      name: "about"
+      fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+        - {label: Blurb, name: blurb, widget: text} 
+        - label: "Banner Image"
+          name: imagebanner
+          widget: object
+          fields: 
+            - {label: Image, name: image, widget: image, hint: "size 1600 x 596"}
+            - {label: Alt, name: alt, widget: string,  required: false}    
+        - label: "About Area"
+          name: aboutarea
+          widget: object
+          fields: 
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
+            - label: "Image"
+              name: image
+              widget: object
+              fields: 
+                - {label: Image, name: image, widget: image, hint: "size 785 x 647"}
+                - {label: Alt, name: alt, widget: string,  required: false}       
+            - {label: Text, name: text, widget: text}     
+        - label: Destinations Area
+          name: destinationsarea
+          widget: object
+          fields:
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
+            - {label: Introduction, name: introduction, widget: text}
+            - label: "Destination"
+              name: destination
+              widget: list
+              fields:
+                - label: "Image"
+                  name: image
+                  widget: object
+                  fields: 
+                    - {label: Image, name: image, widget: image, hint: "size 540 x 300"}
+                    - {label: Alt, name: alt, widget: string,  required: false}                    
+                - {label: Heading 1, name: heading1, widget: string}
+                - {label: Heading 2, name: heading2, widget: string}
+        - label: Partners Area
+          name: partnersarea
+          widget: object
+          fields:
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
+            - {label: Introduction, name: introduction, widget: text}
+            - label: "Partner"
+              name: partner
+              widget: list
+              fields:
+                - label: "Image"
+                  name: image
+                  widget: object
+                  fields: 
+                    - {label: Image, name: image, widget: image, hint: "size 540 x 300"}
+                    - {label: Alt, name: alt, widget: string,  required: false}                    
+                - {label: Heading 1, name: heading1, widget: string}
+                - {label: Heading 2, name: heading2, widget: string}
     - file: "src/pages/contact/index.md"
       label: "Contact Page"
       name: contact
@@ -290,6 +290,15 @@ collections:
             - {label: Email Address, name: email, widget: string}
             - {label: Phone Number, name: phone, widget: string}
     - file: "src/general/footer.md"
+      label: "Configuration"
+      name: "config"
+      fields:
+        - label: Image
+          name: image
+          widget: object
+          fields: 
+            - {label: Image, name: image, widget: image, hint: "size 1600 x 987"}
+            - {label: Alt, name: alt, widget: string,  required: false}      
     - file: "src/general/config.md"
       label: "Configuration"
       name: "config"
