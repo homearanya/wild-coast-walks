@@ -152,7 +152,7 @@ collections:
       fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
         - label : Banner
-          name: Banner
+          name: banner
           widget: object
           fields:
             - {label: Blurb, name: blurb, widget: text} 
