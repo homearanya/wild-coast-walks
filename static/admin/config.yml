@@ -181,7 +181,7 @@ collections:
           fields:
             - {label: Heading 1, name: heading1, widget: string}
             - {label: Heading 2, name: heading2, widget: string}
-            - {label: Introduction, name: introduction, widget: "markdown"}
+            - {label: Introduction, name: body, widget: "markdown"}
             - label: "Destination"
               name: destination
               widget: list
@@ -194,7 +194,7 @@ collections:
                     - {label: Alt, name: alt, widget: string,  required: false}                    
                 - {label: Heading 1, name: heading1, widget: string}
                 - {label: Heading 2, name: heading2, widget: string}
-                - {label: Text, name: text, widget: "markdown"}
+                - {label: Text, name: body, widget: "markdown"}
         - label: Partners Area
           name: partnersarea
           widget: object
@@ -214,7 +214,7 @@ collections:
                     - {label: Alt, name: alt, widget: string,  required: false}                    
                 - {label: Heading 1, name: heading1, widget: string}
                 - {label: Heading 2, name: heading2, widget: string}
-                - {label: Text, name: text, widget: "markdown"}
+                - {label: Text, name: body, widget: "markdown"}
     - file: "src/pages/contact/index.md"
       label: "Contact Page"
       name: contact
