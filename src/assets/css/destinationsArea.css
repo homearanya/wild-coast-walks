@@ -1,0 +1,93 @@
+/* ********** 
+   Destinations Area 
+   ********** */
+
+.destinations-area {
+    /* background: #edecec none repeat scroll 0 0; */
+    background: #ffffff none repeat scroll 0 0;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.destinations-area .title-border:after {
+    background: rgba(0, 0, 0, 0) url(../img/icon/title-icon-2.png) no-repeat scroll 0 0
+}
+
+.single-destinations {
+    padding: 20px;
+}
+
+.destinations-image {
+    position: relative;
+}
+
+.destinations-text h4 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.destinations-text {
+    background: #edecec none repeat scroll 0 0;
+    border-bottom: 4px solid #bcbcbc;
+    padding: 15px 15px 15px 15px;
+    position: relative;
+}
+
+.destinations-text>h4 {
+    margin-bottom: 19px
+}
+
+.destinations-text>p {
+    position: relative;
+    z-index: 9999
+}
+
+.destinations-carousel .owl-item>.col-md-6 {
+    width: 100%
+}
+
+
+/*  15.6 Home Two Destinations Area
+/*----------------------------------------*/
+
+.destinations-area.destinations-two-area,
+.destinations-area.destinations-three-area {
+    padding-top: 100px
+}
+
+.destinations-two-area .destinations-text::after,
+.destinations-three-area .destinations-text::after {
+    display: none
+}
+
+
+/*  16.8 Home Three Destinations Area
+/*----------------------------------------*/
+
+.destinations-three-area .destinations-text {
+    background: #00c0ff none repeat scroll 0 0;
+    color: #fff
+}
+
+.destinations-three-area .destinations-text h4 {
+    color: #fff
+}
+
+.destinations-three-area .destinations-text {
+    border-color: #ffd400
+}
+
+.destinations-three-area .destinations-text::before {
+    background: #00c0ff none repeat scroll 0 0;
+    content: "";
+    height: 26px;
+    left: -13px;
+    margin-top: -13px;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+    width: 26px;
+}

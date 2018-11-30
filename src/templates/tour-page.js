@@ -118,13 +118,13 @@ const TripInformation = (props) => {
                                 <li className=""><span>Group size</span>Min 1, Max 12</li>
                                 <li className=""><span>Countries</span>Nepal</li>
                             </ul>
-                            <div className="details-social-link">
+                            {/* <div className="details-social-link">
                                 <a href="#"><i className="fa fa-facebook"></i></a>
                                 <a href="#"><i className="fa fa-twitter"></i></a>
                                 <a href="#"><i className="fa fa-google-plus"></i></a>
                                 <a href="#"><i className="fa fa-linkedin"></i></a>
                                 <a href="#"><i className="fa fa-rss"></i></a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="col-md-6 hidden-sm hidden-xs">

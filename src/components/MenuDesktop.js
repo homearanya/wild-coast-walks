@@ -17,7 +17,9 @@ const MenuBar = (props) => {
                         <div className="logo-menu-bg">
                             <div className="row">
                                 <Logo />
-                                <MainMenu tourMenuSections={props.tourMenuSections} />
+                                <MainMenu
+                                    tourMenuSections={props.tourMenuSections}
+                                    switches={props.switches} />
                             </div>
                         </div>
                     </div>
@@ -55,14 +57,14 @@ const SubMenuDest = (props) => {
                 </a>
             </span>
             <span>
-                <a className="mega-title">
-                    {props.section.heading1}
-                    {/* <span>{props.section.heading2}</span> */}
-                </a>
+                <div className="mega-title">
+                    <h4>{props.section.heading1} <span>{props.section.heading2}</span></h4>
+                </div>
                 {props.section.tours.map((tour, index) =>
                     <Link
                         key={index}
                         to={tour.slug}
+                        className="mega-item"
                         onClick={props.handleLeave}>
                         {tour.tour + " (" + tour.duration + ")"}
                     </Link>
@@ -121,8 +123,21 @@ class MainMenu extends Component {
                 <div className="mainmenu">
                     <nav>
                         <ul id="nav">
-                            <li><Link to="/" className="menu-item" activeClassName="menu-item-active" > HOME</Link></li>
-                            <li><Link to="/about/" className="menu-item" activeClassName="menu-item-active">ABOUT US</Link></li>
+                            <li>
+                                <Link
+                                    to="/" className="menu-item"
+                                    activeClassName="menu-item-active" >
+                                    HOME
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/about/"
+                                    className="menu-item"
+                                    activeClassName="menu-item-active">
+                                    ABOUT US
+                                </Link>
+                            </li>
                             <li onMouseLeave={this.handleLeave} onMouseEnter={this.handleHover}>
                                 <a href="#"> Tours </a>
                                 <CSSTransitionGroup
@@ -133,9 +148,38 @@ class MainMenu extends Component {
                                     {this.state.showSubMenu && <SubMenu tourMenuSections={this.props.tourMenuSections} handleLeave={this.handleLeave} />}
                                 </CSSTransitionGroup>
                             </li>
-                            <li><Link to="/tour-calendar/" className="menu-item" activeClassName="menu-item-active">Tour Calendar</Link></li>
-                            <li><Link to="/blog/" className="menu-item" activeClassName="menu-item-active">BLOG</Link></li>
-                            <li><Link to="/contact/" className="menu-item" activeClassName="menu-item-active">Contact Us</Link></li>
+                            {this.props.switches.calendarswitch ?
+                                <li>
+                                    <Link
+                                        to="/tour-calendar/"
+                                        className="menu-item"
+                                        activeClassName="menu-item-active">
+                                        Tour Calendar
+                                </Link>
+                                </li>
+                                :
+                                null
+                            }
+                            {this.props.switches.blogswitch ?
+                                <li>
+                                    <Link
+                                        to="/blog/"
+                                        className="menu-item"
+                                        activeClassName="menu-item-active">
+                                        BLOG
+                                </Link>
+                                </li>
+                                :
+                                null
+                            }
+                            <li>
+                                <Link
+                                    to="/contact/"
+                                    className="menu-item"
+                                    activeClassName="menu-item-active">
+                                    Contact Us
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -166,7 +210,11 @@ export default class MenuDesktop extends Component {
         }
         return (
             <Sticky onFixedToggle={this.onFixedToggle}>
-                <MenuBar menuClass={menuClass} tourMenuSections={this.props.sections} />
+                <MenuBar
+                    menuClass={menuClass}
+                    tourMenuSections={this.props.sections}
+                    switches={this.props.switches}
+                />
             </Sticky>
         )
     }

@@ -116,13 +116,13 @@ export default () => (
                                 <div className="adventure-price-link">
                                     <span className="trip-price">$659</span>
                                     <span className="trip-person">Per Person</span>
-                                    <div className="adventure-link">
+                                    {/* <div className="adventure-link">
                                         <a href="#"><i className="fa fa-facebook"></i></a>
                                         <a href="#"><i className="fa fa-twitter"></i></a>
                                         <a href="#"><i className="fa fa-google-plus"></i></a>
                                         <a href="#"><i className="fa fa-linkedin"></i></a>
                                         <a href="#"><i className="fa fa-rss"></i></a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -140,13 +140,13 @@ export default () => (
                                 <div className="adventure-price-link">
                                     <span className="trip-price">$408</span>
                                     <span className="trip-person">Per Person</span>
-                                    <div className="adventure-link">
+                                    {/* <div className="adventure-link">
                                         <a href="#"><i className="fa fa-facebook"></i></a>
                                         <a href="#"><i className="fa fa-twitter"></i></a>
                                         <a href="#"><i className="fa fa-google-plus"></i></a>
                                         <a href="#"><i className="fa fa-linkedin"></i></a>
                                         <a href="#"><i className="fa fa-rss"></i></a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -164,13 +164,13 @@ export default () => (
                                 <div className="adventure-price-link">
                                     <span className="trip-price">$970</span>
                                     <span className="trip-person">Per Person</span>
-                                    <div className="adventure-link">
+                                    {/* <div className="adventure-link">
                                         <a href="#"><i className="fa fa-facebook"></i></a>
                                         <a href="#"><i className="fa fa-twitter"></i></a>
                                         <a href="#"><i className="fa fa-google-plus"></i></a>
                                         <a href="#"><i className="fa fa-linkedin"></i></a>
                                         <a href="#"><i className="fa fa-rss"></i></a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -188,13 +188,13 @@ export default () => (
                                 <div className="adventure-price-link">
                                     <span className="trip-price">$350</span>
                                     <span className="trip-person">Per Person</span>
-                                    <div className="adventure-link">
+                                    {/* <div className="adventure-link">
                                         <a href="#"><i className="fa fa-facebook"></i></a>
                                         <a href="#"><i className="fa fa-twitter"></i></a>
                                         <a href="#"><i className="fa fa-google-plus"></i></a>
                                         <a href="#"><i className="fa fa-linkedin"></i></a>
                                         <a href="#"><i className="fa fa-rss"></i></a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -212,13 +212,13 @@ export default () => (
                                 <div className="adventure-price-link">
                                     <span className="trip-price">$950</span>
                                     <span className="trip-person">Per Person</span>
-                                    <div className="adventure-link">
+                                    {/* <div className="adventure-link">
                                         <a href="#"><i className="fa fa-facebook"></i></a>
                                         <a href="#"><i className="fa fa-twitter"></i></a>
                                         <a href="#"><i className="fa fa-google-plus"></i></a>
                                         <a href="#"><i className="fa fa-linkedin"></i></a>
                                         <a href="#"><i className="fa fa-rss"></i></a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -236,13 +236,13 @@ export default () => (
                                 <div className="adventure-price-link">
                                     <span className="trip-price">$568</span>
                                     <span className="trip-person">Per Person</span>
-                                    <div className="adventure-link">
+                                    {/* <div className="adventure-link">
                                         <a href="#"><i className="fa fa-facebook"></i></a>
                                         <a href="#"><i className="fa fa-twitter"></i></a>
                                         <a href="#"><i className="fa fa-google-plus"></i></a>
                                         <a href="#"><i className="fa fa-linkedin"></i></a>
                                         <a href="#"><i className="fa fa-rss"></i></a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -260,13 +260,13 @@ export default () => (
                                 <div className="adventure-price-link">
                                     <span className="trip-price">$999</span>
                                     <span className="trip-person">Per Person</span>
-                                    <div className="adventure-link">
+                                    {/* <div className="adventure-link">
                                         <a href="#"><i className="fa fa-facebook"></i></a>
                                         <a href="#"><i className="fa fa-twitter"></i></a>
                                         <a href="#"><i className="fa fa-google-plus"></i></a>
                                         <a href="#"><i className="fa fa-linkedin"></i></a>
                                         <a href="#"><i className="fa fa-rss"></i></a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -284,13 +284,13 @@ export default () => (
                                 <div className="adventure-price-link">
                                     <span className="trip-price">$852</span>
                                     <span className="trip-person">Per Person</span>
-                                    <div className="adventure-link">
+                                    {/* <div className="adventure-link">
                                         <a href="#"><i className="fa fa-facebook"></i></a>
                                         <a href="#"><i className="fa fa-twitter"></i></a>
                                         <a href="#"><i className="fa fa-google-plus"></i></a>
                                         <a href="#"><i className="fa fa-linkedin"></i></a>
                                         <a href="#"><i className="fa fa-rss"></i></a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -308,13 +308,13 @@ export default () => (
                                 <div className="adventure-price-link">
                                     <span className="trip-price">$378</span>
                                     <span className="trip-person">Per Person</span>
-                                    <div className="adventure-link">
+                                    {/* <div className="adventure-link">
                                         <a href="#"><i className="fa fa-facebook"></i></a>
                                         <a href="#"><i className="fa fa-twitter"></i></a>
                                         <a href="#"><i className="fa fa-google-plus"></i></a>
                                         <a href="#"><i className="fa fa-linkedin"></i></a>
                                         <a href="#"><i className="fa fa-rss"></i></a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

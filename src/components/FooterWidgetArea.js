@@ -64,7 +64,7 @@ export default function FooterWidgetArea() {
                                 <FooterContactDetails />
                                 <Newsletter />
                             </div>
-                            <div className="row">
+                            {/* <div className="row">
                                 <div className="col-sm-12">
                                     <div className={"footer-link " + footerStyles.footerSocial}>
                                         <a href="#"><i className="fa fa-facebook"></i></a>
@@ -74,7 +74,7 @@ export default function FooterWidgetArea() {
                                         <a href="#"><i className="fa fa-rss"></i></a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 )

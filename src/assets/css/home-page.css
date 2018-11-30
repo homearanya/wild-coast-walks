@@ -1,3 +1,240 @@
+/* ********** 
+   About Area 
+   ********** */
+
+.about-area {
+    background: #edecec none repeat scroll 0 0;
+    /* due to slider area adding at inexplicable 4px botton margin to the image */
+    margin-top: -4px;
+}
+
+.about-area .section-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.about-area .section-title,
+.service-about-area .section-title {
+    margin-bottom: 45px
+}
+
+.about-area .section-title h1,
+.service-about-area .section-title h1 {
+    margin-bottom: 0
+}
+
+.about-area .title-border::after {
+    background: rgba(0, 0, 0, 0) url("../img/icon/title-icon-1.png") no-repeat scroll 0 0;
+    bottom: -7px;
+    margin-left: -32px;
+    width: 64px;
+}
+
+.about-area .section-title h1:before,
+.about-area .section-title h1:after {
+    background: #54555D
+}
+
+.about-text h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    line-height: 24px;
+    margin-bottom: 36px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.about-text>a {
+    background: #212227 none repeat scroll 0 0;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 62px;
+    margin-top: 24px;
+    padding: 0 47px;
+}
+
+.about-text>a:hover {
+    background: rgba(0, 0, 0, .7) none repeat scroll 0 0
+}
+
+
+/*  15.2 Service About Area
+/*----------------------------------------*/
+
+.service-about-area {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../img/banner/7.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 49% 100%;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.service-item {
+    margin-top: 84px
+}
+
+.item-image {
+    height: 50px;
+    margin-bottom: 10px
+}
+
+.service-item>h4 {
+    font-size: 13px;
+    text-transform: uppercase
+}
+
+.single-service-two {
+    padding-top: 60px
+}
+
+.service-about-area .section-title.title-two .title-border::after {
+    bottom: 0;
+}
+
+
+/*----------------------------------------*/
+
+
+/*  16.3 Home Three About Area
+/*----------------------------------------*/
+
+.about-area.about-area-three {
+    background-image: url(../img/banner/12.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 100px;
+    margin-top: 57px;
+    padding-bottom: 49px;
+    padding-top: 93px;
+    position: relative;
+}
+
+.about-area.about-area-three::after {
+    background: rgba(0, 0, 0, 0) url(../img/banner/transparent-3.png) no-repeat scroll center top / cover;
+    content: "";
+    height: 46px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.section-title.title-three h1 {
+    padding-bottom: 46px
+}
+
+.section-title.title-three h1::after {
+    display: none
+}
+
+.section-title.title-three h1::before {
+    background: #ffe52d none repeat scroll 0 0;
+    left: 0;
+    margin-left: 0;
+    width: 100%;
+}
+
+.section-title.title-three .title-border::after {
+    background: rgba(0, 0, 0, 0) url(../img/icon/title3-icon-1.png) no-repeat scroll 0 0;
+    bottom: 17px;
+    margin-left: -20px;
+    width: 40px;
+}
+
+.about-area .section-title.title-three .title-border::after {
+    background: rgba(0, 0, 0, 0) url(../img/icon/title3-icon-1.png) no-repeat scroll 0 0;
+    bottom: -1px;
+}
+
+.about-area .section-title.title-three {
+    margin-bottom: 82px
+}
+
+.about-area-three .about-text>p {
+    padding: 0 29px
+}
+
+
+/* Large desktop :1920px. */
+
+@media (min-width: 1920px) {
+    .about-area .section-padding {
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+    .about-area.about-area-three::after {
+        height: 63px
+    }
+    .about-area.about-area-three {
+        padding-bottom: 0;
+        padding-top: 60px;
+    }
+}
+
+
+/* Normal desktop :992px. */
+
+@media (min-width: 992px) and (max-width: 1169px) {
+    .about-area .section-padding {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    .about-area .section-title,
+    .service-about-area .section-title {
+        margin-bottom: 20px
+    }
+    .service-about-area {
+        margin-bottom: 80px;
+        margin-top: 50px;
+    }
+}
+
+
+/* Tablet desktop :768px. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-area {
+        background-size: 100% 100%
+    }
+    .about-area .section-padding {
+        padding-bottom: 110px;
+        padding-top: 110px;
+    }
+    .about-area.text-center.about-area-three {
+        background: rgba(0, 192, 255, 0.4) none repeat scroll 0 0 !important;
+        padding-top: 0;
+    }
+    .about-area.about-area-three .section-padding {
+        padding-bottom: 50px
+    }
+    .about-area .section-title.title-three {
+        margin-bottom: 45px
+    }
+    .service-about-area.text-center {
+        background: #ffffff none repeat scroll 0 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+
+/* ****************** */
+
+
+/* Popular Tours Area */
+
+
+/* ****************** */
+
 .best-sell-area .section-title {
     margin-bottom: 45px
 }
@@ -616,5 +853,395 @@
     }
     .single-adventure-two:hover .adventure-price-link-two {
         top: 39%
+    }
+}
+
+
+/* ***************** */
+
+
+/* Latest Blogs Area */
+
+
+/* ***************** */
+
+.blog-area {
+    background: #edecec none repeat scroll 0 0;
+    padding-top: 100px;
+}
+
+.blog-area .title-border:after {
+    background: rgba(0, 0, 0, 0) url(../img/icon/title-icon-2.png) no-repeat scroll 0 0
+}
+
+.blog-image {
+    position: relative
+}
+
+.blog-image>a {
+    display: inline-block;
+    position: relative
+}
+
+.box-hover a {
+    display: block;
+    position: relative
+}
+
+.box-hover>a::after {
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.3s ease-in 0s;
+}
+
+.hover-effect:hover .box-hover>a::after {
+    bottom: 20px;
+    left: 20px;
+    opacity: 1;
+    right: 20px;
+    top: 20px;
+}
+
+.hover-effect:hover .box-hover.hover-large>a::after {
+    bottom: 88px;
+    top: 88px
+}
+
+.date-time {
+    position: absolute;
+    right: 20px;
+    top: 36%;
+}
+
+.date-time .date {
+    background: #ffffff none repeat scroll 0 0;
+    color: #181818;
+    display: block;
+    font-size: 40px;
+    line-height: 45px;
+    padding-left: 4px;
+    width: 61px;
+    position: relative;
+    margin-bottom: 3px
+}
+
+.date-time .date::after {
+    background: #ffffff none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: -6px;
+    position: absolute;
+    top: 0;
+    transform: skewX(15deg);
+    width: 12px;
+}
+
+.date-time .month {
+    background: #181818 none repeat scroll 0 0;
+    color: #ffffff;
+    display: block;
+    float: right;
+    font-size: 16px;
+    line-height: 35px;
+    padding-left: 5px;
+    position: relative;
+    width: 50px;
+}
+
+.date-time .month::after {
+    background: #181818 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: -7px;
+    position: absolute;
+    top: 0;
+    transform: skewX(10deg);
+    width: 11px;
+}
+
+.blog-text h4 a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.single-blog .margin-left {
+    margin-left: -50px
+}
+
+.blog-text {
+    background: #ffffff none repeat scroll 0 0;
+    border-bottom: 4px solid #bcbcbc;
+    margin: 24px 0;
+    padding: 15px 0 13px 14px;
+    position: relative;
+}
+
+.blog-text>h4 {
+    margin-bottom: 19px
+}
+
+.blog-area .button-one {
+    font-size: 16px;
+    line-height: 40px;
+    margin-bottom: 6px;
+    margin-top: 35px;
+    padding: 0 26px;
+}
+
+.blog-text::after {
+    background: #ffffff none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: -15px;
+    top: 0;
+    transform: skewX(-6deg);
+    width: 30px;
+}
+
+.blog-text>p {
+    position: relative;
+    z-index: 9999
+}
+
+.blog-link>a {
+    color: #7a7a7a;
+    display: inline-block;
+    font-size: 20px;
+    padding: 0 6px;
+}
+
+.blog-link {
+    margin-top: 9px;
+    text-align: center;
+    transition: all 0.3s ease 0
+}
+
+.blog-link>a:hover {
+    color: #000
+}
+
+.blog-carousel .owl-item>.col-md-6 {
+    width: 100%
+}
+
+
+/*  15.6 Home Two Blog Area
+/*----------------------------------------*/
+
+.blog-two-area .date-time .date,
+.blog-two-area .date-time .date::after {
+    background: #ffae00 none repeat scroll 0 0;
+    color: #ffffff;
+}
+
+.blog-area.blog-two-area,
+.blog-area.blog-three-area {
+    padding-top: 100px
+}
+
+.blog-two-area .blog-text::after,
+.blog-three-area .blog-text::after {
+    display: none
+}
+
+.blog-two-area .blog-text,
+.blog-three-area .blog-text {
+    margin: -28px -50px 0 0;
+    padding: 26px 16px 13px 15px;
+}
+
+.blog-two-area .blog-link,
+.blog-three-area .blog-link {
+    margin-bottom: 4px;
+    margin-top: 22px;
+    text-align: left;
+}
+
+.blog-two-area .button-one,
+.blog-three-area .button-one {
+    margin-top: 20px
+}
+
+.blog-two-area .blog-link>a:hover,
+.blog-two-area .blog-text h4 a:hover {
+    color: #FFAE00;
+}
+
+
+/*  16.8 Home Three Blog Area
+/*----------------------------------------*/
+
+.blog-three-area .blog-text {
+    background: #00c0ff none repeat scroll 0 0;
+    color: #fff
+}
+
+.blog-three-area .blog-text h4 a {
+    color: #fff
+}
+
+.blog-three-area .blog-text h4 a:hover {
+    color: #FFD400
+}
+
+.blog-three-area .button-one {
+    background: #ffd400 none repeat scroll 0 0
+}
+
+.blog-three-area .blog-link>a:hover {
+    color: #00c0ff;
+}
+
+.blog-three-area .blog-link>a {
+    color: #ffffff
+}
+
+.blog-three-area .blog-link>a:hover {
+    color: #ffd400
+}
+
+.blog-three-area .blog-text {
+    border-color: #ffd400
+}
+
+.blog-three-area .button-one:hover {
+    color: #00c0ff
+}
+
+.blog-three-area .date-time {
+    top: 0
+}
+
+.blog-three-area .date-time .month::after {
+    background: #ffd400 none repeat scroll 0 0
+}
+
+.blog-three-area .date-time .month {
+    background: #ffd400 none repeat scroll 0 0
+}
+
+.blog-three-area .date-time .date::after {
+    background: #00c0ff none repeat scroll 0 0
+}
+
+.blog-three-area .date-time .date {
+    background: #00c0ff none repeat scroll 0 0;
+    color: #ffffff;
+}
+
+.blog-three-area .blog-text::before {
+    background: #00c0ff none repeat scroll 0 0;
+    content: "";
+    height: 26px;
+    left: -13px;
+    margin-top: -13px;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+    width: 26px;
+}
+
+
+/* Normal desktop :992px. */
+
+@media (min-width: 992px) and (max-width: 1169px) {
+    .blog-text>h4 {
+        margin-bottom: 7px
+    }
+    .blog-text {
+        margin: 0px -22px 0 0;
+        padding: 10px 0 8px 12px;
+    }
+    .blog-area .button-one {
+        line-height: 35px;
+        margin-bottom: 4px;
+        margin-top: 6px;
+        padding: 0 21px;
+    }
+    .blog-two-area .blog-text,
+    .blog-three-area .blog-text {
+        padding: 20px 8px 4px 10px
+    }
+    .blog-two-area .blog-link,
+    .blog-three-area .blog-link {
+        margin-top: 12px
+    }
+}
+
+
+/* Tablet desktop :768px. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .single-blog .blog-image a {
+        margin-right: 76px
+    }
+    .single-blog .date-time {
+        right: 96px
+    }
+    .single-blog .blog-text {
+        margin: 34px -70px 24px 0;
+        padding: 15px 0 13px 21px;
+    }
+    .blog-area .single-blog {
+        margin-bottom: 30px
+    }
+    .single-blog .margin-left {
+        margin-left: -126px
+    }
+    .blog-area .single-blog .blog-link {
+        margin-right: 76px
+    }
+    .blog-two-area .single-blog .blog-text {
+        margin: 20px -125px 24px 0;
+        padding: 15px 10px 13px 21px;
+    }
+    .blog-three-area .single-blog .blog-text {
+        margin: -16px -123px 24px 0;
+        padding: 37px 29px 19px 25px;
+    }
+}
+
+
+/* small mobile :320px. */
+
+@media (max-width: 767px) {
+    .blog-text::after,
+    .blog-three-area .blog-text::before {
+        display: none;
+    }
+    .date-time {
+        right: 0
+    }
+    .blog-carousel .blog-text {
+        margin: 10px 0
+    }
+    .blog-carousel .single-blog {
+        margin-bottom: 20px
+    }
+    .single-blog .margin-left {
+        margin-left: 0
+    }
+    .blog-area.blog-three-area {
+        padding-top: 0
+    }
+}
+
+
+/* Large Mobile :480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .blog-carousel .blog-image img {
+        width: 100%;
     }
 }

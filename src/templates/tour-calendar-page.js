@@ -97,13 +97,13 @@ const Event = (props) => {
                                         <i className="fa fa-star color"></i>
                                         <i className="fa fa-star-o"></i>
                                     </div>
-                                    <div className="adventure-list-link">
+                                    {/* <div className="adventure-list-link">
                                         <a href="#"><i className="fa fa-facebook"></i></a>
                                         <a href="#"><i className="fa fa-twitter"></i></a>
                                         <a href="#"><i className="fa fa-google-plus"></i></a>
                                         <a href="#"><i className="fa fa-linkedin"></i></a>
                                         <a href="#"><i className="fa fa-rss"></i></a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <div className="adventure-list-image">
@@ -129,7 +129,8 @@ const Event = (props) => {
     )
 }
 export default ({ data }) => {
-    const { frontmatter } = data.markdownRemark
+    const { frontmatter } = data.calendarQuery
+    const enableCalendar = data.switch.frontmatter.calendarswitch
     return (
         <div>
             <Helmet>
@@ -152,25 +153,31 @@ export default ({ data }) => {
                     {/* <Filter />
                     <div className="clearfix"></div> */}
                     <div className="row">
-                        <Event />
-                        <Event />
-                        <Event />
-                        <Event />
-                        <Event />
-                        <Event />
-                        <div className="pagination-content">
-                            <div className="pagination-button">
-                                <ul className="pagination">
-                                    <li><a href="#"><i className="fa fa-angle-left"></i></a></li>
-                                    <li className="current"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#"><i className="fa fa-angle-right"></i></a></li>
-                                </ul>
+                        {enableCalendar ?
+                            <div>
+                                <Event />
+                                <Event />
+                                <Event />
+                                <Event />
+                                <Event />
+                                <Event />
+                                <div className="pagination-content">
+                                    <div className="pagination-button">
+                                        <ul className="pagination">
+                                            <li><a href="#"><i className="fa fa-angle-left"></i></a></li>
+                                            <li className="current"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#"><i className="fa fa-angle-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            :
+                            <p>Coming soon!</p>
+                        }
                     </div>
                 </div>
             </div >
@@ -179,13 +186,18 @@ export default ({ data }) => {
 }
 export const CalendarPageQuery = graphql`
   query CalendarPage ($id: String!) {
-                markdownRemark(id: {eq: $id }) {
-                frontmatter {
-            imagebanner {
-                image
-                alt
+        switch:markdownRemark (fields : {slug : {eq : "/config/"}}) {
+            frontmatter {
+                calendarswitch
             }
-        }   
-     }
-  }
+        }
+        calendarQuery:markdownRemark(id: {eq: $id }) {
+            frontmatter {
+                imagebanner {
+                    image
+                    alt
+                }
+            }   
+        }
+    }
 `

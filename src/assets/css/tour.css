@@ -463,21 +463,6 @@ button#booking-button:hover,
         text-align: center;
         width: 59%;
     }
-    .newsletter-area {
-        padding-bottom: 82px
-    }
-    .newsletter-area::after {
-        height: 43px
-    }
-    .footer-widget-area::after {
-        height: 35px
-    }
-    .footer-widget-area,
-    .footer-widget-area.footer-widget-two,
-    .footer-widget-area.footer-widget-three {
-        padding-bottom: 60px;
-        padding-top: 115px;
-    }
     .single-sidebar-widget .hover-effect a img {
         display: none
     }

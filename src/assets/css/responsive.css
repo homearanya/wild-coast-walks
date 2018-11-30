@@ -1,12 +1,6 @@
 /* Large desktop :1920px. */
 
 @media (min-width: 1920px) {
-    .footer-widget-area::after {
-        height: 90px
-    }
-    .footer-widget-area {
-        padding-top: 207px
-    }
     .contact-form {
         background-size: 40% 100%
     }
@@ -16,20 +10,8 @@
     .fun-factor-area::after {
         bottom: 0
     }
-    .newsletter-area {
-        padding-bottom: 211px
-    }
-    .newsletter-area::after {
-        height: 111px
-    }
     .fun-factor-area::after {
         height: 108px
-    }
-    .footer-widget-area.footer-widget-two {
-        padding-top: 210px
-    }
-    .footer-widget-two.footer-widget-area::after {
-        height: 110px
     }
     .fun-factor-area.fun-factor-three {
         padding-bottom: 197px
@@ -71,8 +53,7 @@
         line-height: 24px;
         margin-bottom: 18px;
     }
-    .single-portfolio:hover .portfolio-text::after,
-    .single-member:hover .member-text::after {
+    .single-portfolio:hover .portfolio-text::after {
         top: -3px
     }
     .single-service::before {
@@ -119,28 +100,6 @@
     .carousel-style-one .owl-controls .owl-buttons {
         top: -61px
     }
-    .newsletter-area {
-        padding-bottom: 166px
-    }
-    .newsletter-area::after {
-        height: 67px
-    }
-    .blog-text>h4 {
-        margin-bottom: 7px
-    }
-    .blog-text {
-        margin: 0px -22px 0 0;
-        padding: 10px 0 8px 12px;
-    }
-    .blog-area .button-one {
-        line-height: 35px;
-        margin-bottom: 4px;
-        margin-top: 6px;
-        padding: 0 21px;
-    }
-    .member-text h4 a {
-        font-size: 18px
-    }
     #footer-menu li a {
         margin-left: 9px;
         padding-left: 9px;
@@ -177,17 +136,6 @@
         right: 33px;
         transform: rotate(-98deg);
     }
-    .blog-two-area .blog-text,
-    .blog-three-area .blog-text {
-        padding: 20px 8px 4px 10px
-    }
-    .blog-two-area .blog-link,
-    .blog-three-area .blog-link {
-        margin-top: 12px
-    }
-    .single-member:hover .member-text.effect-bottom::after {
-        top: 62px
-    }
     .fun-factor-three .single-icon-three {
         height: 133px;
         width: 132px;
@@ -209,9 +157,6 @@
     }
     .fun-factor-three .single-icon-three:hover::after {
         border-width: 5px 66.5px
-    }
-    .footer-widget-area.footer-widget-two {
-        padding-top: 164px
     }
     .adventure-list-text>h2 {
         font-size: 26px;
@@ -323,43 +268,14 @@
     .single-icon {
         margin-top: 22px
     }
-    .single-portfolio:hover .portfolio-text::after,
-    .single-member:hover .member-text::after {
+    .single-portfolio:hover .portfolio-text::after {
         top: -3px
     }
     .single-fun-factor {
         width: 157px
     }
-    .single-blog .blog-image a {
-        margin-right: 76px
-    }
-    .single-blog .date-time {
-        right: 96px
-    }
-    .single-blog .blog-text {
-        margin: 34px -70px 24px 0;
-        padding: 15px 0 13px 21px;
-    }
-    .blog-area .single-blog {
-        margin-bottom: 30px
-    }
-    .single-blog .margin-left {
-        margin-left: -126px
-    }
-    .blog-area .single-blog .blog-link {
-        margin-right: 76px
-    }
     .fun-factor-area::after {
         height: 72px
-    }
-    .newsletter-area::after {
-        height: 56px
-    }
-    .newsletter-content button {
-        padding: 0 28px
-    }
-    .footer-widget-area::after {
-        height: 46px
     }
     .footer-link>a {
         margin-right: 15px
@@ -396,16 +312,6 @@
         right: 38px !important;
         left: auto
     }
-    .blog-two-area .single-blog .blog-text {
-        margin: 20px -125px 24px 0;
-        padding: 15px 10px 13px 21px;
-    }
-    .single-member:hover .member-text.effect-bottom::after {
-        top: 65px
-    }
-    .footer-widget-area.footer-widget-two {
-        padding-top: 155px
-    }
     header.header-three {
         background: #001128 none repeat scroll 0 0
     }
@@ -414,10 +320,6 @@
     .google-map-area,
     .contact-us-form::after {
         display: none
-    }
-    .blog-three-area .single-blog .blog-text {
-        margin: -16px -123px 24px 0;
-        padding: 37px 29px 19px 25px;
     }
     .adventure-link>a {
         font-size: 17px;
@@ -529,9 +431,7 @@
         padding: 10px 0;
     }
     .nivo-directionNav,
-    .blog-text::after,
     .carousel-style-two.owl-theme .owl-buttons div,
-    .blog-three-area .blog-text::before,
     .adventure-list-image,
     .adventure-list-container::before,
     .adventure-list-container::after,
@@ -563,49 +463,6 @@
     .best-sell-area .col-md-6>img {
         margin-top: 40px
     }
-    .newsletter-area {
-        padding-bottom: 62px;
-        padding-top: 30px;
-    }
-    .newsletter-area .section-title {
-        margin-bottom: 20px
-    }
-    .newsletter-content .row .col-md-3 {
-        margin: 20px auto 0;
-        text-align: center;
-    }
-    .newsletter-area::after {
-        height: 19px
-    }
-    .newsletter-content button {
-        display: block;
-        margin: 20px auto 0;
-    }
-    .date-time {
-        right: 0
-    }
-    .blog-carousel .blog-text {
-        margin: 10px 0
-    }
-    .blog-carousel .single-blog,
-    .single-member {
-        margin-bottom: 20px
-    }
-    .single-blog .margin-left {
-        margin-left: 0
-    }
-    .single-member:hover .member-text.effect-bottom::after {
-        top: 66px
-    }
-    .member-text h4 a {
-        font-size: 17px
-    }
-    .footer-widget-area,
-    .footer-widget-area.footer-widget-two,
-    .footer-widget-area.footer-widget-three {
-        padding-bottom: 60px;
-        padding-top: 80px;
-    }
     .single-footer-widget.contact-text-info li:last-child {
         margin-bottom: 0
     }
@@ -630,9 +487,6 @@
     .payment-image>img,
     .adventure-list-text {
         width: 100%
-    }
-    .footer-widget-area::after {
-        height: 16px
     }
     .footer-area span {
         display: block;
@@ -660,14 +514,8 @@
     .portfolio-area.portfolio-two {
         padding-top: 50px
     }
-    .blog-area.blog-three-area {
-        padding-top: 0
-    }
     header.header-three {
         background: #001128 none repeat scroll 0 0
-    }
-    .newsletter-area.newsletter-two {
-        padding-bottom: 65px
     }
     .portfolio-area.portfolio-three {
         padding-top: 40px
@@ -834,7 +682,6 @@
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .single-portfolio img,
-    .blog-carousel .blog-image img,
     .team-image img,
     .single-gallery-item .gallery-image a img,
     .list .adventure-img img,
@@ -847,21 +694,6 @@
         margin: 0 auto;
         text-align: center;
         width: 59%;
-    }
-    .newsletter-area {
-        padding-bottom: 82px
-    }
-    .newsletter-area::after {
-        height: 43px
-    }
-    .footer-widget-area::after {
-        height: 35px
-    }
-    .footer-widget-area,
-    .footer-widget-area.footer-widget-two,
-    .footer-widget-area.footer-widget-three {
-        padding-bottom: 60px;
-        padding-top: 115px;
     }
     .single-sidebar-widget .hover-effect a img {
         display: none

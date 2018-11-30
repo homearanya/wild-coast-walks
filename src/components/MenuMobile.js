@@ -21,7 +21,7 @@ class ToursMenuSection extends Component {
     render() {
         return (
             <li>
-                <a onClick={this.toggleTours}>{this.props.tourMenuSections.heading1}</a>
+                <a onClick={this.toggleTours}>{this.props.tourMenuSections.heading1} <span>{this.props.tourMenuSections.heading2}</span></a>
                 {this.state.showTours ? (
                     <div>
                         <ul style={{ display: 'block' }}>

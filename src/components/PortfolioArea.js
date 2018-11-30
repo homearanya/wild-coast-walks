@@ -32,13 +32,13 @@ export default function PortfolioArea() {
                             <div className="portfolio-text effect-bottom">
                                 <h4><a href="#">Family</a></h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <div className="portfolio-link">
+                                {/* <div className="portfolio-link">
                                     <a href="#"><i className="fa fa-facebook"></i></a>
                                     <a href="#"><i className="fa fa-twitter"></i></a>
                                     <a href="#"><i className="fa fa-google-plus"></i></a>
                                     <a href="#"><i className="fa fa-linkedin"></i></a>
                                     <a href="#"><i className="fa fa-rss"></i></a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="single-portfolio">
@@ -46,13 +46,13 @@ export default function PortfolioArea() {
                             <div className="portfolio-text effect-bottom">
                                 <h4><a href="#">Urban</a></h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <div className="portfolio-link">
+                                {/* <div className="portfolio-link">
                                     <a href="#"><i className="fa fa-facebook"></i></a>
                                     <a href="#"><i className="fa fa-twitter"></i></a>
                                     <a href="#"><i className="fa fa-google-plus"></i></a>
                                     <a href="#"><i className="fa fa-linkedin"></i></a>
                                     <a href="#"><i className="fa fa-rss"></i></a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -62,13 +62,13 @@ export default function PortfolioArea() {
                             <div className="portfolio-text">
                                 <h4><a href="#">Polar</a></h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <div className="portfolio-link">
+                                {/* <div className="portfolio-link">
                                     <a href="#"><i className="fa fa-facebook"></i></a>
                                     <a href="#"><i className="fa fa-twitter"></i></a>
                                     <a href="#"><i className="fa fa-google-plus"></i></a>
                                     <a href="#"><i className="fa fa-linkedin"></i></a>
                                     <a href="#"><i className="fa fa-rss"></i></a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="single-portfolio">
@@ -76,13 +76,13 @@ export default function PortfolioArea() {
                             <div className="portfolio-text">
                                 <h4><a href="#">Urban</a></h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <div className="portfolio-link">
+                                {/* <div className="portfolio-link">
                                     <a href="#"><i className="fa fa-facebook"></i></a>
                                     <a href="#"><i className="fa fa-twitter"></i></a>
                                     <a href="#"><i className="fa fa-google-plus"></i></a>
                                     <a href="#"><i className="fa fa-linkedin"></i></a>
                                     <a href="#"><i className="fa fa-rss"></i></a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -92,13 +92,13 @@ export default function PortfolioArea() {
                             <div className="portfolio-text effect-bottom">
                                 <h4><a href="#">Polar</a></h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <div className="portfolio-link">
+                                {/* <div className="portfolio-link">
                                     <a href="#"><i className="fa fa-facebook"></i></a>
                                     <a href="#"><i className="fa fa-twitter"></i></a>
                                     <a href="#"><i className="fa fa-google-plus"></i></a>
                                     <a href="#"><i className="fa fa-linkedin"></i></a>
                                     <a href="#"><i className="fa fa-rss"></i></a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="single-portfolio">
@@ -106,13 +106,13 @@ export default function PortfolioArea() {
                             <div className="portfolio-text effect-bottom">
                                 <h4><a href="#">Urban</a></h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <div className="portfolio-link">
+                                {/* <div className="portfolio-link">
                                     <a href="#"><i className="fa fa-facebook"></i></a>
                                     <a href="#"><i className="fa fa-twitter"></i></a>
                                     <a href="#"><i className="fa fa-google-plus"></i></a>
                                     <a href="#"><i className="fa fa-linkedin"></i></a>
                                     <a href="#"><i className="fa fa-rss"></i></a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -122,13 +122,13 @@ export default function PortfolioArea() {
                             <div className="portfolio-text">
                                 <h4><a href="#">Polar</a></h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <div className="portfolio-link">
+                                {/* <div className="portfolio-link">
                                     <a href="#"><i className="fa fa-facebook"></i></a>
                                     <a href="#"><i className="fa fa-twitter"></i></a>
                                     <a href="#"><i className="fa fa-google-plus"></i></a>
                                     <a href="#"><i className="fa fa-linkedin"></i></a>
                                     <a href="#"><i className="fa fa-rss"></i></a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="single-portfolio">
@@ -136,13 +136,13 @@ export default function PortfolioArea() {
                             <div className="portfolio-text">
                                 <h4><a href="#">Urban</a></h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <div className="portfolio-link">
+                                {/* <div className="portfolio-link">
                                     <a href="#"><i className="fa fa-facebook"></i></a>
                                     <a href="#"><i className="fa fa-twitter"></i></a>
                                     <a href="#"><i className="fa fa-google-plus"></i></a>
                                     <a href="#"><i className="fa fa-linkedin"></i></a>
                                     <a href="#"><i className="fa fa-rss"></i></a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

@@ -11,8 +11,14 @@ export default function Menu() {
     return (
         <StaticQuery
             query={graphql`
-                query TourMenuQuery {
-                    markdownRemark (fields : {slug : {eq : "/tour-menu/"}}) {
+                query MenuQuery {
+                    switches:markdownRemark (fields : {slug : {eq : "/config/"}}) {
+                        frontmatter {
+                            blogswitch
+                            calendarswitch
+                        }
+                    }
+                    tourMenu:markdownRemark (fields : {slug : {eq : "/tour-menu/"}}) {
                         fields {
                             menutours {
                                 fields {
@@ -41,8 +47,9 @@ export default function Menu() {
                 }
             `}
             render={data => {
-                const { section } = data.markdownRemark.frontmatter
-                const { menutours } = data.markdownRemark.fields
+                const switches = data.switches.frontmatter
+                const { section } = data.tourMenu.frontmatter
+                const { menutours } = data.tourMenu.fields
                 const toursObject = menutours.reduce((obj, tour) => {
                     obj[tour.frontmatter.title.trim().toLowerCase()] = tour
                     return obj;
@@ -54,8 +61,8 @@ export default function Menu() {
                     });
                 })
                 return <div>
-                    <MenuDesktop sections={section} />
-                    <MenuMobile sections={section} />
+                    <MenuDesktop sections={section} switches={switches} />
+                    <MenuMobile sections={section} switches={switches} />
                 </div>
             }}
         />

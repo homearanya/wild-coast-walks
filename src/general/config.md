@@ -1,0 +1,5 @@
+---
+blogswitch: false
+calendarswitch: false
+---
+

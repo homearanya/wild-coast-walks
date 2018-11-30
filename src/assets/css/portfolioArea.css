@@ -10,20 +10,16 @@
 
 .single-portfolio:hover .portfolio-text a:hover,
 .single-portfolio:hover .portfolio-text .portfolio-link a:hover,
-.single-member:hover .member-text a:hover,
-.single-member:hover .member-text .member-link a:hover,
 .best-sell-link>a:hover {
     color: #000000;
 }
 
-.single-portfolio,
-.single-member {
+.single-portfolio {
     overflow: hidden;
     position: relative
 }
 
-.portfolio-text,
-.member-text {
+.portfolio-text {
     background: transparent;
     height: auto;
     left: 0;
@@ -34,8 +30,7 @@
     transition: all 0.3s ease-in-out 0s
 }
 
-.portfolio-text::after,
-.member-text::after {
+.portfolio-text::after {
     background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
     content: "";
     height: 135px;
@@ -48,8 +43,7 @@
     width: 100%;
 }
 
-.portfolio-text>p,
-.member-text>p {
+.portfolio-text>p {
     display: none;
     font-size: 13px;
     margin-bottom: 8px;
@@ -57,30 +51,24 @@
 
 .portfolio-text p,
 .portfolio-text h4 a,
-.portfolio-text .portfolio-link a,
-.member-text p,
-.member-text h4 a,
-.member-text .member-link a {
+.portfolio-text .portfolio-link a {
     z-index: 9;
     position: relative
 }
 
 .portfolio-link>a,
-.adventure-link a,
-.member-link>a {
+.adventure-link a {
     color: #4e4f54;
     display: inline-block;
     margin-right: 9px;
 }
 
-.single-portfolio:hover .portfolio-text p,
-.single-member:hover .member-text p {
+.single-portfolio:hover .portfolio-text p {
     display: block;
     margin-bottom: 5px;
 }
 
-.single-portfolio:hover .portfolio-text::after,
-.single-member:hover .member-text::after {
+.single-portfolio:hover .portfolio-text::after {
     background: rgba(33, 34, 39, 0.9) none repeat scroll 0 0;
     left: -8px;
     top: -23px;
@@ -92,10 +80,7 @@
 
 .single-portfolio:hover .portfolio-text p,
 .single-portfolio:hover .portfolio-text h4 a,
-.single-portfolio:hover .portfolio-text .portfolio-link a,
-.single-member:hover .member-text p,
-.single-member:hover .member-text h4 a,
-.single-member:hover .member-text .member-link a {
+.single-portfolio:hover .portfolio-text .portfolio-link a1 {
     color: #fff
 }
 
@@ -103,28 +88,24 @@
     margin-bottom: 30px
 }
 
-.portfolio-text.effect-bottom,
-.member-text.effect-bottom {
+.portfolio-text.effect-bottom {
     bottom: 0;
     top: auto;
 }
 
-.portfolio-text.effect-bottom::after,
-.member-text.effect-bottom::after {
+.portfolio-text.effect-bottom::after {
     bottom: -70px;
     left: -11px;
     opacity: 1;
     top: auto;
 }
 
-.single-portfolio:hover .portfolio-text.effect-bottom::after,
-.single-member:hover .member-text.effect-bottom::after {
+.single-portfolio:hover .portfolio-text.effect-bottom::after {
     background: rgba(33, 34, 39, 0.9) none repeat scroll 0 0;
     left: -11px;
     top: -5px;
 }
 
-.single-portfolio:hover .portfolio-text,
-.single-member:hover .member-text {
+.single-portfolio:hover .portfolio-text {
     animation: 1500ms ease-in-out 0s normal none 1 running flipInX;
 }

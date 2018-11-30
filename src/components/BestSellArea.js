@@ -25,13 +25,13 @@ export default function BestSellArea() {
                         <div className="sell-text-container">
                             <div className="title-container">
                                 <h3>WILDLIFE</h3>
-                                <div className="best-sell-link">
+                                {/* <div className="best-sell-link">
                                     <a href="#"><i className="fa fa-facebook"></i></a>
                                     <a href="#"><i className="fa fa-twitter"></i></a>
                                     <a href="#"><i className="fa fa-google-plus"></i></a>
                                     <a href="#"><i className="fa fa-linkedin"></i></a>
                                     <a href="#"><i className="fa fa-rss"></i></a>
-                                </div>
+                                </div> */}
                             </div>
                             <p>Get closer to nature. From the jungles of India to the African bush, our small group tours take you to the heart of nature. From elephants silhouetted against an Africa sunset to orangutans swinging in the treetops.....</p>
                             <a href="#" className="button-one">VIew trip</a>

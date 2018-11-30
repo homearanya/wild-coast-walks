@@ -59,8 +59,10 @@ export default class SliderArea extends Component {
   componentDidMount() {
     const img = this.image.current;
     if (img && img.complete) {
+      console.log('slider component - componentDidMount - image complete')
       this.set({ loadSpinner: false });
     } else {
+      console.log('slider component - componentDidMount - image NO complete')
       img.addEventListener("onLoad", this.set({ loadSpinner: false }))
     }
   }

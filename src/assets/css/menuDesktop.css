@@ -144,6 +144,11 @@ header.fixed .header-logo-menu {
     width: 25%;
 }
 
+.mainmenu ul#nav li .megamenu h4 span {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
 .mainmenu ul#nav li .megamenu span>a,
 .mainmenu ul#nav li ul.sub-menu li a {
     color: #000
@@ -163,17 +168,27 @@ header.fixed .header-logo-menu {
     z-index: 99;
 }
 
+.mainmenu ul#nav li .megamenu span>a.mega-item {
+    margin: 0px;
+}
+
 .mainmenu ul#nav li ul.sub-menu li a {
     padding: 9px 0 !important;
     margin-left: 15px
 }
 
 .mega-title {
-    color: #000 !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
+    color: #000;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    margin: 0;
+    padding: 7px 0;
     position: relative;
-    text-transform: uppercase !important;
+    text-align: left;
+    text-transform: uppercase;
+    z-index: 99;
 }
 
 .mainmenu ul#nav li a {

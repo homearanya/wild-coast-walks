@@ -161,13 +161,13 @@ export default () => (
                             </div>
                             <div className="blog-button-links">
                                 <span className="blog-tags">Tags: <a href="#">Store,</a> <a href="#">Women,</a> <a href="#">Dress,</a> <a href="#">Fashion</a></span>
-                                <div className="blog-links">
+                                {/* <div className="blog-links">
                                     <a href="#"><i className="fa fa-facebook"></i></a>
                                     <a href="#"><i className="fa fa-twitter"></i></a>
                                     <a href="#"><i className="fa fa-google-plus"></i></a>
                                     <a href="#"><i className="fa fa-linkedin"></i></a>
                                     <a href="#"><i className="fa fa-rss"></i></a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="blog-comments">

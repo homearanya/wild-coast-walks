@@ -112,7 +112,7 @@ collections:
               fields: 
                 - {label: Image, name: image, widget: image, hint: "size 786 x 426"}
                 - {label: Alt, name: alt, widget: string,  required: false}       
-            - {label: Blur, name: blur, widget: text}     
+            - {label: Blurb, name: blurb, widget: text}     
         - label: "Tours Area"
           name: toursarea
           widget: object
@@ -144,26 +144,77 @@ collections:
             - {label: Switch, name: switch, widget: boolean}
             - {label: Heading 1, name: heading1, widget: string}
             - {label: Heading 2, name: heading2, widget: string}
-            - {label: Blur, name: blur, widget: text}     
+            - {label: Blurb, name: blurb, widget: text}     
 
     - file: "src/pages/about/index.md"
       label: "About Page"
       name: "about"
       fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-        - {label: Blur, name: blur, widget: text} 
+        - {label: Blurb, name: blurb, widget: text} 
         - label: "Banner Image"
           name: imagebanner
           widget: object
           fields: 
             - {label: Image, name: image, widget: image, hint: "size 1600 x 596"}
             - {label: Alt, name: alt, widget: string,  required: false}    
+        - label: "About Area"
+          name: aboutarea
+          widget: object
+          fields: 
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
+            - label: "Image"
+              name: image
+              widget: object
+              fields: 
+                - {label: Image, name: image, widget: image, hint: "size 785 x 647"}
+                - {label: Alt, name: alt, widget: string,  required: false}       
+            - {label: Text, name: text, widget: text}     
+        - label: Destinations Area
+          name: destinationsarea
+          widget: object
+          fields:
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
+            - {label: Introduction, name: introduction, widget: text}
+            - label: "Destination"
+              name: destination
+              widget: list
+              fields:
+                - label: "Image"
+                  name: image
+                  widget: object
+                  fields: 
+                    - {label: Image, name: image, widget: image, hint: "size 540 x 300"}
+                    - {label: Alt, name: alt, widget: string,  required: false}                    
+                - {label: Heading 1, name: heading1, widget: string}
+                - {label: Heading 2, name: heading2, widget: string}
+        - label: Partners Area
+          name: partnersarea
+          widget: object
+          fields:
+            - {label: Heading 1, name: heading1, widget: string}
+            - {label: Heading 2, name: heading2, widget: string}
+            - {label: Introduction, name: introduction, widget: text}
+            - label: "Partner"
+              name: partner
+              widget: list
+              fields:
+                - label: "Image"
+                  name: image
+                  widget: object
+                  fields: 
+                    - {label: Image, name: image, widget: image, hint: "size 540 x 300"}
+                    - {label: Alt, name: alt, widget: string,  required: false}                    
+                - {label: Heading 1, name: heading1, widget: string}
+                - {label: Heading 2, name: heading2, widget: string}
     - file: "src/pages/contact/index.md"
       label: "Contact Page"
       name: contact
       fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
-        - {label: Blur, name: blur, widget: text} 
+        - {label: Blurb, name: blurb, widget: text} 
         - label: "Banner Image"
           name: imagebanner
           widget: object
@@ -175,7 +226,7 @@ collections:
       name: tourcalendar
       fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-calendar-page"}
-        - {label: Blur, name: blur, widget: text} 
+        - {label: Blurb, name: blurb, widget: text} 
         - label: "Banner Image"
           name: imagebanner
           widget: object
@@ -187,7 +238,7 @@ collections:
       name: bloglist
       fields:
         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-list"}
-        - {label: Blur, name: blur, widget: text} 
+        - {label: Blurb, name: blurb, widget: text} 
         - label: "Banner Image"
           name: imagebanner
           widget: object
@@ -238,17 +289,13 @@ collections:
           fields:
             - {label: Email Address, name: email, widget: string}
             - {label: Phone Number, name: phone, widget: string}
-
     - file: "src/general/footer.md"
-      label: "Footer"
-      name: "footer"
+    - file: "src/general/config.md"
+      label: "Configuration"
+      name: "config"
       fields:
-        - label: "Background Image"
-          name: image
-          widget: object
-          fields: 
-            - {label: Image, name: image, widget: image, hint: "size 1600 x 553"}
-            - {label: Alt, name: alt, widget: string,  required: false}
+        - {label: "Blog Switch", name: blogswitch, widget: boolean}
+        - {label: "Calendar Switch", name: calendarswitch, widget: boolean}
   editor:
     preview: false
 
