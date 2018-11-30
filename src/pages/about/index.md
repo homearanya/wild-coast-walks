@@ -21,11 +21,21 @@ destinationsarea:
       image:
         alt: Wild Coast Slackpack
         image: /img/about-wildcoast-slackpack540x300-min.jpg
+    - heading1: Midlands
+      heading2: Walks
+      image:
+        alt: Midlands Walks
+        image: /img/about-midlands-walks540x300-min.jpg
     - heading1: Drakensberg
       heading2: Slackpack
       image:
         alt: Drakensberg Slackpack
         image: /img/about-drakensberg-slackpack540x300-min.jpg
+    - heading1: KZN
+      heading2: Cycle Tours
+      image:
+        alt: Cycle Tours
+        image: /img/about-cycle-tours540x300-min.jpg
   heading1: Our
   heading2: Destinations & Activities
   introduction: >-
