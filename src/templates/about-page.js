@@ -145,9 +145,9 @@ export default ({ data }) => {
                 breadcrumb="About us"
                 imageBanner={frontmatter.imagebanner}
             />
-            <AboutAdventures />
-            <DestinationsArea />
+            {/* <AboutAdventures /> */}
             <AssociatesArea />
+            <DestinationsArea />
         </div >
     )
 }
