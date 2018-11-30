@@ -51,6 +51,7 @@ partnersarea:
     - heading1: Paul Colvin
       heading2: ''
       image:
-        alt: ''
+        alt: Paul Colvin
+        image: /img/about-julia-colvin270x300.jpg
 ---
 
