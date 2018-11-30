@@ -22,9 +22,7 @@ export default function Banner(props) {
                                 <h1>{props.title1} <span>{props.title2}</span></h1>
                             </div>
                             <p className="text-white">
-                                {props.text1}
-                                <br />
-                                {props.text2}
+                                {props.text}
                             </p>
                         </div>
                     </div>

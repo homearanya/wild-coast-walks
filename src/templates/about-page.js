@@ -87,16 +87,19 @@ const AssociatesArea = (props) => {
                     <div className="col-md-12">
                         <div className="section-title text-center">
                             <div className="title-border">
-                                <h1>Associates <span>Area</span></h1>
+                                <h1>{props.heading1} <span>{props.heading2}</span></h1>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui<br /> id, convallis iaculis eros. Praesent porta lacinia elementum.</p>
+                            <p>{props.blurb}</p>
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="associate-carousel">
-                        <Associate />
-                        <Associate />
+                        {props.partners.map(partner =>
+                            <Associate
+                                partner={partner}
+                            />
+                        )}
                     </div>
                 </div>
             </div>
@@ -112,13 +115,16 @@ const Associate = (props) => {
                 <div className="row">
                     <div className="col-md-3 col-sm-4">
                         <div className="associate-image">
-                            <img src={associate_1} alt="" />
+                            <img
+                                src={props.partner.image.image}
+                                alt={props.partner.image.alt}
+                            />
                         </div>
                     </div>
                     <div className="col-md-9 col-sm-8 margin-left">
                         <div className="associate-text">
-                            <h4>What is travel? We answer the big, burning question.....</h4>
-                            <p>The question of What Travel Is is inter- esting, but more for what it tells you about the people doing the asking.</p>
+                            <h4>{props.partner.heading1} <span>{props.partner.heading2}</span></h4>
+                            <p>{props.partner.text}</p>
                         </div>
                     </div>
                 </div>
@@ -140,14 +146,23 @@ export default ({ data }) => {
                 extraClass="about-banner"
                 title1="About"
                 title2="US"
-                text1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui"
-                text2="id, convallis iaculis eros. Praesent porta lacinia elementum."
+                text={frontmatter.banner.blurb}
                 breadcrumb="About us"
-                imageBanner={frontmatter.imagebanner}
+                imageBanner={frontmatter.banner.imagebanner}
             />
             {/* <AboutAdventures /> */}
-            <AssociatesArea />
-            <DestinationsArea />
+            <AssociatesArea
+                heading1={frontmatter.partnersarea.heading1}
+                heading2={frontmatter.partnersarea.heading2}
+                blurb={frontmatter.partnersarea.introduction}
+                partners={frontmatter.partnersarea.partner}
+            />
+            <DestinationsArea
+                heading1={frontmatter.destinationsarea.heading1}
+                heading2={frontmatter.destinationsarea.heading2}
+                blurb={frontmatter.destinationsarea.introduction}
+                destinations={frontmatter.destinationsarea.destination}
+            />
         </div >
     )
 }
@@ -155,12 +170,43 @@ export default ({ data }) => {
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-        frontmatter {
-            imagebanner {
+		frontmatter {
+            banner {
+                blurb
+                imagebanner {
+                    image
+                    alt
+                }
+          }
+          destinationsarea {
+            heading1
+            heading2
+            introduction
+            destination {
+              image {
                 image
                 alt
+              }
+              heading1
+              heading2
+              text
             }
-        }   
-     }
+          }
+          partnersarea {
+            heading1
+            heading2
+            introduction
+            partner {
+              image {
+                image
+                alt
+              }
+              heading1
+              heading2
+              text
+            }
+          }
+        }
+    }
   }
 `

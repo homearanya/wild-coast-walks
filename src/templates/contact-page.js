@@ -64,8 +64,7 @@ export default ({ data }) => {
                 extraClass="contact-banner"
                 title1="Contact"
                 title2="US"
-                text1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui"
-                text2="id, convallis iaculis eros. Praesent porta lacinia elementum."
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui id, convallis iaculis eros. Praesent porta lacinia elementum."
                 breadcrumb="Contact us"
                 imageBanner={frontmatter.imagebanner}
             />

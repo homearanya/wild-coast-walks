@@ -351,8 +351,7 @@ export default ({ data }) => {
                 extraClass="details-one"
                 title1={frontmatter.title}
                 title2=""
-                text1="The right tour for the right traveller"
-                text2=""
+                text="The right tour for the right traveller"
                 breadcrumb="tour"
                 imageBanner={frontmatter.imagebanner}
             />

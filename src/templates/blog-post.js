@@ -19,8 +19,7 @@ export default () => (
             extraClass="blog-one"
             title1="Adventure"
             title2="Blog"
-            text1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui"
-            text2="id, convallis iaculis eros. Praesent porta lacinia elementum."
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui id, convallis iaculis eros. Praesent porta lacinia elementum."
             breadcrumb="Blog"
             imageBanner={bannerImage}
         />

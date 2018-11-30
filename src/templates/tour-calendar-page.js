@@ -142,8 +142,7 @@ export default ({ data }) => {
                 extraClass="grid"
                 title1="Tour"
                 title2="Calendar"
-                text1="Upcoming Events"
-                text2=""
+                text="Upcoming Events"
                 breadcrumb="Calendar"
                 imageBanner={frontmatter.imagebanner}
             />

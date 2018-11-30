@@ -19,8 +19,7 @@ export default () => (
             extraClass="grid"
             title1="Adventure"
             title2="Listing"
-            text1="Three Columns Grid View Adventure Listing"
-            text2=""
+            text="Three Columns Grid View Adventure Listing"
             breadcrumb="Tours"
             imageBanner={bannerImage}
 
