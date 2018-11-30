@@ -215,6 +215,9 @@ collections:
                 - {label: Heading 1, name: heading1, widget: string}
                 - {label: Heading 2, name: heading2, widget: string}
                 - {label: Text, name: body, widget: "markdown"}
+        - label: Body
+          name: body
+          widget: "markdown"
     - file: "src/pages/contact/index.md"
       label: "Contact Page"
       name: contact
