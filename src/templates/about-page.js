@@ -151,7 +151,7 @@ export default ({ data }) => {
                 imageBanner={frontmatter.banner.imagebanner}
             />
             {/* <AboutAdventures /> */}
-            <AssociatesArea
+            {/* <AssociatesArea
                 heading1={frontmatter.partnersarea.heading1}
                 heading2={frontmatter.partnersarea.heading2}
                 blurb={frontmatter.partnersarea.introduction}
@@ -162,7 +162,7 @@ export default ({ data }) => {
                 heading2={frontmatter.destinationsarea.heading2}
                 blurb={frontmatter.destinationsarea.introduction}
                 destinations={frontmatter.destinationsarea.destination}
-            />
+            /> */}
         </div >
     )
 }
@@ -177,36 +177,51 @@ export const aboutPageQuery = graphql`
                     image
                     alt
                 }
-          }
-          destinationsarea {
-            heading1
-            heading2
-            introduction
-            destination {
-              image {
-                image
-                alt
-              }
-              heading1
-              heading2
-              text
             }
-          }
-          partnersarea {
-            heading1
-            heading2
-            introduction
-            partner {
-              image {
-                image
-                alt
-              }
-              heading1
-              heading2
-              text
-            }
-          }
         }
     }
   }
 `
+// export const aboutPageQuery = graphql`
+//   query AboutPage($id: String!) {
+//     markdownRemark(id: { eq: $id }) {
+// 		frontmatter {
+//             banner {
+//                 blurb
+//                 imagebanner {
+//                     image
+//                     alt
+//                 }
+//             }
+//             destinationsarea {
+//                 heading1
+//                 heading2
+//                 body
+//                 destination {
+//                 image {
+//                     image
+//                     alt
+//                 }
+//                 heading1
+//                 heading2
+//                 body
+//                 }
+//             }
+//             partnersarea {
+//                 heading1
+//                 heading2
+//                 introduction
+//                 partner {
+//                 image {
+//                     image
+//                     alt
+//                 }
+//                 heading1
+//                 heading2
+//                 body
+//                 }
+//             }
+//         }
+//     }
+//   }
+// `
