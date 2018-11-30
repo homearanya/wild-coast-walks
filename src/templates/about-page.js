@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 import Banner from "../components/Banner";
 
 import '../assets/css/about.css'
-import '../assets/css/destinationsArea.css'
 
 import associate_1 from '../assets/img/blog/1.jpg'
 import destination_1 from '../assets/img/destinations/destination_1.jpg'
