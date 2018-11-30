@@ -15,23 +15,28 @@ aboutarea:
     alt: ''
   text: ''
 destinationsarea:
+  body: Destination introduction
   destination:
-    - heading1: Wild Coast
+    - body: body destination 1
+      heading1: Wild Coast
       heading2: Slackpack
       image:
         alt: Wild Coast Slackpack
         image: /img/about-wildcoast-slackpack540x300-min.jpg
-    - heading1: Midlands
+    - body: body destination 2
+      heading1: Midlands
       heading2: Walks
       image:
         alt: Midlands Walks
         image: /img/about-midlands-walks540x300-min.jpg
-    - heading1: Drakensberg
+    - body: body destination 3
+      heading1: Drakensberg
       heading2: Slackpack
       image:
         alt: Drakensberg Slackpack
         image: /img/about-drakensberg-slackpack540x300-min.jpg
-    - heading1: KZN
+    - body: body destination 4
+      heading1: KZN
       heading2: Cycle Tours
       image:
         alt: Cycle Tours
@@ -45,15 +50,17 @@ partnersarea:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua.
   partner:
-    - heading1: Paul Colvin
+    - body: body partner 1
+      heading1: Paul Colvin
       heading2: ''
       image:
         alt: Paul Colvin
         image: /img/about-julia-colvin270x300.jpg
-    - heading1: Julia Colvin
+    - body: body partner 2
+      heading1: Julia Colvin
       heading2: ''
       image:
         alt: Julia Colvin
         image: /img/about-julia-colvin270x300.jpg
 ---
-
+Body at the end
