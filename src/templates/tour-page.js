@@ -1,18 +1,11 @@
 import React from 'react'
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
+import TourGallery from '../components/TourGallery';
 
 import Banner from "../components/Banner";
 
 import '../assets/css/tour.css'
-
-import icon_41 from '../assets/img/icon/41.png'
-import icon_42 from '../assets/img/icon/42.png'
-import icon_43 from '../assets/img/icon/43.png'
-import level_1 from '../assets/img/icon/level1.png'
-import level_2 from '../assets/img/icon/level2.png'
-import level_3 from '../assets/img/icon/level3.png'
-
 
 const AdventuresGrid = (props) => {
     return (
@@ -103,108 +96,87 @@ const TripInformation = (props) => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <div className="trip-info-left-text">
-                            <div className="section-title text-center">
-                                <div className="title-border">
-                                    <h1>Trip <span>Overview</span></h1>
+                        <div className="row">
+                            <div className="trip-info-left-text">
+                                <div className="section-title text-center">
+                                    <div className="title-border">
+                                        <h1>Trip <span>Overview</span></h1>
+                                    </div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                 </div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <div className="clearfix"></div>
+                                <ul className="details-info">
+                                    <li className=""><span>Duration</span>5 days</li>
+                                    <li className=""><span>Price</span>From R6500 per person</li>
+                                </ul>
+                                {/* <div className="details-social-link">
+                                    <a href="#"><i className="fa fa-facebook"></i></a>
+                                    <a href="#"><i className="fa fa-twitter"></i></a>
+                                    <a href="#"><i className="fa fa-google-plus"></i></a>
+                                    <a href="#"><i className="fa fa-linkedin"></i></a>
+                                    <a href="#"><i className="fa fa-rss"></i></a>
+                                </div> */}
                             </div>
-                            <div className="clearfix"></div>
-                            <ul className="details-info">
-                                <li className=""><span>Start</span>Kathmandu, Nepal</li>
-                                <li className=""><span>Ages</span>MIN 16</li>
-                                <li className=""><span>Finish</span>Kathmandu, Nepal</li>
-                                <li className=""><span>Group size</span>Min 1, Max 12</li>
-                                <li className=""><span>Countries</span>Nepal</li>
-                            </ul>
-                            {/* <div className="details-social-link">
-                                <a href="#"><i className="fa fa-facebook"></i></a>
-                                <a href="#"><i className="fa fa-twitter"></i></a>
-                                <a href="#"><i className="fa fa-google-plus"></i></a>
-                                <a href="#"><i className="fa fa-linkedin"></i></a>
-                                <a href="#"><i className="fa fa-rss"></i></a>
-                            </div> */}
                         </div>
-                    </div>
-                    <div className="col-md-6 hidden-sm hidden-xs">
-                        <div className="trip-booking-info">
-                            <div className="row">
-                                <div className="col-md-6">
-                                    <h2>Activities</h2>
-                                    <div className="single-trip-content">
-                                        <div className="trip-icon">
-                                            <img src={icon_41} alt="" />
-                                        </div>
-                                        <h4>Camping</h4>
-                                    </div>
-                                    <div className="single-trip-content">
-                                        <div className="trip-icon">
-                                            <img src={icon_42} alt="" />
-                                        </div>
-                                        <h4>Hiking</h4>
-                                    </div>
-                                    <div className="single-trip-content">
-                                        <div className="trip-icon">
-                                            <img src={icon_43} alt="" />
-                                        </div>
-                                        <h4>Camping</h4>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <h2>Activity Level</h2>
-                                    <div className="trip-level-content">
-                                        <img src={level_1} alt="" />
-                                        <h4>Easy</h4>
-                                    </div>
-                                    <div className="trip-level-content">
-                                        <img src={level_2} alt="" />
-                                        <h4>Medium</h4>
-                                    </div>
-                                    <div className="trip-level-content">
-                                        <img src={level_3} alt="" />
-                                        <h4>hard</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row divider"></div>
-                            <div className="row">
-                                <div className="col-md-4 text-center">
-                                    <div className="trip-text-container">
-                                        <h2>Rating</h2>
-                                        <div className="trip-rating">
-                                            <i className="fa fa-star grey"></i>
-                                            <i className="fa fa-star grey"></i>
-                                            <i className="fa fa-star grey"></i>
-                                            <i className="fa fa-star grey"></i>
-                                            <i className="fa fa-star-o"></i>
-                                        </div>
-                                        <p>15 <span>reviews</span></p>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 text-center">
-                                    <div className="trip-text-container">
-                                        <h2>Duration</h2>
-                                        <h3>10 Days</h3>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 text-center">
-                                    <div className="trip-text-container budget">
-                                        <h2>Budget</h2>
-                                        <h1>$659</h1>
-                                        <p>per person</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-12 text-center">
-                                    <button id="booking-button" type="submit">Book this trip</button>
-                                </div>
+                        <div className="row">
+                            <div className="trip-booking-info">
+                                <button id="booking-button" type="submit">Book this trip</button>
                             </div>
                         </div>
                     </div>
+                    <Gallery />
                 </div>
             </div>
         </div>
 
+    )
+}
+
+function makeUnsplashSrc(id) {
+    return `https://images.unsplash.com/photo-${id}?dpr=2&auto=format&w=1024&h=1024`;
+}
+function makeUnsplashSrcSet(id, size) {
+    return `https://images.unsplash.com/photo-${id}?dpr=2&auto=format&w=${size} ${size}w`;
+}
+function makeUnsplashThumbnail(id, orientation = 'landscape') {
+    const dimensions = orientation === 'square'
+        ? 'w=300&h=300'
+        : 'w=240&h=159';
+
+    return `https://images.unsplash.com/photo-${id}?dpr=2&auto=format&crop=faces&fit=crop&${dimensions}`;
+}
+
+const DEFAULT_IMAGES = [
+    { id: '1470619549108-b85c56fe5be8', caption: 'Photo by Alan Emery', orientation: 'square', useForDemo: true }, // https://unsplash.com/photos/SYzUF6XcWBY (Flamingo)
+    { id: '1471079502516-250c19af6928', caption: 'Photo by Jeremy Bishop', orientation: 'landscape', useForDemo: true }, // https://unsplash.com/photos/GIpGxe2_cT4 (Turtle)
+    { id: '1454023492550-5696f8ff10e1', caption: 'Photo by Jessica Weiller', orientation: 'landscape', useForDemo: true }, // https://unsplash.com/photos/LmVSKeDy6EA (Tiger)
+    { id: '1470854989922-5be2f7456d78', caption: 'Photo by Piotr Łaskawski', orientation: 'landscape', useForDemo: true }, // https://unsplash.com/photos/GXMr7BadXQo (Hedgehog)
+    { id: '1470317596697-cbdeda56f999', caption: 'Photo by Michel Bosma', orientation: 'landscape', useForDemo: true }, // https://unsplash.com/photos/XgF9e93Tkt0 (Ladybug)
+    { id: '1470777639313-60af88918203', caption: 'Photo by Cris Saur', orientation: 'square', useForDemo: true }, // https://unsplash.com/photos/GNUcUx-iObg (Koala)
+    { id: '1471101173712-b9884175254e', caption: 'Photo by Pedro Lastra', orientation: 'landscape', useForDemo: true }, // https://unsplash.com/photos/5oRzZU5uwSM (Dragonfly)
+    { id: '1471127432458-65206be149c9', caption: 'Photo by Ernesto Velázquez', orientation: 'landscape', useForDemo: true }, // https://unsplash.com/photos/Kpgt4pl03O0 (Deer)
+    { id: '1453550486481-aa4175b013ea', caption: 'Photo by Benjamin Pley', orientation: 'landscape', useForDemo: true }, // https://unsplash.com/photos/WiSeaZ4E6ZI (Elephant)
+    { id: '1415904663467-dfdc16cae794', caption: 'Photo by Levi Saunders', orientation: 'landscape', useForDemo: true }, // https://unsplash.com/photos/NUMlxTPsznM (Coyote)
+];
+
+const Gallery = (props) => {
+
+    return (
+        <div className="col-md-6">
+            <TourGallery images={DEFAULT_IMAGES.map(({ caption, id, orientation, useForDemo }) => ({
+                src: makeUnsplashSrc(id),
+                thumbnail: makeUnsplashThumbnail(id, orientation),
+                srcSet: [
+                    makeUnsplashSrcSet(id, 1024),
+                    makeUnsplashSrcSet(id, 800),
+                    makeUnsplashSrcSet(id, 500),
+                    makeUnsplashSrcSet(id, 320),
+                ],
+                caption,
+                orientation,
+                useForDemo,
+            }))} />
+        </div>
     )
 }
 
@@ -358,16 +330,14 @@ export default ({ data }) => {
 
             {/* <AdventuresGrid /> */}
             <TripInformation />
-            <TripInclusion />
-            <TripPricingArea />
         </div>
     )
 }
 
 export const tourPageQuery = graphql`
   query TourPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-        frontmatter {
+                markdownRemark(id: {eq: $id }) {
+                frontmatter {
             title
             imagebanner {
                 image

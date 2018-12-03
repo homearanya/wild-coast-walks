@@ -18,7 +18,7 @@
 /*----------------------------------------*/
 
 .trip-information {
-    background: #edecec url(../img/banner/26.png) no-repeat scroll right top / 58% 100%;
+    /* background: #edecec url(../img/banner/26.png) no-repeat scroll right top / 58% 100%; */
     padding-bottom: 96px;
     padding-top: 80px;
     margin-top: 100px;
@@ -76,7 +76,8 @@
 }
 
 .trip-booking-info {
-    padding-top: 127px
+    /* padding-top: 127px */
+    text-align: center;
 }
 
 .single-trip-content,
@@ -148,7 +149,7 @@ button#booking-button {
     font-size: 25px;
     font-weight: 300;
     line-height: 58px;
-    margin-top: 36px;
+    /* margin-top: 36px; */
     padding: 0 70px;
     text-transform: uppercase;
 }
@@ -332,16 +333,16 @@ button#booking-button:hover,
     text-transform: uppercase;
 }
 
+#lightboxBackdrop {
+    z-index: 9999 !important;
+}
+
 
 /* Large desktop :1920px. */
 
 @media (min-width: 1920px) {
     .trip-information {
         background-size: 49.8% 100%
-    }
-    .trip-booking-info {
-        position: relative;
-        right: -127px;
     }
     .trip-information.details-two {
         background-size: 49.5% 100%
@@ -357,9 +358,6 @@ button#booking-button:hover,
     }
     .trip-info-left-text p {
         line-height: 26px
-    }
-    .trip-booking-info {
-        padding-top: 100px
     }
     .trip-status,
     .trip-price {

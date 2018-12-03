@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Sticky from 'react-sticky-el';
 import { Link } from "gatsby"
-import { CSSTransitionGroup } from 'react-transition-group'
+// import { CSSTransitionGroup } from 'react-transition-group'
 
 import '../assets/css/menuDesktop.css'
 
@@ -140,13 +140,13 @@ class MainMenu extends Component {
                             </li>
                             <li onMouseLeave={this.handleLeave} onMouseEnter={this.handleHover}>
                                 <a href="#"> Tours </a>
-                                <CSSTransitionGroup
+                                {/* <CSSTransitionGroup
                                     transitionName="fade"
                                     transitionEnterTimeout={300}
                                     transitionLeaveTimeout={300}
-                                >
-                                    {this.state.showSubMenu && <SubMenu tourMenuSections={this.props.tourMenuSections} handleLeave={this.handleLeave} />}
-                                </CSSTransitionGroup>
+                                > */}
+                                {this.state.showSubMenu && <SubMenu tourMenuSections={this.props.tourMenuSections} handleLeave={this.handleLeave} />}
+                                {/* </CSSTransitionGroup> */}
                             </li>
                             {this.props.switches.calendarswitch ?
                                 <li>

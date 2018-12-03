@@ -188,63 +188,12 @@
     position: relative;
 }
 
-.date-time {
-    position: absolute;
-    right: 20px;
-    top: 36%;
-}
-
-.date-time .date {
-    background: #ffffff none repeat scroll 0 0;
-    color: #181818;
-    display: block;
-    font-size: 40px;
-    line-height: 45px;
-    padding-left: 4px;
-    width: 61px;
-    position: relative;
-    margin-bottom: 3px
-}
-
-.date-time .date::after {
-    background: #ffffff none repeat scroll 0 0;
-    content: "";
-    height: 100%;
-    left: -6px;
-    position: absolute;
-    top: 0;
-    transform: skewX(15deg);
-    width: 12px;
-}
-
-.date-time .month {
-    background: #181818 none repeat scroll 0 0;
-    color: #ffffff;
-    display: block;
-    float: right;
-    font-size: 16px;
-    line-height: 35px;
-    padding-left: 5px;
-    position: relative;
-    width: 50px;
-}
-
-.date-time .month::after {
-    background: #181818 none repeat scroll 0 0;
-    content: "";
-    height: 100%;
-    left: -7px;
-    position: absolute;
-    top: 0;
-    transform: skewX(10deg);
-    width: 11px;
-}
-
-.associate-text h4 {
+.associate-text h2 {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    /* font-size: 16px;
     font-weight: 600;
-    line-height: 25px;
+    line-height: 25px; */
+    text-align: center;
     text-transform: uppercase;
 }
 
@@ -272,17 +221,6 @@
     padding: 0 26px;
 }
 
-.associate-text::after {
-    background: #ffffff none repeat scroll 0 0;
-    content: "";
-    height: 100%;
-    position: absolute;
-    right: -15px;
-    top: 0;
-    transform: skewX(-6deg);
-    width: 30px;
-}
-
 .associate-text>p {
     position: relative;
     z-index: 9999
@@ -295,12 +233,6 @@
 
 /*  15.6 Home Two Associate Area
 /*----------------------------------------*/
-
-.associate-two-area .date-time .date,
-.associate-two-area .date-time .date::after {
-    background: #ffae00 none repeat scroll 0 0;
-    color: #ffffff;
-}
 
 .associate-area.associate-two-area,
 .associate-area.associate-three-area {
@@ -342,27 +274,6 @@
 
 .associate-three-area .associate-text {
     border-color: #ffd400
-}
-
-.associate-three-area .date-time {
-    top: 0
-}
-
-.associate-three-area .date-time .month::after {
-    background: #ffd400 none repeat scroll 0 0
-}
-
-.associate-three-area .date-time .month {
-    background: #ffd400 none repeat scroll 0 0
-}
-
-.associate-three-area .date-time .date::after {
-    background: #00c0ff none repeat scroll 0 0
-}
-
-.associate-three-area .date-time .date {
-    background: #00c0ff none repeat scroll 0 0;
-    color: #ffffff;
 }
 
 .associate-three-area .associate-text::before {
@@ -407,9 +318,6 @@
     .single-associate .associate-image {
         margin-right: 76px
     }
-    .single-associate .date-time {
-        right: 96px
-    }
     .single-associate .associate-text {
         margin: 34px -70px 24px 0;
         padding: 15px 0 13px 21px;
@@ -437,9 +345,6 @@
     .associate-text::after,
     .associate-three-area .associate-text::before {
         display: none;
-    }
-    .date-time {
-        right: 0
     }
     .associate-carousel .associate-text {
         margin: 10px 0

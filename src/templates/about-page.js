@@ -44,35 +44,38 @@ const DestinationsArea = (props) => {
                     <div className="col-md-12">
                         <div className="section-title text-center">
                             <div className="title-border">
-                                <h1>Destinations <span>Area</span></h1>
+                                <h1>{props.heading1} <span>{props.heading2}</span></h1>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui<br /> id, convallis iaculis eros. Praesent porta lacinia elementum.</p>
+                            <p>{props.blurb}</p>
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="destinations-carousel">
-                        <Destination />
-                        <Destination />
-                        <Destination />
-                        <Destination />
+                        {props.destinations.map((destination, index) =>
+                            <Destination
+                                key={index}
+                                destination={destination}
+                            />
+                        )}
                     </div>
                 </div>
             </div>
         </div>
     )
 }
-
 const Destination = (props) => {
     return (
         <div className="col-sm-6">
             <div className="single-destinations">
                 <div className="destinations-image">
-                    <img src={destination_1} alt="" />
+                    <img src={props.destination.image.image} alt="" />
                 </div>
                 <div className="destinations-text">
-                    <h4>What is travel? We answer the big, burning question.....</h4>
-                    <p>The question of What Travel Is is inter- esting, but more for what it tells you about the people doing the asking.</p>
+                    <h4>{props.destination.heading1} <span>{props.destination.heading2}</span></h4>
+                    {props.destination.content.paragraph.map((paragraph, index) =>
+                        <p key={index}>{paragraph.text}</p>
+                    )}
                 </div>
             </div>
         </div>
@@ -95,8 +98,9 @@ const AssociatesArea = (props) => {
                 </div>
                 <div className="row">
                     <div className="associate-carousel">
-                        {props.partners.map(partner =>
+                        {props.partners.map((partner, index) =>
                             <Associate
+                                key={index}
                                 partner={partner}
                             />
                         )}
@@ -123,8 +127,10 @@ const Associate = (props) => {
                     </div>
                     <div className="col-md-9 col-sm-8 margin-left">
                         <div className="associate-text">
-                            <h4>{props.partner.heading1} <span>{props.partner.heading2}</span></h4>
-                            <p>{props.partner.text}</p>
+                            <h2>{props.partner.heading1} <span>{props.partner.heading2}</span></h2>
+                            {props.partner.content.paragraph.map((paragraph, index) =>
+                                <p key={index}>{paragraph.text}</p>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -151,7 +157,7 @@ export default ({ data }) => {
                 imageBanner={frontmatter.banner.imagebanner}
             />
             {/* <AboutAdventures /> */}
-            {/* <AssociatesArea
+            <AssociatesArea
                 heading1={frontmatter.partnersarea.heading1}
                 heading2={frontmatter.partnersarea.heading2}
                 blurb={frontmatter.partnersarea.introduction}
@@ -162,7 +168,7 @@ export default ({ data }) => {
                 heading2={frontmatter.destinationsarea.heading2}
                 blurb={frontmatter.destinationsarea.introduction}
                 destinations={frontmatter.destinationsarea.destination}
-            /> */}
+            />
         </div >
     )
 }
@@ -178,50 +184,43 @@ export const aboutPageQuery = graphql`
                     alt
                 }
             }
+            destinationsarea {
+                heading1
+                heading2
+                introduction
+                destination {
+                    image {
+                        image
+                        alt
+                    }
+                    heading1
+                    heading2
+                    content {
+                        paragraph {
+                            text
+                        }
+                    }
+                }
+            }
+            partnersarea {
+                heading1
+                heading2
+                introduction
+                partner {
+                    image {
+                        image
+                        alt
+                    }
+                    heading1
+                    heading2
+                    content {
+                        paragraph {
+                            text
+                        }
+                    }
+                }
+            }
         }
     }
   }
 `
-// export const aboutPageQuery = graphql`
-//   query AboutPage($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-// 		frontmatter {
-//             banner {
-//                 blurb
-//                 imagebanner {
-//                     image
-//                     alt
-//                 }
-//             }
-//             destinationsarea {
-//                 heading1
-//                 heading2
-//                 body
-//                 destination {
-//                 image {
-//                     image
-//                     alt
-//                 }
-//                 heading1
-//                 heading2
-//                 body
-//                 }
-//             }
-//             partnersarea {
-//                 heading1
-//                 heading2
-//                 introduction
-//                 partner {
-//                 image {
-//                     image
-//                     alt
-//                 }
-//                 heading1
-//                 heading2
-//                 body
-//                 }
-//             }
-//         }
-//     }
-//   }
-// `
