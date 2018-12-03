@@ -342,15 +342,17 @@ export default ({ data }) => {
 }
 
 export const tourPageQuery = graphql`
-  query TourPage($id: String!) {
-                markdownRemark(id: {eq: $id }) {
-                frontmatter {
-            title
-            imagebanner {
-                image
-                alt
-            }
-        }   
-     }
-  }
+    query TourPage($id: String!) {
+        markdownRemark(id: {eq: $id }) {
+            frontmatter {
+                title
+                imagebanner {
+                    image {
+                        publicURL
+                    }
+                    alt
+                }
+            }   
+        }
+    }
 `

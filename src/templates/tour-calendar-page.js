@@ -193,7 +193,9 @@ export const CalendarPageQuery = graphql`
         calendarQuery:markdownRemark(id: {eq: $id }) {
             frontmatter {
                 imagebanner {
-                    image
+                    image {
+                        publicURL
+                    }
                     alt
                 }
             }   

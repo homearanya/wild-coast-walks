@@ -279,19 +279,21 @@ export default ({ data }) => {
 }
 
 export const blogPageQuery = graphql`
-  query BlogPage($id: String!) {
-    switch:markdownRemark (fields : {slug : {eq : "/config/"}}) {
-                frontmatter {
-            blogswitch
+    query BlogPage($id: String!) {
+        switch:markdownRemark (fields : {slug : {eq : "/config/"}}) {
+                    frontmatter {
+                blogswitch
+            }
+        }
+        blogList: markdownRemark(id: {eq: $id }) {
+            frontmatter {
+                imagebanner {
+                    image {
+                        publicURL
+                    }
+                    alt
+                }
+            }
         }
     }
-    blogList: markdownRemark(id: {eq: $id }) {
-                frontmatter {
-            imagebanner {
-                image
-                alt
-            }
-        }   
-     }
-  }
 `

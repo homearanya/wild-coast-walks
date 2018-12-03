@@ -35,7 +35,13 @@ export default function Menu() {
                                 heading1
                                 heading2
                                 image {
-                                    image
+                                    image {
+                                        childImageSharp {
+                                          fluid(maxWidth: 450) {
+                                              ...GatsbyImageSharpFluid
+                                          }
+                                        }
+                                    }
                                     alt
                                 }
                                 tours {

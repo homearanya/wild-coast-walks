@@ -1,9 +1,8 @@
 import React from 'react'
-import MyContext, { ContextProviderComponent } from "../components/Context"
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
+import Img from 'gatsby-image'
 
-import Spinner from '../components/Spinner'
 import SliderArea from "../components/SliderArea";
 
 import '../assets/css/home-page.css'
@@ -17,7 +16,7 @@ const AboutArea = (props) => {
       <div className="container">
         <div className="row">
           <div className="col-md-6 hidden-sm hidden-xs">
-            <img src={props.aboutArea.image.image} alt="" />
+            <Img fluid={props.aboutArea.image.image.childImageSharp.fluid} alt={props.aboutArea.image.alt} />
           </div>
           <div className="col-md-6">
             <div className="about-container">
@@ -78,16 +77,16 @@ const Tour = (props) => {
   }
   const tourSlug = props.tourDetails.fields.slug;
   const tourDetails = props.tourDetails.frontmatter;
-  let imageSrc = '';
+  let imageFluid = '';
   let imageAlt = '';
   if (tourDetails.imagethumbnail) {
-    imageSrc = tourDetails.imagethumbnail.image;
+    imageFluid = tourDetails.imagethumbnail.image.childImageSharp.fluid;
     imageAlt = tourDetails.imagethumbnail.alt;
   }
   return (
     <div className="col-md-4 col-sm-6 col-xs-12">
       <div className="single-adventure">
-        <Link to={tourSlug}><img src={imageSrc} alt={imageAlt} /></Link>
+        <Link to={tourSlug}><Img fluid={imageFluid} alt={imageAlt} /></Link>
         <div className="adventure-text effect-bottom">
           <div className="transparent-overlay">
             <h4><Link to={tourSlug}>{tourDetails.title} | <span>{tourDetails.destination}</span></Link></h4>
@@ -100,13 +99,6 @@ const Tour = (props) => {
             <span className="trip-person"><span>{tourDetails.price}</span></span>
             <span className="trip-person">per person</span>
             <span className="trip-price">&nbsp;</span>
-            {/* <div className="adventure-link">
-                          <a href="#"><i className="fa fa-facebook"></i></a>
-                          <a href="#"><i className="fa fa-twitter"></i></a>
-                          <a href="#"><i className="fa fa-google-plus"></i></a>
-                          <a href="#"><i className="fa fa-linkedin"></i></a>
-                          <a href="#"><i className="fa fa-rss"></i></a>
-                      </div> */}
           </div>
         </div>
       </div>
@@ -143,13 +135,6 @@ const BlogArea = (props) => {
                             <span className="month">AUG</span>
                           </div>
                         </div>
-                        {/* <div className="blog-link">
-                                              <a href="#"><i className="fa fa-facebook"></i></a>
-                                              <a href="#"><i className="fa fa-twitter"></i></a>
-                                              <a href="#"><i className="fa fa-google-plus"></i></a>
-                                              <a href="#"><i className="fa fa-linkedin"></i></a>
-                                              <a href="#"><i className="fa fa-rss"></i></a>
-                                          </div> */}
                       </div>
                       <div className="col-md-6 col-sm-6 margin-left">
                         <div className="blog-text">
@@ -172,13 +157,6 @@ const BlogArea = (props) => {
                             <span className="month">AUG</span>
                           </div>
                         </div>
-                        {/* <div className="blog-link">
-                                              <a href="#"><i className="fa fa-facebook"></i></a>
-                                              <a href="#"><i className="fa fa-twitter"></i></a>
-                                              <a href="#"><i className="fa fa-google-plus"></i></a>
-                                              <a href="#"><i className="fa fa-linkedin"></i></a>
-                                              <a href="#"><i className="fa fa-rss"></i></a>
-                                          </div> */}
                       </div>
                       <div className="col-md-6 col-sm-6 margin-left">
                         <div className="blog-text">
@@ -208,7 +186,6 @@ export default function index({ data }) {
     obj[tour.frontmatter.title.trim().toLowerCase()] = tour
     return obj;
   }, {});
-  console.log('home-page render')
   return (
     <div>
       <Helmet>
@@ -216,37 +193,20 @@ export default function index({ data }) {
         <title>Wild Coast Walks</title>
       </Helmet>
 
-      <ContextProviderComponent>
-        <MyContext.Consumer>
-          {({ data }) => {
-            console.log('home-page context 1', data.loadSpinner)
-            return data.loadSpinner ? <Spinner /> : null
-          }}
-        </MyContext.Consumer>
-
-        <SliderArea
-          slider={frontmatter.slider}
-        />
-        <MyContext.Consumer>
-          {({ data }) => {
-            console.log('home-page context 2', data.loadSpinner)
-            return data.loadSpinner ? null :
-              <div>
-                <AboutArea
-                  aboutArea={frontmatter.aboutarea}
-                />
-                <ToursPopular
-                  toursObject={toursObject}
-                  toursArea={frontmatter.toursarea}
-                />
-                <BlogArea
-                  blogArea={frontmatter.blogarea}
-                  blogswitch={blogswitch}
-                />
-              </div>
-          }}
-        </MyContext.Consumer>
-      </ContextProviderComponent>
+      <SliderArea
+        slider={frontmatter.slider}
+      />
+      <AboutArea
+        aboutArea={frontmatter.aboutarea}
+      />
+      <ToursPopular
+        toursObject={toursObject}
+        toursArea={frontmatter.toursarea}
+      />
+      <BlogArea
+        blogArea={frontmatter.blogarea}
+        blogswitch={blogswitch}
+      />
     </div>
   )
 }
@@ -267,7 +227,13 @@ export const homePageQuery = graphql`
             price
             description
             imagethumbnail {
-              image
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 370) {
+                      ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               alt
             }
           }
@@ -281,7 +247,13 @@ export const homePageQuery = graphql`
           subheading2
           image {
             alt
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1600) {
+                    ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
         aboutarea {
@@ -290,7 +262,13 @@ export const homePageQuery = graphql`
           blur
           image {
             alt
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 786) {
+                    ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
         toursarea {

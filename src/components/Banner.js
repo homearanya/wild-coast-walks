@@ -8,7 +8,7 @@ export default function Banner(props) {
         <div className={"banner-area " + props.extraClass}
             style={{
                 backgroundColor: 'rgba(0, 0, 0, 0)',
-                backgroundImage: `url(${props.imageBanner.image})`,
+                backgroundImage: `url(${props.imageBanner.image.publicURL})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundAttachment: 'scroll',
                 backgroundPosition: 'center top',

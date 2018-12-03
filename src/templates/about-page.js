@@ -1,6 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
+import Img from 'gatsby-image'
 
 import Banner from "../components/Banner";
 
@@ -66,7 +67,7 @@ const Destination = (props) => {
         <div className="col-sm-6">
             <div className="single-destinations">
                 <div className="destinations-image">
-                    <img src={props.destination.image.image} alt="" />
+                    <Img fluid={props.destination.image.image.childImageSharp.fluid} alt={props.destination.image.alt} />
                 </div>
                 <div className="destinations-text">
                     <h4>{props.destination.heading1} <span>{props.destination.heading2}</span></h4>
@@ -116,8 +117,8 @@ const Associate = (props) => {
                 <div className="row">
                     <div className="col-md-3 col-sm-4">
                         <div className="associate-image">
-                            <img
-                                src={props.partner.image.image}
+                            <Img
+                                fluid={props.partner.image.image.childImageSharp.fluid}
                                 alt={props.partner.image.alt}
                             />
                         </div>
@@ -177,7 +178,9 @@ export const aboutPageQuery = graphql`
             banner {
                 blurb
                 imagebanner {
-                    image
+                    image {
+                        publicURL
+                    }
                     alt
                 }
             }
@@ -187,7 +190,13 @@ export const aboutPageQuery = graphql`
                 introduction
                 destination {
                     image {
-                        image
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 540) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
                         alt
                     }
                     heading1
@@ -205,7 +214,13 @@ export const aboutPageQuery = graphql`
                 introduction
                 partner {
                     image {
-                        image
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 270) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
                         alt
                     }
                     heading1

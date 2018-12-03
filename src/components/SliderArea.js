@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Slider from "react-slick";
-
-import MyContext from './Context'
+import Img from 'gatsby-image'
 
 import '../assets/css/animate.css'
 import '../assets/lib/nivo-slider/css/nivo-slider.css'
@@ -11,22 +10,11 @@ import '../assets/css/slick.css'
 import '../assets/css/banner.css'
 import '../assets/css/sliderArea.css'
 
-const settings = {
-  dots: false,
-  infinite: true,
-  fade: true,
-  autoplay: true,
-  speed: 1500,
-  slidesToShow: 1,
-  slidesToScroll: 1
-};
-
 const Slide = (props) => {
   return (
     <div>
-      <img
-        src={props.imageSrc}
-        ref={props.reference}
+      <Img
+        fluid={props.imageFluid}
         alt={props.imageAlt}
         title={props.imageTitle}
       />
@@ -49,57 +37,35 @@ const Slide = (props) => {
   )
 }
 
-export default class SliderArea extends Component {
-  constructor(props) {
-    super(props);
-    this.image = React.createRef();
-    this.set = null;
-  }
-
-  componentDidMount() {
-    const img = this.image.current;
-    if (img && img.complete) {
-      console.log('slider component - componentDidMount - image complete')
-      this.set({ loadSpinner: false });
-    } else {
-      console.log('slider component - componentDidMount - image NO complete')
-      img.addEventListener("onLoad", this.set({ loadSpinner: false }))
-    }
-  }
-
-  render() {
-    const slides = this.props.slider
-    return (
-      <div className="slider-area">
-        <div className="preview-2">
-          <MyContext.Consumer>
-            {({ set }) => {
-              this.set = set;
-              let reference;
-              return <Slider {...settings}>
-                {slides.map((slide, index) => {
-                  if (index === 0) {
-                    reference = this.image
-                  } else {
-                    reference = null
-                  }
-                  return <Slide
-                    key={index}
-                    imageSrc={slide.image.image}
-                    imageAlt={slide.image.alt}
-                    imageTitle={slide.heading1 + ' ' + slide.heading2}
-                    reference={reference}
-                    heading1={slide.heading1}
-                    heading2={slide.heading2}
-                    subheading1={slide.subheading1}
-                    subheading2={slide.subheading2}
-                  />
-                })}
-              </Slider>
-            }}
-          </MyContext.Consumer>
-        </div>
+export default function SliderArea(props) {
+  const settings = {
+    dots: false,
+    infinite: true,
+    fade: true,
+    autoplay: true,
+    speed: 1500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+  return (
+    <div className="slider-area">
+      <div className="preview-2">
+        <Slider {...settings}>
+          {props.slider.map((slide, index) => {
+            return <Slide
+              key={index}
+              imageFluid={slide.image.image.childImageSharp.fluid}
+              imageAlt={slide.image.alt}
+              imageTitle={slide.heading1 + ' ' + slide.heading2}
+              heading1={slide.heading1}
+              heading2={slide.heading2}
+              subheading1={slide.subheading1}
+              subheading2={slide.subheading2}
+            />
+          })}
+        </Slider>
       </div>
-    )
-  }
+    </div>
+
+  )
 }

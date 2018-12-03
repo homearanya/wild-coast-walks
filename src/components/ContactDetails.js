@@ -37,7 +37,7 @@ export default function ContactDetails() {
                             <div className="col-md-12">
                                 <div className="row">
                                     <div className="contact-info text-center">
-                                        <div class="col-md-6">
+                                        <div className="col-md-6">
                                             <div className="contact-image">
                                                 <div className="contact-icon">
                                                     <div className="icon-table-cell">

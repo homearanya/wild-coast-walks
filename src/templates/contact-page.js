@@ -84,7 +84,9 @@ export const contactPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
         frontmatter {
             imagebanner {
-                image
+                image {
+                    publicURL
+                }
                 alt
             }
         }   

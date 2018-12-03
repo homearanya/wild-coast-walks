@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image'
 
 import '../assets/css/footerWidgetArea.css'
 import footerStyles from '../assets/css/footerWidgetArea.module.css'
@@ -40,8 +41,10 @@ export default function FooterWidgetArea() {
                     childMarkdownRemark {
                       frontmatter {
                         image {
-                          image
-                          alt
+                            image {
+                                publicURL
+                            }
+                            alt
                         }
                       }
                     }
@@ -53,7 +56,7 @@ export default function FooterWidgetArea() {
                     <div className="footer-widget-area"
                         style={{
                             backgroundColor: 'rgba(0, 0, 0, 0)',
-                            backgroundImage: `url(${data.file.childMarkdownRemark.frontmatter.image.image})`,
+                            backgroundImage: `url(${data.file.childMarkdownRemark.frontmatter.image.image.publicURL})`,
                             backgroundRepeat: 'no-repeat',
                             backgroundAttachment: 'scroll',
                             backgroundPosition: 'center top',
@@ -64,17 +67,6 @@ export default function FooterWidgetArea() {
                                 <FooterContactDetails />
                                 <Newsletter />
                             </div>
-                            {/* <div className="row">
-                                <div className="col-sm-12">
-                                    <div className={"footer-link " + footerStyles.footerSocial}>
-                                        <a href="#"><i className="fa fa-facebook"></i></a>
-                                        <a href="#"><i className="fa fa-twitter"></i></a>
-                                        <a href="#"><i className="fa fa-google-plus"></i></a>
-                                        <a href="#"><i className="fa fa-linkedin"></i></a>
-                                        <a href="#"><i className="fa fa-rss"></i></a>
-                                    </div>
-                                </div>
-                            </div> */}
                         </div>
                     </div>
                 )

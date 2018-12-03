@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Sticky from 'react-sticky-el';
 import { Link } from "gatsby"
-// import { CSSTransitionGroup } from 'react-transition-group'
+import Img from 'gatsby-image'
+
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import '../assets/css/menuDesktop.css'
 
@@ -43,17 +45,17 @@ const Logo = () => {
 }
 
 const SubMenuDest = (props) => {
-    let imageSrc = '';
+    let imageFluid = '';
     let imageAlt = '';
     if (props.section.image) {
-        imageSrc = props.section.image.image;
+        imageFluid = props.section.image.image.childImageSharp.fluid;
         imageAlt = props.section.image.alt;
     }
     return (
         <div>
             <span className="border-hover">
                 <a className="mega-image" >
-                    <img src={imageSrc} alt={imageAlt} />
+                    <Img fluid={imageFluid} alt={imageAlt} />
                 </a>
             </span>
             <span>
@@ -140,13 +142,16 @@ class MainMenu extends Component {
                             </li>
                             <li onMouseLeave={this.handleLeave} onMouseEnter={this.handleHover}>
                                 <a href="#"> Tours </a>
-                                {/* <CSSTransitionGroup
-                                    transitionName="fade"
-                                    transitionEnterTimeout={300}
-                                    transitionLeaveTimeout={300}
-                                > */}
-                                {this.state.showSubMenu && <SubMenu tourMenuSections={this.props.tourMenuSections} handleLeave={this.handleLeave} />}
-                                {/* </CSSTransitionGroup> */}
+                                <TransitionGroup>
+                                    <CSSTransition
+                                        classNames="fade"
+                                        timeout={{ enter: 500, exit: 300 }}
+                                    >
+                                        <div>
+                                            {this.state.showSubMenu && <SubMenu tourMenuSections={this.props.tourMenuSections} handleLeave={this.handleLeave} />}
+                                        </div>
+                                    </CSSTransition>
+                                </TransitionGroup>
                             </li>
                             {this.props.switches.calendarswitch ?
                                 <li>
