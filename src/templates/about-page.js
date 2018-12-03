@@ -6,9 +6,6 @@ import Banner from "../components/Banner";
 
 import '../assets/css/about.css'
 
-import associate_1 from '../assets/img/blog/1.jpg'
-import destination_1 from '../assets/img/destinations/destination_1.jpg'
-
 const AboutAdventures = (props) => {
     return (
         <div className="about-adventures section-padding">
@@ -17,11 +14,11 @@ const AboutAdventures = (props) => {
                     <div className="col-md-6">
                         <div className="section-title text-center">
                             <div className="title-border">
-                                <h1>About <span>adventures</span></h1>
+                                <h1>About <span>SA Adventure Trails</span></h1>
                             </div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.....</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra sit amet aliquam id diam maecenas. Dui accumsan sit amet nulla facilisi morbi. Vel quam elementum pulvinar etiam. Iaculis urna id volutpat lacus laoreet. Nisl purus in mollis nunc sed id semper risus in. Arcu non sodales neque sodales ut etiam sit amet nisl. Pharetra magna ac placerat vestibulum lectus mauris ultrices. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Purus sit amet luctus venenatis. Dictum non consectetur a erat. Vel risus commodo viverra maecenas accumsan. Scelerisque purus semper eget duis at tellus at. Urna duis convallis convallis tellus id interdum. Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit. Nibh nisl condimentum id venenatis a condimentum. Nunc sed id semper risus. Dolor sit amet consectetur adipiscing elit ut aliquam. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed. Nec ultrices dui sapien eget mi.</p>
                         </div>
-                        <a href="#" className="button-one">Buy Now</a>
+                        {/* <a href="#" className="button-one">Buy Now</a> */}
                         {/* <div className="details-social-link">
                             <a href="#"><i className="fa fa-facebook"></i></a>
                             <a href="#"><i className="fa fa-twitter"></i></a>
