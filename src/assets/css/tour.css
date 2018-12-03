@@ -19,9 +19,8 @@
 
 .trip-information {
     /* background: #edecec url(../img/banner/26.png) no-repeat scroll right top / 58% 100%; */
-    padding-bottom: 96px;
+    /* padding-bottom: 96px; */
     padding-top: 80px;
-    margin-top: 100px;
 }
 
 .adventures-grid form#banner-searchbox.details-form {
@@ -157,6 +156,10 @@ button#booking-button {
 button#booking-button:hover,
 .booking-button-two:hover {
     background: rgba(255, 174, 0, 0.8) none repeat scroll 0 0
+}
+
+.react-photo-gallery--gallery {
+    padding-top: 50px;
 }
 
 .react-photo-gallery--gallery img {
@@ -341,6 +344,14 @@ button#booking-button:hover,
     z-index: 9999 !important;
 }
 
+.trip-information-left {
+    padding-right: 40px;
+}
+
+.trip-information-right {
+    padding-left: 40px;
+}
+
 
 /* Large desktop :1920px. */
 
@@ -389,9 +400,6 @@ button#booking-button:hover,
     .trip-information {
         background: rgba(0, 0, 0, 0) none repeat scroll 0 0
     }
-    .trip-information {
-        padding: 0
-    }
     .trip-action {
         width: 20%
     }
@@ -403,6 +411,13 @@ button#booking-button:hover,
     .trip-action>div {
         width: 162px;
     }
+    .trip-information-right {
+        padding-top: 50px;
+        padding-left: 15px;
+    }
+    .trip-information-left {
+        padding-right: 15px;
+    }
 }
 
 
@@ -411,9 +426,6 @@ button#booking-button:hover,
 @media (max-width: 767px) {
     .trip-information {
         background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    }
-    .trip-information {
-        padding: 0;
     }
     .trip-information.details-two,
     .error-area {
@@ -443,6 +455,13 @@ button#booking-button:hover,
     }
     .trip-action>div {
         width: 162px
+    }
+    .trip-information-right {
+        padding-top: 50px;
+        padding-left: 15px;
+    }
+    .trip-information-left {
+        padding-right: 15px;
     }
 }
 

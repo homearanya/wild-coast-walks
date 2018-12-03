@@ -92,39 +92,48 @@ const AdventuresGrid = (props) => {
 
 const TripInformation = (props) => {
     return (
-        <div className="trip-information">
+        <div className="trip-information section-padding">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-6 trip-information-left">
                         <div className="row">
                             <div className="trip-info-left-text">
                                 <div className="section-title text-center">
                                     <div className="title-border">
-                                        <h1>Trip <span>Overview</span></h1>
+                                        <h1>At a <span>Glance</span></h1>
                                     </div>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                    <p>Easy walking along wide sandy beaches running south from Kob Inn and completing at Morgan Bay after 4 days of hiking. Dinner, bed and breakfast with packed lunches at hotels, fully guided and shuttle service.</p>
                                 </div>
                                 <div className="clearfix"></div>
                                 <ul className="details-info">
                                     <li className=""><span>Duration</span>5 days</li>
                                     <li className=""><span>Price</span>From R6500 per person</li>
                                 </ul>
-                                {/* <div className="details-social-link">
-                                    <a href="#"><i className="fa fa-facebook"></i></a>
-                                    <a href="#"><i className="fa fa-twitter"></i></a>
-                                    <a href="#"><i className="fa fa-google-plus"></i></a>
-                                    <a href="#"><i className="fa fa-linkedin"></i></a>
-                                    <a href="#"><i className="fa fa-rss"></i></a>
-                                </div> */}
+                            </div>
+                            <div className="row">
+                                <div className="trip-booking-info">
+                                    <button id="booking-button" type="submit">Book this trip</button>
+                                </div>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="trip-booking-info">
-                                <button id="booking-button" type="submit">Book this trip</button>
+                            <Gallery />
+                        </div>
+                    </div>
+                    <div className="col-md-6 trip-information-right">
+                        <div className="row">
+                            <div className="trip-info-left-text">
+                                <div className="section-title text-center">
+                                    <div className="title-border">
+                                        <h1>Trip <span>Overview</span></h1>
+                                    </div>
+                                    <p>The Meander 5 night 4 day hike was the first established on the lower Wild Coast and has been running for more than 30 years.  It runs through what was the old Transkei following the coastline through communal tribal land with small settlements and huts dotting the rolling grassy hills. At approximately 15km intervals there is a chain of small mostly family run hotels providing simple but comfortable overnight accommodation for travellers and holiday makers in season.  There are few coastal roads other than those leading down to the hotels so most of the terrain is wide open and untarnished by modern developments of tarred roads and commercialisation.   Just the local communities subsisting in ways that have changed little over the years. </p>
+                                    <p>Most of the Meander route follows the long sandy beaches that characterise this section of the coast.  There are few hills or rocky headlands that hinder your progress along wide open expanses of sea and sand broken only by small lagoons and river valleys lined by coastal dune forest vegetation.</p>
+                                    <p>The tour provides for either fly-in or self drive to the Eastern Cape with shuttles to the start of the Meander route at Kob Inn.   After the first night dinner, bed and breakfast accommodation you will meet with your guide and arrange for porters drawn from local villages to carry your bags to the next hotel in the chain.  The chain of hotels extends at approx. 15km intervals from Kob Inn south to the old border of the Kei river.  Here you will take the pont (one of the last operating in the country) and after a short stroll you will reach the holiday and retirement settlement of Morgan Bay which connects through to East London by a newly tarred road.  Here your tour ends with either a pick up of your car or a shuttle back the next day to East London to catch your flight home.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <Gallery />
                 </div>
             </div>
         </div>
@@ -162,21 +171,19 @@ const DEFAULT_IMAGES = [
 const Gallery = (props) => {
 
     return (
-        <div className="col-md-6">
-            <TourGallery images={DEFAULT_IMAGES.map(({ caption, id, orientation, useForDemo }) => ({
-                src: makeUnsplashSrc(id),
-                thumbnail: makeUnsplashThumbnail(id, orientation),
-                srcSet: [
-                    makeUnsplashSrcSet(id, 1024),
-                    makeUnsplashSrcSet(id, 800),
-                    makeUnsplashSrcSet(id, 500),
-                    makeUnsplashSrcSet(id, 320),
-                ],
-                caption,
-                orientation,
-                useForDemo,
-            }))} />
-        </div>
+        <TourGallery images={DEFAULT_IMAGES.map(({ caption, id, orientation, useForDemo }) => ({
+            src: makeUnsplashSrc(id),
+            thumbnail: makeUnsplashThumbnail(id, orientation),
+            srcSet: [
+                makeUnsplashSrcSet(id, 1024),
+                makeUnsplashSrcSet(id, 800),
+                makeUnsplashSrcSet(id, 500),
+                makeUnsplashSrcSet(id, 320),
+            ],
+            caption,
+            orientation,
+            useForDemo,
+        }))} />
     )
 }
 
