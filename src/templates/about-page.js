@@ -81,7 +81,7 @@ const Destination = (props) => {
 
 const AssociatesArea = (props) => {
     return (
-        <div className="associate-area section-padding">
+        <div className="associate-area">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
