@@ -7,7 +7,7 @@ import '../assets/css/header.css'
 
 export default () => (
     <header>
-        <HeaderTop />
+        {/* <HeaderTop /> */}
         <Menu />
     </header>
 )

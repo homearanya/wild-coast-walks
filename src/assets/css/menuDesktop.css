@@ -26,7 +26,7 @@
     display: inline;
 }
 
-.logo img.logo-dark {
+.logo img.logo-color {
     display: none;
 }
 
@@ -261,7 +261,7 @@ header.fixed .header-logo-menu {
     .sticky-menu .logo img.logo-white {
         display: none;
     }
-    .sticky-menu .logo img.logo-dark {
+    .sticky-menu .logo img.logo-color {
         display: inline;
     }
 }

@@ -5,8 +5,8 @@ import { Link } from "gatsby"
 
 import '../assets/css/menuDesktop.css'
 
-import logo_white from '../assets/img/logo/logo.png'
-import logo_dark from '../assets/img/logo/logo-dark.png'
+import logo_white from '../assets/img/logo/logo-trails-white.png'
+import logo_color from '../assets/img/logo/logo-trails-color.png'
 
 const MenuBar = (props) => {
     return (
@@ -34,8 +34,8 @@ const Logo = () => {
         <div className="col-md-4 col-sm-12">
             <div className="logo">
                 <Link to="/">
-                    <img className="logo-white" src={logo_white} alt="Wild Coast Walks logo"></img>
-                    <img className="logo-dark" src={logo_dark} alt="Wild Coast Walks logo"></img>
+                    <img className="logo-white" src={logo_white} alt="Sa Adventure Trails logo"></img>
+                    <img className="logo-color" src={logo_color} alt="Sa Adventure Trails logo"></img>
                 </Link>
             </div>
         </div>

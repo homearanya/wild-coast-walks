@@ -159,6 +159,10 @@ button#booking-button:hover,
     background: rgba(255, 174, 0, 0.8) none repeat scroll 0 0
 }
 
+.react-photo-gallery--gallery img {
+    height: 100%;
+}
+
 
 /*----------------------------------------*/
 
