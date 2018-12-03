@@ -16,7 +16,7 @@ const Slide = (props) => {
       <Img
         fluid={props.imageFluid}
         alt={props.imageAlt}
-        backgroundColor="rgba(0, 0, 0, .6)"
+        backgroundColor="rgba(0,0,0,.6)"
         title={props.imageTitle}
       />
       <div className="nivo-caption" style={{ display: 'block' }}>
