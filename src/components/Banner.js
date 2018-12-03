@@ -4,11 +4,15 @@ import { Link } from "gatsby"
 import '../assets/css/banner.css'
 
 export default function Banner(props) {
+    let imageURL = '';
+    if (props.imageBanner.image) {
+        imageURL = props.imageBanner.image.publicURL;
+    }
     return (
         <div className={"banner-area " + props.extraClass}
             style={{
                 backgroundColor: 'rgba(0, 0, 0, 0)',
-                backgroundImage: `url(${props.imageBanner.image.publicURL})`,
+                backgroundImage: `url(${imageURL})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundAttachment: 'scroll',
                 backgroundPosition: 'center top',
