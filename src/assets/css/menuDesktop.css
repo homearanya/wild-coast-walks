@@ -225,6 +225,10 @@ header.fixed .header-logo-menu {
     transition: opacity 300ms ease-in;
 }
 
+.sticky-menu {
+    z-index: 9998;
+}
+
 
 /* reponsive behaviour */
 

@@ -120,7 +120,7 @@
 
 .destinations-text>p {
     position: relative;
-    z-index: 9999
+    z-index: 9998
 }
 
 .destinations-carousel .owl-item>.col-md-6 {
@@ -223,7 +223,7 @@
 
 .associate-text>p {
     position: relative;
-    z-index: 9999
+    z-index: 9998
 }
 
 .associate-carousel .owl-item>.col-md-6 {
