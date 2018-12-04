@@ -45,7 +45,7 @@ collections:
   slug: "{{slug}}"
   fields:
     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-page"}
-    - {label: "Featured?", name: "featured", widget: "boolean", default: false}
+    # - {label: "Featured?", name: "featured", widget: "boolean", default: false}
     - label: "Destination"
       name: "destination"
       widget: "relation"
@@ -61,9 +61,10 @@ collections:
       valueField: "title"
       displayFields: ["title"]
     - {label: "Title", name: "title", widget: "string"}
-    - {label: "Content", name: "body", widget: "text"}
     - {label: "Duration", name: "duration", widget: "string"}
     - {label: "Price", name: "price", widget: "string"}
+    - {label: "Short Description", name: "body", widget: "text"}
+    - {label: "Long Description", name: "body", widget: "markdown"}
     - label: "Thumbnail Image"
       name: imagethumbnail
       widget: object
