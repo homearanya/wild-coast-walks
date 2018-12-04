@@ -1,8 +1,9 @@
 import React from 'react'
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-import TourGallery from '../components/TourGallery';
 
+import Content, { HTMLContent } from '../components/Content'
+import TourGallery from '../components/TourGallery';
 import Banner from "../components/Banner";
 
 import '../assets/css/tour.css'

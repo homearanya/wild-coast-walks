@@ -86,13 +86,9 @@ collections:
           widget: list
           required: false
           fields:
-            - label: Image
-              name: image
-              widget: object
-              fields: 
-                - {label: Image, name: image, widget: image, hint: "size 800 x 600"}
-                - {label: Alt, name: alt, widget: text,  required: false}
-                - {label: Caption, name: caption, widget: text,  required: false}
+            - {label: Image, name: image, widget: image, hint: "size 800 x 600"}
+            - {label: Alt, name: alt, widget: text,  required: false}
+            - {label: Caption, name: caption, widget: text,  required: false}
 
   editor:
     preview: false
