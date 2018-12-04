@@ -1,6 +1,6 @@
 import React from 'react'
 import ScrollToTop from 'react-scroll-up'
-import { ContextProviderComponent } from "../components/Context";
+import MyContext, { ContextProviderComponent } from "../components/Context";
 
 import '../assets/css/scrollUp.css'
 
@@ -22,13 +22,15 @@ import '../assets/css/banner.css'
 export default function Layout({ children }) {
     return (
         <ContextProviderComponent>
-            <Header />
-            {children}
-            <FooterWidgetArea />
-            <Footer />
-            <ScrollToTop showUnder={160}>
-                <i id="scrollUp" className="fa fa-angle-up"></i>
-            </ScrollToTop>
+            <div>
+                <Header />
+                {children}
+                <FooterWidgetArea />
+                <Footer />
+                <ScrollToTop showUnder={160}>
+                    <i id="scrollUp" className="fa fa-angle-up"></i>
+                </ScrollToTop>
+            </div>
         </ContextProviderComponent>
     )
 }

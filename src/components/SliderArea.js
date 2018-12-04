@@ -2,8 +2,6 @@ import React from 'react'
 import Slider from "react-slick";
 import Img from 'gatsby-image'
 
-import MyContext from "../components/Context";
-
 import '../assets/css/animate.css'
 import '../assets/lib/nivo-slider/css/nivo-slider.css'
 import '../assets/lib/nivo-slider/css/preview.css'
