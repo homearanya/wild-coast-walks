@@ -20,5 +20,11 @@ photoGallery:
     - alt: Tugela Falls
       caption: Tugela Falls
       image: /img/ampthitheatre-gallery_2.jpg
+    - alt: On the Amphitheatre
+      caption: On the Amphitheatre
+      image: /img/ampthitheatre-gallery_3.JPG
+    - alt: Going up the Chainladders
+      caption: Going up the Chainladders
+      image: /img/ampthitheatre-gallery_4.jpg
 ---
 Long Description
