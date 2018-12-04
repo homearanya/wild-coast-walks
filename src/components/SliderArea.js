@@ -2,12 +2,13 @@ import React from 'react'
 import Slider from "react-slick";
 import Img from 'gatsby-image'
 
+import MyContext from "../components/Context";
+
 import '../assets/css/animate.css'
 import '../assets/lib/nivo-slider/css/nivo-slider.css'
 import '../assets/lib/nivo-slider/css/preview.css'
 import '../assets/css/slick-theme.css'
 import '../assets/css/slick.css'
-import '../assets/css/banner.css'
 import '../assets/css/sliderArea.css'
 
 const Slide = (props) => {
@@ -17,7 +18,7 @@ const Slide = (props) => {
         fluid={props.imageFluid}
         alt={props.imageAlt}
         title={props.imageTitle}
-        onLoad={props.setSpinner ? props.setSpinner({ loadSpinner: false }) : null}
+        onLoad={props.setSpinner ? () => props.setSpinner({ loadSpinner: false }) : null}
       />
       <div className="nivo-caption" style={{ display: 'block' }}>
         <div className="banner-content slider-1">
@@ -39,7 +40,7 @@ const Slide = (props) => {
 }
 
 export default function SliderArea(props) {
-  let setSpinner = null;
+  let setSpinner;
   const settings = {
     dots: false,
     infinite: true,
@@ -55,7 +56,7 @@ export default function SliderArea(props) {
         <Slider {...settings}>
           {props.slider.map((slide, index) => {
             if (index === 0) {
-              setSpinner = props.setSpinner;
+              setSpinner = props.setSpinner
             }
             return <Slide
               key={index}

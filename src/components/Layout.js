@@ -16,6 +16,7 @@ import Footer from "../components/Footer";
 
 import '../assets/css/layout.css'
 import '../assets/css/responsive.css'
+import '../assets/css/banner.css'
 
 export default function Layout({ children }) {
     return (

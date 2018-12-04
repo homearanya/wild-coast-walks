@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from "gatsby"
 
-import '../assets/css/banner.css'
-
 export default function Banner(props) {
     let imageURL = '';
     if (props.imageBanner.image) {

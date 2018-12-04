@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
@@ -180,8 +180,8 @@ const BlogArea = (props) => {
   )
 }
 
+
 export default function index({ data }) {
-  let setSpinner;
   const { frontmatter } = data.homePageQuery
   const { hometours } = data.homePageQuery.fields
   const { blogswitch } = data.blogAreaQuery.childMarkdownRemark.frontmatter
@@ -198,27 +198,33 @@ export default function index({ data }) {
       <ContextProviderComponent>
         <MyContext.Consumer>
           {({ data, set }) => {
-            setSpinner = set
-            return data.loadSpinner ? <Spinner /> : null
+            return (
+              <div>
+                {data.loadSpinner ? <Spinner /> : null}
+                <SliderArea
+                  slider={frontmatter.slider}
+                  setSpinner={set}
+                />
+                {data.loadSpinner ? null :
+                  <div>
+                    <AboutArea
+                      aboutArea={frontmatter.aboutarea}
+                    />
+                    <ToursPopular
+                      toursObject={toursObject}
+                      toursArea={frontmatter.toursarea}
+                    />
+                    <BlogArea
+                      blogArea={frontmatter.blogarea}
+                      blogswitch={blogswitch}
+                    />
+                  </div>
+                }
+              </div>
+            )
           }}
         </MyContext.Consumer>
       </ContextProviderComponent>
-
-      <SliderArea
-        slider={frontmatter.slider}
-        setSpinner={setSpinner}
-      />
-      <AboutArea
-        aboutArea={frontmatter.aboutarea}
-      />
-      <ToursPopular
-        toursObject={toursObject}
-        toursArea={frontmatter.toursarea}
-      />
-      <BlogArea
-        blogArea={frontmatter.blogarea}
-        blogswitch={blogswitch}
-      />
     </div>
   )
 }
