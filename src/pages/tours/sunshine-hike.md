@@ -1,9 +1,8 @@
 ---
 templateKey: tour-page
-featured: true
+title: Sunshine Hike
 destination: Wild Coast
 activity: Slackpack
-title: Sunshine Hike
 shortdescription: >-
   Takes in the best of Wild Coast scenery over 4 hiking days between Wavecrest
   and Crawfords hotel Chintsa in the south.  Dinner, bed and breakfast with

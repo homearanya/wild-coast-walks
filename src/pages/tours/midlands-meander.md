@@ -1,9 +1,8 @@
 ---
 templateKey: tour-page
-featured: true
+title: Midlands Meander
 destination: Midlands
 activity: Cycle Tour
-title: Midlands Meander
 shortdescription: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis

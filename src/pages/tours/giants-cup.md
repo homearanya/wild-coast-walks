@@ -1,9 +1,8 @@
 ---
 templateKey: tour-page
-featured: true
+title: Giants Cup
 destination: Drakensberg
 activity: Slackpack
-title: Giants Cup
 shortdescription: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. 

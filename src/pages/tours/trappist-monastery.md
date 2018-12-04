@@ -1,9 +1,8 @@
 ---
 templateKey: tour-page
-featured: true
+title: Trappist Monastery
 destination: Midlands
 activity: Cycle Tour
-title: Trappist Monastery
 shortdescription: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
