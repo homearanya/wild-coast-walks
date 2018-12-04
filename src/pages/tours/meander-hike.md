@@ -4,7 +4,7 @@ featured: true
 destination: Wild Coast
 activity: Slackpack
 title: Meander hike
-description: >
+shortdescription:>
   Easy walking along wide sandy beaches running south from Kob Inn and
   completing at Morgan Bay after 4 days of hiking. Dinner, bed and breakfast
   with packed lunches at hotels, fully guided and shuttle service.  Bags

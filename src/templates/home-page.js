@@ -94,7 +94,7 @@ const Tour = (props) => {
             <h4><Link to={tourSlug}>{tourDetails.title} | <span>{tourDetails.destination}</span></Link></h4>
             <span className="trip-time"><i className="fa fa-clock-o"></i>{tourDetails.duration}</span>
             <span className="trip-level"><i className="fa fa-send-o"></i>{tourDetails.level}</span>
-            <p>{tourDetails.description.substring(0, 230) + '...'}</p>
+            <p>{tourDetails.shortdescription.substring(0, 230) + '...'}</p>
           </div>
           <div className="adventure-price-link">
             <span className="trip-person">From</span>
@@ -240,7 +240,7 @@ export const homePageQuery = graphql`
             activity
             duration
             price
-            description
+            shortdescription
             imagethumbnail {
               image {
                 childImageSharp {

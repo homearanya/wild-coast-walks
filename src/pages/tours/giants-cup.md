@@ -4,7 +4,7 @@ featured: true
 destination: Drakensberg
 activity: Slackpack
 title: Giants Cup
-description: >-
+shortdescription: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. 
 duration: 5 nights

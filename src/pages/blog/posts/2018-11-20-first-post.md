@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: First post
 date: 2018-11-20T11:35:46.821Z
-description: this is my first blog post
+shortdescription: this is my first blog post
 tags:
   - beginnings
 ---
