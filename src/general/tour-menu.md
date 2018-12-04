@@ -15,7 +15,7 @@ section:
       image: /img/tm-450x300-12.jpg
     tours:
       - tour: Giants Cup
-      - tour: Amphitheatre
+      - tour: Amphitheatre Hike
       - tour: Mehloding
   - heading1: Midlands Slackpack
     image:
