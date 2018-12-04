@@ -35,9 +35,6 @@ export default class TourGallery extends React.Component {
                 }
             )
         })
-
-        console.log('this.photos', this.photos)
-        console.log('this.images', this.images)
     }
 
     openLightbox(event, obj) {

@@ -122,6 +122,7 @@ const TripInformation = (props) => {
                         </div>
                         <div className="row">
                             {props.tourInfo.frontmatter.photoGallery &&
+                                props.tourInfo.frontmatter.photoGallery.photo &&
                                 props.tourInfo.frontmatter.photoGallery.photo.length > 0 ?
                                 <TourGallery photos={props.tourInfo.frontmatter.photoGallery.photo} />
                                 : null}
