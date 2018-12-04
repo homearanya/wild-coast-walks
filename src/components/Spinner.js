@@ -1,23 +1,55 @@
-import React from 'react'
-import Loader from 'react-loader-spinner'
+import React from 'react';
+import { css } from 'react-emotion';
+// First way to import
+import { GridLoader } from 'react-spinners';
 
 import '../assets/css/spinner.css'
 
+const spinnerWrapper = css`
 
-export default function Spinner() {
+`
+const override = css`
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    border-color: red;
+`;
+
+export default function Spinner(props) {
     return (
         <div className='spinnerWrapper'>
-            <div className='spinnerContainer'>
-                <Loader
-                    type="Circles"
-                    color="#00BFFF"
-                    height="100"
-                    width="100"
-                />
-            </div>
+            <GridLoader
+                className={override}
+                sizeUnit={"px"}
+                size={250}
+                color={'#123abc'}
+                loading={true}
+            />
         </div>
     )
 }
+
+
+// import React from 'react'
+// import Loader from 'react-loader-spinner'
+
+// import '../assets/css/spinner.css'
+
+
+// export default function Spinner() {
+//     return (
+//         <div className='spinnerWrapper'>
+//             <div className='spinnerContainer'>
+//                 <Loader
+//                     type="Circles"
+//                     color="#00BFFF"
+//                     height="100"
+//                     width="100"
+//                 />
+//             </div>
+//         </div>
+//     )
+// }
 
 
 // import React from 'react'
