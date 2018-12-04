@@ -25,7 +25,7 @@ export default function Spinner() {
                 maxHeight: "100%",
             }}
             >
-                {/* <img className="logo-color" src={logo_color} alt="Sa Adventure Trails logo"></img> */}
+                <img className="logo-color" src={logo_color} alt="Sa Adventure Trails logo"></img>
                 {/* <Loader
                     type="Circles"
                     color="#00BFFF"

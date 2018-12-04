@@ -196,36 +196,36 @@ export default function index({ data }) {
         <meta charSet="utf-8" />
         <title>Wild Coast Walks</title>
       </Helmet>
-      <ContextProviderComponent>
-        <MyContext.Consumer>
-          {({ data, set }) => {
-            return (
+      {/* <ContextProviderComponent> */}
+      <MyContext.Consumer>
+        {({ data, set }) => {
+          return (
+            <div>
+              {data.loadSpinner ? <Spinner /> : null}
+              <SliderArea
+                slider={frontmatter.slider}
+                setSpinner={set}
+              />
+              {/* {data.loadSpinner ? null : */}
               <div>
-                {data.loadSpinner ? <Spinner /> : null}
-                <SliderArea
-                  slider={frontmatter.slider}
-                  setSpinner={set}
+                <AboutArea
+                  aboutArea={frontmatter.aboutarea}
                 />
-                {/* {data.loadSpinner ? null : */}
-                <div>
-                  <AboutArea
-                    aboutArea={frontmatter.aboutarea}
-                  />
-                  <ToursPopular
-                    toursObject={toursObject}
-                    toursArea={frontmatter.toursarea}
-                  />
-                  <BlogArea
-                    blogArea={frontmatter.blogarea}
-                    blogswitch={blogswitch}
-                  />
-                </div>
-                {/* } */}
+                <ToursPopular
+                  toursObject={toursObject}
+                  toursArea={frontmatter.toursarea}
+                />
+                <BlogArea
+                  blogArea={frontmatter.blogarea}
+                  blogswitch={blogswitch}
+                />
               </div>
-            )
-          }}
-        </MyContext.Consumer>
-      </ContextProviderComponent>
+              {/* } */}
+            </div>
+          )
+        }}
+      </MyContext.Consumer>
+      {/* </ContextProviderComponent> */}
     </div>
   )
 }
