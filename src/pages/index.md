@@ -16,10 +16,12 @@ slider:
     subheading1: MEANDERING THROUGH THE
     subheading2: NATAL MIDLANDS
 aboutarea:
+  blurb: >-
+    We're are one of the oldest and most established luxury slack-packing
+    operators in the Transkei, our walks take in some of the most unspoilt and
+    picturesque sections of our coastline.
   heading1: SA Adventure
   heading2: Trails
-  blurb: >-
-    We're are one of the oldest and most established luxury slack-packing operators in the Transkei, our walks take in some of the most unspoilt and picturesque sections of our coastline.
   image:
     alt: Wild Coast Slackpacking - Hikers and Porters
     image: /img/hikers-and-porters786x426-min.jpg
@@ -54,6 +56,10 @@ toursarea:
         - tour: Midlands Meander
         - tour: Trappist Monastery
 blogarea:
+  blurb: >-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor
+    turpis, pulvinar varius dui<br /> id, convallis iaculis eros. Praesent porta
+    lacinia elementum.
   heading1: Latest
   heading2: Blog Posts
   switch: true
