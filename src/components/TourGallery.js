@@ -17,7 +17,7 @@ export default class TourGallery extends React.Component {
                     src: photo.image.childImageSharp.fluid.src,
                     srcSet: photo.image.childImageSharp.fluid.srcSet,
                     sizes: photo.image.childImageSharp.fluid.sizes,
-                    width: photo.image.childImageSharp.fluid.aspectRation,
+                    width: photo.image.childImageSharp.fluid.aspectRatio,
                     height: 1,
                     alt: photo.alt,
                     key: index,
@@ -35,29 +35,37 @@ export default class TourGallery extends React.Component {
                 }
             )
         })
+
+        console.log('this.photos', this.photos)
+        console.log('this.images', this.images)
     }
+
     openLightbox(event, obj) {
         this.setState({
             currentImage: obj.index,
             lightboxIsOpen: true,
         });
     }
+
     closeLightbox() {
         this.setState({
             currentImage: 0,
             lightboxIsOpen: false,
         });
     }
+
     gotoPrevious() {
         this.setState({
             currentImage: this.state.currentImage - 1,
         });
     }
+
     gotoNext() {
         this.setState({
             currentImage: this.state.currentImage + 1,
         });
     }
+
     render() {
         return (
             <div>
