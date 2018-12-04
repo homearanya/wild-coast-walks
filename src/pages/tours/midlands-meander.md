@@ -15,6 +15,7 @@ imagethumbnail:
 imagebanner:
   alt: Midlands Meander
   image: /img/midlands-meander-banner1600x596-min.jpg
-photoGallery:  
+photoGallery:
+  photo:
 ---
 

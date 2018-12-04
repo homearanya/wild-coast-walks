@@ -15,6 +15,7 @@ imagethumbnail:
 imagebanner:
   alt: Battlefields - Isandlwana
   image: /img/battlefields-banner1600x596-min.jpg
-photoGallery:  
+photoGallery:
+  photo:
 ---
 

@@ -15,6 +15,7 @@ imagethumbnail:
 imagebanner:
   alt: Dargle Samango
   image: /img/dargle-banner1600x596-min.jpg
-photoGallery:  
+photoGallery:
+  photo:
 ---
 

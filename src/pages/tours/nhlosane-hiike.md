@@ -15,6 +15,7 @@ imagethumbnail:
 imagebanner:
   alt: Nhlosane Hike
   image: /img/nhlosane-hike.-banner1600x596-min.jpg
-photoGallery:  
+photoGallery:
+  photo:
 ---
 

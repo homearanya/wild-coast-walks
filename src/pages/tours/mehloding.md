@@ -16,5 +16,6 @@ imagebanner:
   alt: Mehloding
   image: /img/mehloding-banner1600x596-min.jpg
 photoGallery:
+  photo:
 ---
 

@@ -93,7 +93,6 @@ const AdventuresGrid = (props) => {
 
 const TripInformation = (props) => {
     const TourContent = HTMLContent || Content
-    console.log('props.tourInfo.frontmatter.photoGallery.photo', props.tourInfo.frontmatter.photoGallery.photo)
     return (
         <div className="trip-information section-padding">
             <div className="container">
@@ -122,7 +121,10 @@ const TripInformation = (props) => {
                             </div>
                         </div>
                         <div className="row">
-                            <TourGallery photos={props.tourInfo.frontmatter.photoGallery.photo} />
+                            {props.tourInfo.frontmatter.photoGallery &&
+                                props.tourInfo.frontmatter.photoGallery.photo > 0 ?
+                                <TourGallery photos={props.tourInfo.frontmatter.photoGallery.photo} />
+                                : null}
                         </div>
                     </div>
                     <div className="col-md-6 trip-information-right">
