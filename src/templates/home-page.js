@@ -182,6 +182,7 @@ const BlogArea = (props) => {
 
 
 export default function index({ data }) {
+  const { siteMetadata } = data.siteMetaDataQuery
   const { frontmatter } = data.homePageQuery
   const { hometours } = data.homePageQuery.fields
   const { blogswitch } = data.blogAreaQuery.childMarkdownRemark.frontmatter
@@ -193,7 +194,7 @@ export default function index({ data }) {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Wild Coast Walks</title>
+        <title>{siteMetadata.title}</title>
       </Helmet>
       <MyContext.Consumer>
         {({ data, set }) => {
@@ -310,6 +311,11 @@ export const homePageQuery = graphql`
           frontmatter {
               blogswitch
           }
+      }
+    }
+    siteMetaDataQuery: site {
+      siteMetadata {
+        title
       }
     }
   }
