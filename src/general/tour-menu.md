@@ -9,14 +9,6 @@ section:
       - tour: Meander hike
       - tour: Sunshine Hike
       - tour: Mini Break
-  - heading1: Drakensberg Slackpack
-    image:
-      alt: Giants Cup Trail
-      image: /img/giants-cup-trail450x300.jpg
-    tours:
-      - tour: Giants Cup
-      - tour: Amphitheatre Hike
-      - tour: Mehloding
   - heading1: Midlands Walks
     image:
       alt: Midlands Walks
@@ -24,6 +16,14 @@ section:
     tours:
       - tour: Karkloof Falls2Fallls
       - tour: Dargle Samango
+      - tour: Nhlosane Hike
+  - heading1: Drakensberg Slackpack
+    image:
+      alt: Giants Cup Trail
+      image: /img/giants-cup-trail450x300.jpg
+    tours:
+      - tour: Giants Cup
+      - tour: Amphitheatre Hike
       - tour: Nhlosane Hike
   - heading1: KZN Cycle Tours
     image:
