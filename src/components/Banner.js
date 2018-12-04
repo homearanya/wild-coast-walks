@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 export default function Banner(props) {
     let imageURL = '';
     if (props.imageBanner.image) {
-        imageURL = props.imageBanner.image.publicURL;
+        imageURL = props.imageBanner.image.childImageSharp.fluid.src;
     }
     return (
         <div className={"banner-area " + props.extraClass}

@@ -179,7 +179,11 @@ export const aboutPageQuery = graphql`
                 blurb
                 imagebanner {
                     image {
-                        publicURL
+                        childImageSharp {
+                            fluid(maxWidth: 1600) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
                     }
                     alt
                 }

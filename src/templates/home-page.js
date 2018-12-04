@@ -181,7 +181,7 @@ const BlogArea = (props) => {
 }
 
 
-export default function index({ data }) {
+export default function Index({ data }) {
   const { siteMetadata } = data.siteMetaDataQuery
   const { frontmatter } = data.homePageQuery
   const { hometours } = data.homePageQuery.fields
@@ -194,7 +194,7 @@ export default function index({ data }) {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{siteMetadata.title}</title>
+        <title>{`Slackpacking, Walks & Cycle Tours - ${siteMetadata.title}`}</title>
       </Helmet>
       <MyContext.Consumer>
         {({ data, set }) => {

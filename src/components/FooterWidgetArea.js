@@ -42,7 +42,11 @@ export default function FooterWidgetArea() {
                       frontmatter {
                         image {
                             image {
-                                publicURL
+                                childImageSharp {
+                                    fluid(maxWidth: 1600) {
+                                        ...GatsbyImageSharpFluid
+                                    }
+                                }
                             }
                             alt
                         }
@@ -56,7 +60,7 @@ export default function FooterWidgetArea() {
                     <div className="footer-widget-area"
                         style={{
                             backgroundColor: 'rgba(0, 0, 0, 0)',
-                            backgroundImage: `url(${data.file.childMarkdownRemark.frontmatter.image.image.publicURL})`,
+                            backgroundImage: `url(${data.file.childMarkdownRemark.frontmatter.image.image.childImageSharp.fluid.src})`,
                             backgroundRepeat: 'no-repeat',
                             backgroundAttachment: 'scroll',
                             backgroundPosition: 'center top',

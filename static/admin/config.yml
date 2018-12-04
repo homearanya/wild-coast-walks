@@ -80,11 +80,11 @@ collections:
     - label: "Photo Gallery"
       name: photoGallery
       widget: object
+      required: false
       fields:
         - label: Photo
           name: photo
           widget: list
-          required: false
           fields:
             - {label: Image, name: image, widget: image, hint: "size 800 x 600"}
             - {label: Alt, name: alt, widget: text,  required: false}

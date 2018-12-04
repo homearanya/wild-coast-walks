@@ -289,7 +289,11 @@ export const blogPageQuery = graphql`
             frontmatter {
                 imagebanner {
                     image {
-                        publicURL
+                        childImageSharp {
+                            fluid(maxWidth: 1600) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
                     }
                     alt
                 }
