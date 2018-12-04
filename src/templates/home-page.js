@@ -189,23 +189,24 @@ export default function index({ data }) {
     obj[tour.frontmatter.title.trim().toLowerCase()] = tour
     return obj;
   }, {});
+  console.log('render home-page')
   return (
     <div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Wild Coast Walks</title>
       </Helmet>
-      {/* <ContextProviderComponent> */}
-      <MyContext.Consumer>
-        {({ data, set }) => {
-          return (
-            <div>
-              {data.loadSpinner ? <Spinner /> : null}
-              <SliderArea
-                slider={frontmatter.slider}
-                setSpinner={set}
-              />
-              {data.loadSpinner ? null :
+      <ContextProviderComponent>
+        <MyContext.Consumer>
+          {({ data, set }) => {
+            return (
+              <div>
+                {data.loadSpinner ? <Spinner /> : null}
+                <SliderArea
+                  slider={frontmatter.slider}
+                  setSpinner={set}
+                />
+                {/* {data.loadSpinner ? null : */}
                 <div>
                   <AboutArea
                     aboutArea={frontmatter.aboutarea}
@@ -219,12 +220,12 @@ export default function index({ data }) {
                     blogswitch={blogswitch}
                   />
                 </div>
-              }
-            </div>
-          )
-        }}
-      </MyContext.Consumer>
-      {/* </ContextProviderComponent> */}
+                {/* } */}
+              </div>
+            )
+          }}
+        </MyContext.Consumer>
+      </ContextProviderComponent>
     </div>
   )
 }
