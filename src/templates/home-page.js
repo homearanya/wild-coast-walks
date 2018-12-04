@@ -28,7 +28,7 @@ const AboutArea = (props) => {
                 </div>
               </div>
               <div className="about-text">
-                <p>{props.aboutArea.blur}</p>
+                <p>{props.aboutArea.blurb}</p>
                 <Link to="/about">Learn more</Link>
               </div>
             </div>
@@ -274,7 +274,7 @@ export const homePageQuery = graphql`
         aboutarea {
           heading1
           heading2
-          blur
+          blurb
           image {
             alt
             image {
@@ -299,7 +299,7 @@ export const homePageQuery = graphql`
           }
         }
         blogarea {
-          blur
+          blurb
           heading1
           heading2
           switch
