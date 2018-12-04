@@ -14,9 +14,8 @@ imagebanner:
   image: /img/amphitheatre1600x596-min.jpg
 photoGallery:
   photo:
-    - image:
-        alt: Amphitheatre
-        caption: Amphitheatre
-        image: /img/kd2_001.jpg
+    - alt: Amphitheatre
+      caption: Amphitheatre
+      image: /img/ampthitheatre-gallery_1.jpg
 ---
 Long Description
