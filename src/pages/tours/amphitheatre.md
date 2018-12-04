@@ -17,5 +17,8 @@ photoGallery:
     - alt: Amphitheatre
       caption: Amphitheatre
       image: /img/ampthitheatre-gallery_1.jpg
+    - alt: Tugela Falls
+      caption: Tugela Falls
+      image: /img/ampthitheatre-gallery_2.jpg
 ---
 Long Description
