@@ -18,6 +18,8 @@ slider:
 aboutarea:
   heading1: SA Adventure
   heading2: Trails
+  blurb: >-
+  We're are one of the oldest and most established luxury slack-packing operators in the Transkei, our walks take in some of the most unspoilt and picturesque sections of our coastline.
   image:
     alt: Wild Coast Slackpacking - Hikers and Porters
     image: /img/hikers-and-porters786x426-min.jpg
