@@ -3,32 +3,32 @@ section:
   - heading1: Wild Coast Slackpack
     heading2: ''
     image:
-      alt: Midlands Walk
-      image: /img/tm-450x300-12.jpg
+      alt: Wild Coast Slackpack
+      image: /img/wild-coast-slackpack450x300.jpg
     tours:
       - tour: Meander hike
       - tour: Sunshine Hike
       - tour: Mini Break
   - heading1: Drakensberg Slackpack
     image:
-      alt: Midlands Walk
-      image: /img/tm-450x300-12.jpg
+      alt: Giants Cup Trail
+      image: /img/giants-cup-trail450x300.jpg
     tours:
       - tour: Giants Cup
       - tour: Amphitheatre Hike
       - tour: Mehloding
-  - heading1: Midlands Slackpack
+  - heading1: Midlands Walks
     image:
-      alt: Midlands Walk
-      image: /img/tm-450x300-12.jpg
+      alt: Midlands Walks
+      image: /img/midlands-walks450x300.jpg
     tours:
       - tour: Karkloof Falls2Fallls
       - tour: Dargle Samango
       - tour: Nhlosane Hike
-  - heading1: Midlands Cycle Tours
+  - heading1: KZN Cycle Tours
     image:
-      alt: Midlands Walk
-      image: /img/tm-450x300-12.jpg
+      alt: KZN Cycle Tours
+      image: /img/cycle-tours450x300.jpg
     tours:
       - tour: Battlefields
       - tour: Midlands Meander
