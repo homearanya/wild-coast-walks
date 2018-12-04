@@ -123,13 +123,13 @@ collections:
           fields: 
             - {label: Heading 1, name: heading1, widget: string}
             - {label: Heading 2, name: heading2, widget: string}
+            - {label: Blurb, name: blurb, widget: text}     
             - label: "Image"
               name: image
               widget: object
               fields: 
                 - {label: Image, name: image, widget: image, hint: "size 786 x 426"}
                 - {label: Alt, name: alt, widget: text,  required: false}       
-            - {label: Blurb, name: blurb, widget: text}     
         - label: "Tours Area"
           name: toursarea
           widget: object
