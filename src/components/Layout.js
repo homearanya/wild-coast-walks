@@ -20,18 +20,15 @@ import '../assets/css/responsive.css'
 import '../assets/css/banner.css'
 
 export default function Layout({ children }) {
-    console.log('render Layout')
     return (
         <ContextProviderComponent>
-            <div>
-                <Header />
-                {children}
-                <FooterWidgetArea />
-                <Footer />
-                <ScrollToTop showUnder={160}>
-                    <i id="scrollUp" className="fa fa-angle-up"></i>
-                </ScrollToTop>
-            </div>
+            <Header />
+            {children}
+            <FooterWidgetArea />
+            <Footer />
+            <ScrollToTop showUnder={160}>
+                <i id="scrollUp" className="fa fa-angle-up"></i>
+            </ScrollToTop>
         </ContextProviderComponent>
     )
 }
