@@ -3,7 +3,9 @@ import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
 
-import SliderArea from "../components/SliderArea";
+import MyContext, { ContextProviderComponent } from "../components/Context";
+import SliderArea from "../components/SliderArea"
+import Spinner from '../components/Spinner'
 
 import '../assets/css/home-page.css'
 
@@ -179,6 +181,7 @@ const BlogArea = (props) => {
 }
 
 export default function index({ data }) {
+  let setSpinner;
   const { frontmatter } = data.homePageQuery
   const { hometours } = data.homePageQuery.fields
   const { blogswitch } = data.blogAreaQuery.childMarkdownRemark.frontmatter
@@ -192,9 +195,18 @@ export default function index({ data }) {
         <meta charSet="utf-8" />
         <title>Wild Coast Walks</title>
       </Helmet>
+      <ContextProviderComponent>
+        <MyContext.Consumer>
+          {({ data, set }) => {
+            setSpinner = set
+            return data.loadSpinner ? <Spinner /> : null
+          }}
+        </MyContext.Consumer>
+      </ContextProviderComponent>
 
       <SliderArea
         slider={frontmatter.slider}
+        setSpinner={setSpinner}
       />
       <AboutArea
         aboutArea={frontmatter.aboutarea}
