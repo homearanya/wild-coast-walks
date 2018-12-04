@@ -84,6 +84,7 @@ collections:
         - label: Photo
           name: photo
           widget: list
+          required: false
           fields:
             - label: Image
               name: image
