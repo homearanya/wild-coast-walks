@@ -93,7 +93,7 @@ const AdventuresGrid = (props) => {
 
 const TripInformation = (props) => {
     const TourContent = HTMLContent || Content
-    // console.log('props.tourInfo.frontmatter.photoGallery.photo', props.tourInfo.frontmatter.photoGallery.photo)
+    console.log('props.tourInfo.frontmatter.photoGallery.photo', props.tourInfo.frontmatter.photoGallery.photo)
     return (
         <div className="trip-information section-padding">
             <div className="container">

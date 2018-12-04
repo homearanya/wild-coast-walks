@@ -15,5 +15,6 @@ imagethumbnail:
 imagebanner:
   alt: Karkloof Falls
   image: /img/karkloof-falls-banner1600x596-min.jpg
+photoGallery:  
 ---
 

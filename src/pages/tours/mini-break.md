@@ -20,5 +20,6 @@ imagethumbnail:
 imagebanner:
   alt: Mini Break
   image: /img/mini-break-banner1600x596-min.jpg
+photoGallery:  
 ---
 

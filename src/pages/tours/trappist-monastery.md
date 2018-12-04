@@ -15,5 +15,6 @@ imagethumbnail:
 imagebanner:
   alt: Trappist Monastery
   image: /img/trappist-monastery1600x596-min.jpg
+photoGallery:  
 ---
 

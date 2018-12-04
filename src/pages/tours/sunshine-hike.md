@@ -19,5 +19,6 @@ imagethumbnail:
 imagebanner:
   alt: Sunshine Hike
   image: /img/sunshine-hike1600x596-min.jpg
+photoGallery:  
 ---
 

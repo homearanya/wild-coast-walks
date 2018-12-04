@@ -19,5 +19,6 @@ imagethumbnail:
 imagebanner:
   alt: Meander Hike
   image: /img/wild-coast-meander1600x596-min.jpg
+photoGallery:  
 ---
 
