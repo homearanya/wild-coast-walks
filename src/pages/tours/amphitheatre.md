@@ -1,6 +1,6 @@
 ---
 templateKey: tour-page
-title: Amphitheatre
+title: Amphitheatre Hike
 destination: Drakensberg
 activity: Slackpack
 duration: 4 nights
