@@ -18,24 +18,7 @@ destinationsarea:
   destination:
     - content:
         paragraph:
-          - text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna
-              fringilla urna porttitor rhoncus dolor purus non enim. Mauris sit
-              amet massa vitae tortor condimentum. Morbi tincidunt augue
-              interdum velit euismod in pellentesque massa. Ac orci phasellus
-              egestas tellus rutrum. Aliquam faucibus purus in massa tempor nec.
-              Amet cursus sit amet dictum sit amet justo donec. Feugiat
-              scelerisque varius morbi enim nunc faucibus a pellentesque sit. In
-              cursus turpis massa tincidunt dui. Dictum sit amet justo donec.
-              Fames ac turpis egestas integer eget aliquet nibh praesent
-              tristique. Auctor neque vitae tempus quam pellentesque. Diam quam
-              nulla porttitor massa. Mattis ullamcorper velit sed ullamcorper.
-              Auctor elit sed vulputate mi sit. Condimentum id venenatis a
-              condimentum vitae sapien pellentesque habitant. Viverra tellus in
-              hac habitasse platea dictumst vestibulum. Adipiscing vitae proin
-              sagittis nisl rhoncus mattis. Bibendum est ultricies integer quis
-              auctor.
+          - text: This is about Wild Coast Slackpack
       heading1: Wild Coast
       heading2: Slackpack
       image:
