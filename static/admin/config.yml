@@ -329,8 +329,8 @@ collections:
             - {label: Email Address, name: email, widget: string}
             - {label: Phone Number, name: phone, widget: string}
     - file: "src/general/footer.md"
-      label: "Configuration"
-      name: "config"
+      label: "Footer"
+      name: "footer"
       fields:
         - label: Image
           name: image

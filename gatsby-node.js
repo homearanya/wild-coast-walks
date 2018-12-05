@@ -83,6 +83,13 @@ exports.createPages = ({ actions, graphql, getNode }) => {
                     value: menuTourIds,
                 })
             }
+
+            // console.log(homeTourIds)
+            // console.log(menuTourTitles)
+            // console.log(menuTourIds)
+            // console.log(toursObject)
+            // console.log(homeNodeId)
+            // console.log(tourMenuNodeId)
         })
 }
 

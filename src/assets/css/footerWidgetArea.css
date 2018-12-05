@@ -179,11 +179,27 @@
 .newsletter-content input {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: 1px solid #ffffff;
-    color: #ffffff;
     line-height: 46px;
-    opacity: 1;
     padding: 0 20px;
     width: 100%;
+}
+
+.newsletter-content input::placeholder {
+    color: white;
+    opacity: 1;
+    /* Firefox */
+}
+
+.newsletter-content input:-ms-input-placeholder {
+    color: white;
+    opacity: 1;
+    /* Firefox */
+}
+
+.newsletter-content input::-ms-input-placeholder {
+    color: white;
+    opacity: 1;
+    /* Firefox */
 }
 
 .newsletter-content button {

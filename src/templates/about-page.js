@@ -138,12 +138,13 @@ const Associate = (props) => {
 }
 
 export default ({ data }) => {
-    const { frontmatter } = data.markdownRemark
+    const { siteMetadata } = data.siteMetaDataQuery
+    const { frontmatter } = data.AboutPageQuery
     return (
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>About us - Wild Coast Walks</title>
+                <title>{`About Us - ${siteMetadata.title}`}</title>
             </Helmet>
 
             <Banner
@@ -154,7 +155,7 @@ export default ({ data }) => {
                 breadcrumb="About us"
                 imageBanner={frontmatter.banner.imagebanner}
             />
-            <AboutAdventures />
+            {/* <AboutAdventures /> */}
             <AssociatesArea
                 heading1={frontmatter.partnersarea.heading1}
                 heading2={frontmatter.partnersarea.heading2}
@@ -172,71 +173,76 @@ export default ({ data }) => {
 }
 
 export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-		frontmatter {
-            banner {
-                blurb
-                imagebanner {
-                    image {
-                        childImageSharp {
-                            fluid(maxWidth: 1600) {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
-                    }
-                    alt
-                }
-            }
-            destinationsarea {
-                heading1
-                heading2
-                introduction
-                destination {
-                    image {
+    query AboutPage($id: String!) {
+        AboutPageQuery: markdownRemark(id: { eq: $id }) {
+            frontmatter {
+                banner {
+                    blurb
+                    imagebanner {
                         image {
                             childImageSharp {
-                                fluid(maxWidth: 540) {
+                                fluid(maxWidth: 1600) {
                                     ...GatsbyImageSharpFluid
                                 }
                             }
                         }
                         alt
                     }
+                }
+                destinationsarea {
                     heading1
                     heading2
-                    content {
-                        paragraph {
-                            text
+                    introduction
+                    destination {
+                        image {
+                            image {
+                                childImageSharp {
+                                    fluid(maxWidth: 540) {
+                                        ...GatsbyImageSharpFluid
+                                    }
+                                }
+                            }
+                            alt
+                        }
+                        heading1
+                        heading2
+                        content {
+                            paragraph {
+                                text
+                            }
                         }
                     }
                 }
-            }
-            partnersarea {
-                heading1
-                heading2
-                introduction
-                partner {
-                    image {
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 270) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
-                        }
-                        alt
-                    }
+                partnersarea {
                     heading1
                     heading2
-                    content {
-                        paragraph {
-                            text
+                    introduction
+                    partner {
+                        image {
+                            image {
+                                childImageSharp {
+                                    fluid(maxWidth: 270) {
+                                        ...GatsbyImageSharpFluid
+                                    }
+                                }
+                            }
+                            alt
+                        }
+                        heading1
+                        heading2
+                        content {
+                            paragraph {
+                                text
+                            }
                         }
                     }
                 }
             }
         }
+        siteMetaDataQuery: site {
+            siteMetadata {
+            title
+            }
+        }
     }
-  }
 `
