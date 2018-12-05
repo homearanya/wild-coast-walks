@@ -60,8 +60,6 @@ export default function Menu() {
                     obj[tour.frontmatter.title.trim().toLowerCase()] = tour
                     return obj;
                 }, {});
-                console.log(data)
-                console.log(toursObject)
                 section.forEach(section => {
                     section.tours.forEach((tour, index) => {
                         section.tours[index]['slug'] = toursObject[tour.tour.trim().toLowerCase()].fields.slug
