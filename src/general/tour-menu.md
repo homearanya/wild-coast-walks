@@ -24,7 +24,7 @@ section:
     tours:
       - tour: Giants Cup
       - tour: Amphitheatre Hike
-      - tour: Nhlosane Hike
+      - tour: Mehloding
   - heading1: KZN Cycle Tours
     image:
       alt: KZN Cycle Tours

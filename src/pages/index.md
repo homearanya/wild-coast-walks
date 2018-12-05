@@ -5,14 +5,14 @@ slider:
     heading2: SLACKPACKING
     image:
       alt: Wild Coast Slackpacking
-      image: /img/wild-coast-min.jpg
+      image: /img/wild-coast1600x790.jpg
     subheading1: TAKE A WALK ON THE
     subheading2: WILD SIDE
   - heading1: MIDLANDS
     heading2: WALKS & CYCLE TOURS
     image:
       alt: Midlands Walks and Cycle Tours
-      image: /img/midlands-cycling-min.jpg
+      image: /img/midlands-cycling1600x790.jpg
     subheading1: MEANDERING THROUGH THE
     subheading2: NATAL MIDLANDS
 aboutarea:
