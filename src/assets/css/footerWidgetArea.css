@@ -6,7 +6,7 @@
 }
 
 .footer-widget-area::before {
-    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0.2) none repeat scroll 0 0;
     content: "";
     height: 100%;
     left: 0;
@@ -35,7 +35,7 @@
 }
 
 .footer-widget-list li {
-    color: #cccccc;
+    color: #ffffff;
     display: block;
     line-height: 25px;
 }
