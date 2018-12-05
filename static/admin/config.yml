@@ -45,7 +45,7 @@ collections:
   slug: "{{slug}}"
   fields:
     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "tour-page"}
-    # - {label: "Featured?", name: "featured", widget: "boolean", default: false}
+    - {label: "Featured?", name: "featured", widget: "boolean", default: false}
     - {label: "Title", name: "title", widget: "string"}
     - label: "Destination"
       name: "destination"
@@ -65,13 +65,14 @@ collections:
     - {label: "Price", name: "price", widget: "string"}
     - {label: "Short Description", name: "shortdescription", widget: "text"}
     - {label: "Long Description", name: "body", widget: "markdown"}
+    - {label: "Banner Blurb", name: "bannerblurb", widget: "text"}
     - label: "Thumbnail Image"
       name: imagethumbnail
       widget: object
       required: false
       fields: 
         - {label: Image, name: image, widget: image, hint: "size 375 x 375"}
-        - {label: Alt, name: alt, widget: text,  required: false}    
+        - {label: Alt, name: alt, widget: text,  required: false}  
     - label: "Banner Image"
       name: imagebanner
       widget: object
@@ -136,7 +137,7 @@ collections:
           fields:
             - {label: Heading 1, name: heading1, widget: string}
             - {label: Heading 2, name: heading2, widget: string}
-            - {label: Introduction, name: introduction, widget: text}
+            - {label: Blurb, name: introduction, widget: text}
             - label: "Section"
               name: section
               widget: list
@@ -197,7 +198,7 @@ collections:
           fields:
             - {label: Heading 1, name: heading1, widget: string}
             - {label: Heading 2, name: heading2, widget: string}
-            - {label: Introduction, name: introduction, widget: text}
+            - {label: Blurb, name: introduction, widget: text}
             - label: "Destination"
               name: destination
               widget: list
@@ -225,7 +226,7 @@ collections:
           fields:
             - {label: Heading 1, name: heading1, widget: string}
             - {label: Heading 2, name: heading2, widget: string}
-            - {label: Introduction, name: introduction, widget: text}
+            - {label: Blurb, name: introduction, widget: text}
             - label: "Partner"
               name: partner
               widget: list

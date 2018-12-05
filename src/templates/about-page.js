@@ -154,7 +154,7 @@ export default ({ data }) => {
                 breadcrumb="About us"
                 imageBanner={frontmatter.banner.imagebanner}
             />
-            {/* <AboutAdventures /> */}
+            <AboutAdventures />
             <AssociatesArea
                 heading1={frontmatter.partnersarea.heading1}
                 heading2={frontmatter.partnersarea.heading2}
