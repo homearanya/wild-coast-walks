@@ -219,11 +219,6 @@
     margin-bottom: 45px
 }
 
-.single-adventure:hover .adventure-text a:hover,
-.single-adventure:hover .adventure-text .adventure-link a:hover {
-    color: #000000;
-}
-
 .single-adventure {
     overflow: hidden;
     position: relative
@@ -396,12 +391,13 @@
     position: relative
 }
 
-.trip-time::after {
+
+/* .trip-time::after {
     content: "/";
     position: absolute;
     right: 7px;
     top: 0;
-}
+} */
 
 .single-adventure:hover .transparent-overlay>h4 {
     margin-bottom: 7px
@@ -673,6 +669,13 @@
     border-color: rgba(0, 0, 0, 0) rgba(255, 174, 0, 0.9) rgba(255, 174, 0, 0.9) rgba(0, 0, 0, 0);
     left: -143px;
     transform: rotate(-90deg);
+}
+
+.single-adventure:hover .transparent-overlay>h4:hover,
+.single-adventure:hover .adventure-text p:hover,
+.trip-time:hover,
+.single-adventure:hover .adventure-price-link span:hover {
+    color: #ccc;
 }
 
 

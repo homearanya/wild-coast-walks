@@ -87,12 +87,12 @@ const Tour = (props) => {
     <div className="col-md-4 col-sm-6 col-xs-12">
       <div className="single-adventure">
         <Link to={tourSlug}><Img fluid={imageFluid} alt={imageAlt} /></Link>
-        <Link to={tourSlug}>
-          <div className="adventure-text effect-bottom">
+        <div className="adventure-text effect-bottom">
+          <Link to={tourSlug}>
             <div className="transparent-overlay">
               <h4>{tourDetails.title} | <span>{tourDetails.destination}</span></h4>
               <span className="trip-time"><i className="fa fa-clock-o"></i>{tourDetails.duration}</span>
-              <span className="trip-level"><i className="fa fa-send-o"></i>{tourDetails.level}</span>
+              {/* <span className="trip-level"><i className="fa fa-send-o"></i>{tourDetails.level}</span> */}
               <p>{tourDetails.shortdescription.substring(0, 230) + '...'}</p>
             </div>
             <div className="adventure-price-link">
@@ -101,8 +101,8 @@ const Tour = (props) => {
               <span className="trip-person">per person</span>
               <span className="trip-price">&nbsp;</span>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
         {/* <Link to={tourSlug}><Img fluid={imageFluid} alt={imageAlt} /></Link>
         <div className="adventure-text effect-bottom">
           <div className="transparent-overlay">
