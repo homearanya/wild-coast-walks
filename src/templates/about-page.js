@@ -62,9 +62,10 @@ const DestinationsArea = (props) => {
         </div>
     )
 }
+
 const Destination = (props) => {
     return (
-        <div className="col-sm-6">
+        <div className="col-md-6">
             <div className="single-destinations">
                 <div className="destinations-image">
                     <Img fluid={props.destination.image.image.childImageSharp.fluid} alt={props.destination.image.alt} />
@@ -82,7 +83,7 @@ const Destination = (props) => {
 
 const AssociatesArea = (props) => {
     return (
-        <div className="associate-area">
+        <div className="associate-area section-padding">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">

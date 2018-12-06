@@ -83,8 +83,6 @@
 .destinations-area {
     /* background: #edecec none repeat scroll 0 0; */
     background: #edecec none repeat scroll 0 0;
-    padding-top: 80px;
-    padding-bottom: 96px;
 }
 
 .destinations-area .title-border:after {
@@ -177,7 +175,6 @@
 
 .associate-area {
     background: #ffffff none repeat scroll 0 0;
-    padding-top: 80px;
 }
 
 .associate-area .title-border:after {
@@ -233,11 +230,6 @@
 
 /*  15.6 Home Two Associate Area
 /*----------------------------------------*/
-
-.associate-area.associate-two-area,
-.associate-area.associate-three-area {
-    padding-top: 80px;
-}
 
 .associate-two-area .associate-text::after,
 .associate-three-area .associate-text::after {
@@ -336,6 +328,10 @@
         margin: -16px -123px 24px 0;
         padding: 37px 29px 19px 25px;
     }
+    .single-destinations {
+        padding: 0px;
+        margin-bottom: 30px;
+    }
 }
 
 
@@ -355,8 +351,9 @@
     .single-associate .margin-left {
         margin-left: 0
     }
-    .associate-area.associate-three-area {
-        padding-top: 0
+    .single-destinations {
+        padding: 0px;
+        margin-bottom: 20px;
     }
 }
 

@@ -16,7 +16,6 @@ const Slide = (props) => {
         fluid={props.imageFluid}
         alt={props.imageAlt}
         title={props.imageTitle}
-        onLoad={props.setSpinner ? () => props.setSpinner({ loadSpinner: false }) : null}
       />
       <div className="nivo-caption" style={{ display: 'block' }}>
         <div className="banner-content slider-1">
@@ -38,7 +37,6 @@ const Slide = (props) => {
 }
 
 export default function SliderArea(props) {
-  let setSpinner;
   const settings = {
     dots: false,
     infinite: true,
@@ -53,9 +51,6 @@ export default function SliderArea(props) {
       <div className="preview-2">
         <Slider {...settings}>
           {props.slider.map((slide, index) => {
-            if (index === 0) {
-              setSpinner = props.setSpinner
-            }
             return <Slide
               key={index}
               imageFluid={slide.image.image.childImageSharp.fluid}
@@ -65,7 +60,6 @@ export default function SliderArea(props) {
               heading2={slide.heading2}
               subheading1={slide.subheading1}
               subheading2={slide.subheading2}
-              setSpinner={setSpinner}
             />
           })}
         </Slider>

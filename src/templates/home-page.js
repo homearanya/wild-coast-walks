@@ -3,9 +3,7 @@ import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
 
-import MyContext from "../components/Context"
 import SliderArea from "../components/SliderArea"
-import Spinner from '../components/Spinner'
 
 import '../assets/css/home-page.css'
 
@@ -88,7 +86,23 @@ const Tour = (props) => {
   return (
     <div className="col-md-4 col-sm-6 col-xs-12">
       <div className="single-adventure">
-        <Link to={tourSlug}><Img fluid={imageFluid} alt={imageAlt} /></Link>
+        <Link to={tourSlug}><Img fluid={imageFluid} alt={imageAlt} />
+          <div className="adventure-text effect-bottom">
+            <div className="transparent-overlay">
+              <h4>{tourDetails.title} | <span>{tourDetails.destination}</span></h4>
+              <span className="trip-time"><i className="fa fa-clock-o"></i>{tourDetails.duration}</span>
+              <span className="trip-level"><i className="fa fa-send-o"></i>{tourDetails.level}</span>
+              <p>{tourDetails.shortdescription.substring(0, 230) + '...'}</p>
+            </div>
+            <div className="adventure-price-link">
+              <span className="trip-person">From</span>
+              <span className="trip-person"><span>{tourDetails.price}</span></span>
+              <span className="trip-person">per person</span>
+              <span className="trip-price">&nbsp;</span>
+            </div>
+          </div>
+        </Link>
+        {/* <Link to={tourSlug}><Img fluid={imageFluid} alt={imageAlt} /></Link>
         <div className="adventure-text effect-bottom">
           <div className="transparent-overlay">
             <h4><Link to={tourSlug}>{tourDetails.title} | <span>{tourDetails.destination}</span></Link></h4>
@@ -102,7 +116,7 @@ const Tour = (props) => {
             <span className="trip-person">per person</span>
             <span className="trip-price">&nbsp;</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )
@@ -196,32 +210,20 @@ export default function Index({ data }) {
         <meta charSet="utf-8" />
         <title>{`Slackpacking, Walks & Cycle Tours - ${siteMetadata.title}`}</title>
       </Helmet>
-      <MyContext.Consumer>
-        {({ data, set }) => {
-          return (
-            <div>
-              {data.loadSpinner ? <Spinner /> : null}
-              <SliderArea
-                slider={frontmatter.slider}
-                setSpinner={set}
-              />
-              <div>
-                <AboutArea
-                  aboutArea={frontmatter.aboutarea}
-                />
-                <ToursPopular
-                  toursObject={toursObject}
-                  toursArea={frontmatter.toursarea}
-                />
-                <BlogArea
-                  blogArea={frontmatter.blogarea}
-                  blogswitch={blogswitch}
-                />
-              </div>
-            </div>
-          )
-        }}
-      </MyContext.Consumer>
+      <SliderArea
+        slider={frontmatter.slider}
+      />
+      <AboutArea
+        aboutArea={frontmatter.aboutarea}
+      />
+      <ToursPopular
+        toursObject={toursObject}
+        toursArea={frontmatter.toursarea}
+      />
+      <BlogArea
+        blogArea={frontmatter.blogarea}
+        blogswitch={blogswitch}
+      />
     </div>
   )
 }

@@ -11,7 +11,6 @@ import '../assets/css/font-awesome.min.css'
 
 import '../assets/css/globalStyles.css'
 
-import { ContextProviderComponent } from "../components/Context";
 import Menu from "../components/Menu";
 import FooterWidgetArea from "../components/FooterWidgetArea";
 
@@ -62,7 +61,7 @@ export default function Layout({ children }) {
             render={data => {
                 const siteTitle = data.SiteMetaDataQuery.siteMetadata.title
                 return (
-                    <ContextProviderComponent>
+                    <div>
                         <Header />
                         {children}
                         <FooterWidgetArea />
@@ -70,7 +69,7 @@ export default function Layout({ children }) {
                         <ScrollToTop showUnder={160}>
                             <i id="scrollUp" className="fa fa-angle-up"></i>
                         </ScrollToTop>
-                    </ContextProviderComponent>
+                    </div>
                 )
             }}
         />

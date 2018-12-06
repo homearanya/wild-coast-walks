@@ -8,11 +8,6 @@
     margin-top: -4px;
 }
 
-.about-area .section-padding {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
 .about-area .section-title,
 .service-about-area .section-title {
     margin-bottom: 45px
@@ -167,10 +162,6 @@
 /* Large desktop :1920px. */
 
 @media (min-width: 1920px) {
-    .about-area .section-padding {
-        padding-bottom: 100px;
-        padding-top: 100px;
-    }
     .about-area.about-area-three::after {
         height: 63px
     }
@@ -184,10 +175,6 @@
 /* Normal desktop :992px. */
 
 @media (min-width: 992px) and (max-width: 1169px) {
-    .about-area .section-padding {
-        padding-bottom: 30px;
-        padding-top: 30px;
-    }
     .about-area .section-title,
     .service-about-area .section-title {
         margin-bottom: 20px
@@ -205,16 +192,9 @@
     .about-area {
         background-size: 100% 100%
     }
-    .about-area .section-padding {
-        padding-bottom: 110px;
-        padding-top: 110px;
-    }
     .about-area.text-center.about-area-three {
         background: rgba(0, 192, 255, 0.4) none repeat scroll 0 0 !important;
         padding-top: 0;
-    }
-    .about-area.about-area-three .section-padding {
-        padding-bottom: 50px
     }
     .about-area .section-title.title-three {
         margin-bottom: 45px
