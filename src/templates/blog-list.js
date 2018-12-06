@@ -291,7 +291,7 @@ export const blogPageQuery = graphql`
                     image {
                         childImageSharp {
                             fluid(maxWidth: 1600) {
-                                ...GatsbyImageSharpFluid
+                                ...GatsbyImageSharpFluid_tracedSVG
                             }
                         }
                     }
