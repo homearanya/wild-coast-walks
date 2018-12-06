@@ -9,7 +9,7 @@ import '../assets/css/contact.css'
 
 const ContactForm = (props) => {
     return (
-        <div className="col-md-7" style={{ backgroundColor: '#edecec' }}>
+        <div className="col-md-7" style={{ backgroundColor: '#ffffff' }}>
             <div className="contact-form">
                 <div className="contact-us-form-wrapper">
                     <div className="contact-us-form section-padding">

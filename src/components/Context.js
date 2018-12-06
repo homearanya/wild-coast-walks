@@ -3,7 +3,7 @@ import React from "react"
 const defaultContextValue = {
     data: {
         // set your initial data shape here
-        loadSpinner: false,
+        loadSpinner: true,
     },
     set: () => { },
 }

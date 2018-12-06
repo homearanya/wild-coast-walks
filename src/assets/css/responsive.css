@@ -1,9 +1,6 @@
 /* Large desktop :1920px. */
 
 @media (min-width: 1920px) {
-    .contact-form {
-        background-size: 40% 100%
-    }
     .fun-factor-area {
         padding-bottom: 200px
     }
@@ -26,14 +23,6 @@
     }
     .blog-two-text-container {
         padding-bottom: 41px
-    }
-    .contact-container {
-        padding-left: 18.76%
-    }
-    .contact-us-form::after {
-        left: 87%;
-        transform: skewX(-12deg);
-        width: 185px;
     }
 }
 
@@ -199,7 +188,6 @@
         line-height: 25px;
     }
     .include-text>h4,
-    .contact-text>h4,
     .about-text-container>h4 {
         font-size: 20px
     }
@@ -232,25 +220,8 @@
     .blog-post-two .single-blog-post:hover .blog-post-margin {
         margin-left: -33px
     }
-    .contact-us-form::after {
-        left: 80%;
-        transform: skewX(-9deg);
-    }
-    .contact-us-form.section-padding {
-        padding-bottom: 70px;
-        padding-top: 70px;
-    }
-    .contact-form {
-        height: auto
-    }
     #googleMap {
         height: 676px !important
-    }
-    .contact-container {
-        padding-left: 9%
-    }
-    .contact-us-form.section-padding.thank-u {
-        padding: 50px 0
     }
 }
 
@@ -281,8 +252,7 @@
         margin-right: 15px
     }
     .payment-image>img,
-    .adventure-list-text,
-    .contact-form::before {
+    .adventure-list-text {
         width: 100%
     }
     .footer-area span {
@@ -317,8 +287,7 @@
     }
     .slider-icon-container,
     .adventure-list-image,
-    .google-map-area,
-    .contact-us-form::after {
+    .google-map-area {
         display: none
     }
     .adventure-link>a {
@@ -397,14 +366,6 @@
         margin-top: 80px;
         overflow: hidden;
     }
-    .contact-form {
-        height: auto
-    }
-    .contact-container {
-        padding-left: 13%;
-        padding-right: 13%;
-        width: 100%;
-    }
     .error-area .col-md-6 {
         padding-right: 15px
     }
@@ -439,8 +400,7 @@
     .adventure-img::after,
     .adventures-grid.list .list-rating,
     .blog-post-two .single-blog-post:hover .blog-two-text-container::after,
-    .google-map-area,
-    .contact-us-form::after {
+    .google-map-area {
         display: none;
     }
     .single-service {
@@ -649,20 +609,6 @@
     .sign-in-area .section-title.title-right {
         margin-top: 50px
     }
-    .contact-form::before {
-        width: 100%
-    }
-    .contact-form {
-        height: auto
-    }
-    .contact-information-area .contact-info {
-        margin-bottom: 25px
-    }
-    .contact-container {
-        padding-left: 6%;
-        padding-right: 6%;
-        width: 100%;
-    }
     .error-area .col-md-6 {
         padding-right: 15px
     }
@@ -715,9 +661,5 @@
     }
     .blog-post-details .blog-links {
         margin-top: 25px
-    }
-    .contact-container {
-        padding-left: 22%;
-        padding-right: 22%;
     }
 }
