@@ -314,7 +314,13 @@
 }
 
 .transparent-overlay>h4 {
-    margin-bottom: 14px
+    margin-bottom: 14px;
+    position: relative;
+    z-index: 9;
+}
+
+.single-adventure:hover .transparent-overlay>h4 {
+    color: #ffffff;
 }
 
 .adventure-text h4 a {

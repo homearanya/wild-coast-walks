@@ -86,7 +86,8 @@ const Tour = (props) => {
   return (
     <div className="col-md-4 col-sm-6 col-xs-12">
       <div className="single-adventure">
-        <Link to={tourSlug}><Img fluid={imageFluid} alt={imageAlt} />
+        <Link to={tourSlug}><Img fluid={imageFluid} alt={imageAlt} /></Link>
+        <Link to={tourSlug}>
           <div className="adventure-text effect-bottom">
             <div className="transparent-overlay">
               <h4>{tourDetails.title} | <span>{tourDetails.destination}</span></h4>
