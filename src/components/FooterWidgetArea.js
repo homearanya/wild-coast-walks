@@ -44,7 +44,7 @@ export default function FooterWidgetArea() {
                             image {
                                 childImageSharp {
                                     fluid(maxWidth: 1600) {
-                                        ...GatsbyImageSharpFluid
+                                        ...GatsbyImageSharpFluid_tracedSVG
                                     }
                                 }
                             }
