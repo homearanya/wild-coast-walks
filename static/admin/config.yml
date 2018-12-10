@@ -18,12 +18,12 @@ collections:
   fields:
     - label: "Tour"
       name: "title"
-      widget: "string"
-      # widget: "relation"
-      # collection: "tours"
-      # searchFields: ["title"] 
-      # valueField: "title"
-      # displayFields: ["title"]
+      # widget: "string"
+      widget: "relation"
+      collection: "tours"
+      searchFields: ["title"] 
+      valueField: "title"
+      displayFields: ["title"]
     - {label: "Date", name: "date", widget: "date", default: "", format: "DD MM YYYY"}
   editor:
     preview: false
