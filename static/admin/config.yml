@@ -17,7 +17,7 @@ collections:
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
   fields:
   - label: "Tour"
-    name: "tour"
+    name: "title"
     widget: "relation"
     collection: "tours"
     searchFields: ["title"] 
@@ -41,7 +41,6 @@ collections:
     - {label: "Tags", name: "tags", widget: "list"}
   editor:
     preview: false
-
 
 - name: "tours"
   label: "Tours"
@@ -101,7 +100,6 @@ collections:
   editor:
     preview: false
            
-
 - name: "pages"
   label: "Pages"
   files:
@@ -292,7 +290,6 @@ collections:
             - {label: Alt, name: alt, widget: text,  required: false}    
   editor:
     preview: false
-
 
 - name: "general"
   label: "General"
