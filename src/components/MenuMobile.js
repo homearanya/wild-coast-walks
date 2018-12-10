@@ -149,8 +149,28 @@ export default class MenuMobile extends Component {
                                             )
                                         }
                                     </li>
-                                    <li><Link to="/tour-calendar/" onClick={this.toggleMenu}>Tour Calendar</Link></li>
-                                    <li><Link to="/blog/" onClick={this.toggleMenu}>Blog</Link></li>
+                                    {this.props.switches.calendarswitch ?
+                                        <li>
+                                            <Link
+                                                to="/tour-calendar/"
+                                                onClick={this.toggleMenu}>
+                                                Tour Calendar
+                                        </Link>
+                                        </li>
+                                        :
+                                        null
+                                    }
+                                    {this.props.switches.blogswitch ?
+                                        <li>
+                                            <Link
+                                                to="/blog/"
+                                                onClick={this.toggleMenu}>
+                                                Blog
+                                        </Link>
+                                        </li>
+                                        :
+                                        null
+                                    }
                                     <li className="mean-last"><Link to="/contact/" onClick={this.toggleMenu}>CONTACT</Link></li>
                                 </ul>
                             ) :
