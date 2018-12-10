@@ -23,7 +23,7 @@ collections:
       searchFields: ["title"] 
       valueField: "title"
       displayFields: ["title"]
-    - {label: "Date", name: "date", widget: "datetime"}
+    - {label: "Date", name: "date", widget: "date", default: ""}
   editor:
     preview: false
 
