@@ -86,7 +86,7 @@ collections:
            
 - name: event
   label: "Events"
-  folder: "src/pages/tour-calendar/events"
+  folder: "src/general/events"
   create: true
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
   fields:
