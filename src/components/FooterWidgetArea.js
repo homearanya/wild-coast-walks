@@ -24,9 +24,12 @@ const Newsletter = (props) => {
                     <div className="col-md-8 col-sm-12">
                         <div className="section-title text-center">
                             <div className="title-border">
-                                <h1 className="text-white">Subscribe for <span>Newsletter</span></h1>
+                                <h1 className="text-white">
+                                    {props.newsletterArea.heading1}
+                                    <span>{props.newsletterArea.heading2}</span>
+                                </h1>
                             </div>
-                            <p className="text-white">Join our community of over 300,000 global readers who receive emails filled with news,<br /> promotions, and other good stuff from G Adventures.</p>
+                            <p className="text-white">{props.newsletterArea.blurb}</p>
                         </div>
                         <form action="#" method="post" id="newsletter">
                             <div className="newsletter-content">
@@ -52,28 +55,33 @@ export default function FooterWidgetArea() {
         <StaticQuery
             query={graphql`
             query FooterQuery {
-                FooterBackgroundImage: file (relativePath : {eq: "footer.md"}) {
+                FooterDetails: file (relativePath : {eq: "footer.md"}) {
                     childMarkdownRemark {
-                      frontmatter {
-                        image {
+                        frontmatter {
                             image {
-                                childImageSharp {
-                                    fluid(maxWidth: 1600) {
-                                        ...GatsbyImageSharpFluid_tracedSVG
+                                image {
+                                    childImageSharp {
+                                        fluid(maxWidth: 1600) {
+                                            ...GatsbyImageSharpFluid_tracedSVG
+                                        }
                                     }
                                 }
+                                alt
                             }
-                            alt
+                            newsletterarea {
+                                heading1
+                                heading2
+                                blurb
+                            }
                         }
-                      }
                     }
                 }
                 ContactDetails: file (relativePath : {eq: "contact.md"}) {
                     childMarkdownRemark {
                       frontmatter {
                         contact_details {
-                          email
-                          phone
+                            email
+                            phone
                         }
                       }
                     }
@@ -81,8 +89,9 @@ export default function FooterWidgetArea() {
             }
         `}
             render={data => {
-                const { image: backgroundImage } = data.FooterBackgroundImage.childMarkdownRemark.frontmatter.image
+                const { image: backgroundImage } = data.FooterDetails.childMarkdownRemark.frontmatter.image
                 const { contact_details } = data.ContactDetails.childMarkdownRemark.frontmatter
+                const { newsletterarea } = data.FooterDetails.childMarkdownRemark.frontmatter
                 return (
                     <div className="footer-widget-area"
                         style={{
@@ -96,7 +105,7 @@ export default function FooterWidgetArea() {
                         <div className="container">
                             <div className="row">
                                 <FooterContactDetails contactDetails={contact_details} />
-                                <Newsletter />
+                                <Newsletter newsletterArea={newsletterarea} />
                             </div>
                         </div>
                     </div>
