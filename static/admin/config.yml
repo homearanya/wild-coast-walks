@@ -25,22 +25,6 @@ collections:
   editor:
     preview: false
 
-- name: "events"
-  label: "Events"
-  folder: "src/pages/tour-calendar/events"
-  create: true
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-  fields:
-  - label: "Tour"
-    name: "tour"
-    widget: "relation"
-    collection: "tours"
-    searchFields: ["title"] 
-    valueField: "title"
-    displayFields: ["title"]
-  - {label: "Date", name: "date", widget: "datetime"}
-  editor:
-    preview: false
 
 - name: "tours"
   label: "Tours"
@@ -100,6 +84,23 @@ collections:
   editor:
     preview: false
            
+- name: "events"
+  label: "Events"
+  folder: "src/pages/tour-calendar/events"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  fields:
+  - label: "Tour"
+    name: "tour"
+    widget: "relation"
+    collection: "tours"
+    searchFields: ["title"] 
+    valueField: "title"
+    displayFields: ["title"]
+  - {label: "Date", name: "date", widget: "datetime"}
+  editor:
+    preview: false
+
 - name: "pages"
   label: "Pages"
   files:
