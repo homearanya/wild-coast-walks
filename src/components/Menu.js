@@ -1,9 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 
-import '../assets/css/meanmenu.css'
-import '../assets/css/menu.css'
-
 import MenuDesktop from './MenuDesktop'
 import MenuMobile from './MenuMobile'
 

@@ -295,8 +295,8 @@ export default function TourPage({ data }) {
                 imageBanner={tourInfo.frontmatter.imagebanner}
             />
 
-            {/* <AdventuresGrid /> */}
             <TripInformation tourInfo={tourInfo} />
+            <TripPricingArea />
         </div>
     )
 }

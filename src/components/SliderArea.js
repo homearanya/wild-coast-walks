@@ -7,7 +7,6 @@ import '../assets/lib/nivo-slider/css/nivo-slider.css'
 import '../assets/lib/nivo-slider/css/preview.css'
 import '../assets/css/slick-theme.css'
 import '../assets/css/slick.css'
-import '../assets/css/sliderArea.css'
 
 const Slide = (props) => {
   return (

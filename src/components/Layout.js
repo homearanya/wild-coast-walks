@@ -2,24 +2,18 @@ import React from 'react'
 import ScrollToTop from 'react-scroll-up'
 import { StaticQuery, graphql, Link } from "gatsby"
 
-import '../assets/css/scrollUp.css'
-
 import '../assets/css/open-sans.css'
 import '../assets/css/raleway.css'
 import '../assets/css/bootstrap.css'
 import '../assets/css/font-awesome.min.css'
 
 import '../assets/css/globalStyles.css'
+import '../assets/css/layout.css'
+import '../assets/css/responsive.css'
 
 import Menu from "../components/Menu";
 import FooterWidgetArea from "../components/FooterWidgetArea";
 
-import '../assets/css/layout.css'
-import '../assets/css/banner.css'
-import '../assets/css/header.css'
-import '../assets/css/footer.css'
-import footerStyle from '../assets/css/footer.module.css'
-import '../assets/css/responsive.css'
 
 const Header = (props) => {
     return (
@@ -37,7 +31,10 @@ const Footer = (props) => {
         <div className="footer-area">
             <div className="container">
                 <div className="row">
-                    <div className={"col-sm-12 footer " + footerStyle.footerContent}>
+                    <div
+                        className={"col-sm-12 footer"}
+                        style={{ display: 'flex', justifyContent: 'center' }}
+                    >
                         <span>{`Copyright © ${currentYear} - `}<Link to="/">{props.siteTitle}</Link></span>
                     </div>
                 </div>

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "gatsby"
 
-import '../assets/css/menuMobile.css'
-
 class ToursMenuSection extends Component {
     constructor(props) {
         super(props);

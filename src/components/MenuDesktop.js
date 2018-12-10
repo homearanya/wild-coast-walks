@@ -5,8 +5,6 @@ import Img from 'gatsby-image'
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
-import '../assets/css/menuDesktop.css'
-
 import logo_white from '../assets/img/logo/logo-trails-white.png'
 import logo_color from '../assets/img/logo/logo-trails-color.png'
 
