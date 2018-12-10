@@ -16,14 +16,14 @@ collections:
   create: true
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
   fields:
-    - {label: "Template Key", name: "templateKey", widget: "hidden", default: "event-page"}
     - label: "Tour"
       name: "title"
-      widget: "relation"
-      collection: "tours"
-      searchFields: ["title"] 
-      valueField: "title"
-      displayFields: ["title"]
+      widget: "string"
+      # widget: "relation"
+      # collection: "tours"
+      # searchFields: ["title"] 
+      # valueField: "title"
+      # displayFields: ["title"]
     - {label: "Date", name: "date", widget: "date", default: "", format: "DD MM YYYY"}
   editor:
     preview: false
