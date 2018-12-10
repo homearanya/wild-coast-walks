@@ -211,6 +211,10 @@ ul {
     padding: 0.2em 0;
 }
 
+::placeholder {
+    opacity: 1 !important
+}
+
 ::-webkit-input-placeholder {
     opacity: 1 !important
 }

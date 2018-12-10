@@ -1439,37 +1439,28 @@ header.fixed .header-logo-menu {
     color: #ffffff;
 }
 
-
-/* .newsletter-content input::placeholder,
-.newsletter-content input::-moz-placeholder, */
-
 .newsletter-content input::placeholder {
     color: #ffffff!important;
-    opacity: 1 !important;
     /* Chrome, Firefox, Opera, Safari 10.1+ */
 }
 
 .newsletter-content input::-moz-placeholder {
     color: #ffffff!important;
-    opacity: 1 !important;
     /* Chrome, Firefox, Opera, Safari 10.1+ */
 }
 
 .newsletter-content input::-webkit-input-placeholder {
     color: #ffffff!important;
-    opacity: 1 !important;
     /* Chrome, Firefox, Opera, Safari 10.1+ */
 }
 
 .newsletter-content input:-ms-input-placeholder {
     color: #ffffff !important;
-    opacity: 1 !important;
     /* Internet Explorer 10-11 */
 }
 
 .newsletter-content input::-ms-input-placeholder {
     color: #ffffff !important;
-    opacity: 1 !important;
     /* Microsoft Edge */
 }
 
