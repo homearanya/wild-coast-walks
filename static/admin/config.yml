@@ -39,6 +39,10 @@ collections:
           default: "",
           format: "DD MM YYYY",
         }
+      - label: "Align Content"
+        name: "align"
+        widget: "selectbis"
+        options: ["left", "center", "right"]
     editor:
       preview: false
 
