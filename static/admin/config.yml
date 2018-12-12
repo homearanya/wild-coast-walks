@@ -10,25 +10,25 @@ public_folder: /img
 publish_mode: editorial_workflow
 
 collections:
-- name: events
-  label: "Events"
-  folder: "src/general/events"
-  create: true
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-  fields:
-    - label: "Name of Event"
-      name: "title"
-      widget: "string"
-    - label: "Tour"
-      name: "tour"
-      widget: "relation"
-      collection: "tours"
-      searchFields: ["title"] 
-      valueField: "title"
-      displayFields: ["title"]
-    - {label: "Date", name: "date", widget: "date", default: "", format: "DD MM YYYY"}
-  editor:
-    preview: false
+# - name: events
+#   label: "Events"
+#   folder: "src/general/events"
+#   create: true
+#   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+#   fields:
+#     - label: "Name of Event"
+#       name: "title"
+#       widget: "string"
+#     - label: "Tour"
+#       name: "tour"
+#       widget: "relation"
+#       collection: "tours"
+#       searchFields: ["title"] 
+#       valueField: "title"
+#       displayFields: ["title"]
+#     - {label: "Date", name: "date", widget: "date", default: "", format: "DD MM YYYY"}
+#   editor:
+#     preview: false
 
 - name: "blog"
   label: "Blog"
