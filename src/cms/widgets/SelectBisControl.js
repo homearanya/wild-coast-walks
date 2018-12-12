@@ -86,6 +86,7 @@ export default class SelectBisControl extends React.Component {
       ...fieldOptions.map(option => {
         console.log("option", option, typeof option);
         if (typeof option === "string") {
+          console.log("option is string");
           return { label: option, value: option };
         }
         return Map.isMap(option) ? option.toJS() : option;
