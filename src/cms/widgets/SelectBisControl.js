@@ -1,34 +1,31 @@
-import React from "react";
-import PropTypes from "prop-types";
-import ImmutablePropTypes from "react-immutable-proptypes";
-import { Map } from "immutable";
-import { find } from "lodash";
-import Select from "react-select";
-import { colors } from "netlify-cms-ui-default";
+import React from 'react';
+import PropTypes from 'prop-types';
+import ImmutablePropTypes from 'react-immutable-proptypes';
+import { Map } from 'immutable';
+import { find } from 'lodash';
+import Select from 'react-select';
+import { colors } from 'netlify-cms-ui-default';
 
 const styles = {
   control: provided => ({
     ...provided,
     border: 0,
-    boxShadow: "none",
-    padding: "9px 0 9px 12px"
+    boxShadow: 'none',
+    padding: '9px 0 9px 12px',
   }),
   option: (provided, state) => ({
     ...provided,
     backgroundColor: state.isSelected
       ? `${colors.active}`
       : state.isFocused
-      ? `${colors.activeBackground}`
-      : "transparent",
-    paddingLeft: "22px"
+        ? `${colors.activeBackground}`
+        : 'transparent',
+    paddingLeft: '22px',
   }),
   menu: provided => ({ ...provided, right: 0 }),
-  container: provided => ({ ...provided, padding: "0 !important" }),
-  indicatorSeparator: () => ({ display: "none" }),
-  dropdownIndicator: provided => ({
-    ...provided,
-    color: `${colors.controlLabel}`
-  })
+  container: provided => ({ ...provided, padding: '0 !important' }),
+  indicatorSeparator: () => ({ display: 'none' }),
+  dropdownIndicator: provided => ({ ...provided, color: `${colors.controlLabel}` }),
 };
 
 export default class SelectBisControl extends React.Component {
@@ -45,55 +42,42 @@ export default class SelectBisControl extends React.Component {
           PropTypes.string,
           ImmutablePropTypes.contains({
             label: PropTypes.string.isRequired,
-            value: PropTypes.string.isRequired
-          })
-        ])
-      ).isRequired
-    })
+            value: PropTypes.string.isRequired,
+          }),
+        ]),
+      ).isRequired,
+    }),
   };
 
   static defaultProps = {
-    value: ""
+    value: '',
   };
 
   handleChange = selectedOption => {
-    this.props.onChange(selectedOption["value"]);
+    this.props.onChange(selectedOption['value']);
   };
 
   render() {
     console.log("selectcontrol", this.props);
 
-    const {
-      field,
-      value,
-      forID,
-      classNameWrapper,
-      setActiveStyle,
-      setInactiveStyle
-    } = this.props;
-    const fieldOptions = field.get("options");
+    const { field, value, forID, classNameWrapper, setActiveStyle, setInactiveStyle } = this.props;
+    const fieldOptions = field.get('options');
 
     if (!fieldOptions) {
-      return (
-        <div>
-          Error rendering select control for {field.get("name")}: No options
-        </div>
-      );
+      return <div>Error rendering select control for {field.get('name')}: No options</div>;
     }
 
     const options = [
-      ...(field.get("default", false) ? [] : [{ label: "", value: "" }]),
+      ...(field.get('default', false) ? [] : [{ label: '', value: '' }]),
       ...fieldOptions.map(option => {
-        console.log("option", option, typeof option);
-        if (typeof option === "string") {
-          console.log("option is string");
+        if (typeof option === 'string') {
           return { label: option, value: option };
         }
         return Map.isMap(option) ? option.toJS() : option;
-      })
+      }),
     ];
-    console.log("options", options);
-    const selectedValue = find(options, ["value", value]);
+
+    const selectedValue = find(options, ['value', value]);
 
     return (
       <Select
