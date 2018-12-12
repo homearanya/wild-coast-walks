@@ -22,27 +22,33 @@ collections:
           widget: "hidden",
           default: "event-page",
         }
-      - label: "Name of Event"
-        name: "title"
-        widget: "string"
-      - label: "Tour"
-        name: "tour"
-        widget: "relationbis"
-        collection: "tours"
-        searchFields: ["title"]
-        valueField: "title"
-        displayFields: ["title"]
+      - {
+        label: "Name of Event",
+        name: "title",
+        widget: "string",
+      }
+      - {
+        label: "Tour",
+        name: "tour",
+        widget: "relationbis",
+        collection: "tours",
+        searchFields: ["title"],
+        valueField: "title",
+        displayFields: ["title"],
+      }
       - {
           label: "Date",
           name: "date",
           widget: "date",
           default: "",
-          format: "DD MM YYYY",
+          format: "DD-MM-YYYY",
         }
-      - label: "Align Content"
-        name: "align"
-        widget: "selectbis"
+      - {
+        label: "Align Content",
+        name: "align",
+        widget: "selectbis",
         options: ["left", "center", "right"]
+        }
     editor:
       preview: false
 
