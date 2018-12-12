@@ -44,10 +44,10 @@ collections:
           format: "DD-MM-YYYY",
         }
       - {
-        label: "Align Content",
-        name: "align",
-        widget: "selectbis",
-        options: ['left', 'center', 'right']
+          label: 'Select',
+          name: 'select',
+          widget: 'selectbis',
+          options: ['a', 'b', 'c'],
         }
     editor:
       preview: false
