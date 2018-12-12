@@ -16,9 +16,11 @@ collections:
   create: true
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
   fields:
-    - label: "Tour"
+    - label: "Name of Event"
       name: "title"
-      # widget: "string"
+      widget: "string"
+    - label: "Tour"
+      name: "tour"
       widget: "relation"
       collection: "tours"
       searchFields: ["title"] 
