@@ -27,7 +27,7 @@ collections:
         widget: "string"
       - label: "Tour"
         name: "tour"
-        widget: "relationBis"
+        widget: "relationbis"
         collection: "tours"
         searchFields: ["title"]
         valueField: "title"
