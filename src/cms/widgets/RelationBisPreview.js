@@ -6,8 +6,8 @@ const RelationBisPreview = ({ value }) => (
   <WidgetPreviewContainer>{value}</WidgetPreviewContainer>
 );
 
-RelationPreview.propTypes = {
+RelationBisPreview.propTypes = {
   value: PropTypes.node
 };
 
-export default RelationPreview;
+export default RelationBisPreview;
