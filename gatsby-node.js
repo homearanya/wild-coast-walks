@@ -8,13 +8,14 @@ let homeTourIds = [];
 let menuTourTitles = [];
 let menuTourIds = [];
 let toursObject = new Object();
+let eventsObject = new Object();
 let homeNodeId, tourMenuNodeId;
 
 exports.createPages = ({ actions, graphql, getNode }) => {
     const { createPage, createNodeField } = actions
     return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(limit: 1000, filter: {fileAbsolutePath:{regex:"/src/pages/"}}) {
         edges {
           node {
             fileAbsolutePath
@@ -40,19 +41,19 @@ exports.createPages = ({ actions, graphql, getNode }) => {
             posts.forEach(edge => {
                 const id = edge.node.id
                 const fileAbsolutePath = edge.node.fileAbsolutePath
-                if (fileAbsolutePath.includes('/src/pages/')) {
-                    createPage({
-                        path: edge.node.fields.slug,
-                        // tags: edge.node.frontmatter.tags,
-                        component: path.resolve(
-                            `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-                        ),
-                        // additional data can be passed via context
-                        context: {
-                            id,
-                        },
-                    })
-                }
+                // if (fileAbsolutePath.includes('/src/pages/')) {
+                createPage({
+                    path: edge.node.fields.slug,
+                    // tags: edge.node.frontmatter.tags,
+                    component: path.resolve(
+                        `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+                    ),
+                    // additional data can be passed via context
+                    context: {
+                        id,
+                    },
+                })
+                // }
             })
 
             // create node fields for homepage/tours & tourmenu/tours relations
@@ -84,10 +85,19 @@ exports.createPages = ({ actions, graphql, getNode }) => {
                 })
             }
 
+            // create tour/events relationships
+            for (let key in toursObject) {
+                if (toursObject.hasOwnProperty(key)) {
+
+                    console.log('key', key)
+                }
+            }
+
             // console.log(homeTourIds)
             // console.log(menuTourTitles)
             // console.log(menuTourIds)
-            // console.log(toursObject)
+            console.log(toursObject)
+            console.log(eventsObject)
             // console.log(homeNodeId)
             // console.log(tourMenuNodeId)
         })
@@ -114,6 +124,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         } else if (node.frontmatter.templateKey &&
             node.frontmatter.templateKey.includes('tour-page')) {
             toursObject[node.frontmatter.title.trim().toLowerCase()] = node.id;
+        } else if (node.frontmatter.templateKey &&
+            node.frontmatter.templateKey.includes('event-page')) {
+            eventsObject[node.frontmatter.tour.trim().toLowerCase()] = node.id;
         } else if (node.fileAbsolutePath &&
             node.fileAbsolutePath.includes('/src/general/tour-menu.md')) {
             tourMenuNodeId = node.id;
