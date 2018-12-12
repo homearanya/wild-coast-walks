@@ -46,7 +46,7 @@ collections:
       - {
           label: 'Select',
           name: 'select',
-          widget: 'selectbis',
+          widget: 'select',
           options: ['a', 'b', 'c'],
         }
     editor:
