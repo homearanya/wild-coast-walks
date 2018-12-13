@@ -17,9 +17,10 @@ slider:
     subheading2: NATAL MIDLANDS
 aboutarea:
   blurb: >-
-    We're are one of the oldest and most established luxury slack-packing
-    operators in the Transkei, our walks take in some of the most unspoilt and
-    picturesque sections of our coastline.
+    SA Adventure Trails is a marketing association between Paul Colvin of Wild
+    Coast Walks and Julia Colvin of Spekboom Tours.  Together we offer the best
+    selection of fully supported hiking and cycling tours in KwaZulu Natal and
+    the Eastern Cape Wild Coast
   heading1: SA Adventure
   heading2: Trails
   image:
