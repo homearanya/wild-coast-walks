@@ -78,7 +78,7 @@ export default class SelectBisControl extends React.Component {
     ];
 
     const selectedValue = find(options, ['value', value]);
-    console.log(orID)
+    console.log(forID)
     console.log(selectedValue)
     console.log(this.handleChange)
     console.log(classNameWrapper)
