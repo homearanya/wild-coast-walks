@@ -101,9 +101,7 @@ destinationsarea:
         image: /img/about-cycle-tours540x300-min.jpg
   heading1: Our
   heading2: Services
-  introduction: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
+  introduction: A brief description and background to 'who we are' and 'where we operate' ..
 partnersarea:
   heading1: About
   heading2: Us
