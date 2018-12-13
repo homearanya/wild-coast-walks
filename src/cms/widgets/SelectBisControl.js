@@ -67,18 +67,25 @@ export default class SelectBisControl extends React.Component {
       return <div>Error rendering select control for {field.get('name')}: No options</div>;
     }
 
-    // const options = [
-    //   ...(field.get('default', false) ? [] : [{ label: '', value: '' }]),
-    //   ...fieldOptions.map(option => {
-    //     if (typeof option === 'string') {
-    //       return { label: option, value: option };
-    //     }
-    //     return Map.isMap(option) ? option.toJS() : option;
-    //   }),
-    // ];
-    const options = ["left", "center", "right"];
+    const options = [
+      ...(field.get('default', false) ? [] : [{ label: '', value: '' }]),
+      ...fieldOptions.map(option => {
+        if (typeof option === 'string') {
+          return { label: option, value: option };
+        }
+        return Map.isMap(option) ? option.toJS() : option;
+      }),
+    ];
 
     const selectedValue = find(options, ['value', value]);
+    console.log(orID)
+    console.log(selectedValue)
+    console.log(this.handleChange)
+    console.log(classNameWrapper)
+    console.log(setActiveStyle)
+    console.log(setInactiveStyle)
+    console.log(options)
+    console.log(styles)
 
     return (
       <Select
