@@ -58,7 +58,7 @@ export default class SelectBisControl extends React.Component {
   };
 
   render() {
-    console.log("selectcontrol", this.props);
+    console.log("SelectBisControl", this.props);
 
     const { field, value, forID, classNameWrapper, setActiveStyle, setInactiveStyle } = this.props;
     const fieldOptions = field.get('options');
@@ -66,14 +66,13 @@ export default class SelectBisControl extends React.Component {
     if (!fieldOptions) {
       return <div>Error rendering select control for {field.get('name')}: No options</div>;
     }
-
+    console.log('fieldOptions', fieldOptions)
     const options = [
       ...(field.get('default', false) ? [] : [{ label: '', value: '' }]),
       ...fieldOptions.map(option => {
         if (typeof option === 'string') {
           return { label: option, value: option };
         }
-        console.log('option is not string')
         return Map.isMap(option) ? option.toJS() : option;
       }),
     ];
