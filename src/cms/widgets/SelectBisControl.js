@@ -73,19 +73,14 @@ export default class SelectBisControl extends React.Component {
         if (typeof option === 'string') {
           return { label: option, value: option };
         }
+        console.log('option is not string')
         return Map.isMap(option) ? option.toJS() : option;
       }),
     ];
 
     const selectedValue = find(options, ['value', value]);
-    console.log(forID)
-    console.log(selectedValue)
-    console.log(this.handleChange)
-    console.log(classNameWrapper)
-    console.log(setActiveStyle)
-    console.log(setInactiveStyle)
-    console.log(options)
-    console.log(styles)
+    console.log('options', options)
+    console.log('selectedValue', selectedValue)
 
     return (
       <Select

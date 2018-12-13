@@ -45,7 +45,7 @@ collections:
         }
       - label: "Align Content"
         name: "align"
-        widget: "select"
+        widget: "selectbis"
         options: ["left", "center", "right"]
     editor:
       preview: false
