@@ -16,7 +16,7 @@ imagethumbnail:
   image: /img/kd1_002.jpg
 imagebanner:
   alt: Giants Cup Trail - Winterhoek Huts
-  image: /img/giants-cup-trail450x300.jpg
+  image: /img/hikeathon-oct-2005-062.jpg
 photoGallery:
   photo:
     - image: /img/giantsmonk-cowl-129-2-.jpg
