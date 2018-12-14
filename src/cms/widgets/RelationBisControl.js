@@ -70,6 +70,11 @@ export default class RelationBisControl extends React.Component {
     super(props, ctx);
     this.controlID = uuid();
     this.didInitialSearch = false;
+    this.props.query(this.controlID, "tours", ["title"], "*")
+    console.log('this.props.queryHits', this.props.queryHits)
+    // const suggestions = queryHits.get ? queryHits.get(this.controlID, []) : [];
+    console.log('suggestions', this.props.queryHits.get ? this.props.queryHits.get(this.controlID, []) : [])
+
   }
 
   componentDidMount() {
@@ -78,6 +83,11 @@ export default class RelationBisControl extends React.Component {
       const collection = field.get("collection");
       const searchFields = field.get("searchFields").toJS();
       this.props.query(this.controlID, collection, searchFields, value);
+      // console.log('componentDidMount - this.props.query', this.props.queryHits)
+      // console.log('componentDidMount - this.props.query - this.controlID', this.controlID)
+      // console.log('componentDidMount - this.props.query - collection', collection)
+      // console.log('componentDidMount - this.props.query - searchFields', searchFields)
+      // console.log('componentDidMount - this.props.query - value', value)
     }
   }
 
@@ -114,11 +124,17 @@ export default class RelationBisControl extends React.Component {
   };
 
   onSuggestionsFetchRequested = debounce(({ value }) => {
-    if (value.length < 2) return;
+    // if (value.length < 2) return;
+    if (value.length < 0) return;
     const { field } = this.props;
     const collection = field.get("collection");
     const searchFields = field.get("searchFields").toJS();
     this.props.query(this.controlID, collection, searchFields, value);
+    // console.log('onSuggestionsFetchRequested - this.props.query', this.props.queryHits)
+    // console.log('onSuggestionsFetchRequested - this.props.query - this.controlID', this.controlID)
+    // console.log('onSuggestionsFetchRequested - this.props.query - collection', collection)
+    // console.log('onSuggestionsFetchRequested - this.props.query - searchFields', searchFields)
+    // console.log('onSuggestionsFetchRequested - this.props.query - value', value)
   }, 500);
 
   onSuggestionsClearRequested = () => {
@@ -170,6 +186,7 @@ export default class RelationBisControl extends React.Component {
     };
 
     const suggestions = queryHits.get ? queryHits.get(this.controlID, []) : [];
+    console.log('suggestions', suggestions)
 
     return (
       <div>

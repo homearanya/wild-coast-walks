@@ -13,7 +13,7 @@ imagebanner:
   alt: Tugela Falls
   image: /img/amphitheatre1600x596-min.jpg
 photoGallery:
-  photo:
+  photos:
     - alt: Amphitheatre
       caption: Amphitheatre
       image: /img/ampthitheatre-gallery_1.jpg
@@ -39,4 +39,5 @@ photoGallery:
       caption: A glorious day on the Amphitheatre
       image: /img/ampthitheatre-gallery_8.jpg
 ---
+
 Long Description
