@@ -1,8 +1,11 @@
 ---
 templateKey: tour-page
+featured: true
 title: Mini Break
 destination: Wild Coast
 activity: Slackpack
+duration: 3 days
+price: R 5400
 shortdescription: >-
   A scenic 2 day hike with 3 nights of hotel pampering on the Sunshine Coast.
   Fly into East London on a Thursday and be back home on Sunday with all
@@ -12,15 +15,13 @@ shortdescription: >-
 
 
   Price:  From R 5400 per person sharing
-duration: 3 days
-price: R 5400
+bannerblurb: Great news coming ..
 imagethumbnail:
   alt: Mini Break
-  image: /img/mini-break375x375-min.jpg
+  image: /img/meander-hike-gallery_6.jpg
 imagebanner:
   alt: Mini Break
-  image: /img/mini-break-banner1600x596-min.jpg
-photoGallery:
-  photo:
+  image: /img/about-wildcoast-slackpack540x300-min.jpg
+photoGallery: {}
 ---
 
