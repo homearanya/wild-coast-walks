@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
+import dateformat from "dateformat";
 
 import Content, { HTMLContent } from "../components/Content";
 import TourGallery from "../components/TourGallery";
@@ -233,7 +234,11 @@ const TripInclusion = props => {
 };
 
 const UpcomingEvents = props => {
-  console.log("props.tourEvents", props.tourEvents);
+  props.tourEvents.sort((a, b) => {
+    let aDate = new Date(a.frontmatter.date);
+    let bDate = new Date(b.frontmatter.date);
+    return aDate - bDate;
+  });
   return (
     <div className="trip-pricing-area section-padding">
       <div className="container">
@@ -258,11 +263,7 @@ const UpcomingEvents = props => {
                 <thead>
                   <tr>
                     <td className="trip-date">
-                      <div>
-                        Departure
-                        <br />
-                        Dates
-                      </div>
+                      <div>Dates</div>
                     </td>
                     {/* <td className="trip-status">
                         <div>Trip Status</div>
@@ -282,8 +283,12 @@ const UpcomingEvents = props => {
                 </thead>
                 <tbody>
                   {props.tourEvents.map((event, index) => {
-                    console.log("event", event);
-                    return <UpcomingEvent />;
+                    return (
+                      <UpcomingEvent
+                        key={index}
+                        eventDate={event.frontmatter.date}
+                      />
+                    );
                   })}
                 </tbody>
               </table>
@@ -300,11 +305,7 @@ const UpcomingEvent = props => {
   return (
     <tr>
       <td className="trip-date">
-        <div>
-          19 Dec 2015
-          <br />
-          24 Dec 2015
-        </div>
+        <div>{dateformat(props.eventDate, "dd mmm yyyy")}</div>
       </td>
       {/* <td className="trip-status">
         <div>Fully booked</div>
@@ -364,7 +365,6 @@ export const tourPageQuery = graphql`
       fields {
         tourevents {
           frontmatter {
-            tour
             date
           }
         }

@@ -8,6 +8,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "dateformat": "^3.0.3",
     "gatsby": "^2.0.61",
     "gatsby-image": "^2.0.22",
     "gatsby-plugin-layout": "^1.0.10",
