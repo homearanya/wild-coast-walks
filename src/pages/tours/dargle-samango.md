@@ -13,12 +13,14 @@ shortdescription: >-
 bannerblurb: 'Dargle Samango blurb .. '
 imagethumbnail:
   alt: Dargle Samango
-  image: /img/sm2_004.jpg
+  image: /img/sm2_008.jpg
 imagebanner:
   alt: Dargle Samango
-  image: /img/dargle-banner1600x596-min.jpg
+  image: /img/sm2_003.jpg
 photoGallery: {}
 ---
-This is a three day round hike encompassing curated paths through one of the oldest and most well protected nature conservancies in the Midlands. Well known for its rich biodiversity, the daily hikes are gentle in distance and gradient making this hike a perfect beginner’s hike for families and for those less experienced and fit. Comfortable farm-style accommodation at country lodges with locally grown, home cooked meals as an added bonus. In the summer, there are rivers and dams to swim in and plenty of picturesque picnic spots on route. 
+This is a three day round hike encompassing curated paths through one of the oldest and most well protected nature conservancies in the Midlands. Well known for its rich biodiversity, the daily hikes are gentle in distance and gradient making this hike a perfect beginner’s hike for families and for those less experienced and fit. Comfortable farmstyle accommodation at country lodges with locally grown, home cooked meals as an added bonus. In the summer, there are rivers and dams to swim in and plenty of picturesque picnic spots on route. 
 
-Nature-based eco-tourism is one of the principal aims of Spekboom Tours as 10% of all profits are donated towards ongoing conservation projects.
+
+
+Nature-based eco-tourism is one of the principal aims of Spekboom Tours as 10% of all profits are donated towards ongoing conservation projects.
