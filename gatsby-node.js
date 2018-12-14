@@ -90,16 +90,29 @@ exports.createPages = ({ actions, graphql, getNode }) => {
 
     // create tour/events relationships
     for (let key in toursObject) {
-      if (toursObject.hasOwnProperty(key)) {
-        console.log("key", key);
+      if (toursObject.hasOwnProperty(key) && eventsObject[key]) {
+        if (eventsObject[key].length > 0) {
+          createNodeField({
+            node: getNode(toursObject[key]),
+            name: `tourevents`,
+            value: eventsObject[key]
+          });
+          eventsObject[key].forEach(eventNodeId => {
+            createNodeField({
+              node: getNode(eventNodeId),
+              name: `eventtour`,
+              value: toursObject[key]
+            });
+          });
+        }
       }
     }
 
     // console.log(homeTourIds)
     // console.log(menuTourTitles)
     // console.log(menuTourIds)
-    console.log(toursObject);
-    console.log(eventsObject);
+    // console.log(toursObject);
+    // console.log(eventsObject);
     // console.log(homeNodeId)
     // console.log(tourMenuNodeId)
   });
@@ -136,7 +149,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node.frontmatter.templateKey &&
       node.frontmatter.templateKey.includes("event-page")
     ) {
-      eventsObject[node.frontmatter.tour.trim().toLowerCase()] = node.id;
+      if (eventsObject[node.frontmatter.tour.trim().toLowerCase()]) {
+        eventsObject[node.frontmatter.tour.trim().toLowerCase()].push(node.id);
+      } else {
+        eventsObject[node.frontmatter.tour.trim().toLowerCase()] = [];
+        eventsObject[node.frontmatter.tour.trim().toLowerCase()].push(node.id);
+      }
     } else if (
       node.fileAbsolutePath &&
       node.fileAbsolutePath.includes("/src/general/tour-menu.md")

@@ -44,6 +44,7 @@ collections:
           widget: "date",
           default: "",
           dateFormat: "YYYY-MM-DD",
+          hint: "YYYY-MM-DD",
           # format: "DD-MM-YYYY",
         }
     editor:
@@ -493,6 +494,13 @@ collections:
         fields:
           - { label: "Blog Switch", name: blogswitch, widget: boolean }
           - { label: "Calendar Switch", name: calendarswitch, widget: boolean }
+      - file: "src/general/upcoming-events.md"
+        label: "Upcoming Events Area on Tour Pages"
+        name: "upcomingevents"
+        fields:
+          - { label: Heading 1, name: heading1, widget: string }
+          - { label: Heading 2, name: heading2, widget: string }
+          - { label: Blurb, name: blurb, widget: text }
     editor:
       preview: false
 
