@@ -32,8 +32,7 @@ SA Adventure Trails has introduced slackpacking to this trail for those who woul
 
 Services offered on this tour include
 
-3 nights overnight Accommodation (private guest lodges)
-
+* 3 nights overnight Accommodation (private guest lodges)
 * Full Catering Facilities (dinner, bed and breakfast and a packed lunch for 3 days)
 * Luggage Transfer from Lodge to Lodge
 * Pick Up from End Point of Hike.
