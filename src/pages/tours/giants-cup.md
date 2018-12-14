@@ -13,10 +13,10 @@ shortdescription: >-
 bannerblurb: Hike the Giants Cup
 imagethumbnail:
   alt: Giants Cup Trail
-  image: /img/kd1_002.jpg
+  image: /img/kd1_thumb.jpg
 imagebanner:
   alt: Giants Cup Trail - Winterhoek Huts
-  image: /img/giants-cup-trail450x300.jpg
+  image: /img/hikeathon-oct-2005-062.jpg
 photoGallery:
   photo:
     - image: /img/giantsmonk-cowl-129-2-.jpg
@@ -32,8 +32,7 @@ SA Adventure Trails has introduced slackpacking to this trail for those who woul
 
 Services offered on this tour include
 
-3 nights overnight Accommodation (private guest lodges)
-
+* 3 nights overnight Accommodation (private guest lodges)
 * Full Catering Facilities (dinner, bed and breakfast and a packed lunch for 3 days)
 * Luggage Transfer from Lodge to Lodge
 * Pick Up from End Point of Hike.
