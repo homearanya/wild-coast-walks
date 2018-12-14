@@ -17,7 +17,11 @@ imagethumbnail:
 imagebanner:
   alt: Dargle Samango
   image: /img/sm2_003.jpg
-photoGallery: {}
+photoGallery:
+  photo:
+    - image: /img/sm2_004.jpg
+    - image: /img/sm2_009.jpg
+    - image: /img/sm2_001.jpg
 ---
 This is a three day round hike encompassing curated paths through one of the oldest and most well protected nature conservancies in the Midlands. Well known for its rich biodiversity, the daily hikes are gentle in distance and gradient making this hike a perfect beginner’s hike for families and for those less experienced and fit. Comfortable farmstyle accommodation at country lodges with locally grown, home cooked meals as an added bonus. In the summer, there are rivers and dams to swim in and plenty of picturesque picnic spots on route. 
 
