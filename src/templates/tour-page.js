@@ -235,7 +235,7 @@ const TripInclusion = props => {
 
 const UpcomingEvents = props => {
   let imageURL = "";
-  if (props.backgroundImage.image) {
+  if (props.backgroundImage && props.backgroundImage.image) {
     imageURL = props.backgroundImage.image.childImageSharp.fluid.src;
   }
 
