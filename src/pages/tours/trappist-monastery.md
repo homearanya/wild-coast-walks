@@ -23,9 +23,9 @@ photoGallery:
     - image: /img/ct3_002.jpg
     - image: /img/ct3_004.jpg
     - image: /img/ct3_009.jpg
+    - image: /img/ct3_008.jpg
     - image: /img/ct3_005.jpg
     - image: /img/ct3_006.jpg
-    - image: /img/ct3_005.jpg
 ---
 Join us on an extraordinary journey following in the footsteps of the legendary Abbot Francis Pfanner, a charismatic and eccentric religious leader who was instrumental in bringing the Trappist missionary ethos of “work and prayer” to South Africa in the late 19th century. Cycling through the gorgeous countryside in which Alan Paton described as “the fairest valley in Africa”, we visit four magnificent mission stations in 5 days, each one an architectural masterpiece. 
 
