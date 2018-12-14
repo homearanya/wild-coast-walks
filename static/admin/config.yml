@@ -152,18 +152,18 @@ collections:
                 }
               - { label: Alt, name: alt, widget: text, required: false }
               - { label: Caption, name: caption, widget: text, required: false }
-      - label: "Backgound Image for Upcoming Events"
-        name: backgroundimage
-        widget: object
-        required: false
-        fields:
-          - {
-              label: Image,
-              name: image,
-              widget: image,
-              hint: "size 1600 x 821",
-            }
-          - { label: Alt, name: alt, widget: text, required: false }
+      # - label: "Backgound Image for Upcoming Events"
+      #   name: backgroundimage
+      #   widget: object
+      #   required: false
+      #   fields:
+      #     - {
+      #         label: Image,
+      #         name: image,
+      #         widget: image,
+      #         hint: "size 1600 x 821",
+      #       }
+      #     - { label: Alt, name: alt, widget: text, required: false }
     editor:
       preview: false
 
