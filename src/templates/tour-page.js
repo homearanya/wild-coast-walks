@@ -234,29 +234,13 @@ const TripInclusion = props => {
 };
 
 const UpcomingEvents = props => {
-  let imageURL = "";
-  if (props.backgroundImage && props.backgroundImage.image) {
-    imageURL = props.backgroundImage.image.childImageSharp.fluid.src;
-  }
-
   props.tourEvents.sort((a, b) => {
     let aDate = new Date(a.frontmatter.date);
     let bDate = new Date(b.frontmatter.date);
     return aDate - bDate;
   });
   return (
-    <div
-      className="trip-pricing-area section-padding"
-      style={{
-        backgroundColor: "rgba(0, 0, 0, 0)",
-        backgroundImage: `url(${imageURL})`,
-        backgroundRepeat: "repeat",
-        backgroundAttachment: "scroll",
-        backgroundPosition: "center top",
-        backgroundSize: "cover"
-      }}
-    >
-      >
+    <div className="trip-pricing-area section-padding">
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -416,16 +400,6 @@ export const tourPageQuery = graphql`
               }
             }
           }
-        }
-        backgroundimage {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 1600) {
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
-            }
-          }
-          alt
         }
       }
     }
