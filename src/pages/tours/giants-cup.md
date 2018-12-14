@@ -13,7 +13,7 @@ shortdescription: >-
 bannerblurb: Hike the Giants Cup
 imagethumbnail:
   alt: Giants Cup Trail
-  image: /img/kd1_002.jpg
+  image: /img/kd1_thumb.jpg
 imagebanner:
   alt: Giants Cup Trail - Winterhoek Huts
   image: /img/hikeathon-oct-2005-062.jpg
