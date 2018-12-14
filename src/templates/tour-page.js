@@ -242,157 +242,53 @@ const UpcomingEvents = props => {
             <div className="section-title text-center">
               <div className="title-border">
                 <h1 className="text-white">
-                  Upcoming <span>Events</span>
+                  {props.upcomingEventsInfo.heading1}{" "}
+                  <span>{props.upcomingEventsInfo.heading2}</span>
                 </h1>
               </div>
-              <p className="text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque dolor turpis, pulvinar varius dui
-                <br /> id, convallis iaculis eros. Praesent porta lacinia
-                elementum.
-              </p>
+              <p className="text-white">{props.upcomingEventsInfo.blurb}</p>
             </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-md-12">
-            <form action="#" method="post">
-              <div className="table-content table-responsive">
-                <table>
-                  <thead>
-                    <tr>
-                      <td className="trip-date">
-                        <div>Departure Dates</div>
-                      </td>
-                      <td className="trip-status">
+          <div className="col-md-offset-3 col-md-6">
+            {/* <form action="#" method="post"> */}
+            <div className="table-content table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <td className="trip-date">
+                      <div>
+                        Departure
+                        <br />
+                        Dates
+                      </div>
+                    </td>
+                    {/* <td className="trip-status">
                         <div>Trip Status</div>
                       </td>
                       <td className="trip-price">
                         <div>
                           Price <span>(Per person)</span>
                         </div>
-                      </td>
-                      <td className="trip-action">
-                        <div>Action</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="transparent" colSpan={4} />
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="trip-date">
-                        <div>19 Dec 2015 - 28 Dec 2015</div>
-                      </td>
-                      <td className="trip-status">
-                        <div>Fully booked</div>
-                      </td>
-                      <td className="trip-price">
-                        <div>$1,200 - $1,400</div>
-                      </td>
-                      <td className="trip-action">
-                        <div>
-                          <button className="booking-button-two" type="submit">
-                            Book now
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="trip-date">
-                        <div>31 Oct 2015 - 9 Nov 2015</div>
-                      </td>
-                      <td className="trip-status">
-                        <div>Available</div>
-                      </td>
-                      <td className="trip-price">
-                        <div>$1,048 - $2156</div>
-                      </td>
-                      <td className="trip-action">
-                        <div>
-                          <button className="booking-button-two" type="submit">
-                            Book now
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="trip-date">
-                        <div>24 Oct 2015 - 2 Nov 2015</div>
-                      </td>
-                      <td className="trip-status">
-                        <div>Fully booked</div>
-                      </td>
-                      <td className="trip-price">
-                        <div>$1,200 - $1,400</div>
-                      </td>
-                      <td className="trip-action">
-                        <div>
-                          <button className="booking-button-two" type="submit">
-                            Book now
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="trip-date">
-                        <div>19 Dec 2015 - 28 Dec 2015</div>
-                      </td>
-                      <td className="trip-status">
-                        <div>Available</div>
-                      </td>
-                      <td className="trip-price">
-                        <div>$1,048 - $2156</div>
-                      </td>
-                      <td className="trip-action">
-                        <div>
-                          <button className="booking-button-two" type="submit">
-                            Book now
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="trip-date">
-                        <div>31 Oct 2015 - 9 Nov 2015</div>
-                      </td>
-                      <td className="trip-status">
-                        <div>Fully booked</div>
-                      </td>
-                      <td className="trip-price">
-                        <div>$1,200 - $1,400</div>
-                      </td>
-                      <td className="trip-action">
-                        <div>
-                          <button className="booking-button-two" type="submit">
-                            Book now
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="trip-date">
-                        <div>24 Oct 2015 - 2 Nov 2015</div>
-                      </td>
-                      <td className="trip-status">
-                        <div>Available</div>
-                      </td>
-                      <td className="trip-price">
-                        <div>$1,048 - $2156</div>
-                      </td>
-                      <td className="trip-action">
-                        <div>
-                          <button className="booking-button-two" type="submit">
-                            Book now
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </form>
+                      </td> */}
+                    <td className="trip-action">
+                      <div />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="transparent" colSpan={4} />
+                  </tr>
+                </thead>
+                <tbody>
+                  {props.tourEvents.map((event, index) => {
+                    console.log("event", event);
+                    return <UpcomingEvent />;
+                  })}
+                </tbody>
+              </table>
+            </div>
+            {/* </form> */}
           </div>
         </div>
       </div>
@@ -400,9 +296,39 @@ const UpcomingEvents = props => {
   );
 };
 
+const UpcomingEvent = props => {
+  return (
+    <tr>
+      <td className="trip-date">
+        <div>
+          19 Dec 2015
+          <br />
+          24 Dec 2015
+        </div>
+      </td>
+      {/* <td className="trip-status">
+        <div>Fully booked</div>
+      </td>
+      <td className="trip-price">
+        <div>$1,200 - $1,400</div>
+      </td> */}
+      <td className="trip-action">
+        <div>
+          <button className="booking-button-two" type="submit">
+            Book now
+          </button>
+        </div>
+      </td>
+    </tr>
+  );
+};
+
 export default function TourPage({ data }) {
   const { siteMetadata } = data.siteMetaDataQuery;
   const { TourPageQuery: tourInfo } = data;
+  const {
+    frontmatter: upcomingEventsInfo
+  } = data.UpcomingEventsQuery.childMarkdownRemark;
   return (
     <div>
       <Helmet>
@@ -423,7 +349,10 @@ export default function TourPage({ data }) {
 
       <TripInformation tourInfo={tourInfo} />
       {tourInfo.fields.tourevents && tourInfo.fields.tourevents.length > 0 ? (
-        <UpcomingEvents tourEvents={tourInfo.fields.tourevents} />
+        <UpcomingEvents
+          upcomingEventsInfo={upcomingEventsInfo}
+          tourEvents={tourInfo.fields.tourevents}
+        />
       ) : null}
     </div>
   );
@@ -470,6 +399,15 @@ export const tourPageQuery = graphql`
               }
             }
           }
+        }
+      }
+    }
+    UpcomingEventsQuery: file(relativePath: { eq: "upcoming-events.md" }) {
+      childMarkdownRemark {
+        frontmatter {
+          heading1
+          heading2
+          blurb
         }
       }
     }

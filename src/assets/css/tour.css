@@ -288,9 +288,15 @@ button#booking-button:hover,
     height: 61px;
 }
 
-.trip-date {
+
+/* .trip-date {
     padding-left: 28px;
     width: 34%
+} */
+
+.trip-date,
+.trip-action {
+    text-align: center;
 }
 
 .trip-pricing-area table {
@@ -302,9 +308,10 @@ button#booking-button:hover,
     width: 25%
 }
 
-.trip-action {
+
+/* .trip-action {
     width: 16%
-}
+} */
 
 .trip-pricing-area tbody {
     background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
@@ -317,7 +324,8 @@ button#booking-button:hover,
     padding-top: 1px;
 }
 
-.trip-pricing-area table tbody tr:first-child td {
+
+/* .trip-pricing-area table tbody tr:first-child td {
     padding-top: 18px
 }
 
@@ -327,6 +335,11 @@ button#booking-button:hover,
 
 .trip-pricing-area table tbody tr:first-child td:last-child {
     padding-top: 28px
+} */
+
+.trip-pricing-area table tbody tr:nth-child(odd) {
+    /* background: rgb(151, 243, 57, 0.2); */
+    background: rgb(0, 0, 0, 0.3);
 }
 
 .booking-button-two {
@@ -378,9 +391,9 @@ button#booking-button:hover,
     .trip-price {
         width: 23%
     }
-    .trip-action {
+    /* .trip-action {
         width: 18%
-    }
+    } */
     .details-button button#btn-search-category {
         padding: 0 30px
     }
@@ -400,17 +413,17 @@ button#booking-button:hover,
     .trip-information {
         background: rgba(0, 0, 0, 0) none repeat scroll 0 0
     }
-    .trip-action {
+    /* .trip-action {
         width: 20%
-    }
+    } */
     .trip-information.details-two,
     .details-two .trip-info-left-text {
         padding-top: 100px;
         padding-bottom: 100px
     }
-    .trip-action>div {
+    /* .trip-action>div {
         width: 162px;
-    }
+    } */
     .trip-information-right {
         padding-top: 50px;
         padding-left: 15px;
@@ -447,15 +460,15 @@ button#booking-button:hover,
     .trip-status>div {
         width: 120px
     }
-    .trip-date div {
+    /* .trip-date div {
         width: 205px
-    }
+    } */
     .trip-price>div {
         width: 144px
     }
-    .trip-action>div {
+    /* .trip-action>div {
         width: 162px
-    }
+    } */
     .trip-information-right {
         padding-top: 50px;
         padding-left: 15px;
