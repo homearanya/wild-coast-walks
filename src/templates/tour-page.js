@@ -234,13 +234,29 @@ const TripInclusion = props => {
 };
 
 const UpcomingEvents = props => {
+  let imageURL = "";
+  if (props.backgroundImage.image) {
+    imageURL = props.backgroundImage.image.childImageSharp.fluid.src;
+  }
+
   props.tourEvents.sort((a, b) => {
     let aDate = new Date(a.frontmatter.date);
     let bDate = new Date(b.frontmatter.date);
     return aDate - bDate;
   });
   return (
-    <div className="trip-pricing-area section-padding">
+    <div
+      className="trip-pricing-area section-padding"
+      style={{
+        backgroundColor: "rgba(0, 0, 0, 0)",
+        backgroundImage: `url(${imageURL})`,
+        backgroundRepeat: "repeat",
+        backgroundAttachment: "scroll",
+        backgroundPosition: "center top",
+        backgroundSize: "cover"
+      }}
+    >
+      >
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -351,6 +367,7 @@ export default function TourPage({ data }) {
       <TripInformation tourInfo={tourInfo} />
       {tourInfo.fields.tourevents && tourInfo.fields.tourevents.length > 0 ? (
         <UpcomingEvents
+          backgroundImage={tourInfo.frontmatter.backgroundimage}
           upcomingEventsInfo={upcomingEventsInfo}
           tourEvents={tourInfo.fields.tourevents}
         />
@@ -399,6 +416,16 @@ export const tourPageQuery = graphql`
               }
             }
           }
+        }
+        backgroundimage {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1600) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+          alt
         }
       }
     }

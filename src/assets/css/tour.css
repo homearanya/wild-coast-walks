@@ -260,9 +260,10 @@ button#booking-button:hover,
 /*  20.3 Trip Pricing Area
 /*----------------------------------------*/
 
-.trip-pricing-area {
+
+/* .trip-pricing-area {
     background: rgba(0, 0, 0, 0) url(../img/banner/19.jpg) repeat scroll center top / cover
-}
+} */
 
 .trip-pricing-area table td {
     color: #ffffff;
