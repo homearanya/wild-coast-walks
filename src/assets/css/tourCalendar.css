@@ -387,13 +387,13 @@
     }
     .adventure-list-text>h1 {
         font-size: 25px;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         position: relative;
         z-index: 999;
     }
     .adventure-list-text>h2 {
         font-size: 26px;
-        margin-bottom: 3px;
+        margin-bottom: 15px;
     }
     .adventure-list-text>h2 span.persons {
         font-size: 24px;
@@ -405,7 +405,7 @@
         line-height: 26px
     }
     .list-buttons {
-        margin-top: 10px
+        margin-top: 20px
     }
     .list-buttons .button-one {
         line-height: 35px;
@@ -474,14 +474,38 @@
 /* Large Mobile :480px. */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .list .adventure-img img {
+    /* .list .adventure-img img {
         width: 100%;
-    }
+    } */
     .adventures-grid.grid-two-tab .adventure-cat.box-small {
         margin-left: 10px;
         margin-top: 16px;
     }
     .list-buttons .button-one {
         margin-right: 15px
+    }
+}
+
+
+/* Small Mobile :320px. */
+
+@media (max-width: 479px) {
+    .adventure-list-image {
+        padding: 0 0 10px 0;
+    }
+    .adventure-list-image>h2 {
+        width: 35%;
+    }
+    .adventure-list-image h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .adventure-list-image ul {
+        line-height: normal;
+        padding: 5px 0;
+        width: 65%;
+    }
+    .adventure-list-image li {
+        width: 100%;
     }
 }
