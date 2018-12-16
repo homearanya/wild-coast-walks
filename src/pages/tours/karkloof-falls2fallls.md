@@ -5,7 +5,7 @@ title: Karkloof Falls2Fallls
 destination: Midlands
 activity: Slackpack
 duration: 3 nights
-price: From R4900 pps
+price: R 4900
 shortdescription: >-
   This is a 3 day 3 night slackpacking hike through  the Karkloof Valley, KZN
   Midlands. All inclusive of comfortable accommodation, all meals, luggage
