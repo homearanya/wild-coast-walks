@@ -307,7 +307,7 @@ export const homePageQuery = graphql`
             imagethumbnail {
               image {
                 childImageSharp {
-                  fluid(maxWidth: 370) {
+                  fluid(maxWidth: 370, maxHeight: 370) {
                     ...GatsbyImageSharpFluid
                   }
                 }
