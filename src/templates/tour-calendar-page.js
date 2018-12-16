@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
+import dateformat from "dateformat";
 
 import "../assets/css/tourCalendar.css";
 import Banner from "../components/Banner";
@@ -80,44 +82,69 @@ const Filter = props => {
 };
 
 const Event = props => {
+  let imageFluid = "";
+  let imageAlt = "";
+  if (props.tourInfo.imagethumbnail) {
+    imageFluid = props.tourInfo.imagethumbnail.image.childImageSharp.fluid;
+    imageAlt = props.tourInfo.imagethumbnail.alt;
+  }
+  console.log(props);
   return (
     <div className="col-md-12">
       <div className="single-list-item">
         <div className="row">
-          <div className="col-md-4 col-sm-5">
+          <div className="col-md-4 col-sm-6">
             <div className="adventure-img">
-              <a href="#">
-                <img src={eventImage} alt="" />
-              </a>
+              <Link to={props.tourSlug}>
+                <Img fluid={imageFluid} alt={imageAlt} />
+              </Link>
             </div>
           </div>
-          <div className="col-md-8 col-sm-7 margin-left-list">
+          <div className="col-md-8 col-sm-6 margin-left-list">
             <div className="adventure-list-container">
+              <div className="adventure-list-image">
+                <h2>
+                  {dateformat(props.eventDate, "mmm")}
+                  <br />
+                  {dateformat(props.eventDate, "dd")}
+                </h2>
+                <ul>
+                  <li>
+                    <h3>{props.tourInfo.destination}</h3>
+                  </li>
+                  <li>
+                    <h3>{props.tourInfo.activity}</h3>
+                  </li>
+                </ul>
+              </div>
               <div className="adventure-list-text">
                 <h1>
-                  <a href="#">Beach Trip in Miami / 7 Days Trip</a>
+                  <a href="#">{`${props.tourInfo.title} / ${
+                    props.tourInfo.duration
+                  } Trip`}</a>
                 </h1>
                 <h2>
-                  $659<span className="light">/</span>
-                  <span className="persons">per person</span>
+                  <span className="persons">From </span>
+                  {props.tourInfo.price}
+                  {/* <span className="light">/</span> */}
+                  <span className="persons"> per person</span>
                 </h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  varius tortor at placerat rutrum. Cum sociis natoque penatibus
-                  et magnis dis parturient montes, nascetur ridiculus mus.
-                  Vestibulum vel condimentum tortor.{" "}
+                  {props.tourInfo.shortdescription.length > 215
+                    ? props.tourInfo.shortdescription.substring(0, 212) + "..."
+                    : props.tourInfo.shortdescription}
                 </p>
                 <div className="list-buttons">
-                  <a href="#" className="button-one button-blue">
+                  <Link to={props.tourSlug} className="button-one button-blue">
                     Learn More
-                  </a>
-                  <div className="list-rating">
+                  </Link>
+                  {/* <div className="list-rating">
                     <i className="fa fa-star color" />
                     <i className="fa fa-star color" />
                     <i className="fa fa-star color" />
                     <i className="fa fa-star color" />
                     <i className="fa fa-star-o" />
-                  </div>
+                  </div> */}
                   {/* <div className="adventure-list-link">
                                         <a href="#"><i className="fa fa-facebook"></i></a>
                                         <a href="#"><i className="fa fa-twitter"></i></a>
@@ -126,32 +153,6 @@ const Event = props => {
                                         <a href="#"><i className="fa fa-rss"></i></a>
                                     </div> */}
                 </div>
-              </div>
-              <div className="adventure-list-image">
-                <div className="image-top">
-                  <img src={icon_level} alt="" />
-                </div>
-                <h2>Easy level</h2>
-                <ul className="image-bottom">
-                  <li>
-                    <img src={icon_35} alt="" />
-                  </li>
-                  <li>
-                    <img src={icon_36} alt="" />
-                  </li>
-                  <li>
-                    <img src={icon_37} alt="" />
-                  </li>
-                  <li>
-                    <img src={icon_38} alt="" />
-                  </li>
-                  <li>
-                    <img src={icon_39} alt="" />
-                  </li>
-                  <li>
-                    <img src={icon_40} alt="" />
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
@@ -164,6 +165,21 @@ export default ({ data }) => {
   const { title: siteTitle } = data.siteMetaDataQuery.siteMetadata;
   const { frontmatter } = data.calendarQuery;
   const enableCalendar = data.switch.frontmatter.calendarswitch;
+
+  const upcomingEvents = data.EventsQuery.edges;
+  // filter out expired events
+  let currentUpcomingEvents = [];
+  let today = new Date();
+  upcomingEvents.forEach(event => {
+    let eventDate = new Date(event.node.frontmatter.date);
+    if (eventDate > today) {
+      currentUpcomingEvents.push({
+        eventDate: event.node.frontmatter.date,
+        tourSlug: event.node.fields.eventtour.fields.slug,
+        tourInfo: event.node.fields.eventtour.frontmatter
+      });
+    }
+  });
   return (
     <div>
       <Helmet>
@@ -187,12 +203,14 @@ export default ({ data }) => {
           <div className="row">
             {enableCalendar ? (
               <div>
-                <Event />
-                <Event />
-                <Event />
-                <Event />
-                <Event />
-                <Event />
+                {currentUpcomingEvents.map((event, index) => (
+                  <Event
+                    key={index}
+                    eventDate={event.eventDate}
+                    tourSlug={event.tourSlug}
+                    tourInfo={event.tourInfo}
+                  />
+                ))}
                 {/* <div className="pagination-content">
                   <div className="pagination-button">
                     <ul className="pagination">
@@ -256,13 +274,16 @@ export const CalendarPageQuery = graphql`
       }
     }
     EventsQuery: allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "event-page" } } }
     ) {
       edges {
         node {
           fields {
             eventtour {
+              fields {
+                slug
+              }
               frontmatter {
                 title
                 destination
@@ -270,11 +291,11 @@ export const CalendarPageQuery = graphql`
                 duration
                 price
                 shortdescription
-                imagebanner {
+                imagethumbnail {
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 1600) {
-                        ...GatsbyImageSharpFluid_tracedSVG
+                      fluid(maxWidth: 370, maxHeight: 294) {
+                        ...GatsbyImageSharpFluid
                       }
                     }
                   }
@@ -284,7 +305,6 @@ export const CalendarPageQuery = graphql`
             }
           }
           frontmatter {
-            tour
             date
           }
         }

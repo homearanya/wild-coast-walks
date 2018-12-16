@@ -260,10 +260,9 @@ button#booking-button:hover,
 /*  20.3 Trip Pricing Area
 /*----------------------------------------*/
 
-
-/* .trip-pricing-area {
-    background: rgba(0, 0, 0, 0) url(../img/banner/19.jpg) repeat scroll center top / cover
-} */
+.trip-pricing-area {
+    background: #edecec none repeat scroll 0 0;
+}
 
 .trip-pricing-area table td {
     color: #ffffff;
@@ -343,13 +342,13 @@ button#booking-button:hover,
     background: rgb(0, 0, 0, 0.3);
 }
 
-.booking-button-two {
+.trip-pricing-area .booking-button-two {
     background: #0967B9 none repeat scroll 0 0;
     border: 0 none;
     color: #ffffff;
     font-size: 18px;
     line-height: 38px;
-    margin-bottom: 10px;
+    margin: 10px 0px;
     padding: 0 25px;
     text-transform: uppercase;
 }

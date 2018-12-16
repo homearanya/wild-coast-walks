@@ -47,7 +47,13 @@ module.exports = {
     },
     netlifyCmsPaths, // Including in your Gatsby plugins will transform any paths in your frontmatter
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true
+      }
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {

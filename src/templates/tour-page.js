@@ -234,11 +234,26 @@ const TripInclusion = props => {
 };
 
 const UpcomingEvents = props => {
+  // sort events by date ascending
   props.tourEvents.sort((a, b) => {
     let aDate = new Date(a.frontmatter.date);
     let bDate = new Date(b.frontmatter.date);
     return aDate - bDate;
   });
+  // filter out expired events
+  let today = new Date();
+  let currentEventsDates = [];
+  props.tourEvents.forEach(event => {
+    let eventDate = new Date(event.frontmatter.date);
+    if (eventDate > today) {
+      currentEventsDates.push(event.frontmatter.date);
+    }
+  });
+
+  if (currentEventsDates.length === 0) {
+    return null;
+  }
+
   return (
     <div className="trip-pricing-area section-padding">
       <div className="container">
@@ -246,12 +261,12 @@ const UpcomingEvents = props => {
           <div className="col-md-12">
             <div className="section-title text-center">
               <div className="title-border">
-                <h1 className="text-white">
+                <h1>
                   {props.upcomingEventsInfo.heading1}{" "}
                   <span>{props.upcomingEventsInfo.heading2}</span>
                 </h1>
               </div>
-              <p className="text-white">{props.upcomingEventsInfo.blurb}</p>
+              <p>{props.upcomingEventsInfo.blurb}</p>
             </div>
           </div>
         </div>
@@ -282,13 +297,8 @@ const UpcomingEvents = props => {
                   </tr>
                 </thead>
                 <tbody>
-                  {props.tourEvents.map((event, index) => {
-                    return (
-                      <UpcomingEvent
-                        key={index}
-                        eventDate={event.frontmatter.date}
-                      />
-                    );
+                  {currentEventsDates.map((eventDate, index) => {
+                    return <UpcomingEvent key={index} eventDate={eventDate} />;
                   })}
                 </tbody>
               </table>

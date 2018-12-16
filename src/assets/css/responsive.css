@@ -147,37 +147,6 @@
     .fun-factor-three .single-icon-three:hover::after {
         border-width: 5px 66.5px
     }
-    .adventure-list-text>h2 {
-        font-size: 26px;
-        margin-bottom: 5px;
-    }
-    .adventure-list-text>p {
-        line-height: 24px
-    }
-    .adventure-list-image {
-        padding-top: 5px
-    }
-    .image-bottom>li {
-        height: 49px
-    }
-    .adventure-list-image>h2 {
-        font-size: 16px;
-        margin: 7px 9px 0;
-        padding-bottom: 12px;
-    }
-    .adventure-list-image {
-        width: 22%
-    }
-    .adventure-list-text {
-        width: 76%
-    }
-    .adventure-list-image::after {
-        height: 100%;
-        top: 0;
-    }
-    .adventure-list-container::after {
-        bottom: -7px
-    }
     .error-area {
         background-size: 51% 100%;
         padding-bottom: 85px;
@@ -251,8 +220,7 @@
     .footer-link>a {
         margin-right: 15px
     }
-    .payment-image>img,
-    .adventure-list-text {
+    .payment-image>img {
         width: 100%
     }
     .footer-area span {
@@ -286,7 +254,6 @@
         background: #001128 none repeat scroll 0 0
     }
     .slider-icon-container,
-    .adventure-list-image,
     .google-map-area {
         display: none
     }
@@ -302,38 +269,6 @@
     }
     .widget-icon .slider-values>input {
         width: 24%
-    }
-    .adventure-list-text>h1 {
-        margin-bottom: 7px;
-        padding-top: 14px;
-        position: relative;
-        z-index: 999;
-    }
-    .adventure-list-text>h2 {
-        font-size: 28px;
-        margin-bottom: 3px;
-    }
-    .adventure-list-text>p {
-        line-height: 26px
-    }
-    .list-buttons {
-        margin-top: 10px
-    }
-    .list-buttons .button-one {
-        line-height: 35px;
-        margin-bottom: 10px;
-        padding: 0 20px;
-        position: relative;
-        z-index: 9;
-    }
-    .adventure-list-container::before {
-        top: -5px
-    }
-    .single-list-item {
-        margin-bottom: 50px
-    }
-    .adventure-list-container {
-        padding-left: 20px
     }
     .error-area {
         padding-bottom: 80px;
@@ -393,12 +328,6 @@
     }
     .nivo-directionNav,
     .carousel-style-two.owl-theme .owl-buttons div,
-    .adventure-list-image,
-    .adventure-list-container::before,
-    .adventure-list-container::after,
-    .adventure-list-link::after,
-    .adventure-img::after,
-    .adventures-grid.list .list-rating,
     .blog-post-two .single-blog-post:hover .blog-two-text-container::after,
     .google-map-area {
         display: none;
@@ -444,8 +373,7 @@
     .payment-image {
         margin-top: 40px
     }
-    .payment-image>img,
-    .adventure-list-text {
+    .payment-image>img {
         width: 100%
     }
     .footer-area span {
@@ -479,50 +407,6 @@
     }
     .portfolio-area.portfolio-three {
         padding-top: 40px
-    }
-    .shop-item-filter .adventure-cat {
-        margin-bottom: 20px
-    }
-    .shop-item-filter .adventure-tab {
-        float: left
-    }
-    .shop-item-filter .adventure-tab ul.nav li:first-child a {
-        margin-left: 0
-    }
-    .pagination li {
-        height: 30px;
-        line-height: 25px;
-        margin: 0 2px;
-        width: 30px;
-    }
-    .adventure-tab {
-        margin-top: 15px
-    }
-    .adventures-grid.grid-two-tab .adventure-cat.box-small {
-        float: left;
-        margin-top: 20px;
-    }
-    .col-md-8.margin-left-list {
-        margin-left: 0;
-        margin-top: 30px;
-        padding-left: 15px;
-    }
-    .adventure-list-container {
-        margin-right: 0;
-        padding-left: 15px;
-    }
-    .single-list-item .col-md-4 {
-        padding-right: 15px
-    }
-    .single-list-item {
-        margin-bottom: 30px
-    }
-    .adventure-list-link {
-        margin: 15px 0;
-        position: inherit;
-    }
-    .list .adventure-img {
-        border: 3px solid #f0f0f0
     }
     .include-item {
         margin-bottom: 25px
@@ -630,7 +514,6 @@
     .single-portfolio img,
     .team-image img,
     .single-gallery-item .gallery-image a img,
-    .list .adventure-img img,
     .blog-post-two .blog-image a img,
     .blog-post-two .blog-image a {
         width: 100%;
@@ -643,13 +526,6 @@
     }
     .single-sidebar-widget .hover-effect a img {
         display: none
-    }
-    .adventures-grid.grid-two-tab .adventure-cat.box-small {
-        margin-left: 10px;
-        margin-top: 16px;
-    }
-    .list-buttons .button-one {
-        margin-right: 15px
     }
     .blog-links,
     .blog-post-two .blog-links {
