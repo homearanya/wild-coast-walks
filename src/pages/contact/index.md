@@ -1,9 +1,6 @@
 ---
 templateKey: contact-page
-blurb: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor
-  turpis, pulvinar varius dui id, convallis iaculis eros. Praesent porta lacinia
-  elementum.
+blurb: 'Contact us by email, phone or through our web form below'
 imagebanner:
   alt: Contact Us
   image: /img/contact-banner1600x596-min.jpg
