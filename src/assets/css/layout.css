@@ -1497,6 +1497,23 @@ header.fixed .header-logo-menu {
     /* Microsoft Edge */
 }
 
+.newsletter-area .result-submission {
+    height: 60px;
+    color: white;
+    padding: 10px 0;
+}
+
+.newsletter-area .result-message {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+.newsletter-area .result-submission a {
+    color: white;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
 
 /* Large desktop :1920px. */
 

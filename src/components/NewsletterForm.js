@@ -55,7 +55,7 @@ export default class NewsletterForm extends Component {
                 </div>
                 <p className="text-white">{this.props.newsletterArea.blurb}</p>
               </div>
-              <form onSubmit={this._handleSubmit}>
+              <form onSubmit={this.handleSubmit}>
                 <div className="newsletter-content">
                   <div className="row">
                     <div className="col-sm-6 col-xs-12">
@@ -96,6 +96,16 @@ export default class NewsletterForm extends Component {
                   </div>
                 </div>
               </form>
+              <div className="result-submission">
+                {this.state.submissionResult ? (
+                  <div
+                    className="result-message"
+                    dangerouslySetInnerHTML={{
+                      __html: this.state.submissionResult.msg
+                    }}
+                  />
+                ) : null}
+              </div>
             </div>
           </div>
         </div>
