@@ -21,7 +21,7 @@ export default ({ data }) => {
         extraClass="contact-banner"
         title1="Contact"
         title2="US"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui id, convallis iaculis eros. Praesent porta lacinia elementum."
+        text={frontmatter.blurb}
         breadcrumb="Contact us"
         imageBanner={frontmatter.imagebanner}
       />
@@ -36,7 +36,7 @@ export default ({ data }) => {
                     <div className="section-title text-center">
                       <div className="title-border">
                         <h1>
-                          Contact <span>US</span>
+                          Contact <span>Form</span>
                         </h1>
                       </div>
                     </div>
@@ -61,6 +61,7 @@ export const contactPageQuery = graphql`
   query ContactPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
+        blurb
         imagebanner {
           image {
             childImageSharp {

@@ -79,6 +79,10 @@ textarea.yourmessage {
     box-shadow: none;
 }
 
+input:required {
+    box-shadow: none;
+}
+
 
 /* Normal desktop :992px. */
 

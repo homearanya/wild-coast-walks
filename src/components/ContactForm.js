@@ -10,7 +10,8 @@ export default class ContactForm extends Component {
       subject = this.props.subject;
     }
     this.state = {
-      name: "",
+      f_name: "",
+      l_name: "",
       email: "",
       number: "",
       subject: subject,
@@ -21,8 +22,11 @@ export default class ContactForm extends Component {
 
   handleChange(event) {
     switch (event.target.name) {
-      case "name":
-        this.setState({ name: event.target.value });
+      case "f_name":
+        this.setState({ f_name: event.target.value });
+        break;
+      case "l_name":
+        this.setState({ l_name: event.target.value });
         break;
       case "email":
         this.setState({ email: event.target.value });
@@ -44,18 +48,29 @@ export default class ContactForm extends Component {
     return (
       <form action="https://formspree.io/homearanya@gmail.com" method="POST">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-sm-6">
             <input
               required
-              name="name"
+              name="f_name"
               type="text"
               className="form-box"
-              placeholder="Full name"
+              placeholder="First name"
               value={this.state.name}
               onChange={this.handleChange}
             />
           </div>
-          <div className="col-md-6">
+          <div className="col-sm-6">
+            <input
+              required
+              name="l_name"
+              type="text"
+              className="form-box"
+              placeholder="Last name"
+              value={this.state.name}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="col-sm-6">
             <input
               required
               name="email"
@@ -66,7 +81,7 @@ export default class ContactForm extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="col-md-6">
+          <div className="col-sm-6">
             <input
               name="number"
               type="text"
@@ -76,7 +91,7 @@ export default class ContactForm extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="col-md-12">
+          <div className="col-sm-12">
             <input
               required
               name="subject"
@@ -87,7 +102,7 @@ export default class ContactForm extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div className="col-md-12">
+          <div className="col-sm-12">
             <textarea
               required
               name="message"
