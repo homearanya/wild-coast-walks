@@ -88,7 +88,6 @@ const Event = props => {
     imageFluid = props.tourInfo.imagethumbnail.image.childImageSharp.fluid;
     imageAlt = props.tourInfo.imagethumbnail.alt;
   }
-  console.log(props);
   return (
     <div className="col-md-12">
       <div className="single-list-item">

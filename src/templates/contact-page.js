@@ -47,7 +47,8 @@ export default class ContactPage extends Component {
                     </div>
                     <div className="row">
                       <div className="col-xs-12">
-                        {this.props.location.state.subject ? (
+                        {this.props.location.state &&
+                        this.props.location.state.subject ? (
                           <ContactForm
                             subject={this.props.location.state.subject}
                           />
