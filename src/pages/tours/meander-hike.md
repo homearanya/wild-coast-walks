@@ -20,7 +20,8 @@ imagebanner:
   image: /img/wild-coast-meander1600x596-min.jpg
 photoGallery:
   photo:
-    - image: /img/meander-hike-gallery_1.jpg
+    - alt: Fisherman along the hike
+      image: /img/meander-hike-gallery_1.jpg
     - image: /img/meander-hike-gallery_2.jpg
     - image: /img/meander-hike-gallery_3.jpg
     - image: /img/meander-hike-gallery_4.jpg
