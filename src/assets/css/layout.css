@@ -1603,6 +1603,17 @@ header.fixed .header-logo-menu {
 }
 
 
+/* Small Mobile :320px. */
+
+@media only screen and (max-width: 480px) {
+    .footer-widget-area,
+    .footer-widget-area.footer-widget-two,
+    .footer-widget-area.footer-widget-three {
+        padding-bottom: 40px;
+    }
+}
+
+
 /* ********** 
    Footer
    ********** */
