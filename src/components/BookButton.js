@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactModal from "react-modal";
+import { Link } from "gatsby";
 
 import ContactForm from "../components/ContactForm";
 import "../assets/css/bookButton.css";
@@ -15,15 +16,15 @@ export default class BookButton extends Component {
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.subject = null;
-  }
-
-  openModal() {
     if (this.props.tour) {
       this.subject = `Hey! I'm interested in your tour ${this.props.tour.toUpperCase()}`;
       if (this.props.date) {
         this.subject = this.subject + ` on this date: ${this.props.date}`;
       }
     }
+  }
+
+  openModal() {
     this.setState({
       visible: true
     });
@@ -38,13 +39,15 @@ export default class BookButton extends Component {
   render() {
     return (
       <div>
-        <button
-          className="booking-button-two"
-          type="submit"
-          onClick={() => this.openModal()}
-        >
-          {this.props.text}
-        </button>
+        <Link to="/contact/#contact-form" state={{ subject: this.subject }}>
+          <button
+            className="booking-button-two"
+            type="submit"
+            // onClick={() => this.openModal()}
+          >
+            {this.props.text}
+          </button>
+        </Link>
         <ReactModal
           isOpen={this.state.visible}
           contentLabel="Contact Form"
