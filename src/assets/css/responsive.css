@@ -225,7 +225,6 @@
     }
     .footer-area span {
         display: block;
-        margin-bottom: 15px;
     }
     #footer-menu {
         text-align: left
@@ -307,6 +306,9 @@
     .error-text-container {
         padding-left: 0px
     }
+    .single-footer-widget.contact-text-info {
+        margin-bottom: 40px;
+    }
 }
 
 
@@ -352,6 +354,9 @@
     .best-sell-area .col-md-6>img {
         margin-top: 40px
     }
+    .single-footer-widget.contact-text-info {
+        margin-bottom: 40px;
+    }
     .single-footer-widget.contact-text-info li:last-child {
         margin-bottom: 0
     }
@@ -378,7 +383,6 @@
     }
     .footer-area span {
         display: block;
-        margin-bottom: 20px;
         text-align: center;
     }
     #footer-menu a {

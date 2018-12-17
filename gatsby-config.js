@@ -73,6 +73,13 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://wildtrails.us17.list-manage.com/subscribe/post?u=792c9f598edc1eff7ee0c6658&amp;id=9415608b3b" // see instructions section below
+      }
+    },
+    {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`

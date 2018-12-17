@@ -1275,6 +1275,30 @@ header.fixed .header-logo-menu {
     margin-bottom: 0
 }
 
+.contact-text-info .title-border::after {
+    background: rgba(0, 0, 0, 0) url(../img/icon/title-icon-3.png) no-repeat scroll 0 0;
+}
+
+.contact-text-info .section-title {
+    margin-bottom: 20px;
+}
+
+.contact-text-info .section-title h1::before,
+.contact-text-info .section-title h1::after {
+    background: #fff none repeat scroll 0 0;
+    width: 100px;
+}
+
+.contact-text-info .section-title h1::before {
+    margin-left: -133.5px;
+    left: 50%;
+}
+
+.contact-text-info .section-title h1::after {
+    right: 50%;
+    margin-right: -133.5px;
+}
+
 .footer-widget-list li span.icon {
     display: inline-block;
     font-size: 20px;
@@ -1406,6 +1430,10 @@ header.fixed .header-logo-menu {
     background: rgba(0, 0, 0, 0) url(../img/icon/title-icon-3.png) no-repeat scroll 0 0;
 }
 
+.newsletter-area .section-title {
+    margin-bottom: 20px;
+}
+
 .newsletter-area .section-title h1::before,
 .newsletter-area .section-title h1::after {
     background: #fff none repeat scroll 0 0;
@@ -1421,6 +1449,10 @@ header.fixed .header-logo-menu {
     width: 100%;
 }
 
+.newsletter-content input {
+    margin-top: 20px;
+}
+
 .newsletter-content button {
     background: #000000 none repeat scroll 0 0;
     border: 0 none;
@@ -1428,10 +1460,11 @@ header.fixed .header-logo-menu {
     font-size: 20px;
     font-weight: 300;
     line-height: 48px;
-    margin: 0;
+    margin-top: 20px;
     padding: 0 34px;
     text-transform: uppercase;
-    transition: all 0.3s ease 0s
+    transition: all 0.3s ease 0s;
+    float: right;
 }
 
 .newsletter-content button:hover {
@@ -1515,7 +1548,7 @@ header.fixed .header-logo-menu {
 
 @media (max-width: 767px) {
     .newsletter-area .section-title {
-        margin-bottom: 20px
+        margin-bottom: 0px
     }
     .newsletter-content .row .col-md-3 {
         margin: 20px auto 0;
@@ -1524,6 +1557,7 @@ header.fixed .header-logo-menu {
     .newsletter-content button {
         display: block;
         margin: 20px auto 0;
+        float: left;
     }
     .footer-widget-area,
     .footer-widget-area.footer-widget-two,
