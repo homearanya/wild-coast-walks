@@ -46,7 +46,10 @@ export default class ContactForm extends Component {
   }
   render() {
     return (
-      <form action="https://formspree.io/homearanya@gmail.com" method="POST">
+      <form
+        action="https://formspree.io/paul.hideaways@gmail.com"
+        method="POST"
+      >
         <div className="row">
           <div className="col-sm-6">
             <input
