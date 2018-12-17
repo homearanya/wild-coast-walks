@@ -76,7 +76,7 @@ module.exports = {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint:
-          "https://wildtrails.us17.list-manage.com/subscribe/post?u=792c9f598edc1eff7ee0c6658&amp;id=9415608b3b" // see instructions section below
+          "https://wildtrails.us17.list-manage.com/subscribe/post?u=792c9f598edc1eff7ee0c6658&amp;id=b7114c9ca6" // see instructions section below
       }
     },
     {
