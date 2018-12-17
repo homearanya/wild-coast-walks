@@ -1,0 +1,126 @@
+.contact-form {
+    position: relative;
+    height: 737px;
+    overflow: hidden
+}
+
+.contact-us-form.section-padding.thank-u {
+    padding: 80px 0;
+}
+
+.contact-us-form {
+    position: relative;
+    z-index: 9;
+}
+
+.contact-form .section-title {
+    margin-bottom: 22px
+}
+
+.contact-form .section-title h1 {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+input.form-box {
+    background-color: #edecec;
+    border: 1px solid #d9d9d9;
+    color: #2f2f2f;
+    font-weight: 300;
+    height: 48px;
+    margin-bottom: 40px;
+    padding: 0 18px;
+    width: 100%;
+}
+
+textarea.yourmessage {
+    background-color: #edecec;
+    border: 1px solid #d9d9d9;
+    color: #2f2f2f;
+    font-weight: 300;
+    height: 178px;
+    padding: 18px;
+    resize: none;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background: #0967B9 none repeat scroll 0 0
+}
+
+.submit-button {
+    background: #212227 none repeat scroll 0 0;
+    border: 0 none;
+    color: #ffffff;
+    /* display: inline-block; */
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 38px;
+    margin-top: 40px;
+    padding: 0 27px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in 0s;
+}
+
+.contact-us-form-wrapper .submit-button {
+    margin: 20px auto 0;
+}
+
+.contact-form form p {
+    color: #444444;
+    margin-bottom: 20px;
+}
+
+
+/* firefox displays a red border on required texarea fiels. This rule disables it */
+
+.yourmessage:required {
+    box-shadow: none;
+}
+
+
+/* Normal desktop :992px. */
+
+@media (min-width: 992px) and (max-width: 1169px) {
+    .contact-us-form::after {
+        left: 80%;
+        transform: skewX(-9deg);
+    }
+    .contact-form {
+        height: auto
+    }
+    .contact-us-form.section-padding.thank-u {
+        padding: 50px 0
+    }
+}
+
+
+/* Tablet desktop :768px. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact-form::before {
+        width: 100%
+    }
+    .contact-us-form::after {
+        display: none
+    }
+    .contact-form {
+        height: auto
+    }
+}
+
+
+/* small mobile :320px. */
+
+@media (max-width: 767px) {
+    .contact-us-form::after {
+        display: none;
+    }
+    .contact-form::before {
+        width: 100%
+    }
+    .contact-form {
+        height: auto
+    }
+}

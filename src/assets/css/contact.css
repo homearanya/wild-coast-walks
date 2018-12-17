@@ -2,6 +2,11 @@
     margin-bottom: 64px
 }
 
+.contact-information-area .section-title h1 {
+    font-size: 30px;
+    line-height: 30px;
+}
+
 .contact-image {
     border-left: 1px solid #000000;
     border-right: 1px solid #000000;
@@ -37,15 +42,17 @@
     transform: rotate(12deg);
 }
 
-.contact-info:hover .contact-image {
+
+/* .contact-info:hover .contact-image {
     background: #0967B9 none repeat scroll 0 0;
     border-color: #0967B9;
-}
+} */
 
-.contact-info:hover .contact-image::after,
+
+/* .contact-info:hover .contact-image::after,
 .contact-info:hover .contact-image::before {
     display: none;
-}
+} */
 
 .contact-icon {
     display: table;
@@ -58,28 +65,40 @@
     vertical-align: middle
 }
 
-.contact-info:hover .contact-icon {
+
+/* .contact-info:hover .contact-icon {
     height: 100%
-}
+} */
 
-.contact-info:hover {
+
+/* .contact-info:hover {
     transition: all 0.3s ease-in 0s
-}
+} */
 
-.secondary-img,
+
+/* .secondary-img,
 .contact-info:hover .contact-icon img.primary-img,
 .single-service:hover .single-icon img.primary-img,
 .single-fun-factor:hover img.primary-img,
 .single-icon-three:hover img.primary-img {
     display: none;
+} */
+
+.secondary-img {
+    display: none;
 }
 
-.contact-info:hover .contact-icon img.secondary-img,
+
+/* .contact-info:hover .contact-icon img.secondary-img,
 .single-service:hover .single-icon img.secondary-img,
 .single-fun-factor:hover img.secondary-img,
 .single-icon-three:hover img.secondary-img {
     display: inline-block;
     text-align: center;
+} */
+
+.contact-text {
+    padding: 20px 0;
 }
 
 .contact-text>h4 {
@@ -93,95 +112,18 @@
     margin-bottom: 0;
 }
 
-.contact-form {
-    position: relative;
-    height: 737px;
-    overflow: hidden
-}
-
-.contact-us-form.section-padding.thank-u {
-    padding: 80px 0;
-}
-
 .contact-container {
     width: 50%;
     padding-right: 15px;
     padding-left: 6.7%;
 }
 
-.contact-us-form {
-    position: relative;
-    z-index: 9;
-}
-
-.contact-form .section-title {
-    margin-bottom: 22px
-}
-
-input.form-box {
-    background-color: #edecec;
-    border: 1px solid #d9d9d9;
-    color: #2f2f2f;
-    font-weight: 300;
-    height: 48px;
-    margin-bottom: 40px;
-    padding: 0 18px;
-    width: 100%;
-}
-
-textarea.yourmessage {
-    background-color: #edecec;
-    border: 1px solid #d9d9d9;
-    color: #2f2f2f;
-    font-weight: 300;
-    height: 178px;
-    padding: 18px;
-    resize: none;
-    width: 100%;
-}
-
-.submit-button:hover {
-    background: #0967B9 none repeat scroll 0 0
-}
-
-.submit-button {
-    background: #212227 none repeat scroll 0 0;
-    border: 0 none;
-    color: #ffffff;
-    /* display: inline-block; */
-    display: block;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 38px;
-    margin-top: 40px;
-    padding: 0 27px;
-    text-transform: uppercase;
-    transition: all 0.3s ease-in 0s;
-}
-
-.contact-us-form-wrapper .submit-button {
-    margin: 40px auto 0;
-}
-
-.contact-form form p {
-    color: #444444;
-    margin-bottom: 20px;
-}
-
 
 /* Large desktop :1920px. */
 
 @media (min-width: 1920px) {
-    .contact-form {
-        background-size: 40% 100%
-    }
     .contact-container {
         padding-left: 18.76%
-    }
-    .contact-us-form::after {
-        left: 87%;
-        transform: skewX(-12deg);
-        width: 185px;
     }
 }
 
@@ -189,18 +131,8 @@ textarea.yourmessage {
 /* Normal desktop :992px. */
 
 @media (min-width: 992px) and (max-width: 1169px) {
-    .contact-us-form::after {
-        left: 80%;
-        transform: skewX(-9deg);
-    }
-    .contact-form {
-        height: auto
-    }
     .contact-container {
         padding-left: 9%
-    }
-    .contact-us-form.section-padding.thank-u {
-        padding: 50px 0
     }
 }
 
@@ -210,15 +142,6 @@ textarea.yourmessage {
 @media (min-width: 768px) and (max-width: 991px) {
     .contact-text>h4 {
         margin-top: 25px;
-    }
-    .contact-form::before {
-        width: 100%
-    }
-    .contact-us-form::after {
-        display: none
-    }
-    .contact-form {
-        height: auto
     }
     .contact-container {
         padding-left: 13%;
@@ -233,15 +156,6 @@ textarea.yourmessage {
 @media (max-width: 767px) {
     .contact-text>h4 {
         margin-top: 25px;
-    }
-    .contact-us-form::after {
-        display: none;
-    }
-    .contact-form::before {
-        width: 100%
-    }
-    .contact-form {
-        height: auto
     }
     .contact-information-area .contact-info {
         margin-bottom: 25px

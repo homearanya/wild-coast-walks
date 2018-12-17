@@ -6,6 +6,7 @@ import dateformat from "dateformat";
 import Content, { HTMLContent } from "../components/Content";
 import TourGallery from "../components/TourGallery";
 import Banner from "../components/Banner";
+import BookButton from "../components/BookButton";
 
 import "../assets/css/tour.css";
 
@@ -133,9 +134,10 @@ const TripInformation = props => {
               </div>
               <div className="row">
                 <div className="trip-booking-info">
-                  <button id="booking-button" type="submit">
-                    Book this trip
-                  </button>
+                  <BookButton
+                    text="Book this trip"
+                    tour={props.tourInfo.frontmatter.title}
+                  />
                 </div>
               </div>
             </div>
@@ -155,11 +157,19 @@ const TripInformation = props => {
                 <div className="section-title text-center">
                   <div className="title-border">
                     <h1>
-                      Trip <span>Overview</span>
+                      Trip <span>Details</span>
                     </h1>
                   </div>
                   <TourContent content={props.tourInfo.html} />
                 </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="trip-booking-info">
+                <BookButton
+                  text="Book this trip"
+                  tour={props.tourInfo.frontmatter.title}
+                />
               </div>
             </div>
           </div>
@@ -298,7 +308,13 @@ const UpcomingEvents = props => {
                 </thead>
                 <tbody>
                   {currentEventsDates.map((eventDate, index) => {
-                    return <UpcomingEvent key={index} eventDate={eventDate} />;
+                    return (
+                      <UpcomingEvent
+                        key={index}
+                        eventDate={eventDate}
+                        tour={props.tour}
+                      />
+                    );
                   })}
                 </tbody>
               </table>
@@ -312,10 +328,11 @@ const UpcomingEvents = props => {
 };
 
 const UpcomingEvent = props => {
+  let eventDateFormatted = dateformat(props.eventDate, "dd mmm yyyy");
   return (
     <tr>
       <td className="trip-date">
-        <div>{dateformat(props.eventDate, "dd mmm yyyy")}</div>
+        <div>{eventDateFormatted}</div>
       </td>
       {/* <td className="trip-status">
         <div>Fully booked</div>
@@ -324,11 +341,11 @@ const UpcomingEvent = props => {
         <div>$1,200 - $1,400</div>
       </td> */}
       <td className="trip-action">
-        <div>
-          <button className="booking-button-two" type="submit">
-            Book now
-          </button>
-        </div>
+        <BookButton
+          text="Book now"
+          tour={props.tour}
+          date={eventDateFormatted}
+        />
       </td>
     </tr>
   );
@@ -364,6 +381,7 @@ export default function TourPage({ data }) {
           backgroundImage={tourInfo.frontmatter.backgroundimage}
           upcomingEventsInfo={upcomingEventsInfo}
           tourEvents={tourInfo.fields.tourevents}
+          tour={tourInfo.frontmatter.title}
         />
       ) : null}
     </div>

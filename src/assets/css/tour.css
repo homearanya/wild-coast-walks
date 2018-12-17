@@ -141,23 +141,6 @@
     padding-top: 0
 }
 
-button#booking-button {
-    background: #0967B9 none repeat scroll 0 0;
-    border: 0 none;
-    color: #ffffff;
-    font-size: 25px;
-    font-weight: 300;
-    line-height: 58px;
-    /* margin-top: 36px; */
-    padding: 0 70px;
-    text-transform: uppercase;
-}
-
-button#booking-button:hover,
-.booking-button-two:hover {
-    background: rgba(255, 174, 0, 0.8) none repeat scroll 0 0
-}
-
 .react-photo-gallery--gallery {
     padding-top: 50px;
 }
@@ -234,8 +217,7 @@ button#booking-button:hover,
     overflow: hidden
 }
 
-.include-item:hover .include-text h4,
-.contact-info:hover .contact-text h4 {
+.include-item:hover .include-text h4 {
     color: #0967B9
 }
 
@@ -340,17 +322,6 @@ button#booking-button:hover,
 .trip-pricing-area table tbody tr:nth-child(odd) {
     /* background: rgb(151, 243, 57, 0.2); */
     background: rgb(0, 0, 0, 0.3);
-}
-
-.trip-pricing-area .booking-button-two {
-    background: #0967B9 none repeat scroll 0 0;
-    border: 0 none;
-    color: #ffffff;
-    font-size: 18px;
-    line-height: 38px;
-    margin: 10px 0px;
-    padding: 0 25px;
-    text-transform: uppercase;
 }
 
 #lightboxBackdrop {

@@ -1,0 +1,81 @@
+.booking-button-two {
+    background: #0967B9 none repeat scroll 0 0;
+    border: 0 none;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 38px;
+    margin: 10px 0px;
+    padding: 0 25px;
+    text-transform: uppercase;
+}
+
+.trip-booking-info .booking-button-two {
+    background: #0967B9 none repeat scroll 0 0;
+    border: 0 none;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 58px;
+    padding: 0 70px;
+    text-transform: uppercase;
+}
+
+.booking-button-two:hover {
+    background: rgba(255, 174, 0, 0.8) none repeat scroll 0 0;
+}
+
+.book-button .close-button {
+    background: #212227 none repeat scroll 0 0;
+    border: 0 none;
+    color: #ffffff;
+    float: right;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 10px 0 20px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in 0s;
+}
+
+.book-button .close-button:hover {
+    background: #0967B9 none repeat scroll 0 0
+}
+
+.modal-contact-form {
+    padding: 0 30px 20px;
+    /* let it scroll */
+}
+
+.Modal {
+    background-color: white;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    position: absolute;
+    height: 90%;
+    overflow: auto;
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+}
