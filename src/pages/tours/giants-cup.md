@@ -38,8 +38,8 @@ Services offered on this tour include
 
 \# Luggage Transfer from Lodge to Lodge
 
-\# Pick Up from End Point of Hike\
-\
-# Safe Parking of Vehicles during the Hike
+\# Pick Up from End Point of Hike
+
+\# Safe Parking of Vehicles during the Hike
 
 Departures are organized for the spring and autumn months when the weather is predictable and mostly fine - outside of the summer thunderstorms and cold winters. Groups of 4 - 10 hikers are welcome to form their own parties or join one of the scheduled hikes planned for March to May, or September to November
