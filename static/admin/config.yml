@@ -439,6 +439,22 @@ collections:
   - name: "general"
     label: "General"
     files:
+      - file: "src/general/logo.md"
+        label: "Logo"
+        name: "logo"
+        fields:
+          - label: "Color Logo"
+            name: colorlogo
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Alt, name: alt, widget: text, required: false }
+          - label: "White Logo"
+            name: whitelogo
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Alt, name: alt, widget: text, required: false }
       - file: "src/general/tour-menu.md"
         label: "Tour Menu"
         name: "tourmenu"
@@ -500,12 +516,6 @@ collections:
               - { label: Heading 1, name: heading1, widget: string }
               - { label: Heading 2, name: heading2, widget: string }
               - { label: Blurb, name: blurb, widget: text }
-      - file: "src/general/config.md"
-        label: "Configuration"
-        name: "config"
-        fields:
-          - { label: "Blog Switch", name: blogswitch, widget: boolean }
-          - { label: "Calendar Switch", name: calendarswitch, widget: boolean }
       - file: "src/general/upcoming-events.md"
         label: "Upcoming Events Area on Tour Pages"
         name: "upcomingevents"
@@ -513,6 +523,12 @@ collections:
           - { label: Heading 1, name: heading1, widget: string }
           - { label: Heading 2, name: heading2, widget: string }
           - { label: Blurb, name: blurb, widget: text }
+      - file: "src/general/config.md"
+        label: "Switches"
+        name: "config"
+        fields:
+          - { label: "Blog Switch", name: blogswitch, widget: boolean }
+          - { label: "Calendar Switch", name: calendarswitch, widget: boolean }
     editor:
       preview: false
 
