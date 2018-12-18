@@ -306,7 +306,8 @@ a.meanmenu-reveal {
    ********** */
 
 .logo-menu-bg {
-    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+    transition: all 0.3s ease-in-out 0s;
 }
 
 .logo,
@@ -318,7 +319,7 @@ a.meanmenu-reveal {
 
 .logo {
     padding-bottom: 20px;
-    padding-top: 20px
+    padding-top: 20px;
 }
 
 .logo>a {
