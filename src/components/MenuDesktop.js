@@ -5,9 +5,6 @@ import Img from "gatsby-image";
 
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-import logo_white from "../assets/img/logo/trails-logo-white.png";
-import logo_color from "../assets/img/logo/trails-logo-color.png";
-
 const MenuBar = props => {
   return (
     <div className={props.menuClass}>
@@ -16,7 +13,7 @@ const MenuBar = props => {
           <div className="col-md-12">
             <div className="logo-menu-bg">
               <div className="row">
-                <Logo />
+                <Logo logos={props.logos} />
                 <MainMenu
                   tourMenuSections={props.tourMenuSections}
                   switches={props.switches}
@@ -30,20 +27,21 @@ const MenuBar = props => {
   );
 };
 
-const Logo = () => {
+const Logo = props => {
+  console.log(props);
   return (
     <div className="col-md-4 col-sm-12">
       <div className="logo">
         <Link to="/">
-          <img
+          <Img
             className="logo-white"
-            src={logo_white}
-            alt="Sa Adventure Trails logo"
+            fluid={props.logos.whitelogo.image.childImageSharp.fluid}
+            alt={props.logos.whitelogo.alt}
           />
-          <img
+          <Img
             className="logo-color"
-            src={logo_color}
-            alt="Sa Adventure Trails logo"
+            fluid={props.logos.colorlogo.image.childImageSharp.fluid}
+            alt={props.logos.colorlogo.alt}
           />
         </Link>
       </div>
@@ -235,6 +233,7 @@ export default class MenuDesktop extends Component {
       <Sticky onFixedToggle={this.onFixedToggle}>
         <MenuBar
           menuClass={menuClass}
+          logos={this.props.logos}
           tourMenuSections={this.props.sections}
           switches={this.props.switches}
         />
