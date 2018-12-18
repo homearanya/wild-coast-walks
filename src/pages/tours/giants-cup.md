@@ -28,7 +28,7 @@ photoGallery:
 ---
 The Giants Cup Hiking Trail is part of the National Hiking Way. The hike follows a well established and clearly marked trail that runs southwards from Sani Pass in the north to Bushmans Nek in the south, the full trail being approximately 60km in length. It falls within the Ukahlamba Wilderness Area (a World Heritage Site) and is administered by KZN Wildlife who provide 5 overnight huts along the route - at Pholela (Cobham valley), Mzimkhulwana, Winterhoek and Swimans (in the Drakensberg Gardens valley) and at Bushmans Nek.
 
-SA Adventure Trails has introduced slackpacking to this trail for those who would like to walk the trail during the day and stay at comfortable lodges at night where all meals are provided for.
+SA Adventure Trails has introduced slack-packing to this trail for those who would like to walk the trail during the day and stay at comfortable lodges at night where all meals are provided for.
 
 Services offered on this tour include
 
