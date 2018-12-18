@@ -28,21 +28,25 @@ const MenuBar = props => {
 };
 
 const Logo = props => {
-  console.log(props);
+  console.log(props.logos);
+  console.log(props.logos.whitelogo.image.childImageSharp.fluid);
+  console.log(props.logos.colorlogo.image.childImageSharp.fluid);
   return (
     <div className="col-md-4 col-sm-12">
       <div className="logo">
         <Link to="/">
-          <Img
-            className="logo-white"
-            fluid={props.logos.whitelogo.image.childImageSharp.fluid}
-            alt={props.logos.whitelogo.alt}
-          />
-          <Img
-            className="logo-color"
-            fluid={props.logos.colorlogo.image.childImageSharp.fluid}
-            alt={props.logos.colorlogo.alt}
-          />
+          <div className="logo-white">
+            <Img
+              fluid={props.logos.whitelogo.image.childImageSharp.fluid}
+              alt={props.logos.whitelogo.alt}
+            />
+          </div>
+          <div className="logo-color">
+            <Img
+              fluid={props.logos.colorlogo.image.childImageSharp.fluid}
+              alt={props.logos.colorlogo.alt}
+            />
+          </div>
         </Link>
       </div>
     </div>

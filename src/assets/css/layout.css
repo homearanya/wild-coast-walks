@@ -322,18 +322,20 @@ a.meanmenu-reveal {
 }
 
 .logo>a {
-    display: inline-block
+    display: block
 }
 
-.logo img {
+.logo>a .logo-white {
+    display: block;
     height: 80px;
 }
 
-.logo img.logo-white {
-    display: inline;
+.logo>a .logo-white img {
+    height: 80px !important;
+    width: auto !important;
 }
 
-.logo img.logo-color {
+.logo>a .logo-color {
     display: none;
 }
 
@@ -561,15 +563,17 @@ header.fixed .header-logo-menu {
         padding-top: 10px !important;
         transition: all 0.3s ease-in-out 0s;
     }
-    .sticky-menu .logo img {
+    .sticky-menu .logo .logo-white {
+        display: none;
+    }
+    .sticky-menu .logo>a .logo-color {
+        display: block;
         height: 60px;
         transition: all 0.3s ease-in-out 0s;
     }
-    .sticky-menu .logo img.logo-white {
-        display: none;
-    }
-    .sticky-menu .logo img.logo-color {
-        display: inline;
+    .sticky-menu .logo>a .logo-color img {
+        height: 60px !important;
+        width: auto !important;
     }
 }
 
