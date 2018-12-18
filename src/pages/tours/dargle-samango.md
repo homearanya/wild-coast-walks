@@ -5,7 +5,7 @@ title: Dargle Samango
 destination: Midlands
 activity: Slackpack
 duration: 3 nights
-price: From R 4200 pps
+price: R 4200
 shortdescription: >-
   A 3 day, 3 night slackpacking through the beautiful mistbelt forest and
   pristine grasslands of the Dargle  Conservancy, KZN Midlands.  Fully guided
