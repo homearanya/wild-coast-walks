@@ -36,9 +36,9 @@ Services offered on this tour include
 
 \# Full Catering Facilities (dinner, bed and breakfast and a packed lunch for 3 days)
 
-\# Luggage Transfer from Lodge to Lodge\
-\
-# Pick Up from End Point of Hike\
+\# Luggage Transfer from Lodge to Lodge
+
+\# Pick Up from End Point of Hike\
 \
 # Safe Parking of Vehicles during the Hike
 
