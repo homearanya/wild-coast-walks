@@ -6,8 +6,8 @@ banner:
     alt: About Us
     image: /img/about-us1600x596-min.jpg
 aboutarea:
-  heading1: ''
-  heading2: ''
+  heading1: Where We Operate
+  heading2: KZN and the Eastern Cape
   image:
     alt: ''
   text: ''
