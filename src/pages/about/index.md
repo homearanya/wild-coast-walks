@@ -1,16 +1,13 @@
 ---
 templateKey: about-page
 banner:
-  blurb: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor
-    turpis, pulvinar varius dui id, convallis iaculis eros. Praesent porta
-    lacinia elementum
+  blurb: A brief description and background to 'who we are' and 'where we operate' ..
   imagebanner:
     alt: About Us
     image: /img/about-us1600x596-min.jpg
 aboutarea:
-  heading1: ''
-  heading2: ''
+  heading1: Where We Operate
+  heading2: KZN and the Eastern Cape
   image:
     alt: ''
   text: ''
@@ -101,9 +98,7 @@ destinationsarea:
         image: /img/about-cycle-tours540x300-min.jpg
   heading1: Our
   heading2: Services
-  introduction: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
+  introduction: A brief description and background to 'who we are' and 'where we operate' ..
 partnersarea:
   heading1: About
   heading2: Us
