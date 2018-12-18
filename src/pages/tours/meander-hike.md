@@ -6,12 +6,12 @@ destination: Wild Coast
 activity: Slackpack
 duration: 5 days
 price: R 6900
-bannerblurb: dklsdffjlskdjlkdsf
 shortdescription: >-
   Easy walking along wide sandy beaches running south from Kob Inn and
   completing at Morgan Bay after 4 days of hiking. Dinner, bed and breakfast
   with packed lunches at hotels, fully guided and shuttle service.  Bags
   transported by porters at own cost.
+bannerblurb: dklsdffjlskdjlkdsf
 imagethumbnail:
   alt: Meander Hike
   image: /img/meander-hike375x375-min.jpg
@@ -30,9 +30,6 @@ photoGallery:
     - image: /img/meander-hike-gallery_7.jpg
     - image: /img/meander-hike-gallery_8.jpg
     - image: /img/meander-hike-gallery_9.jpg
-    - alt: Cow on the beach
-      caption: Cow on the beach
-      image: /img/about.jpg
 ---
 
 The Meander 5 night 4 day hike was the first established on the lower Wild Coast and has been running for more than 30 years. It runs through what was the old Transkei following the coastline through communal tribal land with small settlements and huts dotting the rolling grassy hills. At approximately 15km intervals there is a chain of small mostly family run hotels providing simple but comfortable overnight accommodation for travellers and holiday makers in season. There are few coastal roads other than those leading down to the hotels so most of the terrain is wide open and untarnished by modern developments of tarred roads and commercialisation. Just the local communities subsisting in ways that have changed little over the years.
