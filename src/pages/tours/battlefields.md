@@ -5,7 +5,7 @@ title: Battlefields
 destination: Midlands
 activity: Cycle Tour
 duration: 7 nights
-price: R 7 500
+price: R 13 500
 shortdescription: >-
   A unique 8 night (7 riding days) tour of the KZN Battlefields around Ladysmith
   taking in the epic battle sites of the Boer and Anglo Zulu wars.  Includes
