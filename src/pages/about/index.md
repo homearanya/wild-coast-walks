@@ -1,10 +1,7 @@
 ---
 templateKey: about-page
 banner:
-  blurb: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor
-    turpis, pulvinar varius dui id, convallis iaculis eros. Praesent porta
-    lacinia elementum
+  blurb: A brief description and background to 'who we are' and 'where we operate' ..
   imagebanner:
     alt: About Us
     image: /img/about-us1600x596-min.jpg
