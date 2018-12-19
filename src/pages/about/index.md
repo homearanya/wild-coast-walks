@@ -15,87 +15,45 @@ destinationsarea:
   destination:
     - content:
         paragraph:
-          - text: This is about Wild Coast Slackpack
-      heading1: Wild Coast
-      heading2: Slackpack
+          - text: >-
+              This is about the WT network and how to keep in contact with us
+              ...
+      heading1: Wild Trails
+      heading2: Network
       image:
         alt: Wild Coast Slackpack
         image: /img/about-wildcoast-slackpack540x300-min.jpg
     - content:
         paragraph:
           - text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna
-              fringilla urna porttitor rhoncus dolor purus non enim. Mauris sit
-              amet massa vitae tortor condimentum. Morbi tincidunt augue
-              interdum velit euismod in pellentesque massa. Ac orci phasellus
-              egestas tellus rutrum. Aliquam faucibus purus in massa tempor nec.
-              Amet cursus sit amet dictum sit amet justo donec. Feugiat
-              scelerisque varius morbi enim nunc faucibus a pellentesque sit. In
-              cursus turpis massa tincidunt dui. Dictum sit amet justo donec.
-              Fames ac turpis egestas integer eget aliquet nibh praesent
-              tristique. Auctor neque vitae tempus quam pellentesque. Diam quam
-              nulla porttitor massa. Mattis ullamcorper velit sed ullamcorper.
-              Auctor elit sed vulputate mi sit. Condimentum id venenatis a
-              condimentum vitae sapien pellentesque habitant. Viverra tellus in
-              hac habitasse platea dictumst vestibulum. Adipiscing vitae proin
-              sagittis nisl rhoncus mattis. Bibendum est ultricies integer quis
-              auctor.
-      heading1: Midlands
-      heading2: Walks
+              This is what slackpacking is about and the advantages of have a
+              organised tour planned for you ..
+      heading1: What is
+      heading2: SlackPacking
       image:
         alt: Midlands Walks
         image: /img/about-midlands-walks540x300-min.jpg
     - content:
         paragraph:
           - text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna
-              fringilla urna porttitor rhoncus dolor purus non enim. Mauris sit
-              amet massa vitae tortor condimentum. Morbi tincidunt augue
-              interdum velit euismod in pellentesque massa. Ac orci phasellus
-              egestas tellus rutrum. Aliquam faucibus purus in massa tempor nec.
-              Amet cursus sit amet dictum sit amet justo donec. Feugiat
-              scelerisque varius morbi enim nunc faucibus a pellentesque sit. In
-              cursus turpis massa tincidunt dui. Dictum sit amet justo donec.
-              Fames ac turpis egestas integer eget aliquet nibh praesent
-              tristique. Auctor neque vitae tempus quam pellentesque. Diam quam
-              nulla porttitor massa. Mattis ullamcorper velit sed ullamcorper.
-              Auctor elit sed vulputate mi sit. Condimentum id venenatis a
-              condimentum vitae sapien pellentesque habitant. Viverra tellus in
-              hac habitasse platea dictumst vestibulum. Adipiscing vitae proin
-              sagittis nisl rhoncus mattis. Bibendum est ultricies integer quis
-              auctor.
-      heading1: Drakensberg
-      heading2: Slackpack
+              What cycle touring is about and why you should join an organised
+              tour ..
+      heading1: Cycle
+      heading2: Touring
       image:
-        alt: Drakensberg Slackpack
-        image: /img/about-drakensberg-slackpack540x300-min.jpg
+        alt: Cycle touring - Battlefields
+        image: /img/ct1_002.jpg
     - content:
         paragraph:
           - text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Magna
-              fringilla urna porttitor rhoncus dolor purus non enim. Mauris sit
-              amet massa vitae tortor condimentum. Morbi tincidunt augue
-              interdum velit euismod in pellentesque massa. Ac orci phasellus
-              egestas tellus rutrum. Aliquam faucibus purus in massa tempor nec.
-              Amet cursus sit amet dictum sit amet justo donec. Feugiat
-              scelerisque varius morbi enim nunc faucibus a pellentesque sit. In
-              cursus turpis massa tincidunt dui. Dictum sit amet justo donec.
-              Fames ac turpis egestas integer eget aliquet nibh praesent
-              tristique. Auctor neque vitae tempus quam pellentesque. Diam quam
-              nulla porttitor massa. Mattis ullamcorper velit sed ullamcorper.
-              Auctor elit sed vulputate mi sit. Condimentum id venenatis a
-              condimentum vitae sapien pellentesque habitant. Viverra tellus in
-              hac habitasse platea dictumst vestibulum. Adipiscing vitae proin
-              sagittis nisl rhoncus mattis. Bibendum est ultricies integer quis
-              auctor.
-      heading1: KZN
-      heading2: Cycle Tours
+              How best to arrange a tour etc.  When and where to go?  Going with
+              your own group or joining others on a scheduled slackpack or cycle
+              tour etc. 
+      heading1: Customising
+      heading2: Your Tour
       image:
-        alt: KZN Cycle Tours
-        image: /img/about-cycle-tours540x300-min.jpg
+        alt: Giants Cup Hike
+        image: /img/kd1_005.jpg
   heading1: Our
   heading2: Services
   introduction: A brief description and background to 'who we are' and 'where we operate' ..
