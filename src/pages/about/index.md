@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
 banner:
-  blurb: A brief description and background to 'who we are' and 'where we operate' ..
+  blurb: A brief description and background to 'who we are' and 'how we operate' ..
   imagebanner:
     alt: About Us
     image: /img/about-us1600x596-min.jpg
