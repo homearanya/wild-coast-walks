@@ -25,6 +25,12 @@ photoGallery:
   photo:
     - alt: Fishing inspector
       image: /img/meander-hike-gallery_1.jpg
+    - image: /img/about.jpg
+    - caption: Wavecrest lagoon
+      image: /img/meander-hike-gallery_4.jpg
+    - image: /img/meander-hike-gallery_5.jpg
+    - image: /img/meander-hike-gallery_7.jpg
+    - image: /img/wc2_morganbaycliffs.jpg
 ---
 
 
