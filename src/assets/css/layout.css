@@ -582,6 +582,10 @@ header.fixed .header-logo-menu {
     header .sticky {
         position: static !important;
     }
+    .logo>a .logo-white img {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
