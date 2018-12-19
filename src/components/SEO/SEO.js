@@ -28,7 +28,6 @@ const SEO = ({ postData, postImage, isBlogPost }) => (
       }
     `}
     render={({ site: { siteMetadata: seo } }) => {
-      console.log(postData, postImage, isBlogPost);
       const postMeta = postData || {};
 
       const title = postMeta.title || seo.title;
