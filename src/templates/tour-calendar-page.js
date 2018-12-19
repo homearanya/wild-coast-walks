@@ -6,6 +6,7 @@ import dateformat from "dateformat";
 
 import "../assets/css/tourCalendar.css";
 import Banner from "../components/Banner";
+import SEO from "../components/SEO/SEO";
 
 import eventImage from "../assets/img/adventure-list/22.jpg";
 import icon_level from "../assets/img/icon/level.png";
@@ -162,7 +163,7 @@ const Event = props => {
 };
 export default ({ data }) => {
   const { title: siteTitle } = data.siteMetaDataQuery.siteMetadata;
-  const { frontmatter } = data.calendarQuery;
+  const { fields, frontmatter } = data.calendarQuery;
   const enableCalendar = data.switch.frontmatter.calendarswitch;
 
   const upcomingEvents = data.EventsQuery.edges;
@@ -179,13 +180,15 @@ export default ({ data }) => {
       });
     }
   });
+  const postMeta = {
+    title: `Tour Calendar - ${siteTitle}`,
+    description: `Find your tour. If the dates don't suit you we can still organise it for you`,
+    slug: fields.slug,
+    datePublished: false
+  };
   return (
     <div>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{`Tour Calendar - ${siteTitle}`}</title>
-      </Helmet>
-
+      <SEO postData={postMeta} />
       <Banner
         extraClass="grid"
         title1="Tour"
@@ -259,6 +262,9 @@ export const CalendarPageQuery = graphql`
       }
     }
     calendarQuery: markdownRemark(id: { eq: $id }) {
+      fields {
+        slug
+      }
       frontmatter {
         imagebanner {
           image {

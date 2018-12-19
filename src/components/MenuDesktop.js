@@ -28,9 +28,6 @@ const MenuBar = props => {
 };
 
 const Logo = props => {
-  console.log(props.logos);
-  console.log(props.logos.whitelogo.image.childImageSharp.fluid);
-  console.log(props.logos.colorlogo.image.childImageSharp.fluid);
   return (
     <div className="col-md-4 col-sm-12">
       <div className="logo">

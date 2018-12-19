@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 
 import SliderArea from "../components/SliderArea";
+import SEO from "../components/SEO/SEO";
 
 import "../assets/css/home-page.css";
 
@@ -263,21 +264,22 @@ const BlogArea = props => {
 
 export default function Index({ data }) {
   const { siteMetadata } = data.siteMetaDataQuery;
-  const { frontmatter } = data.homePageQuery;
+  const { fields, frontmatter } = data.homePageQuery;
   const { hometours } = data.homePageQuery.fields;
   const { blogswitch } = data.blogAreaQuery.childMarkdownRemark.frontmatter;
   const toursObject = hometours.reduce((obj, tour) => {
     obj[tour.frontmatter.title.trim().toLowerCase()] = tour;
     return obj;
   }, {});
+  const postMeta = {
+    title: `Slackpacking, Walks & Cycle Tours - ${siteMetadata.title}`,
+    description: `SA Adventure Trails is a marketing association between Paul Colvin of Wild Coast Walks and Julia Colvin of Spekboom Tours.`,
+    slug: fields.slug,
+    datePublished: false
+  };
   return (
     <div>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{`Slackpacking, Walks & Cycle Tours - ${
-          siteMetadata.title
-        }`}</title>
-      </Helmet>
+      <SEO postData={postMeta} />
       <SliderArea slider={frontmatter.slider} />
       <AboutArea aboutArea={frontmatter.aboutarea} />
       <ToursPopular
@@ -293,6 +295,7 @@ export const homePageQuery = graphql`
   query HomePage($id: String!) {
     homePageQuery: markdownRemark(id: { eq: $id }) {
       fields {
+        slug
         hometours {
           fields {
             slug

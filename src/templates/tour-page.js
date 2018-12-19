@@ -7,6 +7,7 @@ import Content, { HTMLContent } from "../components/Content";
 import TourGallery from "../components/TourGallery";
 import Banner from "../components/Banner";
 import BookButton from "../components/BookButton";
+import SEO from "../components/SEO/SEO";
 
 import "../assets/css/tour.css";
 
@@ -357,15 +358,15 @@ export default function TourPage({ data }) {
   const {
     frontmatter: upcomingEventsInfo
   } = data.UpcomingEventsQuery.childMarkdownRemark;
+  const postMeta = {
+    title: `${tourInfo.frontmatter.title} - Tours - ${siteMetadata.title}`,
+    description: `${tourInfo.frontmatter.shortdescription}`,
+    slug: tourInfo.fields.slug,
+    datePublished: false
+  };
   return (
     <div>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{`${tourInfo.frontmatter.title} - Tours - ${
-          siteMetadata.title
-        }`}</title>
-      </Helmet>
-
+      <SEO postData={postMeta} />
       <Banner
         extraClass="details-one"
         title1={tourInfo.frontmatter.title}
@@ -392,6 +393,7 @@ export const tourPageQuery = graphql`
   query TourPage($id: String!) {
     TourPageQuery: markdownRemark(id: { eq: $id }) {
       fields {
+        slug
         tourevents {
           frontmatter {
             date

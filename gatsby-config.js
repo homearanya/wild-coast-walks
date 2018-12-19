@@ -7,9 +7,40 @@ var netlifyCmsPaths = {
 
 module.exports = {
   siteMetadata: {
-    title: "SA Adventure Trails"
+    title: "SA Adventure Trails",
+    description: `
+    SA Adventure Trails is a marketing association between Paul Colvin of Wild Coast Walks and Julia Colvin of Spekboom Tours. Together we offer the best selection of fully supported hiking and cycling tours in KwaZulu Natal and the Eastern Cape Wild Coast`,
+    canonicalUrl: "https://www.trails.co.za",
+    image: "https://www.trails.co.za/img/meander-hike-gallery_2.jpg",
+    author: {
+      name: "Carlos Gonzalez",
+      minibio: `
+        <strong>Carlos Gonzalez</strong> is a front-end web developer specialised in ReactJS/Gatsby.
+        He lives in Howick, KZN, South Africa.
+      `
+    },
+    organization: {
+      name: "Carlos Gonzalez",
+      url: "https://github.com/homearanya",
+      logo: "https://avatars1.githubusercontent.com/u/30703943?s=460&v=4"
+    }
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "GatsbyJS",
+        short_name: "GatsbyJS",
+        start_url: "/",
+        background_color: "#6b37bf",
+        theme_color: "#6b37bf",
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: "standalone",
+        icon: "src/assets/img/icon.png" // This path is relative to the root of the site.
+      }
+    },
+    "gatsby-plugin-offline",
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-layout`,
