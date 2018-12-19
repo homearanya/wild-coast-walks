@@ -23,7 +23,8 @@ module.exports = {
       name: "Carlos Gonzalez",
       url: "https://github.com/homearanya",
       logo: "https://avatars1.githubusercontent.com/u/30703943?s=460&v=4"
-    }
+    },
+    siteUrl: "https://www.trails.co.za" // for gatsby plugin sitemap
   },
   plugins: [
     {
@@ -41,6 +42,7 @@ module.exports = {
       }
     },
     "gatsby-plugin-offline",
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-layout`,
