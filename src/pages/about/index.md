@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
 banner:
-  blurb: A brief description and background to 'who we are' and 'where we operate' ..
+  blurb: A brief description and background to 'who we are' and 'how we operate' ..
   imagebanner:
     alt: About Us
     image: /img/about-us1600x596-min.jpg
@@ -36,8 +36,25 @@ destinationsarea:
     - content:
         paragraph:
           - text: >-
-              What cycle touring is about and why you should join an organised
-              tour ..
+              Having cycled the Himalayans, the Silk Road through Turkey and
+              many remote parts of South Africa your local tour guide, Julia, 
+              believes that there is nothing more gratifying in life than
+              exploring our country under your own steam. A KZN Natal girl at
+              heart, she is very interested in KZN history and promoting local
+              authentic tourism in her own backyard. Whist some may enjoy the
+              freedom on cycling self-sufficient with all your luggage on your
+              bike, Spekboom bespoke cycle tours recognises the value of
+              carefree cycling with luggage transfers, between overnight stays,
+              a cold beer , a home cooked meal with a glass of wine and a warm
+              bed at the end of each day. 
+          - text: >-
+              For this reason, all our cycle Tour offer homely accommodation,
+              back-up support and delicious meals. Using quite non-technical
+              farm roads with very manageable daily distances these tours are
+              designed to suit old and young, fit and less fit. The focus of
+              each tour is about ‘discovering’ the rich history, wildlife and
+              cultural offerings of the KZN Midlands, the Northern KZN
+              Battlefields and the Ixopo/Creighton valley.
       heading1: Cycle
       heading2: Touring
       image:
@@ -96,19 +113,20 @@ partnersarea:
               Julia is the founding member of Spekboom Tours. Passionate about
               the great outdoors, sustainability and animals she has had a
               diverse career as a veterinary nurse, a teacher and environmental
-              facilitator. Most days she can be found burning the trails of the
-              Karkloof/Howick forests or helping a local schools set up a
-              permacultural garden or library. Spekboom Tours was established as
-              an extension of her passions and way of life. After spending many
-              happy months backpacking around SE Asia, South America, Europe and
-              South Africa, she believes cycle touring is the best way to have
-              an authentic experience that will expose people to a culture of
-              green living.
+              facilitator. Most days she is out doing recce trips of trails in
+              the Karkloof/Howick forests or helping a local schools set up a
+              permacultural garden or talking to pupils about the wise use of
+              water resources. 
           - text: >-
-              With 75km of spectacular trails in her backyard, it is little
-              wonder that she had decided to sink her roots and work from her
-              home in the beautiful Midlands town of Howick. If she is a little
-              breathless when she answers the phone, you will know why!!
+              Spekboom Tours was established as an extension of her passions and
+              way of life. After spending many happy months backpacking around
+              SE Asia, South America, Europe and South Africa, she believes
+              cycle touring is the best way to have an authentic experience. 
+              Having recently qualified as a natural history tour guide she is
+              eager to share her knowledge and love for the KZN Midlands area
+              with you.  With spectacular hiking and cycling trails in her
+              backyard of Howick she is often out exploring which may explain
+              why she may be a little breathless when she answers her phone !  
       heading1: Julia Colvin
       image:
         alt: Julia Colvin
