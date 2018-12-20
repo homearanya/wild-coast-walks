@@ -36,8 +36,25 @@ destinationsarea:
     - content:
         paragraph:
           - text: >-
-              What cycle touring is about and why you should join an organised
-              tour ..
+              Having cycled the Himalayans, the Silk Road through Turkey and
+              many remote parts of South Africa your local tour guide, Julia, 
+              believes that there is nothing more gratifying in life than
+              exploring our country under your own steam. A KZN Natal girl at
+              heart, she is very interested in KZN history and promoting local
+              authentic tourism in her own backyard. Whist some may enjoy the
+              freedom on cycling self-sufficient with all your luggage on your
+              bike, Spekboom bespoke cycle tours recognises the value of
+              carefree cycling with luggage transfers, between overnight stays,
+              a cold beer , a home cooked meal with a glass of wine and a warm
+              bed at the end of each day. 
+          - text: >-
+              For this reason, all our cycle Tour offer homely accommodation,
+              back-up support and delicious meals. Using quite non-technical
+              farm roads with very manageable daily distances these tours are
+              designed to suit old and young, fit and less fit. The focus of
+              each tour is about ‘discovering’ the rich history, wildlife and
+              cultural offerings of the KZN Midlands, the Northern KZN
+              Battlefields and the Ixopo/Creighton valley.
       heading1: Cycle
       heading2: Touring
       image:
