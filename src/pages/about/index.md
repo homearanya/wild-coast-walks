@@ -16,10 +16,21 @@ destinationsarea:
     - content:
         paragraph:
           - text: >-
-              This is about the WT network and how to keep in contact with us
-              ...
-      heading1: Wild Trails
-      heading2: Network
+              Our ecological conscious tours endeavor to live up to the highest
+              standards of sustainability. A percentage of the proceeds go
+              towards supporting worthwhile conservation projects in the area
+              and we always try choose to use family based eco-friendly
+              accommodation activity that are involved in conservation or social
+              upliftment programs. Most meal are local, in season, vegetarian
+              and ethically sourced. Where possible, we make use of local guides
+              and support sustainable environmental and social initiatives in
+              the area. Our tours offer unique 'off the trail' experiences to
+              expose people to local history and cultures and a green way of
+              living. This experiences include forest walks, tours of a land
+              rehabilitation programs and excursions to local businesses and
+              other community minded initiatives
+      heading1: Our Ethos
+      heading2: ''
       image:
         alt: Wild Coast Slackpack
         image: /img/about-wildcoast-slackpack540x300-min.jpg
@@ -73,7 +84,7 @@ destinationsarea:
         image: /img/kd1_005.jpg
   heading1: Our
   heading2: Services
-  introduction: A brief description and background to 'who we are' and 'where we operate' ..
+  introduction: A brief description and background to 'who we are' and 'how we operate' ..
 partnersarea:
   heading1: About
   heading2: Us
