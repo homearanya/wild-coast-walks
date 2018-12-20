@@ -96,19 +96,20 @@ partnersarea:
               Julia is the founding member of Spekboom Tours. Passionate about
               the great outdoors, sustainability and animals she has had a
               diverse career as a veterinary nurse, a teacher and environmental
-              facilitator. Most days she can be found burning the trails of the
-              Karkloof/Howick forests or helping a local schools set up a
-              permacultural garden or library. Spekboom Tours was established as
-              an extension of her passions and way of life. After spending many
-              happy months backpacking around SE Asia, South America, Europe and
-              South Africa, she believes cycle touring is the best way to have
-              an authentic experience that will expose people to a culture of
-              green living.
+              facilitator. Most days she is out doing recce trips of trails in
+              the Karkloof/Howick forests or helping a local schools set up a
+              permacultural garden or talking to pupils about the wise use of
+              water resources. 
           - text: >-
-              With 75km of spectacular trails in her backyard, it is little
-              wonder that she had decided to sink her roots and work from her
-              home in the beautiful Midlands town of Howick. If she is a little
-              breathless when she answers the phone, you will know why!!
+              Spekboom Tours was established as an extension of her passions and
+              way of life. After spending many happy months backpacking around
+              SE Asia, South America, Europe and South Africa, she believes
+              cycle touring is the best way to have an authentic experience. 
+              Having recently qualified as a natural history tour guide she is
+              eager to share her knowledge and love for the KZN Midlands area
+              with you.  With spectacular hiking and cycling trails in her
+              backyard of Howick she is often out exploring which may explain
+              why she may be a little breathless when she answers her phone !  
       heading1: Julia Colvin
       image:
         alt: Julia Colvin
