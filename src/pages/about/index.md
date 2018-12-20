@@ -37,8 +37,33 @@ destinationsarea:
     - content:
         paragraph:
           - text: >-
-              This is what slackpacking is about and the advantages of have a
-              organised tour planned for you ..
+              Multi-day hiking in South Africa has been on the decline in the
+              past decade or so, with fewer hardy hikers prepared to carry
+              everything on their backs and sleep out in the open. With the
+              aging process comes inevitably sore backs and less energy.  As a
+              result many of the traditional long distances hikes have closed
+              down
+          - text: >-
+              Luckily, for those of us who love the outdoors, a new concept in
+              hiking has arisen, that of slack-packing.  Defined by Fiona
+              McIntosh as "hiking without the schlep"  this type of trail is
+              made for the hiker who doesn't mind "dirty boots" but prefers to
+              hike with basic comforts
+          - text: >-
+              At the very least on all slack-packing trails, your luggage is
+              transported for you from point to point and you are normally
+              provided with a packed lunch and meals at the start and end of the
+              day with overnight accommodation at suitably chosen lodges. Often
+              too you are provided with a guide who can interpret interesting
+              features along the way. In other words "you walk at ease and stay
+              in comfort"
+          - text: >-
+              Slack-packing strives to improve standards and to make the trails
+              accessible to as many people as possible.  Slack-packing is a very
+              popular and well established concept in USA, Australasia and
+              Europe but is still being developed here in South Africa.  We hope
+              to be part of that process in bring South African's wonderful
+              wildlife and scenery of our spectacular countryside
       heading1: What is
       heading2: SlackPacking
       image:
