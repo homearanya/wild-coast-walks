@@ -17,18 +17,18 @@ destinationsarea:
         paragraph:
           - text: >-
               Our ecological conscious tours endeavor to live up to the highest
-              standards of sustainability. A percentage of the proceeds go
+              standards of sustainability. A percentage of the proceeds goes
               towards supporting worthwhile conservation projects in the area
               and we always try choose to use family based eco-friendly
-              accommodation activity that are involved in conservation or social
-              upliftment programs. Most meal are local, in season, vegetarian
-              and ethically sourced. Where possible, we make use of local guides
-              and support sustainable environmental and social initiatives in
-              the area. Our tours offer unique 'off the trail' experiences to
+              accommodation places that are involved in conservation or social
+              upliftment programs. Most meal are in-season, vegetarian and
+              ethically sourced. Where possible, we make use of local guides and
+              support sustainable environmental and social initiatives in the
+              area. Our tours also offer special 'off the trail' experiences to
               expose people to local history and cultures and a green way of
               living. This experiences include forest walks, tours of a land
-              rehabilitation programs and excursions to local businesses and
-              other community minded initiatives
+              rehabilitation and upliftment programs and excursions to local
+              businesses and other community minded initiatives
       heading1: Our Ethos
       heading2: ''
       image:
@@ -99,9 +99,40 @@ destinationsarea:
     - content:
         paragraph:
           - text: >-
-              How best to arrange a tour etc.  When and where to go?  Going with
-              your own group or joining others on a scheduled slackpack or cycle
-              tour etc. 
+              One of the big advantages of slack-packing or going on an
+              organised tour is that someone else takes care of all the
+              logistics. Where to leave your vehicle, transfers to the trail
+              head each day and pick-up at the end, places to overnight, what
+              food to bring and cook, trail planning and guiding etc are all
+              pre-arranged so that you don't have to worry about these matters.
+          - text: >-
+              The main factors you should give consideration to are :  where to
+              go, when to go and who to hike/ride with.  There is a growing
+              selection of hiking and cycling tours around the country but SA
+              Trails focuses particularly on KwaZulu Natal and the Eastern Cape
+              with which we are most familiar. New trails are being opened up to
+              allow anyone of reasonable fitness level to  enjoy the great
+              outdoors.  Daily hiking distances are generally not more than 15km
+              or 3-4 hours of comfortable hiking with breaks.  Once you have
+              chosen your tour ,then the decision of when to book must be
+              made.  
+          - text: >-
+              Multi-day tours link together a chain of hotels and lodges so all
+              be available on the day of arrival for one night stays.  For this
+              reason it is often hard to secure accommodation at popular resorts
+              during school holidays and  long weekends. To get round this we
+              have pre-scheduled tours where accommodation is booked long in
+              advance or else we must check availability at the time. 
+              Pre-scheduled tours also introduce you to like minded people
+              enjoying the same outdoor fun, but if you would rather hike with
+              your family and friends then form your own group and we can
+              customise a slack-pack hike or cycle ride at time of your
+              choosing. Bear in mind though that costs will come down with more
+              people in the group so parties of 6 to 10 generally get the best
+              rate. Finally, for most outdoor activities in the eastern half of
+              South Africa the best time to tour  is during the spring and
+              autumn months when temperatures are ideal and there is generally
+              less chance of rainstorms and cold weather.  
       heading1: Customising
       heading2: Your Tour
       image:
