@@ -59,11 +59,11 @@ destinationsarea:
               in comfort"
           - text: >-
               Slack-packing strives to improve standards and to make the trails
-              accessible to as many people as possible.  Slack-packing is a very
-              popular and well established concept in USA, Australasia and
-              Europe but is still being developed here in South Africa.  We hope
-              to be part of that process in bring South African's wonderful
-              wildlife and scenery of our spectacular countryside
+              accessible.  Slack-packing is a very popular and well established
+              concept in USA, Australasia and Europe but is still being
+              developed here in South Africa.  We hope to be part of that
+              process in bringing South African's wonderful wildlife and scenery
+              to as many people as possible. 
       heading1: What is
       heading2: SlackPacking
       image:
