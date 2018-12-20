@@ -38,10 +38,10 @@ destinationsarea:
         paragraph:
           - text: >-
               Multi-day hiking in South Africa has been on the decline in the
-              past decade or so, with fewer hardy hikers prepared to carry
-              everything on their backs and sleep out in the open. With the
-              aging process comes inevitably sore backs and less energy.  As a
-              result many of the traditional long distances hikes have closed
+              past decade or so, as there are fewer hardy hikers prepared to
+              carry everything on their backs and sleep out in the open. With
+              the aging process comes inevitable sore backs and less energy.  As
+              a result many of the traditional long distances hikes have closed
               down
           - text: >-
               Luckily, for those of us who love the outdoors, a new concept in
