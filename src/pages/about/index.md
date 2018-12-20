@@ -18,8 +18,8 @@ destinationsarea:
           - text: >-
               This is about the WT network and how to keep in contact with us
               ...
-      heading1: Wild Trails
-      heading2: Network
+      heading1: Our Ethos
+      heading2: ''
       image:
         alt: Wild Coast Slackpack
         image: /img/about-wildcoast-slackpack540x300-min.jpg
