@@ -189,11 +189,11 @@ partnersarea:
               way of life. After spending many happy months backpacking around
               SE Asia, South America, Europe and South Africa, she believes
               cycle touring is the best way to have an authentic experience. 
-              Having recently qualified as a natural history tour guide she is
-              eager to share her knowledge and love for the KZN Midlands area
-              with you.  With spectacular hiking and cycling trails in her
-              backyard of Howick she is often out exploring which may explain
-              why she may be a little breathless when she answers her phone !  
+              Having recently qualified as a nature tour guide she is eager to
+              share her knowledge and love for the KZN Midlands area with you. 
+              With spectacular hiking and cycling trails in her backyard of
+              Howick she is often out exploring which may explain why she may be
+              a little breathless when she answers her phone !  
       heading1: Julia Colvin
       image:
         alt: Julia Colvin
