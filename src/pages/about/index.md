@@ -32,7 +32,7 @@ destinationsarea:
       heading1: Our Ethos
       heading2: ''
       image:
-        alt: Wild Coast Slackpack
+        alt: Lunch at Mgeni valley nature reserve
         image: /img/sm2_015.jpg
     - content:
         paragraph:
