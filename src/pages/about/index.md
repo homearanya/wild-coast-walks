@@ -62,7 +62,7 @@ destinationsarea:
               accessible.  Slack-packing is a very popular and well established
               concept in USA, Australasia and Europe but is still being
               developed here in South Africa.  We hope to be part of that
-              process in bringing South African's wonderful wildlife and scenery
+              process of bringing South Africa's wonderful wildlife and scenery
               to as many people as possible. 
       heading1: What is
       heading2: SlackPacking
