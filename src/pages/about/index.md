@@ -32,16 +32,16 @@ destinationsarea:
       heading1: Our Ethos
       heading2: ''
       image:
-        alt: Wild Coast Slackpack
-        image: /img/about-wildcoast-slackpack540x300-min.jpg
+        alt: Lunch at Mgeni valley nature reserve
+        image: /img/sm2_015.jpg
     - content:
         paragraph:
           - text: >-
               Multi-day hiking in South Africa has been on the decline in the
-              past decade or so, with fewer hardy hikers prepared to carry
-              everything on their backs and sleep out in the open. With the
-              aging process comes inevitably sore backs and less energy.  As a
-              result many of the traditional long distances hikes have closed
+              past decade or so, as there are fewer hardy hikers prepared to
+              carry everything on their backs and sleep out in the open. With
+              the aging process comes inevitable sore backs and less energy.  As
+              a result many of the traditional long distances hikes have closed
               down
           - text: >-
               Luckily, for those of us who love the outdoors, a new concept in
@@ -59,11 +59,11 @@ destinationsarea:
               in comfort"
           - text: >-
               Slack-packing strives to improve standards and to make the trails
-              accessible to as many people as possible.  Slack-packing is a very
-              popular and well established concept in USA, Australasia and
-              Europe but is still being developed here in South Africa.  We hope
-              to be part of that process in bring South African's wonderful
-              wildlife and scenery of our spectacular countryside
+              accessible.  Slack-packing is a very popular and well established
+              concept in USA, Australasia and Europe but is still being
+              developed here in South Africa.  We hope to be part of that
+              process in bringing South African's wonderful wildlife and scenery
+              to as many people as possible. 
       heading1: What is
       heading2: SlackPacking
       image:
@@ -189,11 +189,11 @@ partnersarea:
               way of life. After spending many happy months backpacking around
               SE Asia, South America, Europe and South Africa, she believes
               cycle touring is the best way to have an authentic experience. 
-              Having recently qualified as a natural history tour guide she is
-              eager to share her knowledge and love for the KZN Midlands area
-              with you.  With spectacular hiking and cycling trails in her
-              backyard of Howick she is often out exploring which may explain
-              why she may be a little breathless when she answers her phone !  
+              Having recently qualified as a nature tour guide she is eager to
+              share her knowledge and love for the KZN Midlands area with you. 
+              With spectacular hiking and cycling trails in her backyard of
+              Howick she is often out exploring which may explain why she may be
+              a little breathless when she answers her phone !  
       heading1: Julia Colvin
       image:
         alt: Julia Colvin
