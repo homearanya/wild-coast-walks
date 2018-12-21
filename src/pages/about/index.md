@@ -33,7 +33,7 @@ destinationsarea:
       heading2: ''
       image:
         alt: Wild Coast Slackpack
-        image: /img/about-wildcoast-slackpack540x300-min.jpg
+        image: /img/sm2_015.jpg
     - content:
         paragraph:
           - text: >-
