@@ -286,7 +286,7 @@ button#btn-search-category:hover {
 }
 
 .about-text>a {
-    background: #212227 none repeat scroll 0 0;
+    background: #0967B9 none repeat scroll 0 0;
     color: #ffffff;
     display: inline-block;
     font-size: 20px;
@@ -296,7 +296,7 @@ button#btn-search-category:hover {
 }
 
 .about-text>a:hover {
-    background: rgba(0, 0, 0, .7) none repeat scroll 0 0
+    background: #043B6C none repeat scroll 0 0
 }
 
 
@@ -918,7 +918,7 @@ button#btn-search-category:hover {
 .single-adventure:hover .adventure-text p:hover,
 .trip-time:hover,
 .single-adventure:hover .adventure-price-link span:hover {
-    color: #ccc;
+    color: #0967B9;
 }
 
 

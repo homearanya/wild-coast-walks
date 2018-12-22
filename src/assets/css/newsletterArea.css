@@ -34,7 +34,7 @@
 }
 
 .newsletter-content button {
-    background: #000000 none repeat scroll 0 0;
+    background: #0967B9 none repeat scroll 0 0;
     border: 0 none;
     color: #ffffff;
     font-size: 20px;
@@ -47,7 +47,7 @@
 }
 
 .newsletter-content button:hover {
-    background: rgba(0, 0, 0, 0.5) none no-repeat scroll 0 0;
+    background: #043B6C none no-repeat scroll 0 0;
     color: #ffffff;
 }
 

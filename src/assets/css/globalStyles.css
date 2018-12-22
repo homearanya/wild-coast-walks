@@ -426,12 +426,12 @@ body {
 }
 
 .button-one:hover {
-    background: rgba(0, 0, 0, 0.5) none no-repeat scroll 0 0;
+    background: #043B6C none no-repeat scroll 0 0;
     color: #ffffff;
 }
 
 .button-one {
-    background: #212227 none repeat scroll 0 0;
+    background: #0967B9 none repeat scroll 0 0;
     color: #ffffff;
     display: inline-block;
     font-size: 20px;

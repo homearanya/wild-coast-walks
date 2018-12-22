@@ -229,7 +229,7 @@ export const aboutPageQuery = graphql`
             image {
               image {
                 childImageSharp {
-                  fluid(maxWidth: 540) {
+                  fluid(maxWidth: 600, maxHeight: 337) {
                     ...GatsbyImageSharpFluid
                   }
                 }
