@@ -2,28 +2,29 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 
 import NewsletterForm from "./NewsletterForm";
+import ContactDetails from "./ContactDetails";
 
-const FooterContactDetails = props => {
-  return (
-    <div className="col-md-4 col-sm-12">
-      <div className="single-footer-widget contact-text-info">
-        <div className="section-title text-center">
-          <div className="title-border">
-            <h1 className="text-white">
-              Contact <span>Us</span>
-            </h1>
-          </div>
-        </div>
-        <div className="footer-widget-list">
-          <ul>
-            <li className="icon envelope">{props.contactDetails.email}</li>
-            <li className="icon phone">{props.contactDetails.phone}</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
-};
+// const FooterContactDetails = props => {
+//   return (
+//     <div className="col-md-4 col-sm-12">
+//       <div className="single-footer-widget contact-text-info">
+//         <div className="section-title text-center">
+//           <div className="title-border">
+//             <h1 className="text-white">
+//               Contact <span>Us</span>
+//             </h1>
+//           </div>
+//         </div>
+//         <div className="footer-widget-list">
+//           <ul>
+//             <li className="icon envelope">{props.contactDetails.email}</li>
+//             <li className="icon phone">{props.contactDetails.phone}</li>
+//           </ul>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 export default function FooterWidgetArea() {
   return (
@@ -56,7 +57,10 @@ export default function FooterWidgetArea() {
               frontmatter {
                 contact_details {
                   email
-                  phone
+                  phone {
+                    phonedisplay
+                    phonenumber
+                  }
                 }
               }
             }
@@ -89,7 +93,8 @@ export default function FooterWidgetArea() {
           >
             <div className="container">
               <div className="row">
-                <FooterContactDetails contactDetails={contact_details} />
+                {/* <FooterContactDetails contactDetails={contact_details} /> */}
+                <ContactDetails />
                 <NewsletterForm newsletterArea={newsletterarea} />
               </div>
             </div>

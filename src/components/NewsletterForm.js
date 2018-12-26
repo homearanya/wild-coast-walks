@@ -44,7 +44,7 @@ export default class NewsletterForm extends Component {
       <div className="newsletter-area">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-sm-12">
+            <div className="col-md-7">
               <div className="section-title text-center">
                 <div className="title-border">
                   <h1 className="text-white">

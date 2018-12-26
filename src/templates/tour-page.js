@@ -164,13 +164,13 @@ const TripInformation = props => {
                   <TourContent content={props.tourInfo.html} />
                 </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="trip-booking-info">
-                <BookButton
-                  text="Book this trip"
-                  tour={props.tourInfo.frontmatter.title}
-                />
+              <div className="row">
+                <div className="trip-booking-info">
+                  <BookButton
+                    text="Book this trip"
+                    tour={props.tourInfo.frontmatter.title}
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -1563,8 +1563,8 @@ header.fixed .header-logo-menu {
     .footer-link>a {
         margin-right: 15px
     }
-    .footer-widget-area.footer-widget-two {
-        padding-top: 155px
+    .footer-widget-area {
+        padding-top: 115px
     }
 }
 

@@ -6,6 +6,8 @@ import contact_2_hover from "../assets/img/icon/contact-2-hover.png";
 import contact_4 from "../assets/img/icon/contact-4.png";
 import contact_4_hover from "../assets/img/icon/contact-4-hover.png";
 
+import "../assets/css/contactDetails.css";
+
 export default function ContactDetails() {
   return (
     <StaticQuery
@@ -16,93 +18,105 @@ export default function ContactDetails() {
               frontmatter {
                 contact_details {
                   email
-                  phone
+                  phone {
+                    phonedisplay
+                    phonenumber
+                  }
                 }
               }
             }
           }
         }
       `}
-      render={data => (
-        <div className="col-md-5">
-          <div className="contact-information-area section-padding">
-            <div className="row">
-              <div className="section-title text-center">
-                <div className="title-border">
-                  <h1>
-                    Contact <span>Details</span>
-                  </h1>
-                </div>
-              </div>
-            </div>
-            <div className="row" style={{ marginBottom: "50px" }}>
-              <div className="col-md-12">
+      render={data => {
+        const { contact_details } = data.file.childMarkdownRemark.frontmatter;
+        return (
+          <div className="contact-details-area">
+            <div className="col-md-5">
+              <div className="contact-information-area section-padding">
                 <div className="row">
-                  <div className="contact-info text-center">
-                    <div className="col-md-6">
-                      <div className="contact-image">
-                        <div className="contact-icon">
-                          <div className="icon-table-cell">
-                            <img
-                              className="primary-img"
-                              src={contact_2}
-                              alt=""
-                            />
-                            <img
-                              className="secondary-img"
-                              src={contact_2_hover}
-                              alt=""
-                            />
+                  <div className="section-title text-center">
+                    <div className="title-border">
+                      <h1>
+                        Contact <span>Details</span>
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div className="row" style={{ marginBottom: "50px" }}>
+                  <div className="col-md-12">
+                    <div className="row">
+                      <div className="contact-info text-center">
+                        <div className="col-md-6">
+                          <div className="contact-image">
+                            <div className="contact-icon">
+                              <div className="icon-table-cell">
+                                <a
+                                  href={`tel:${
+                                    contact_details.phone.phonenumber
+                                  }`}
+                                >
+                                  <img
+                                    className="primary-img"
+                                    src={contact_2}
+                                    alt=""
+                                  />
+                                  <img
+                                    className="secondary-img"
+                                    src={contact_2_hover}
+                                    alt=""
+                                  />
+                                </a>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="contact-text">
-                        <h4>Phone</h4>
-                        <p>
-                          {
-                            data.file.childMarkdownRemark.frontmatter
-                              .contact_details.phone
-                          }
-                        </p>
+                        <div className="col-md-6">
+                          <div className="contact-text">
+                            <h4>Phone</h4>
+                            <a
+                              href={`tel:${contact_details.phone.phonenumber}`}
+                            >
+                              <p>{contact_details.phone.phonedisplay}</p>
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
                 <div className="row">
-                  <div className="contact-info text-center">
-                    <div className="col-md-6">
-                      <div className="contact-image">
-                        <div className="contact-icon">
-                          <div className="icon-table-cell">
-                            <img
-                              className="primary-img"
-                              src={contact_4}
-                              alt=""
-                            />
-                            <img
-                              className="secondary-img"
-                              src={contact_4_hover}
-                              alt=""
-                            />
+                  <div className="col-md-12">
+                    <div className="row">
+                      <div className="contact-info text-center">
+                        <div className="col-md-6">
+                          <div className="contact-image">
+                            <div className="contact-icon">
+                              <div className="icon-table-cell">
+                                <a href={`mailto:${contact_details.email}`}>
+                                  <img
+                                    className="primary-img"
+                                    src={contact_4}
+                                    alt=""
+                                  />
+                                  <img
+                                    className="secondary-img"
+                                    src={contact_4_hover}
+                                    alt=""
+                                  />
+                                </a>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="contact-text">
-                        <h4>Email</h4>
-                        <p>
-                          {
-                            data.file.childMarkdownRemark.frontmatter
-                              .contact_details.email
-                          }
-                        </p>
+                        <div className="col-md-6">
+                          <div className="contact-text">
+                            <h4>Email</h4>
+                            <a href={`mailto:${contact_details.email}`}>
+                              <p>{contact_details.email}</p>
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -110,8 +124,8 @@ export default function ContactDetails() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+        );
+      }}
     />
   );
 }

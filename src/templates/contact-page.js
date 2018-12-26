@@ -34,38 +34,40 @@ export default class ContactPage extends Component {
           imageBanner={frontmatter.imagebanner}
         />
 
-        <div className="container">
-          <div className="row">
-            <div className="col-md-7" style={{ backgroundColor: "#ffffff" }}>
-              <div id="contact-form" className="contact-form">
-                <div className="contact-us-form-wrapper">
-                  <div className="contact-us-form section-padding">
-                    <div className="row">
-                      <div className="section-title text-center">
-                        <div className="title-border">
-                          <h1>
-                            Contact <span>Form</span>
-                          </h1>
+        <div className="contact-area">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-7" style={{ backgroundColor: "#ffffff" }}>
+                <div id="contact-form" className="contact-form">
+                  <div className="contact-us-form-wrapper">
+                    <div className="contact-us-form section-padding">
+                      <div className="row">
+                        <div className="section-title text-center">
+                          <div className="title-border">
+                            <h1>
+                              Contact <span>Form</span>
+                            </h1>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-xs-12">
-                        {this.props.location.state &&
-                        this.props.location.state.subject ? (
-                          <ContactForm
-                            subject={this.props.location.state.subject}
-                          />
-                        ) : (
-                          <ContactForm />
-                        )}
+                      <div className="row">
+                        <div className="col-xs-12">
+                          {this.props.location.state &&
+                          this.props.location.state.subject ? (
+                            <ContactForm
+                              subject={this.props.location.state.subject}
+                            />
+                          ) : (
+                            <ContactForm />
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <ContactDetails />
             </div>
-            <ContactDetails />
           </div>
         </div>
       </div>
