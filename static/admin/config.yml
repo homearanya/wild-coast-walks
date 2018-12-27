@@ -69,11 +69,12 @@ collections:
           label: "Publish Date",
           name: "date",
           widget: "date",
-          format: "DD MM YYYY",
+          dateFormat: "YYYY-MM-DD",
+          # format: "DD MM YYYY",
         }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
     editor:
       preview: false
 
@@ -104,6 +105,7 @@ collections:
         searchFields: ["title"]
         valueField: "title"
         displayFields: ["title"]
+        hint: Very important!!!! It has to be exactly the same name as of the destination on the destinations colection
       - label: "Activity"
         name: "activity"
         widget: "relation"
@@ -111,6 +113,7 @@ collections:
         searchFields: ["title"]
         valueField: "title"
         displayFields: ["title"]
+        hint: Very important!!!! It has to be exactly the same name as of the activity on the activities colection
       - { label: "Duration", name: "duration", widget: "string" }
       - { label: "Price", name: "price", widget: "string", hint: 'Only amount. Example: R 6400' }
       - { label: "Banner Blurb", name: "bannerblurb", widget: "text" }
@@ -119,14 +122,12 @@ collections:
       - label: "Thumbnail Image"
         name: imagethumbnail
         widget: object
-        required: false
         fields:
           - { label: Image, name: image, widget: image, hint: "size 375 x 375" }
           - { label: Alt, name: alt, widget: text, required: false }
       - label: "Banner Image"
         name: imagebanner
         widget: object
-        required: false
         fields:
           - {
               label: Image,
@@ -153,18 +154,6 @@ collections:
                 }
               - { label: Alt, name: alt, widget: text, required: false }
               - { label: Caption, name: caption, widget: text, required: false }
-      # - label: "Backgound Image for Upcoming Events"
-      #   name: backgroundimage
-      #   widget: object
-      #   required: false
-      #   fields:
-      #     - {
-      #         label: Image,
-      #         name: image,
-      #         widget: image,
-      #         hint: "size 1600 x 821",
-      #       }
-      #     - { label: Alt, name: alt, widget: text, required: false }
     editor:
       preview: false
 
@@ -245,6 +234,7 @@ collections:
                         searchFields: ["title"]
                         valueField: "title"
                         displayFields: ["title"]
+                        hint: Very important!!!! It has to be exactly the same name as of the tour on the tours colection
           - label: "Blog Area"
             name: blogarea
             widget: object
@@ -436,6 +426,28 @@ collections:
     editor:
       preview: false
 
+  - name: "destinations"
+    label: "Destinations"
+    label_singular: "Destination"
+    folder: "src/general/destinations"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+    editor:
+      preview: false
+
+  - name: "activities"
+    label: "Activities"
+    label_singular: "Activity"
+    folder: "src/general/activities"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+    editor:
+      preview: false
+
   - name: "general"
     label: "General"
     files:
@@ -534,27 +546,5 @@ collections:
         fields:
           - { label: "Blog Switch", name: blogswitch, widget: boolean }
           - { label: "Calendar Switch", name: calendarswitch, widget: boolean }
-    editor:
-      preview: false
-
-  - name: "destinations"
-    label: "Destinations"
-    label_singular: "Destination"
-    folder: "src/general/destinations"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-    editor:
-      preview: false
-
-  - name: "activities"
-    label: "Activities"
-    label_singular: "Activity"
-    folder: "src/general/activities"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
     editor:
       preview: false
