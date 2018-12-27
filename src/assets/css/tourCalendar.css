@@ -86,7 +86,7 @@
 }
 
 .adventure-list-text>h1 a:hover {
-    color: #00C0FF
+    color: #0967B9;
 }
 
 .adventure-list-text>h2 {
@@ -168,7 +168,7 @@
 }
 
 .adventure-list-link a:hover i {
-    color: #00c0ff
+    color: #0967B9;
 }
 
 .adventure-list-link::after {
@@ -229,7 +229,7 @@
 }
 
 .list .pagination li:hover a {
-    color: #00c0ff
+    color: #0967B9;
 }
 
 
