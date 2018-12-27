@@ -42,70 +42,66 @@ export default class NewsletterForm extends Component {
   render() {
     return (
       <div className="newsletter-area">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-7">
-              <div className="section-title text-center">
-                <div className="title-border">
-                  <h1 className="text-white">
-                    {this.props.newsletterArea.heading1}
-                    <span> {this.props.newsletterArea.heading2}</span>
-                  </h1>
-                </div>
-                <p className="text-white">{this.props.newsletterArea.blurb}</p>
-              </div>
-              <form onSubmit={this.handleSubmit}>
-                <div className="newsletter-content">
-                  <div className="row">
-                    <div className="col-sm-6 col-xs-12">
-                      <input
-                        required
-                        type="text"
-                        name="fname"
-                        placeholder="First Name"
-                        value={this.state.fname}
-                        onChange={this.handleChange}
-                      />
-                    </div>
-                    <div className="col-sm-6 col-xs-12">
-                      <input
-                        required
-                        type="text"
-                        name="lname"
-                        placeholder="Last Name"
-                        value={this.state.lname}
-                        onChange={this.handleChange}
-                      />
-                    </div>
-                    <div className="col-sm-8  col-xs-12">
-                      <input
-                        required
-                        type="email"
-                        name="email"
-                        placeholder="Enter your email address ......"
-                        value={this.state.email}
-                        onChange={this.handleChange}
-                      />
-                    </div>
-                    <div className="col-sm-4 col-xs-12">
-                      <button type="submit" className="button">
-                        <span>Subscribe</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              <div className="result-submission">
-                {this.state.submissionResult ? (
-                  <div
-                    className="result-message"
-                    dangerouslySetInnerHTML={{
-                      __html: this.state.submissionResult.msg
-                    }}
+        <div className="col-md-7">
+          <div className="section-title text-center">
+            <div className="title-border">
+              <h1 className="text-white">
+                {this.props.newsletterArea.heading1}
+                <span> {this.props.newsletterArea.heading2}</span>
+              </h1>
+            </div>
+            <p className="text-white">{this.props.newsletterArea.blurb}</p>
+          </div>
+          <form onSubmit={this.handleSubmit}>
+            <div className="newsletter-content">
+              <div className="row">
+                <div className="col-sm-6 col-xs-12">
+                  <input
+                    required
+                    type="text"
+                    name="fname"
+                    placeholder="First Name"
+                    value={this.state.fname}
+                    onChange={this.handleChange}
                   />
-                ) : null}
+                </div>
+                <div className="col-sm-6 col-xs-12">
+                  <input
+                    required
+                    type="text"
+                    name="lname"
+                    placeholder="Last Name"
+                    value={this.state.lname}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="col-sm-8  col-xs-12">
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email address ......"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="col-sm-4 col-xs-12">
+                  <button type="submit" className="button">
+                    <span>Subscribe</span>
+                  </button>
+                </div>
               </div>
             </div>
+          </form>
+          <div className="result-submission">
+            {this.state.submissionResult ? (
+              <div
+                className="result-message"
+                dangerouslySetInnerHTML={{
+                  __html: this.state.submissionResult.msg
+                }}
+              />
+            ) : null}
           </div>
         </div>
       </div>

@@ -2,6 +2,10 @@
     color: white;
 }
 
+.footer-widget-area .contact-text p {
+    color: white;
+}
+
 .footer-widget-area .contact-details-area .section-padding {
     padding-top: 0px;
 }
@@ -55,6 +59,10 @@
     border-color: #0967B9;
 }
 
+.contact-info:hover .contact-text p {
+    color: #0967B9;
+}
+
 .contact-info:hover .contact-image::after,
 .contact-info:hover .contact-image::before {
     display: none;
@@ -91,10 +99,6 @@
 .footer-widget-area .section-title h1::before,
 .footer-widget-area .section-title h1::after {
     background: #fff none repeat scroll 0 0;
-}
-
-.secondary-img {
-    display: none;
 }
 
 .footer-widget-area .secondary-img {
