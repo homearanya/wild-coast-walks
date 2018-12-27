@@ -435,6 +435,16 @@
         position: relative;
         z-index: 9;
     }
+    .list-buttons .booking-button-two {
+        line-height: 35px;
+        margin-bottom: 10px;
+        padding: 0 20px;
+        position: relative;
+        z-index: 9;
+    }
+    .adventure-list-container .trip-booking-info {
+        margin-right: 0px;
+    }
     .shop-item-filter .adventure-cat {
         margin-bottom: 20px
     }
