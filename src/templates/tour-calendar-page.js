@@ -4,18 +4,19 @@ import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import dateformat from "dateformat";
 
-import "../assets/css/tourCalendar.css";
 import Banner from "../components/Banner";
 import SEO from "../components/SEO/SEO";
+import BookButton from "../components/BookButton";
 
-import eventImage from "../assets/img/adventure-list/22.jpg";
-import icon_level from "../assets/img/icon/level.png";
-import icon_35 from "../assets/img/icon/35.png";
-import icon_36 from "../assets/img/icon/36.png";
-import icon_37 from "../assets/img/icon/37.png";
-import icon_38 from "../assets/img/icon/38.png";
-import icon_39 from "../assets/img/icon/39.png";
-import icon_40 from "../assets/img/icon/40.png";
+import "../assets/css/tourCalendar.css";
+// import eventImage from "../assets/img/adventure-list/22.jpg";
+// import icon_level from "../assets/img/icon/level.png";
+// import icon_35 from "../assets/img/icon/35.png";
+// import icon_36 from "../assets/img/icon/36.png";
+// import icon_37 from "../assets/img/icon/37.png";
+// import icon_38 from "../assets/img/icon/38.png";
+// import icon_39 from "../assets/img/icon/39.png";
+// import icon_40 from "../assets/img/icon/40.png";
 
 const Filter = props => {
   return (
@@ -138,6 +139,13 @@ const Event = props => {
                   <Link to={props.tourSlug} className="button-one button-blue">
                     Learn More
                   </Link>
+                  <div className="trip-booking-info">
+                    <BookButton
+                      text="Book this trip"
+                      tour={props.tourInfo.title}
+                      date={dateformat(props.eventDate, "dd mmm yyyy")}
+                    />
+                  </div>
                   {/* <div className="list-rating">
                     <i className="fa fa-star color" />
                     <i className="fa fa-star color" />

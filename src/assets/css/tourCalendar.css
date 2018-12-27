@@ -123,6 +123,17 @@
     padding: 0 26px;
 }
 
+.list-buttons .booking-button-two {
+    font-size: 16px;
+    line-height: 38px;
+    margin: 0;
+    padding: 0 26px;
+}
+
+.adventure-list-container .trip-booking-info {
+    float: right;
+}
+
 .list-buttons {
     margin-top: 20px;
     overflow: hidden;
@@ -328,6 +339,16 @@
         position: relative;
         z-index: 9;
     }
+    .list-buttons .booking-button-two {
+        line-height: 35px;
+        margin-bottom: 10px;
+        padding: 0 20px;
+        position: relative;
+        z-index: 9;
+    }
+    .adventure-list-container .trip-booking-info {
+        margin-right: 20px;
+    }
     .adventure-list-container::before {
         top: -5px
     }
@@ -507,5 +528,8 @@
     }
     .adventure-list-image li {
         width: 100%;
+    }
+    .adventure-list-container .trip-booking-info {
+        float: left;
     }
 }
