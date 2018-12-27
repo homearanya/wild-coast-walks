@@ -371,7 +371,7 @@ export default function TourPage({ data }) {
         extraClass="details-one"
         title1={tourInfo.frontmatter.title}
         title2=""
-        text="The right tour for the right traveller"
+        text={tourInfo.frontmatter.bannerblurb}
         breadcrumb="tour"
         imageBanner={tourInfo.frontmatter.imagebanner}
       />
@@ -407,6 +407,7 @@ export const tourPageQuery = graphql`
         activity
         duration
         price
+        bannerblurb
         shortdescription
         imagebanner {
           image {

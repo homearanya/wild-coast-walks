@@ -6,15 +6,12 @@ destination: Wild Coast
 activity: Slackpack
 duration: 5 days
 price: R 6900
+bannerblurb: ayye
 shortdescription: >-
   Takes in the best of Wild Coast scenery over 4 hiking days between Wavecrest
   and Crawfords hotel Chintsa in the south.  Dinner, bed and breakfast with
   packed lunches from hotels. Fully guided and shuttle service. Bags transported
   by vehicle between hotels from Morgan Bay onwards.
-
-
-  Price:  From R 6900 per person sharing
-bannerblurb: ayye
 imagethumbnail:
   alt: Sunshine Hike
   image: /img/sunshine-hike375x375-min.jpg
@@ -33,9 +30,8 @@ photoGallery:
     - image: /img/wc2_morganbaycliffs.jpg
 ---
 
+This 5 night 4 day hike encompasses the best of the original Meander route with a 2 night extension along the Eastern cape Sunshine coast, stopping over at Haga Haga and finishing at the small holiday village of Chintsa close to East London. An easy fly-in package or just drive to Chintsa and leave your car safely parked while you do the hike.
 
-This 5 night 4 day hike encompasses the best of the original Meander route with a 2 night extension along the Eastern cape Sunshine coast,  stopping over at Haga Haga and finishing at the small holiday village of Chintsa close to East London.   An easy fly-in package or just drive to Chintsa and leave your car safely parked while you do the hike. 
+The hike begins at Wavecrest at the beautiful Nxaxo river lagoon nestled under high dunes and coastal forest and with some of the most southernly mangrove trees lining the banks of the tidal mouth. The first day takes you to Trennerys or Seagulls hotel at Qolora where an optional local cultural and historical morning tour of the local village and Xhosa cultural traditions can be arranged. The next day you walk to the Kei Pont for a crossing of the river and continue through to Morgan Bay for the night.
 
-The hike begins at Wavecrest at the beautiful Nxaxo river lagoon nestled under high dunes and coastal forest and with some of the most southernly mangrove trees lining the banks of the tidal mouth.  The first day takes you to Trennerys or Seagulls hotel at Qolora where an optional local cultural and historical morning tour of the local village and Xhosa cultural traditions can be arranged.  The next day you walk to the Kei Pont for a  crossing of the river and continue through to Morgan Bay for the night.   
-
-The 3rd day is an opportunity for seabird, dolphin and whale watching while you trek over the imposing Morgan Bay cliffs and follow grassy paths around rocky shores on route to your stay at Haga Haga hotel.  Your last day is a long but easy beach 16km  walk through to Chintsa for a final night at the luxurious Crawfords Beach lodge.  Collect your car the next day or take the shuttle back to East London for your flight home.
+The 3rd day is an opportunity for seabird, dolphin and whale watching while you trek over the imposing Morgan Bay cliffs and follow grassy paths around rocky shores on route to your stay at Haga Haga hotel. Your last day is a long but easy beach 16km walk through to Chintsa for a final night at the luxurious Crawfords Beach lodge. Collect your car the next day or take the shuttle back to East London for your flight home.

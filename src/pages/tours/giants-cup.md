@@ -6,11 +6,11 @@ destination: Drakensberg
 activity: Slackpack
 duration: 5 nights
 price: R 6400
+bannerblurb: Hike the Giants Cup
 shortdescription: >-
   Hike the 60km National Hiking Way in the foothills of the Drakenberg from Sani
   Pass to Bushmans Nek.  Self guided well marked trail with daily shuttles from
-  the trail head to small hotels and  lodges for overnight accommodation. 
-bannerblurb: Hike the Giants Cup
+  the trail head to small hotels and  lodges for overnight accommodation.
 imagethumbnail:
   alt: Giants Cup Trail
   image: /img/kd1_thumb.jpg
@@ -26,6 +26,7 @@ photoGallery:
     - image: /img/kd1_003.jpg
     - image: /img/giants-cup375x375-min.jpg
 ---
+
 The Giants Cup Hiking Trail is part of the National Hiking Way. The hike follows a well established and clearly marked trail that runs southwards from Sani Pass in the north to Bushmans Nek in the south, the full trail being approximately 60km in length. It falls within the Ukahlamba Wilderness Area (a World Heritage Site) and is administered by KZN Wildlife who provide 5 overnight huts along the route - at Pholela (Cobham valley), Mzimkhulwana, Winterhoek and Swimans (in the Drakensberg Gardens valley) and at Bushmans Nek.
 
 SA Adventure Trails has introduced slack-packing to this trail for those who would like to walk the trail during the day and stay at comfortable lodges at night where all meals are provided for.

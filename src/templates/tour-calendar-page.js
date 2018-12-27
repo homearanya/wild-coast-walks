@@ -170,6 +170,9 @@ const Event = props => {
   );
 };
 export default ({ data }) => {
+  const {
+    blurb: upcomingEventsBlurb
+  } = data.UpcomingEventsQuery.childMarkdownRemark.frontmatter;
   const { title: siteTitle } = data.siteMetaDataQuery.siteMetadata;
   const { fields, frontmatter } = data.calendarQuery;
   const enableCalendar = data.switch.frontmatter.calendarswitch;
@@ -201,7 +204,7 @@ export default ({ data }) => {
         extraClass="grid"
         title1="Tour"
         title2="Calendar"
-        text="Upcoming Events"
+        text={upcomingEventsBlurb}
         breadcrumb="Calendar"
         imageBanner={frontmatter.imagebanner}
       />
@@ -283,6 +286,13 @@ export const CalendarPageQuery = graphql`
             }
           }
           alt
+        }
+      }
+    }
+    UpcomingEventsQuery: file(relativePath: { eq: "upcoming-events.md" }) {
+      childMarkdownRemark {
+        frontmatter {
+          blurb
         }
       }
     }
