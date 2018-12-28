@@ -38,9 +38,9 @@ toursarea:
     - heading1: Wild Coast Slackpack
       heading2: ''
       tours:
-        - tour: Meander Hike
-        - tour: Sunshine Hike
-        - tour: 'Mini Break '
+        - tour: Wild Coast Meander
+        - tour: Wild Coast Sunshine
+        - tour: Wild Coast Mini Break
     - heading1: Drakensberg Slackpack
       tours:
         - tour: Giants Cup
