@@ -79,7 +79,7 @@ const SubMenuDest = props => {
             activeClassName="menu-item-active"
             onClick={props.handleLeave}
           >
-            {tour.tour + " (" + tour.duration + ")"}
+            {tour.duration ? tour.tour + " (" + tour.duration + ")" : tour.tour}
           </Link>
         ))}
       </span>

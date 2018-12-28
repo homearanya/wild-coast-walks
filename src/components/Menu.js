@@ -84,10 +84,16 @@ export default function Menu(props) {
         }, {});
         section.forEach(section => {
           section.tours.forEach((tour, index) => {
-            section.tours[index]["slug"] =
-              toursObject[tour.tour.trim().toLowerCase()].fields.slug;
-            section.tours[index]["duration"] =
-              toursObject[tour.tour.trim().toLowerCase()].frontmatter.duration;
+            if (toursObject[tour.tour.trim().toLowerCase()]) {
+              section.tours[index]["slug"] =
+                toursObject[tour.tour.trim().toLowerCase()].fields.slug;
+              section.tours[index]["duration"] =
+                toursObject[
+                  tour.tour.trim().toLowerCase()
+                ].frontmatter.duration;
+            } else {
+              console.log("issue with tour:", tour.tour.trim().toLowerCase());
+            }
           });
         });
         return (
