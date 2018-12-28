@@ -1706,6 +1706,7 @@ header.fixed .header-logo-menu {
 
 #scrollUp:hover {
     background-color: #0967B9;
+    color: white;
 }
 
 #scrollup .fa-angle-up::before {
