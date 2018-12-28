@@ -1,12 +1,12 @@
 ---
 templateKey: tour-page
 featured: true
-title: Sunshine Hike
+title: Wild Coast Sunshine
 destination: Wild Coast
 activity: Slackpack
 duration: 5 days
 price: R 6900
-bannerblurb: ayye
+bannerblurb: 5 days from Wavecrest to Chintsa
 shortdescription: >-
   Takes in the best of Wild Coast scenery over 4 hiking days between Wavecrest
   and Crawfords hotel Chintsa in the south.  Dinner, bed and breakfast with
