@@ -444,6 +444,16 @@ body {
 }
 
 
+/* Carlos 2018-12-27 */
+
+button.a-to-button {
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
 /* Large desktop :1920px. */
 
 @media (min-width: 1920px) {

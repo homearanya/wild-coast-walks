@@ -1,8 +1,10 @@
-import React from "react";
+// import React from "react";
+import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import dateformat from "dateformat";
 
+import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import TourGallery from "../components/TourGallery";
 import Banner from "../components/Banner";
@@ -352,42 +354,80 @@ const UpcomingEvent = props => {
   );
 };
 
-export default function TourPage({ data }) {
-  const { siteMetadata } = data.siteMetaDataQuery;
-  const { TourPageQuery: tourInfo } = data;
-  const {
-    frontmatter: upcomingEventsInfo
-  } = data.UpcomingEventsQuery.childMarkdownRemark;
-  const postMeta = {
-    title: `${tourInfo.frontmatter.title} - Tours - ${siteMetadata.title}`,
-    description: `${tourInfo.frontmatter.shortdescription}`,
-    slug: tourInfo.fields.slug,
-    datePublished: false
-  };
-  return (
-    <div>
-      <SEO postData={postMeta} />
-      <Banner
-        extraClass="details-one"
-        title1={tourInfo.frontmatter.title}
-        title2=""
-        text={tourInfo.frontmatter.bannerblurb}
-        breadcrumb="tour"
-        imageBanner={tourInfo.frontmatter.imagebanner}
-      />
-
-      <TripInformation tourInfo={tourInfo} />
-      {tourInfo.fields.tourevents && tourInfo.fields.tourevents.length > 0 ? (
-        <UpcomingEvents
-          backgroundImage={tourInfo.frontmatter.backgroundimage}
-          upcomingEventsInfo={upcomingEventsInfo}
-          tourEvents={tourInfo.fields.tourevents}
-          tour={tourInfo.frontmatter.title}
+export default class TourPage extends Component {
+  render() {
+    const { siteMetadata } = this.props.data.siteMetaDataQuery;
+    const { TourPageQuery: tourInfo } = this.props.data;
+    const {
+      frontmatter: upcomingEventsInfo
+    } = this.props.data.UpcomingEventsQuery.childMarkdownRemark;
+    const postMeta = {
+      title: `${tourInfo.frontmatter.title} - Tours - ${siteMetadata.title}`,
+      description: `${tourInfo.frontmatter.shortdescription}`,
+      slug: tourInfo.fields.slug,
+      datePublished: false
+    };
+    return (
+      <Layout tourPage>
+        <SEO postData={postMeta} />
+        <Banner
+          extraClass="details-one"
+          title1={tourInfo.frontmatter.title}
+          title2=""
+          text={tourInfo.frontmatter.bannerblurb}
+          breadcrumb="tour"
+          imageBanner={tourInfo.frontmatter.imagebanner}
         />
-      ) : null}
-    </div>
-  );
+
+        <TripInformation tourInfo={tourInfo} />
+        {tourInfo.fields.tourevents && tourInfo.fields.tourevents.length > 0 ? (
+          <UpcomingEvents
+            backgroundImage={tourInfo.frontmatter.backgroundimage}
+            upcomingEventsInfo={upcomingEventsInfo}
+            tourEvents={tourInfo.fields.tourevents}
+            tour={tourInfo.frontmatter.title}
+          />
+        ) : null}
+      </Layout>
+    );
+  }
 }
+// export default function TourPage({ data }) {
+//   const { siteMetadata } = data.siteMetaDataQuery;
+//   const { TourPageQuery: tourInfo } = data;
+//   const {
+//     frontmatter: upcomingEventsInfo
+//   } = data.UpcomingEventsQuery.childMarkdownRemark;
+//   const postMeta = {
+//     title: `${tourInfo.frontmatter.title} - Tours - ${siteMetadata.title}`,
+//     description: `${tourInfo.frontmatter.shortdescription}`,
+//     slug: tourInfo.fields.slug,
+//     datePublished: false
+//   };
+//   return (
+//     <div>
+//       <SEO postData={postMeta} />
+//       <Banner
+//         extraClass="details-one"
+//         title1={tourInfo.frontmatter.title}
+//         title2=""
+//         text={tourInfo.frontmatter.bannerblurb}
+//         breadcrumb="tour"
+//         imageBanner={tourInfo.frontmatter.imagebanner}
+//       />
+
+//       <TripInformation tourInfo={tourInfo} />
+//       {tourInfo.fields.tourevents && tourInfo.fields.tourevents.length > 0 ? (
+//         <UpcomingEvents
+//           backgroundImage={tourInfo.frontmatter.backgroundimage}
+//           upcomingEventsInfo={upcomingEventsInfo}
+//           tourEvents={tourInfo.fields.tourevents}
+//           tour={tourInfo.frontmatter.title}
+//         />
+//       ) : null}
+//     </div>
+//   );
+// }
 
 export const tourPageQuery = graphql`
   query TourPage($id: String!) {

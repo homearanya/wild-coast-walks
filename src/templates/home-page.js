@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 
+import Layout from "../components/Layout";
 import SliderArea from "../components/SliderArea";
 import SEO from "../components/SEO/SEO";
 
@@ -278,7 +279,7 @@ export default function Index({ data }) {
     datePublished: false
   };
   return (
-    <div>
+    <Layout>
       <SEO postData={postMeta} />
       <SliderArea slider={frontmatter.slider} />
       <AboutArea aboutArea={frontmatter.aboutarea} />
@@ -287,7 +288,7 @@ export default function Index({ data }) {
         toursArea={frontmatter.toursarea}
       />
       <BlogArea blogArea={frontmatter.blogarea} blogswitch={blogswitch} />
-    </div>
+    </Layout>
   );
 }
 

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
+import Layout from "../components/Layout";
 import Banner from "../components/Banner";
 import SEO from "../components/SEO/SEO";
 
@@ -174,7 +175,7 @@ export default ({ data }) => {
     datePublished: false
   };
   return (
-    <div>
+    <Layout>
       <SEO postData={postMeta} />
       <Banner
         extraClass="about-banner"
@@ -197,7 +198,7 @@ export default ({ data }) => {
         blurb={frontmatter.destinationsarea.introduction}
         destinations={frontmatter.destinationsarea.destination}
       />
-    </div>
+    </Layout>
   );
 };
 

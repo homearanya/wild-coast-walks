@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
+import Layout from "../components/Layout";
 import Banner from "../components/Banner";
 import ContactForm from "../components/ContactForm";
 import ContactDetails from "../components/ContactDetails";
@@ -23,7 +24,7 @@ export default class ContactPage extends Component {
       datePublished: false
     };
     return (
-      <div>
+      <Layout>
         <SEO postData={postMeta} />
         <Banner
           extraClass="contact-banner"
@@ -70,7 +71,7 @@ export default class ContactPage extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </Layout>
     );
   }
 }

@@ -17,6 +17,7 @@ const MenuBar = props => {
                 <MainMenu
                   tourMenuSections={props.tourMenuSections}
                   switches={props.switches}
+                  tourPage={props.tourPage}
                 />
               </div>
             </div>
@@ -75,6 +76,7 @@ const SubMenuDest = props => {
             key={index}
             to={tour.slug}
             className="mega-item"
+            activeClassName="menu-item-active"
             onClick={props.handleLeave}
           >
             {tour.tour + " (" + tour.duration + ")"}
@@ -128,6 +130,10 @@ class MainMenu extends Component {
   };
 
   render() {
+    let toursClassName = "a-to-button";
+    if (this.props.tourPage) {
+      toursClassName = toursClassName + " menu-item-active";
+    }
     return (
       <div className="col-md-8 hidden-sm hidden-xs">
         <div className="mainmenu">
@@ -155,7 +161,11 @@ class MainMenu extends Component {
                 onMouseLeave={this.handleLeave}
                 onMouseEnter={this.handleHover}
               >
-                <a href="#"> Tours </a>
+                {/* <a href="#" activeClassName="menu-item-active">
+                  {" "}
+                  Tours{" "}
+                </a> */}
+                <button className={toursClassName}> Tours </button>
                 <TransitionGroup>
                   <CSSTransition
                     classNames="fade"
@@ -237,6 +247,7 @@ export default class MenuDesktop extends Component {
           logos={this.props.logos}
           tourMenuSections={this.props.sections}
           switches={this.props.switches}
+          tourPage={this.props.tourPage}
         />
       </Sticky>
     );

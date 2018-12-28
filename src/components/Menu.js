@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby";
 import MenuDesktop from "./MenuDesktop";
 import MenuMobile from "./MenuMobile";
 
-export default function Menu() {
+export default function Menu(props) {
   return (
     <StaticQuery
       query={graphql`
@@ -92,7 +92,12 @@ export default function Menu() {
         });
         return (
           <div>
-            <MenuDesktop sections={section} switches={switches} logos={logos} />
+            <MenuDesktop
+              sections={section}
+              switches={switches}
+              logos={logos}
+              tourPage={props.tourPage}
+            />
             <MenuMobile sections={section} switches={switches} />
           </div>
         );

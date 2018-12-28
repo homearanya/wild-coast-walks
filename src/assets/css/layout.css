@@ -394,7 +394,8 @@ header.fixed .header-logo-menu {
     position: relative
 }
 
-.mainmenu ul#nav li a {
+.mainmenu ul#nav li a,
+.mainmenu ul#nav li button {
     color: #ffffff;
     display: inline-block;
     font-family: "Raleway", sans-serif;
@@ -501,11 +502,14 @@ header.fixed .header-logo-menu {
     z-index: 99;
 }
 
-.mainmenu ul#nav li a {
+.mainmenu ul#nav li a,
+.mainmenu ul#nav li button {
     font-weight: 600;
 }
 
 .mainmenu li:hover>a,
+.mainmenu li:hover>button,
+.mainmenu .megamenu button:hover,
 .mainmenu .megamenu a:hover {
     color: #0967B9 !important;
 }
@@ -554,7 +558,8 @@ header.fixed .header-logo-menu {
         background: #f8f8f8;
         transition: all 0.3s ease-in-out 0s;
     }
-    .sticky-menu .mainmenu ul#nav li a {
+    .sticky-menu .mainmenu ul#nav li a,
+    .sticky-menu .mainmenu ul#nav li button {
         color: #5c5e62;
         line-height: 80px;
         transition: all 0.3s ease-in-out 0s;

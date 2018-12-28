@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import dateformat from "dateformat";
 
+import Layout from "../components/Layout";
 import Banner from "../components/Banner";
 import SEO from "../components/SEO/SEO";
 import BookButton from "../components/BookButton";
@@ -198,7 +199,7 @@ export default ({ data }) => {
     datePublished: false
   };
   return (
-    <div>
+    <Layout>
       <SEO postData={postMeta} />
       <Banner
         extraClass="grid"
@@ -262,7 +263,7 @@ export default ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 export const CalendarPageQuery = graphql`
