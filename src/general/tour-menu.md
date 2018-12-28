@@ -6,9 +6,9 @@ section:
       alt: Wild Coast Slackpack
       image: /img/wild-coast-slackpack450x300.jpg
     tours:
-      - tour: Meander hike
-      - tour: Sunshine Hike
-      - tour: Mini Break
+      - tour: Wild Coast Meander
+      - tour: Wild Coast Sunshine
+      - tour: Wild Coast Mini Break
   - heading1: Midlands Walks
     image:
       alt: Midlands Walks
