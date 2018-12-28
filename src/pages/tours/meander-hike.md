@@ -6,7 +6,7 @@ destination: Wild Coast
 activity: Slackpack
 duration: 5 days
 price: R 6900
-bannerblurb: 5 days from Kob Inn to Morgan Bay
+bannerblurb: 5 days - Kob Inn to Morgan Bay
 shortdescription: >-
   Easy walking along wide sandy beaches running south from Kob Inn and
   completing at Morgan Bay after 4 days of hiking. Dinner, bed and breakfast
