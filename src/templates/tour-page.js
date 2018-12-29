@@ -452,7 +452,7 @@ export const tourPageQuery = graphql`
         imagebanner {
           image {
             childImageSharp {
-              fluid(maxWidth: 1600) {
+              fluid(maxWidth: 1600, maxHeight: 750) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }
