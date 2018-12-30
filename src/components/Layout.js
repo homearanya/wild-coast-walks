@@ -74,6 +74,11 @@ export default function Layout({ children, tourPage }) {
                 name="viewport"
                 content="initial-scale=1.0, width=device-width"
               />
+              {/* google search console */}
+              <meta
+                name="google-site-verification"
+                content="5Fs1mwvNeUdz1y6CfK5miXOOFUra094G_nhpRiVyXXQ"
+              />
             </Helmet>
             <Header tourPage={tourPage} />
             {children}

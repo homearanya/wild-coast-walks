@@ -43,12 +43,7 @@ const SEO = ({ postData, postImage, isBlogPost }) => (
         <React.Fragment>
           <Helmet>
             {/* General tags */}
-            <meta charSet="utf-8" />
             <title>{title}</title>
-            <meta
-              name="google-site-verification"
-              content="5Fs1mwvNeUdz1y6CfK5miXOOFUra094G_nhpRiVyXXQ"
-            />
             <meta name="description" content={description} />
             <meta name="image" content={image} />
 

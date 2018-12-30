@@ -521,22 +521,22 @@ header.fixed .header-logo-menu {
 
 /* Fade animation styles */
 
-.fade-enter {
+.fade-dropdown-menu-enter {
     opacity: 0.01;
 }
 
-.fade-enter.fade-enter-active {
+.fade-dropdown-menu-enter-active {
     opacity: 1;
-    transition: opacity 500ms ease-in;
+    transition: all 300ms ease-in !important;
 }
 
-.fade-exit {
+.fade-dropdown-menu-exit {
     opacity: 1;
 }
 
-.fade-exit.fade-exit-active {
+.fade-dropdown-menu-exit-active {
     opacity: 0.01;
-    transition: opacity 300ms ease-in;
+    transition: all 300ms ease-in !important;
 }
 
 .sticky-menu {

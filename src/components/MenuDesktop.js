@@ -3,7 +3,7 @@ import Sticky from "react-sticky-el";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 const MenuBar = props => {
   return (
@@ -122,14 +122,17 @@ class MainMenu extends Component {
   }
 
   handleHover = () => {
+    console.log("handleHover");
     this.setState({ showSubMenu: true });
   };
 
   handleLeave = () => {
+    console.log("handleLeave");
     this.setState({ showSubMenu: false });
   };
 
   render() {
+    console.log("show sub menu", this.state.showSubMenu);
     let toursClassName = "a-to-button";
     if (this.props.tourPage) {
       toursClassName = toursClassName + " menu-item-active";
@@ -161,26 +164,18 @@ class MainMenu extends Component {
                 onMouseLeave={this.handleLeave}
                 onMouseEnter={this.handleHover}
               >
-                {/* <a href="#" activeClassName="menu-item-active">
-                  {" "}
-                  Tours{" "}
-                </a> */}
                 <button className={toursClassName}> Tours </button>
-                <TransitionGroup>
-                  <CSSTransition
-                    classNames="fade"
-                    timeout={{ enter: 500, exit: 300 }}
-                  >
-                    <div>
-                      {this.state.showSubMenu && (
-                        <SubMenu
-                          tourMenuSections={this.props.tourMenuSections}
-                          handleLeave={this.handleLeave}
-                        />
-                      )}
-                    </div>
-                  </CSSTransition>
-                </TransitionGroup>
+                <CSSTransition
+                  in={this.state.showSubMenu}
+                  classNames="fade-dropdown-menu"
+                  timeout={300}
+                  unmountOnExit
+                >
+                  <SubMenu
+                    tourMenuSections={this.props.tourMenuSections}
+                    handleLeave={this.handleLeave}
+                  />
+                </CSSTransition>
               </li>
               {this.props.switches.calendarswitch ? (
                 <li>
