@@ -122,17 +122,14 @@ class MainMenu extends Component {
   }
 
   handleHover = () => {
-    console.log("handleHover");
     this.setState({ showSubMenu: true });
   };
 
   handleLeave = () => {
-    console.log("handleLeave");
     this.setState({ showSubMenu: false });
   };
 
   render() {
-    console.log("show sub menu", this.state.showSubMenu);
     let toursClassName = "a-to-button";
     if (this.props.tourPage) {
       toursClassName = toursClassName + " menu-item-active";
