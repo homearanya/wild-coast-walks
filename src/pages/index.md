@@ -48,7 +48,7 @@ toursarea:
         - tour: Mehloding
     - heading1: Midlands Slackpack
       tours:
-        - tour: Karkloof Falls2Fallls
+        - tour: Karkloof Falls2Falls
         - tour: Dargle Samango
         - tour: Nhlosane Hike
     - heading1: Midlands Cycle Tours
