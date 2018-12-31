@@ -1,7 +1,7 @@
 ---
 templateKey: tour-page
 featured: true
-title: Karkloof Falls2Fallls
+title: Karkloof Falls2Falls
 destination: Midlands
 activity: Slackpack
 duration: 3 nights
