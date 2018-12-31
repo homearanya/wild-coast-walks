@@ -14,7 +14,7 @@ section:
       alt: Midlands Walks
       image: /img/midlands-walks450x300.jpg
     tours:
-      - tour: Karkloof Falls2Fallls
+      - tour: Karkloof Falls2Falls
       - tour: Dargle Samango
       - tour: Nhlosane Hike
   - heading1: Drakensberg Slackpack
