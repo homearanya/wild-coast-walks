@@ -6,7 +6,7 @@ destination: Midlands
 activity: Slackpack
 duration: 3 nights
 price: R 4900
-bannerblurb: '3 nights and 3 days in the Karkloof Valley, KZN Midlands'
+bannerblurb: '3 days and 3 nights in the Karkloof Valley, KZN Midlands'
 shortdescription: >-
   This is a 3 day 3 night slackpacking hike through  the Karkloof Valley, KZN
   Midlands. All inclusive of comfortable accommodation, all meals, luggage
