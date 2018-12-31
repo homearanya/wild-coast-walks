@@ -6,17 +6,17 @@ destination: Midlands
 activity: Slackpack
 duration: 3 nights
 price: R 4200
+bannerblurb: '3 days and 3 nights in the Dargle Valley Conservancy '
 shortdescription: >-
   A 3 day, 3 night slackpacking through the beautiful mistbelt forest and
   pristine grasslands of the Dargle  Conservancy, KZN Midlands.  Fully guided
   and includes all meals, farmstyle accommodation and luggage transfers.
-bannerblurb: 'Dargle Samango blurb .. '
 imagethumbnail:
   alt: Dargle Samango
   image: /img/sm2_008.jpg
 imagebanner:
   alt: Dargle Samango
-  image: /img/sm2_003.jpg
+  image: /img/sm2_banner.jpg
 photoGallery:
   photo:
     - image: /img/sm2_004.jpg
