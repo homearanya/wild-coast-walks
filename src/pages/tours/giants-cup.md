@@ -6,7 +6,7 @@ destination: Drakensberg
 activity: Slackpack
 duration: 5 nights
 price: R 6400
-bannerblurb: Hike the Giants Cup
+bannerblurb: '3 or 4 day hike in the Southern Drakensberg, Sani Pass to Bushmans Nek'
 shortdescription: >-
   Hike the 60km National Hiking Way in the foothills of the Drakenberg from Sani
   Pass to Bushmans Nek.  Self guided well marked trail with daily shuttles from
