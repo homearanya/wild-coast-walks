@@ -5,8 +5,8 @@ title: Trappist Monastery
 destination: Midlands
 activity: Cycle Tour
 duration: 5 nights
-price: R 6900
-bannerblurb: "Trappist tour etc  "
+price: R7500
+bannerblurb: 'A 4 day Cycle Tour of Trappist Mission Stations  '
 shortdescription: >-
   A 4 night 4 day cycle tour through Alan Paton countryside of Ixopo, Creighton
   and Underberg visiting Trappist Mission stations.  Guesthouse accommodation,

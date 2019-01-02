@@ -6,7 +6,7 @@ destination: Drakensberg
 activity: Slackpack
 duration: 4 nights
 price: R 6900
-bannerblurb: "Some interesting stuff .. "
+bannerblurb: 3 day ascent of the Amphitheatre peak in the  Northern Drakensberg
 shortdescription: >-
   Ascent of the 3000m Amphitheatre peak on the Drakensberg escarpment from Royal
   National Park over 3 days and nights. A fully guided slackpacking hike on an

@@ -1,12 +1,12 @@
 ---
 templateKey: tour-page
 featured: true
-title: Karkloof Falls2Fallls
+title: Karkloof Falls2Falls
 destination: Midlands
 activity: Slackpack
 duration: 3 nights
 price: R 4900
-bannerblurb: Karkloof trail stuff ..
+bannerblurb: '3 days and 3 nights in the Karkloof Valley, KZN Midlands'
 shortdescription: >-
   This is a 3 day 3 night slackpacking hike through  the Karkloof Valley, KZN
   Midlands. All inclusive of comfortable accommodation, all meals, luggage
@@ -23,6 +23,9 @@ photoGallery:
     - image: /img/sm2_008.jpg
     - image: /img/sm2_009.jpg
     - image: /img/sm2_002.jpg
+    - image: /img/sm1_010_s.jpg
+    - image: /img/sm1_013_s.jpg
+    - image: /img/sm1_005.jpg
 ---
 
 The **Karkloof Falls2Falls 3-day slack-packing hike** is an all-inclusive trek encompassing some of the most picturesque and hidden parts of the Midlands countryside. From indigenous mist-belt forest to pristine grasslands, pastoral vistas and eye-watering panoramic views, the ever-changing scenery contains something for everyone. Highlights include traversing the forest canopy on a zip line tour, a visit to a world-class bird hide with the chance to spot the critically-endangered Wattled Crane, and an indigenous tree trail with abundant wildlife including various birds, antelope, zebra, wildebeest and other game.
