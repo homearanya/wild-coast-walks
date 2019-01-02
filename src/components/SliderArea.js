@@ -45,7 +45,7 @@ export default function SliderArea(props) {
     dots: false,
     infinite: true,
     fade: true,
-    autoplay: false,
+    autoplay: true,
     speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1
