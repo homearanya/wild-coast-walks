@@ -15,6 +15,12 @@ slider:
       image: /img/midlands-cycling1600x790.jpg
     subheading1: MEANDERING THROUGH THE
     subheading2: NATAL MIDLANDS
+  - heading1: DRAKENSBERG
+    heading2: SLACKPACKING
+    image:
+      image: /img/giants-cup-banner1600x596-min.jpg
+    subheading1: HIKE
+    subheading2: THE HERITAGE TRAIL
 aboutarea:
   blurb: >-
     SA Adventure Trails is a marketing association between Paul Colvin of Wild
