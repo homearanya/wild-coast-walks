@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import addToMailchimp from "gatsby-plugin-mailchimp";
+import { CSSTransition } from "react-transition-group";
 
 import "../assets/css/contactForm.css";
 
@@ -13,11 +15,15 @@ export default class ContactForm extends Component {
       f_name: "",
       l_name: "",
       email: "",
-      number: "",
+      phone_number: "",
       subject: subject,
-      message: ""
+      message: "",
+      contactFormSubmissionResult: null,
+      subscribeNewsletter: true,
+      newsletterSubmissionResult: null
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -34,94 +40,207 @@ export default class ContactForm extends Component {
       case "subject":
         this.setState({ subject: event.target.value });
         break;
-      case "number":
-        this.setState({ number: event.target.value });
+      case "phone_number":
+        this.setState({ phone_number: event.target.value });
         break;
       case "message":
         this.setState({ message: event.target.value });
+        break;
+      case "subscribe_newsletter":
+        this.setState({ subscribeNewsletter: event.target.checked });
         break;
       default:
         console.log("Wrong Case in Switch HandleChange");
     }
   }
+  handleSubmit = async event => {
+    event.preventDefault();
+
+    // Construct an HTTP request
+    var xhr = new XMLHttpRequest();
+    xhr.open(
+      "POST",
+      "https://lbp7i4kzl4.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer",
+      true
+    );
+    xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
+    xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+
+    // Send the collected data as JSON
+    xhr.send(JSON.stringify(this.state));
+
+    // Callback function
+    xhr.onloadend = response => {
+      console.log("contact form respone", response);
+      if (response.target.status === 200) {
+        // The form submission was successful
+        this.setState({
+          f_name: "",
+          l_name: "",
+          email: "",
+          phone_number: "",
+          subject: "",
+          message: "",
+          contactFormSubmissionResult:
+            "Thanks for the message. I’ll be in touch shortly."
+        });
+      } else {
+        // The form submission failed
+        this.setState({ contactFormSubmissionResult: "Something went wrong" });
+        console.error(JSON.parse(response.target.response).message);
+      }
+    };
+
+    // subscribe to newsletter
+    const result = await addToMailchimp(this.state.email, {
+      FNAME: this.state.fname,
+      LNAME: this.state.lname
+    });
+    // I recommend setting `result` to React state
+    // but you can do whatever you want
+    this.setState({ newsletterSubmissionResult: result });
+  };
+
   render() {
     return (
-      <form
-        action="https://formspree.io/paul.hideaways@gmail.com"
-        method="POST"
-      >
-        <div className="row">
-          <div className="col-sm-6">
-            <input
-              required
-              name="f_name"
-              type="text"
-              className="form-box"
-              placeholder="First name"
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
+      <div className="contact-form-area">
+        <form onSubmit={this.handleSubmit}>
+          <div className="row">
+            <div className="col-sm-6">
+              <input
+                required
+                name="f_name"
+                type="text"
+                className="form-box"
+                placeholder="First name"
+                value={this.state.f_name}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-sm-6">
+              <input
+                required
+                name="l_name"
+                type="text"
+                className="form-box"
+                placeholder="Last name"
+                value={this.state.l_name}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-sm-6">
+              <input
+                required
+                name="email"
+                type="email"
+                className="form-box"
+                placeholder="Email"
+                value={this.state.email}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-sm-6">
+              <input
+                name="phone_number"
+                type="text"
+                className="form-box"
+                placeholder="Phone number"
+                value={this.state.phone_number}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-sm-12">
+              <input
+                required
+                name="subject"
+                type="text"
+                className="form-box"
+                placeholder="Subject"
+                value={this.state.subject}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-sm-12">
+              <textarea
+                required
+                name="message"
+                className="yourmessage"
+                placeholder="Your message"
+                value={this.state.message}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-sm-12">
+              <label
+                htmlFor="subscribe_newsletter"
+                className="subscribe-newsletter-label"
+              >
+                Would you like to subscribe to our quarterly newsletter?
+                <input
+                  name="subscribe_newsletter"
+                  id="subscribe_newsletter"
+                  type="checkbox"
+                  className="subscribe-newsletter"
+                  checked={this.state.subscribeNewsletter}
+                  onChange={this.handleChange}
+                />
+                <span className="checkmark" />
+              </label>
+            </div>
+            <div className="col-sm-12">
+              <input
+                type="submit"
+                value="Send Message"
+                className="submit-button"
+              />
+            </div>
           </div>
-          <div className="col-sm-6">
-            <input
-              required
-              name="l_name"
-              type="text"
-              className="form-box"
-              placeholder="Last name"
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
+        </form>
+        <CSSTransition
+          in={
+            this.state.contactFormSubmissionResult ||
+            this.state.newsletterSubmissionResult
+          }
+          classNames="fade-dropdown-menu"
+          timeout={300}
+          unmountOnExit
+        >
+          <div className="result-submission">
+            <div className="result-message">
+              {this.state.contactFormSubmissionResult}
+              <CSSTransition
+                in={this.state.newsletterSubmissionResult}
+                classNames="fade-dropdown-menu"
+                timeout={300}
+                unmountOnExit
+              >
+                {this.state.newsletterSubmissionResult ? (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: this.state.newsletterSubmissionResult.msg
+                    }}
+                  />
+                ) : null}
+              </CSSTransition>
+            </div>
           </div>
-          <div className="col-sm-6">
-            <input
-              required
-              name="email"
-              type="email"
-              className="form-box"
-              placeholder="Email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
+        </CSSTransition>
+        {/* {this.state.contactFormSubmissionResult ||
+        this.state.newsletterSubmissionResult ? (
+          <div className="result-submission">
+            <div className="result-message">
+              {this.state.contactFormSubmissionResult}
+              {this.state.newsletterSubmissionResult ? (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: this.state.newsletterSubmissionResult.msg
+                  }}
+                />
+              ) : null}
+            </div>
           </div>
-          <div className="col-sm-6">
-            <input
-              name="number"
-              type="text"
-              className="form-box"
-              placeholder="Phone number"
-              value={this.state.number}
-              onChange={this.handleChange}
-            />
-          </div>
-          <div className="col-sm-12">
-            <input
-              required
-              name="subject"
-              type="text"
-              className="form-box"
-              placeholder="Subject"
-              value={this.state.subject}
-              onChange={this.handleChange}
-            />
-          </div>
-          <div className="col-sm-12">
-            <textarea
-              required
-              name="message"
-              className="yourmessage"
-              placeholder="Your message"
-              value={this.state.message}
-              onChange={this.handleChange}
-            />
-            <input
-              type="submit"
-              value="Send Message"
-              className="submit-button"
-            />
-          </div>
-        </div>
-      </form>
+        ) : null} */}
+      </div>
     );
   }
 }

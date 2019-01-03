@@ -9,7 +9,7 @@
     },
     "dependencies": {
         "dateformat": "^3.0.3",
-        "gatsby": "^2.0.78",
+        "gatsby": "^2.0.81",
         "gatsby-image": "^2.0.25",
         "gatsby-plugin-favicon": "^3.1.5",
         "gatsby-plugin-mailchimp": "git+https://github.com/benjaminhoffman/gatsby-plugin-mailchimp.git#gatsby-v2",

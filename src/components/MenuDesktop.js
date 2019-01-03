@@ -32,20 +32,22 @@ const Logo = props => {
   return (
     <div className="col-md-4 col-sm-12">
       <div className="logo">
-        <Link to="/">
-          <div className="logo-white">
+        <div className="logo-white">
+          <Link to="/">
             <Img
               fluid={props.logos.whitelogo.image.childImageSharp.fluid}
               alt={props.logos.whitelogo.alt}
             />
-          </div>
-          <div className="logo-color">
+          </Link>
+        </div>
+        <div className="logo-color">
+          <Link to="/">
             <Img
               fluid={props.logos.colorlogo.image.childImageSharp.fluid}
               alt={props.logos.colorlogo.alt}
             />
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
     </div>
   );

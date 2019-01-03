@@ -57,9 +57,14 @@ export default class BookButton extends Component {
           closeTimeoutMS={300}
         >
           <div className="modal-contact-form">
-            <button className="close-button" onClick={() => this.closeModal()}>
-              Close
-            </button>
+            <div className="row">
+              <button
+                className="close-button"
+                onClick={() => this.closeModal()}
+              >
+                Close
+              </button>
+            </div>
             <div className="contact-us-form-wrapper">
               <ContactForm subject={this.subject} />
             </div>

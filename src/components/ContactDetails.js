@@ -31,8 +31,8 @@ export default function ContactDetails() {
       render={data => {
         const { contact_details } = data.file.childMarkdownRemark.frontmatter;
         return (
-          <div className="contact-details-area">
-            <div className="col-md-5">
+          <div className="col-md-5">
+            <div className="contact-details-area">
               <div className="contact-information-area section-padding">
                 <div className="row">
                   <div className="section-title text-center">

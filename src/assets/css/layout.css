@@ -322,21 +322,21 @@ a.meanmenu-reveal {
     padding-top: 20px;
 }
 
-.logo>a {
+.logo a {
     display: block
 }
 
-.logo>a .logo-white {
-    display: block;
+.logo .logo-white a {
     height: 80px;
+    overflow: hidden;
 }
 
-.logo>a .logo-white img {
+.logo .logo-white a img {
     height: 80px !important;
     width: auto !important;
 }
 
-.logo>a .logo-color {
+.logo .logo-color {
     display: none;
 }
 
@@ -572,12 +572,13 @@ header.fixed .header-logo-menu {
     .sticky-menu .logo .logo-white {
         display: none;
     }
-    .sticky-menu .logo>a .logo-color {
+    .sticky-menu .logo .logo-color {
         display: block;
         height: 60px;
+        overflow: hidden;
         transition: all 0.3s ease-in-out 0s;
     }
-    .sticky-menu .logo>a .logo-color img {
+    .sticky-menu .logo .logo-color a img {
         height: 60px !important;
         width: auto !important;
     }
@@ -587,7 +588,7 @@ header.fixed .header-logo-menu {
     header .sticky {
         position: static !important;
     }
-    .logo>a .logo-white img {
+    .logo .logo-white a img {
         left: 50% !important;
         transform: translateX(-50%) !important;
     }
