@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
+import Sticky from "react-sticky-el";
 
 import { CSSTransition } from "react-transition-group";
 
@@ -23,10 +24,10 @@ class ToursMenuSection extends Component {
   render() {
     return (
       <li>
-        <a onClick={this.toggleToursMenuSection}>
+        <button className="a-to-button" onClick={this.toggleToursMenuSection}>
           {this.props.tourMenuSections.heading1}{" "}
           <span>{this.props.tourMenuSections.heading2}</span>
-        </a>
+        </button>
         <CSSTransition
           in={this.state.showToursMenuSection}
           classNames="fade-dropdown-menu"
@@ -48,14 +49,13 @@ class ToursMenuSection extends Component {
                 );
               })}
             </ul>
-            <a
-              className="mean-expand mean-clicked"
-              href="#"
+            <button
+              className="a-to-button mean-expand mean-clicked"
               style={{ fontSize: "18px" }}
               onClick={this.toggleToursMenuSection}
             >
               -
-            </a>
+            </button>
           </React.Fragment>
         </CSSTransition>
         <CSSTransition
@@ -64,14 +64,13 @@ class ToursMenuSection extends Component {
           timeout={300}
           unmountOnExit
         >
-          <a
-            className="mean-expand"
-            href="#"
+          <button
+            className="a-to-button mean-expand"
             style={{ fontSize: "18px" }}
             onClick={this.toggleToursMenuSection}
           >
             +
-          </a>
+          </button>
         </CSSTransition>
       </li>
     );
@@ -110,7 +109,10 @@ const Menu = props => {
         </Link>
       </li>
       <li>
-        <a onClick={props.toggleToursMenu}> Tours </a>
+        <button className="a-to-button" onClick={props.toggleToursMenu}>
+          {" "}
+          Tours{" "}
+        </button>
         <CSSTransition
           in={props.showToursMenu}
           classNames="fade-dropdown-menu"
@@ -122,14 +124,13 @@ const Menu = props => {
               toggleMenu={props.toggleMenu}
               tourMenuSections={props.tourMenuSections}
             />
-            <a
-              className="mean-expand mean-clicked"
-              href="#"
+            <button
+              className="a-to-button mean-expand mean-clicked"
               style={{ fontSize: "18px" }}
               onClick={props.toggleToursMenu}
             >
               -
-            </a>
+            </button>
           </React.Fragment>
         </CSSTransition>
         <CSSTransition
@@ -138,14 +139,13 @@ const Menu = props => {
           timeout={300}
           unmountOnExit
         >
-          <a
-            className="mean-expand"
-            href="#"
+          <button
+            className="a-to-button mean-expand"
             style={{ fontSize: "18px" }}
             onClick={props.toggleToursMenu}
           >
             +
-          </a>
+          </button>
         </CSSTransition>
       </li>
       {props.switches.calendarswitch ? (
@@ -177,7 +177,8 @@ export default class MenuMobile extends Component {
 
     this.state = {
       showMenu: false,
-      showToursMenu: false
+      showToursMenu: false,
+      sticky: false
     };
 
     this.wrapperRef = React.createRef();
@@ -185,6 +186,7 @@ export default class MenuMobile extends Component {
     this.closeMenu = this.closeMenu.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
     this.toggleToursMenu = this.toggleToursMenu.bind(this);
+    this.onFixedToggle = this.onFixedToggle.bind(this);
   }
 
   componentDidMount() {
@@ -220,62 +222,75 @@ export default class MenuMobile extends Component {
     });
   }
 
+  onFixedToggle() {
+    let isSticky = !this.state.sticky;
+    this.setState({ sticky: isSticky });
+  }
+
   render() {
+    let menuClass;
+    if (this.state.sticky) {
+      menuClass = "mobile-menu-area sticky-menu";
+    } else {
+      menuClass = "mobile-menu-area";
+    }
     return (
-      <div className="mobile-menu-area" ref={this.wrapperRef}>
-        <div className="container mean-container">
-          <div className="mean-bar">
-            <nav className="mean-nav">
-              <CSSTransition
-                in={this.state.showMenu}
-                classNames="fade-dropdown-menu"
-                timeout={300}
-                unmountOnExit
-              >
-                <React.Fragment>
-                  <a
-                    className="meanmenu-reveal meanclose"
-                    style={{
-                      right: "0px",
-                      left: "auto",
-                      textAlign: "center",
-                      textIndent: "0px",
-                      fontSize: "18px"
-                    }}
+      <Sticky onFixedToggle={this.onFixedToggle}>
+        <div className={menuClass} ref={this.wrapperRef}>
+          <div className="container mean-container">
+            <div className="mean-bar">
+              <nav className="mean-nav">
+                <CSSTransition
+                  in={this.state.showMenu}
+                  classNames="fade-dropdown-menu"
+                  timeout={300}
+                  unmountOnExit
+                >
+                  <React.Fragment>
+                    <button
+                      className="a-to-button meanmenu-reveal meanclose"
+                      style={{
+                        right: "0px",
+                        left: "auto",
+                        textAlign: "center",
+                        textIndent: "0px",
+                        fontSize: "18px"
+                      }}
+                      onClick={this.toggleMenu}
+                    >
+                      X
+                    </button>
+
+                    <Menu
+                      toggleMenu={this.toggleMenu}
+                      toggleToursMenu={this.toggleToursMenu}
+                      tourMenuSections={this.props.sections}
+                      showToursMenu={this.state.showToursMenu}
+                      switches={this.props.switches}
+                    />
+                  </React.Fragment>
+                </CSSTransition>
+                <CSSTransition
+                  in={!this.state.showMenu}
+                  classNames="fade-dropdown-menu"
+                  timeout={300}
+                  unmountOnExit
+                >
+                  <button
+                    className="a-to-button meanmenu-reveal"
+                    style={{ right: "0", left: "auto" }}
                     onClick={this.toggleMenu}
                   >
-                    X
-                  </a>
-
-                  <Menu
-                    toggleMenu={this.toggleMenu}
-                    toggleToursMenu={this.toggleToursMenu}
-                    tourMenuSections={this.props.sections}
-                    showToursMenu={this.state.showToursMenu}
-                    switches={this.props.switches}
-                  />
-                </React.Fragment>
-              </CSSTransition>
-              <CSSTransition
-                in={!this.state.showMenu}
-                classNames="fade-dropdown-menu"
-                timeout={300}
-                unmountOnExit
-              >
-                <a
-                  className="meanmenu-reveal"
-                  style={{ right: "0", left: "auto" }}
-                  onClick={this.toggleMenu}
-                >
-                  <span />
-                  <span />
-                  <span />
-                </a>
-              </CSSTransition>
-            </nav>
+                    <span />
+                    <span />
+                    <span />
+                  </button>
+                </CSSTransition>
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
+      </Sticky>
     );
   }
 }

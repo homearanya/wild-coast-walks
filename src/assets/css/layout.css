@@ -28,7 +28,7 @@ header {
 
 /* hide the link until viewport size is reached */
 
-a.meanmenu-reveal {
+button.meanmenu-reveal {
     display: none;
 }
 
@@ -46,7 +46,7 @@ a.meanmenu-reveal {
     z-index: 9999;
 }
 
-.mean-container a.meanmenu-reveal {
+.mean-container button.meanmenu-reveal {
     width: 22px;
     height: 22px;
     padding: 13px 13px 11px 13px;
@@ -65,7 +65,7 @@ a.meanmenu-reveal {
     font-weight: 700;
 }
 
-.mean-container a.meanmenu-reveal span {
+.mean-container button.meanmenu-reveal span {
     display: block;
     background: #fff;
     height: 3px;
@@ -92,7 +92,8 @@ a.meanmenu-reveal {
     width: 100%;
 }
 
-.mean-container .mean-nav ul li a {
+.mean-container .mean-nav ul li a,
+.mean-container .mean-nav ul li button {
     display: block;
     float: left;
     width: 90%;
@@ -137,12 +138,13 @@ a.meanmenu-reveal {
     padding: 1em 25%;
 }
 
-.mean-container .mean-nav ul li a:hover {
-    background: #252525;
-    background: rgba(255, 255, 255, 0.1);
+.mean-container .mean-nav ul li a:hover,
+.mean-container .mean-nav ul li button:hover {
+    background: #0967b9;
+    /* background: rgba(255, 255, 255, 0.1); */
 }
 
-.mean-container .mean-nav ul li a.mean-expand {
+.mean-container .mean-nav ul li button.mean-expand {
     margin-top: 1px;
     width: 26px;
     height: 32px;
@@ -159,8 +161,10 @@ a.meanmenu-reveal {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
-.mean-container .mean-nav ul li a.mean-expand:hover {
-    background: rgba(0, 0, 0, 0.9);
+.mean-container .mean-nav ul li button.mean-expand:hover {
+    /* background: rgba(0, 0, 0, 0.9); */
+    color: #0967b9;
+    /* background-color: #0967b9; */
 }
 
 .mean-container .mean-push {
@@ -205,28 +209,31 @@ a.meanmenu-reveal {
     display: none
 }
 
-.mean-container .mean-nav ul li a:hover {
-    color: #000;
+.mean-container .mean-nav ul li a:hover,
+.mean-container .mean-nav ul li button:hover {
+    color: #0967b9;
     background: none
 }
 
-.mean-container a.meanmenu-reveal span {
+.mean-container button.meanmenu-reveal span {
     background: #4e4f54
 }
 
-.mean-container .mean-nav ul li a {
+.mean-container .mean-nav ul li a,
+.mean-container .mean-nav ul li button {
     background: #ffffff none repeat scroll 0 0;
     color: #4e4f54;
     display: block;
 }
 
-.mean-container .mean-nav ul li a.mean-expand {
+.mean-container .mean-nav ul li button.mean-expand {
     background: none;
     /* top: -4px; */
 }
 
-.mean-container .mean-nav ul li a.mean-expand:hover {
-    background: none
+.mean-container .mean-nav ul li button.mean-expand:hover {
+    /* background: none */
+    color: #0967b9;
 }
 
 .mean-container .mean-nav ul li {
@@ -239,16 +246,18 @@ a.meanmenu-reveal {
     border-top: 0;
 }
 
-.mean-container a.meanmenu-reveal {
+.mean-container button.meanmenu-reveal {
     color: #444
 }
 
 .meanmenu-reveal.meanclose:hover {
-    color: #000 !important
+    color: #0967b9 !important;
+    /* color: #000 !important */
 }
 
-.mean-container a.meanmenu-reveal:hover span {
-    background: #000
+.mean-container button.meanmenu-reveal:hover span {
+    background-color: #0967b9;
+    /* background: #000 */
 }
 
 .mobile-menu-area .mean-nav {
@@ -539,7 +548,7 @@ header.fixed .header-logo-menu {
     transition: all 300ms ease-in !important;
 }
 
-.sticky-menu {
+.sticky {
     z-index: 9998;
 }
 
@@ -585,12 +594,41 @@ header.fixed .header-logo-menu {
 }
 
 @media only screen and (max-width: 991px) {
-    header .sticky {
+    header .main-menu-desktop.sticky {
         position: static !important;
     }
     .logo .logo-white a img {
         left: 50% !important;
         transform: translateX(-50%) !important;
+    }
+    /* .mobile-menu-area.sticky-menu .mean-container .mean-bar::before {
+        content: "SA ADVENTURE TRAILS"
+    } */
+    .mobile-menu-area.sticky-menu,
+    .mobile-menu-area.sticky-menu .mean-nav,
+    .mobile-menu-area.sticky-menu .mean-container .mean-nav ul li a,
+    .mobile-menu-area.sticky-menu .mean-container .mean-nav ul li button {
+        background-color: #333333;
+    }
+    .mobile-menu-area.sticky-menu .mean-container .mean-nav ul li a,
+    .mobile-menu-area.sticky-menu .mean-container .mean-nav ul li button,
+    .mobile-menu-area.sticky-menu .mean-container .mean-nav ul li button.mean-expand {
+        border: none !important;
+        color: white;
+    }
+    .mobile-menu-area.sticky-menu,
+    .mobile-menu-area.sticky-menu .meanmenu-reveal.meanclose,
+    .mobile-menu-area.sticky-menu .mean-container .mean-bar::before {
+        color: white;
+    }
+    .mobile-menu-area.sticky-menu .mean-container button.meanmenu-reveal span {
+        background-color: white;
+    }
+    .mobile-menu-area a {
+        transition: none !important;
+    }
+    .mobile-menu-area.sticky-menu {
+        transition: all 0.3s ease 0s;
     }
 }
 

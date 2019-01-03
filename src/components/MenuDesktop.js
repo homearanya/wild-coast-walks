@@ -235,7 +235,7 @@ export default class MenuDesktop extends Component {
       menuClass = "header-logo-menu";
     }
     return (
-      <Sticky onFixedToggle={this.onFixedToggle}>
+      <Sticky className="main-menu-desktop" onFixedToggle={this.onFixedToggle}>
         <MenuBar
           menuClass={menuClass}
           logos={this.props.logos}
