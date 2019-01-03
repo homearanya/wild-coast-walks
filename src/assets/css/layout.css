@@ -556,79 +556,99 @@ header.fixed .header-logo-menu {
 /* reponsive behaviour */
 
 @media only screen and (min-width: 992px) {
-    .sticky-menu {
+    .main-menu-desktop.sticky .sticky-menu {
         min-height: 80px;
     }
-    .header-logo-menu.sticky-menu {
+    .main-menu-desktop.sticky .sticky-menu {
         background: #f8f8f8;
         transition: all 0.3s ease-in-out 0s;
     }
-    .sticky-menu .logo-menu-bg {
+    .main-menu-desktop.sticky .sticky-menu .logo-menu-bg {
         background: #f8f8f8;
         transition: all 0.3s ease-in-out 0s;
     }
-    .sticky-menu .mainmenu ul#nav li a,
-    .sticky-menu .mainmenu ul#nav li button {
+    .main-menu-desktop.sticky .sticky-menu .mainmenu ul#nav li a,
+    .main-menu-desktop.sticky .sticky-menu .mainmenu ul#nav li button {
         color: #5c5e62;
         line-height: 80px;
         transition: all 0.3s ease-in-out 0s;
     }
-    .sticky-menu .logo {
+    .main-menu-desktop.sticky .sticky-menu .logo {
         padding-bottom: 10px !important;
         padding-top: 10px !important;
         transition: all 0.3s ease-in-out 0s;
     }
-    .sticky-menu .logo .logo-white {
+    .main-menu-desktop.sticky .sticky-menu .logo .logo-white {
         display: none;
     }
-    .sticky-menu .logo .logo-color {
+    .main-menu-desktop.sticky .sticky-menu .logo .logo-color {
         display: block;
         height: 60px;
         overflow: hidden;
         transition: all 0.3s ease-in-out 0s;
     }
-    .sticky-menu .logo .logo-color a img {
+    .main-menu-desktop.sticky .sticky-menu .logo .logo-color a img {
         height: 60px !important;
         width: auto !important;
     }
 }
 
 @media only screen and (max-width: 991px) {
+    .logo-menu-bg {
+        background: #f8f8f8 none repeat scroll 0 0;
+    }
+    .header-logo-menu {
+        background: #f8f8f8 none repeat scroll 0 0;
+    }
     header .main-menu-desktop.sticky {
         position: static !important;
     }
-    .logo .logo-white a img {
+    /* .logo .logo-white a img {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    } */
+    .logo .logo-white {
+        display: none;
+    }
+    .logo .logo-color {
+        display: block;
+        height: 80px;
+        overflow: hidden;
+    }
+    .logo .logo-color a img {
+        height: 80px !important;
+        width: auto !important;
+    }
+    .logo .logo-color a img {
         left: 50% !important;
         transform: translateX(-50%) !important;
     }
     /* .mobile-menu-area.sticky-menu .mean-container .mean-bar::before {
         content: "SA ADVENTURE TRAILS"
     } */
-    .mobile-menu-area.sticky-menu,
-    .mobile-menu-area.sticky-menu .mean-nav,
-    .mobile-menu-area.sticky-menu .mean-container .mean-nav ul li a,
-    .mobile-menu-area.sticky-menu .mean-container .mean-nav ul li button {
+    .mobile-menu-area,
+    .mobile-menu-area .mean-nav,
+    .mean-container .mean-nav ul li a,
+    .mean-container .mean-nav ul li button {
         background-color: #333333;
     }
-    .mobile-menu-area.sticky-menu .mean-container .mean-nav ul li a,
-    .mobile-menu-area.sticky-menu .mean-container .mean-nav ul li button,
-    .mobile-menu-area.sticky-menu .mean-container .mean-nav ul li button.mean-expand {
+    .mean-container .mean-nav ul li a,
+    .mean-container .mean-nav ul li button,
+    .mean-container .mean-nav ul li button.mean-expand {
         border: none !important;
         color: white;
     }
-    .mobile-menu-area.sticky-menu,
-    .mobile-menu-area.sticky-menu .meanmenu-reveal.meanclose,
-    .mobile-menu-area.sticky-menu .mean-container .mean-bar::before {
+    .mobile-menu-area,
+    .mean-container .mean-nav ul li li a,
+    .mean-container button.meanmenu-reveal.meanclose,
+    .mean-container .mean-bar::before {
         color: white;
     }
-    .mobile-menu-area.sticky-menu .mean-container button.meanmenu-reveal span {
+    .mean-container button.meanmenu-reveal span {
         background-color: white;
     }
     .mobile-menu-area a {
         transition: none !important;
-    }
-    .mobile-menu-area.sticky-menu {
-        transition: all 0.3s ease 0s;
     }
 }
 
@@ -680,7 +700,7 @@ header.fixed .header-logo-menu {
         margin-left: 0;
         text-align: center;
     }
-    .header-logo-menu {
+    /* .header-logo-menu {
         background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0
     }
     .logo-menu-bg,
@@ -690,28 +710,28 @@ header.fixed .header-logo-menu {
     header.fixed .header-logo-menu {
         background: #212227 none repeat scroll 0 0;
         position: inherit;
-    }
+    } */
 }
 
 
 /* small mobile :320px. */
 
 @media (max-width: 767px) {
-    .logo-menu-bg,
+    /* .logo-menu-bg,
     .header-three .header-logo-menu {
         background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     }
     .header-logo-menu {
         background: #333333 none repeat scroll 0 0
-    }
+    } */
     .logo {
         margin-left: 0;
         text-align: center
     }
-    header.fixed .header-logo-menu {
+    /* header.fixed .header-logo-menu {
         background: #212227 none repeat scroll 0 0;
         position: inherit;
-    }
+    } */
 }
 
 
@@ -1032,9 +1052,10 @@ header.fixed .header-logo-menu {
     transform: rotate(180deg);
 }
 
-.header-three.list .header-logo-menu {
+
+/* .header-three.list .header-logo-menu {
     background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0
-}
+} */
 
 .banner-area.list .section-title h1 {
     font-size: 40px

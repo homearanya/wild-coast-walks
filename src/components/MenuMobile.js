@@ -177,8 +177,7 @@ export default class MenuMobile extends Component {
 
     this.state = {
       showMenu: false,
-      showToursMenu: false,
-      sticky: false
+      showToursMenu: false
     };
 
     this.wrapperRef = React.createRef();
@@ -186,7 +185,6 @@ export default class MenuMobile extends Component {
     this.closeMenu = this.closeMenu.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
     this.toggleToursMenu = this.toggleToursMenu.bind(this);
-    this.onFixedToggle = this.onFixedToggle.bind(this);
   }
 
   componentDidMount() {
@@ -222,21 +220,10 @@ export default class MenuMobile extends Component {
     });
   }
 
-  onFixedToggle() {
-    let isSticky = !this.state.sticky;
-    this.setState({ sticky: isSticky });
-  }
-
   render() {
-    let menuClass;
-    if (this.state.sticky) {
-      menuClass = "mobile-menu-area sticky-menu";
-    } else {
-      menuClass = "mobile-menu-area";
-    }
     return (
-      <Sticky onFixedToggle={this.onFixedToggle}>
-        <div className={menuClass} ref={this.wrapperRef}>
+      <Sticky>
+        <div className="mobile-menu-area" ref={this.wrapperRef}>
           <div className="container mean-container">
             <div className="mean-bar">
               <nav className="mean-nav">
