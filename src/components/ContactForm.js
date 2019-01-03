@@ -92,6 +92,7 @@ export default class ContactForm extends Component {
     };
 
     // subscribe to newsletter
+    console.log("subscribe to newwsletter", this.state.subscribeNewsletter);
     if (this.state.subscribeNewsletter) {
       const result = await addToMailchimp(this.state.email, {
         FNAME: this.state.fname,
@@ -198,35 +199,34 @@ export default class ContactForm extends Component {
             </div>
           </div>
         </form>
-        <CSSTransition
-          in={
-            this.state.contactFormSubmissionResult ||
-            this.state.newsletterSubmissionResult
-          }
-          classNames="fade-dropdown-menu"
-          timeout={300}
-          unmountOnExit
-        >
-          <div className="result-submission">
+        <div className="result-submission">
+          <CSSTransition
+            in={this.state.contactFormSubmissionResult !== null}
+            classNames="fade-dropdown-menu"
+            timeout={300}
+            unmountOnExit
+          >
             <div className="result-message">
               {this.state.contactFormSubmissionResult}
-              <CSSTransition
-                in={this.state.newsletterSubmissionResult}
-                classNames="fade-dropdown-menu"
-                timeout={300}
-                unmountOnExit
-              >
-                {this.state.newsletterSubmissionResult ? (
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: this.state.newsletterSubmissionResult.msg
-                    }}
-                  />
-                ) : null}
-              </CSSTransition>
             </div>
-          </div>
-        </CSSTransition>
+          </CSSTransition>
+          <CSSTransition
+            in={this.state.newsletterSubmissionResult !== null}
+            classNames="fade-dropdown-menu"
+            timeout={300}
+            unmountOnExit
+          >
+            <div className="result-message">
+              {this.state.newsletterSubmissionResult ? (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: this.state.newsletterSubmissionResult.msg
+                  }}
+                />
+              ) : null}
+            </div>
+          </CSSTransition>
+        </div>
         {/* {this.state.contactFormSubmissionResult ||
         this.state.newsletterSubmissionResult ? (
           <div className="result-submission">

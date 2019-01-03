@@ -119,12 +119,12 @@ label.subscribe-newsletter-label .checkmark::after {
     color: white;
     padding: 10px 0;
     margin-top: 10px;
-    margin-bottom: 30px;
 }
 
 .contact-form-area .result-message {
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .contact-form-area .result-submission a {
