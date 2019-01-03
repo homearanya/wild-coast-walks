@@ -92,13 +92,15 @@ export default class ContactForm extends Component {
     };
 
     // subscribe to newsletter
-    const result = await addToMailchimp(this.state.email, {
-      FNAME: this.state.fname,
-      LNAME: this.state.lname
-    });
-    // I recommend setting `result` to React state
-    // but you can do whatever you want
-    this.setState({ newsletterSubmissionResult: result });
+    if (this.state.subscribeNewsletter) {
+      const result = await addToMailchimp(this.state.email, {
+        FNAME: this.state.fname,
+        LNAME: this.state.lname
+      });
+      // I recommend setting `result` to React state
+      // but you can do whatever you want
+      this.setState({ newsletterSubmissionResult: result });
+    }
   };
 
   render() {
