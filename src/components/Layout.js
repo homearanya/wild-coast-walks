@@ -84,7 +84,7 @@ export default function Layout({ children, tourPage }) {
             {children}
             <FooterWidgetArea />
             <Footer siteTitle={siteTitle} />
-            <ScrollToTop showUnder={160}>
+            <ScrollToTop showUnder={160} style={{ zIndex: 99 }}>
               <i id="scrollUp" className="fa fa-angle-up" />
             </ScrollToTop>
           </div>

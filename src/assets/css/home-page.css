@@ -921,6 +921,10 @@ button#btn-search-category:hover {
     color: #0967B9;
 }
 
+.slider-area:hover .adventure-text a {
+    pointer-events: none;
+}
+
 
 /* Large desktop :1920px. */
 

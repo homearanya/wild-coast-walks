@@ -71,9 +71,9 @@ export default function FooterWidgetArea() {
         const {
           image: backgroundImage
         } = data.FooterDetails.childMarkdownRemark.frontmatter.image;
-        const {
-          contact_details
-        } = data.ContactDetails.childMarkdownRemark.frontmatter;
+        // const {
+        //   contact_details
+        // } = data.ContactDetails.childMarkdownRemark.frontmatter;
         const {
           newsletterarea
         } = data.FooterDetails.childMarkdownRemark.frontmatter;

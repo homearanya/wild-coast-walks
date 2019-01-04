@@ -470,12 +470,16 @@ header.fixed .header-logo-menu {
 }
 
 .mainmenu ul#nav li .megamenu span>a,
-.mainmenu ul#nav li ul.sub-menu li a {
+.mainmenu ul#nav li .megamenu span>button,
+.mainmenu ul#nav li ul.sub-menu li a,
+.mainmenu ul#nav li ul.sub-menu li button {
     color: #000
 }
 
 .mainmenu ul#nav li .megamenu span>a,
-.mainmenu ul#nav li ul.sub-menu li a {
+.mainmenu ul#nav li .megamenu span>button,
+.mainmenu ul#nav li ul.sub-menu li a,
+.mainmenu ul#nav li ul.sub-menu li button {
     color: #4e4f54;
     display: block;
     font-size: 14px;
@@ -488,11 +492,13 @@ header.fixed .header-logo-menu {
     z-index: 99;
 }
 
-.mainmenu ul#nav li .megamenu span>a.mega-item {
+.mainmenu ul#nav li .megamenu span>a.mega-item,
+.mainmenu ul#nav li .megamenu span>button.mega-item {
     margin: 0px;
 }
 
-.mainmenu ul#nav li ul.sub-menu li a {
+.mainmenu ul#nav li ul.sub-menu li a,
+.mainmenu ul#nav li ul.sub-menu li button {
     padding: 9px 0 !important;
     margin-left: 15px
 }
@@ -567,8 +573,8 @@ header.fixed .header-logo-menu {
         background: #f8f8f8;
         transition: all 0.3s ease-in-out 0s;
     }
-    .main-menu-desktop.sticky .sticky-menu .mainmenu ul#nav li a,
-    .main-menu-desktop.sticky .sticky-menu .mainmenu ul#nav li button {
+    .main-menu-desktop.sticky .sticky-menu .mainmenu ul#nav li>a,
+    .main-menu-desktop.sticky .sticky-menu .mainmenu ul#nav li>button {
         color: #5c5e62;
         line-height: 80px;
         transition: all 0.3s ease-in-out 0s;
@@ -653,7 +659,8 @@ header.fixed .header-logo-menu {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .mainmenu ul#nav li a {
+    .mainmenu ul#nav li a,
+    .mainmenu ul#nav li button {
         font-size: 15px !important;
     }
 }
@@ -683,7 +690,9 @@ header.fixed .header-logo-menu {
         width: 940px;
     }
     .mainmenu ul#nav li .megamenu span>a,
-    .mainmenu ul#nav li ul.sub-menu li a {
+    .mainmenu ul#nav li .megamenu span>button,
+    .mainmenu ul#nav li ul.sub-menu li a,
+    .mainmenu ul#nav li ul.sub-menu li button {
         margin: 0 16px;
     }
     .mainmenu ul.sub-menu {
@@ -1761,7 +1770,6 @@ header.fixed .header-logo-menu {
     right: 12px;
     text-align: center;
     width: 45px;
-    z-index: 9999;
 }
 
 #scrollUp:hover {
