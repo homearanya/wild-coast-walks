@@ -33,9 +33,28 @@ photoGallery:
       caption: On the road towards Maria Ratchitz
       image: /img/img-20181021-wa0044.jpg
 ---
+Spekboom Tours presents the Battlefields Bike Tour 2019. 
 
-Spekboom Tours presents the Battlefields bike tour 2019. This unique 9-day tour offers a carefully selected range of activities from scenic rides and pampered safaris, to vivid stories of epic battles steeped in local history. Using quiet country roads with very manageable daily cycling distances, we will explore some of the landmark battles of **Ladysmith, Spioenkop, Isandlawana, Rorke’s Drift, Talana Hill** and **Elangslaagte**. \
-\
-A luxury mid-trip stay at the big-five private reserve of Nambiti offers a refreshing rest stop and chance to experience one of South Africa’s premier game reserves.
+A unique 8 night (7 riding days) tour of the KZN Battlefields around Ladysmith taking in the epic battle sites of the Boer and Anglo Zulu wars.  Includes guesthouse and lodge accommodation and a 1 night stay at Nambiti Game reserve with 2 game drives.  Tour is fully guided with historical presentations, catered meals, support vehicle and luggage transfers as well as all park/museum entry fees A qualified professional Battlefields guide accompanies the tour giving insight into the historical battles of **Isandlawana, Rorkes Drift and Spionekop.** 
+
+A luxury mid-trip stay at the big-five private reserve of **Nambiti **offers a refreshing rest stop and chance to experience one of South Africa’s premier game reserves.
 
 This is a spectacular cycle tour that combines many unique attractions to appeal to several varied interest groups.
+
+_Duration: 9 days, 8 nights_
+
+_Recommended fitness level: Moderate_
+
+_Average daily cycle distances: 44-60km/d_
+
+_Accommodation types: Varied from rustic home-style accommodation to luxury game-lodges_
+
+_Price: from R13 500pps_
+
+_Inclusive of comfortable accommodation, all meals, luggage transfer, support vehicle, cycle guide, registered history guide, game drives and all entry fees. _\
+__\
+_Should you have your own organised group (min 6 persons) then a personalised bespoke battlefield tour can be arranged for shorter 5-day as well as for groups not wishing to cycle the route._
+
+__
+
+__
