@@ -41,20 +41,10 @@ A luxury mid-trip stay at the big-five private reserve of **Nambiti **offers a r
 
 This is a spectacular cycle tour that combines many unique attractions to appeal to several varied interest groups.
 
-_Duration: 9 days, 8 nights_
+_Recommended fitness level: Moderate
+Average daily cycle distances: 44-60km/d
+Accommodation types: Varied from rustic home-style accommodation to luxury game-lodges
 
-_Recommended fitness level: Moderate_
-
-_Average daily cycle distances: 44-60km/d_
-
-_Accommodation types: Varied from rustic home-style accommodation to luxury game-lodges_
-
-_Price: from R13 500pps_
-
-_Inclusive of comfortable accommodation, all meals, luggage transfer, support vehicle, cycle guide, registered history guide, game drives and all entry fees. _\
-__\
-_Should you have your own organised group (min 6 persons) then a personalised bespoke battlefield tour can be arranged for shorter 5-day as well as for groups not wishing to cycle the route._
-
-__
-
-__
+Inclusive of comfortable accommodation, all meals, luggage transfer, support vehicle, cycle guide, registered history guide, game drives and all entry fees. _\
+\
+_Should you have your own organised group (min 6 persons) then a personalised bespoke battlefield tour can be arranged for shorter tour as well as for groups not wishing to cycle the route._
