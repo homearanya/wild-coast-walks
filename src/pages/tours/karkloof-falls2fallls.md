@@ -29,11 +29,11 @@ photoGallery:
 ---
 The **Karkloof Falls2Falls 3-day slack-packing hike** is an all-inclusive trek encompassing some of the most picturesque and hidden parts of the Midlands countryside. From indigenous mist-belt forest to pristine grasslands, pastoral vistas and eye-watering panoramic views, the ever-changing scenery contains something for everyone. Highlights include traversing the forest canopy on a zip line tour, a visit to a world-class bird hide with the chance to spot the critically-endangered Wattled Crane, and an indigenous tree trail with abundant wildlife including various birds, antelope, zebra, wildebeest and other game.
 
-A fuller day-to-day description of this slack-packing hike can be found at this [blog post](https://activealison.wordpress.com/2018/05/09/karkloof-falls-2-falls-slackpacking-hike-27-30-april-2018/) from one of our happy hikers\
-_**
-Duration: 3 days, 3 nights
-Recommended fitness level: Moderate to fit
-Average daily walking distances: 12-20km/d
-Accommodation types: upmarket midlands-style guesthouses**_
+A fuller day-to-day description of this slack-packing hike can be found at this [blog post](https://activealison.wordpress.com/2018/05/09/karkloof-falls-2-falls-slackpacking-hike-27-30-april-2018/) from one of our happy hikers
 
-_Nature-based eco-tourism is one of the principal aims of Spekboom Tours as 10% of all profits are donated towards ongoing conservation projects._
+_**Duration: 3 days, 3 nights
+Recommended fitness level: Moderate to fit
+Average daily walking distances: 12-20 km/day
+Accommodation types: upmarket midlands-style guesthouses
+**
+Nature-based eco-tourism is one of the principal aims of Spekboom Tours as 10% of all profits are donated towards ongoing conservation projects._
