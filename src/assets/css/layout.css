@@ -492,6 +492,14 @@ header.fixed .header-logo-menu {
     z-index: 99;
 }
 
+.mainmenu .megamenu span.border-hover .mega-image {
+    display: block;
+    margin: 0 35px;
+    padding: 7px 0;
+    position: relative;
+    z-index: 99;
+}
+
 .mainmenu ul#nav li .megamenu span>a.mega-item,
 .mainmenu ul#nav li .megamenu span>button.mega-item {
     margin: 0px;

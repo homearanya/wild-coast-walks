@@ -63,9 +63,9 @@ const SubMenuDest = props => {
   return (
     <div>
       <span className="border-hover">
-        <a className="mega-image">
+        <div className="mega-image">
           <Img fluid={imageFluid} alt={imageAlt} />
-        </a>
+        </div>
       </span>
       <span>
         <div className="mega-title">
