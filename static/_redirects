@@ -1,5 +1,6 @@
 # Redirect with a 301 (default)
 # Redirect default Netlify subdomain to primary domain
+http://www.trails.co.za/* https://www.trails.co.za/:splat 301!
 https://trails.netlify.com/* https://www.trails.co.za/:splat 301!
 https://trusting-montalcini-1c13de.netlify.com/* https://www.trails.co.za/:splat 301!
 /about/backpack.html	/
