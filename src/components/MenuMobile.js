@@ -24,7 +24,11 @@ class ToursMenuSection extends Component {
   render() {
     return (
       <li>
-        <button className="a-to-button" onClick={this.toggleToursMenuSection}>
+        <button
+          type="button"
+          className="a-to-button"
+          onClick={this.toggleToursMenuSection}
+        >
           {this.props.tourMenuSections.heading1}{" "}
           <span>{this.props.tourMenuSections.heading2}</span>
         </button>
@@ -50,6 +54,7 @@ class ToursMenuSection extends Component {
               })}
             </ul>
             <button
+              type="button"
               className="a-to-button mean-expand mean-clicked"
               style={{ fontSize: "18px" }}
               onClick={this.toggleToursMenuSection}
@@ -65,6 +70,7 @@ class ToursMenuSection extends Component {
           unmountOnExit
         >
           <button
+            type="button"
             className="a-to-button mean-expand"
             style={{ fontSize: "18px" }}
             onClick={this.toggleToursMenuSection}
@@ -109,7 +115,11 @@ const Menu = props => {
         </Link>
       </li>
       <li>
-        <button className="a-to-button" onClick={props.toggleToursMenu}>
+        <button
+          type="button"
+          className="a-to-button"
+          onClick={props.toggleToursMenu}
+        >
           {" "}
           Tours{" "}
         </button>
@@ -125,6 +135,7 @@ const Menu = props => {
               tourMenuSections={props.tourMenuSections}
             />
             <button
+              type="button"
               className="a-to-button mean-expand mean-clicked"
               style={{ fontSize: "18px" }}
               onClick={props.toggleToursMenu}
@@ -140,6 +151,7 @@ const Menu = props => {
           unmountOnExit
         >
           <button
+            type="button"
             className="a-to-button mean-expand"
             style={{ fontSize: "18px" }}
             onClick={props.toggleToursMenu}
@@ -235,6 +247,7 @@ export default class MenuMobile extends Component {
                 >
                   <React.Fragment>
                     <button
+                      type="button"
                       className="a-to-button meanmenu-reveal meanclose"
                       style={{
                         right: "0px",
@@ -264,6 +277,7 @@ export default class MenuMobile extends Component {
                   unmountOnExit
                 >
                   <button
+                    type="button"
                     className="a-to-button meanmenu-reveal"
                     style={{ right: "0", left: "auto" }}
                     onClick={this.toggleMenu}

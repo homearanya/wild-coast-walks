@@ -27,6 +27,7 @@ module.exports = {
     siteUrl: "https://www.trails.co.za" // for gatsby plugin sitemap
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-favicon`,
       options: {

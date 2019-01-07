@@ -163,7 +163,10 @@ class MainMenu extends Component {
                 onMouseLeave={this.handleLeave}
                 onMouseEnter={this.handleHover}
               >
-                <button className={toursClassName}> Tours </button>
+                <button type="button" className={toursClassName}>
+                  {" "}
+                  Tours{" "}
+                </button>
                 <CSSTransition
                   in={this.state.showSubMenu}
                   classNames="fade-dropdown-menu"

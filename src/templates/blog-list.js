@@ -38,7 +38,7 @@ export default ({ data }) => {
                       </h4>
                       <form id="text-search" action="#">
                         <input type="text" placeholder="Search Here ....." />
-                        <button className="submit">
+                        <button type="button" className="submit">
                           <i className="fa fa-search" />
                         </button>
                       </form>
@@ -274,10 +274,12 @@ export default ({ data }) => {
                     </h4>
                     <div className="author-comments">
                       <span>
-                        <i className="fa fa-user" />ALICE HINES
+                        <i className="fa fa-user" />
+                        ALICE HINES
                       </span>
                       <span>
-                        <i className="fa fa-comment" />15 Comments
+                        <i className="fa fa-comment" />
+                        15 Comments
                       </span>
                     </div>
                     <p>
@@ -321,10 +323,12 @@ export default ({ data }) => {
                     </h4>
                     <div className="author-comments">
                       <span>
-                        <i className="fa fa-user" />JHON RUSSEL
+                        <i className="fa fa-user" />
+                        JHON RUSSEL
                       </span>
                       <span>
-                        <i className="fa fa-comment" />15 Comments
+                        <i className="fa fa-comment" />
+                        15 Comments
                       </span>
                     </div>
                     <p>
@@ -368,10 +372,12 @@ export default ({ data }) => {
                     </h4>
                     <div className="author-comments">
                       <span>
-                        <i className="fa fa-user" />KATHIE BLOSSOM
+                        <i className="fa fa-user" />
+                        KATHIE BLOSSOM
                       </span>
                       <span>
-                        <i className="fa fa-comment" />15 Comments
+                        <i className="fa fa-comment" />
+                        15 Comments
                       </span>
                     </div>
                     <p>
@@ -415,10 +421,12 @@ export default ({ data }) => {
                     </h4>
                     <div className="author-comments">
                       <span>
-                        <i className="fa fa-user" />ALICE HINES
+                        <i className="fa fa-user" />
+                        ALICE HINES
                       </span>
                       <span>
-                        <i className="fa fa-comment" />15 Comments
+                        <i className="fa fa-comment" />
+                        15 Comments
                       </span>
                     </div>
                     <p>

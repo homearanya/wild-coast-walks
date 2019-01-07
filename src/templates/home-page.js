@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 

@@ -59,6 +59,7 @@ export default class BookButton extends Component {
           <div className="modal-contact-form">
             <div className="row">
               <button
+                type="button"
                 className="close-button"
                 onClick={() => this.closeModal()}
               >

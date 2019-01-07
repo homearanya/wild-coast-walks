@@ -411,8 +411,7 @@
     .trip-information {
         background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     }
-    .trip-information.details-two,
-    .error-area {
+    .trip-information.details-two {
         background: rgba(33, 34, 39, 0.15) none repeat scroll 0 0
     }
     .details-two .trip-info-left-text {
