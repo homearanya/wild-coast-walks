@@ -546,5 +546,15 @@ collections:
         fields:
           - { label: "Blog Switch", name: blogswitch, widget: boolean }
           - { label: "Calendar Switch", name: calendarswitch, widget: boolean }
+      - file: "src/general/notfound.md"
+        label: "Not Found page"
+        name: "notfoundpage"
+        fields:
+          - label: "Background Image"
+            name: backgroundimage
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Alt, name: alt, widget: text, required: false }
     editor:
       preview: false
