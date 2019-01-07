@@ -28,7 +28,7 @@ photoGallery:
     - image: /img/meander-hike-gallery_5.jpg
     - image: /img/meander-hike-gallery_6.jpg
     - image: /img/meander-hike-gallery_7.jpg
-    - image: /img/meander-hike-gallery_8.jpg
+    - image: /img/wc3_mb.jpg
     - image: /img/meander-hike-gallery_9.jpg
 ---
 
