@@ -5,8 +5,8 @@ title: Wild Coast Mini Break
 destination: Wild Coast
 activity: Slackpack
 duration: 3 days
-price: R 5400
-bannerblurb: 2 days from Morgan Bay to Chintsa
+price: R 4800
+bannerblurb: 2 days 3 nights from Morgan Bay to Chintsa
 shortdescription: >-
   A scenic 2 day hike with 3 nights of hotel pampering on the Sunshine Coast.
   Fly into East London on a Thursday and be back home on Sunday with all
