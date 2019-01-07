@@ -296,7 +296,8 @@ button#btn-search-category:hover {
 }
 
 .about-text>a:hover {
-    background: #043B6C none repeat scroll 0 0
+    background: #043B6C none repeat scroll 0 0;
+    color: white;
 }
 
 
