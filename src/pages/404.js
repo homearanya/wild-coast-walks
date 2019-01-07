@@ -20,6 +20,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO postData={postMeta} />
+      <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <div
         className="error-area"
         style={{
