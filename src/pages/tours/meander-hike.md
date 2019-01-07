@@ -5,7 +5,7 @@ title: Wild Coast Meander
 destination: Wild Coast
 activity: Slackpack
 duration: 5 days
-price: R 6900
+price: R 6600
 bannerblurb: 5 days - Kob Inn to Morgan Bay
 shortdescription: >-
   Easy walking along wide sandy beaches running south from Kob Inn and
