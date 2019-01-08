@@ -1,8 +1,14 @@
-# Redirect with a 301 (default)
-# Redirect default Netlify subdomain to primary domain
-http://www.trails.co.za/* https://www.trails.co.za/:splat 301!
-https://trails.netlify.com/* https://www.trails.co.za/:splat 301!
+# Redirect domain aliases to primary domain
+https://www.wildcoastwalk.co.za/* https://www.trails.co.za/:splat 301!
+https://wildcoastwalk.co.za/* https://www.trails.co.za/:splat 301!
+https://wildcoastwalks.co.za/* https://www.trails.co.za/:splat 301!
+https://www.wildcoastwalks.co.za/* https://www.trails.co.za/:splat 301!
 https://trusting-montalcini-1c13de.netlify.com/* https://www.trails.co.za/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://trails.netlify.com/* https://www.trails.co.za/:splat 301!
+
+# Redirect with a 301 (default)
 /about/backpack.html	/
 /about/binoculars.html	/
 /about/camp_check.html	/
