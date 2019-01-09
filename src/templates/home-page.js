@@ -34,7 +34,7 @@ const AboutArea = props => {
               </div>
               <div className="about-text">
                 <p>{props.aboutArea.blurb}</p>
-                <Link to="/about">Learn more</Link>
+                <Link to="/about">More About Us</Link>
               </div>
             </div>
           </div>

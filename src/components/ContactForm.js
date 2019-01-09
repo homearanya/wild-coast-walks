@@ -71,7 +71,6 @@ export default class ContactForm extends Component {
 
     // Callback function
     xhr.onloadend = response => {
-      console.log("contact form respone", response);
       if (response.target.status === 200) {
         // The form submission was successful
         this.setState({
@@ -111,7 +110,8 @@ export default class ContactForm extends Component {
           <div className="row">
             <div className="col-sm-6">
               <input
-                required
+                aria-label="First Name"
+                aria-required
                 name="f_name"
                 type="text"
                 className="form-box"
@@ -122,7 +122,8 @@ export default class ContactForm extends Component {
             </div>
             <div className="col-sm-6">
               <input
-                required
+                aria-label="Last Name"
+                aria-required
                 name="l_name"
                 type="text"
                 className="form-box"
@@ -133,7 +134,8 @@ export default class ContactForm extends Component {
             </div>
             <div className="col-sm-6">
               <input
-                required
+                aria-label="Email Address"
+                aria-required
                 name="email"
                 type="email"
                 className="form-box"
@@ -144,6 +146,7 @@ export default class ContactForm extends Component {
             </div>
             <div className="col-sm-6">
               <input
+                aria-label="Phone Number"
                 name="phone_number"
                 type="text"
                 className="form-box"
@@ -154,7 +157,8 @@ export default class ContactForm extends Component {
             </div>
             <div className="col-sm-12">
               <input
-                required
+                aria-label="Subject"
+                aria-required
                 name="subject"
                 type="text"
                 className="form-box"
@@ -165,7 +169,8 @@ export default class ContactForm extends Component {
             </div>
             <div className="col-sm-12">
               <textarea
-                required
+                aria-label="Message"
+                aria-required
                 name="message"
                 className="yourmessage"
                 placeholder="Your message"
@@ -192,6 +197,7 @@ export default class ContactForm extends Component {
             </div>
             <div className="col-sm-12">
               <input
+                aria-label="Submit Button"
                 type="submit"
                 value="Send Message"
                 className="submit-button"

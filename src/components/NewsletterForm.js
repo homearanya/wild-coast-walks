@@ -57,7 +57,8 @@ export default class NewsletterForm extends Component {
               <div className="row">
                 <div className="col-sm-6 col-xs-12">
                   <input
-                    required
+                    aria-label="First Name"
+                    aria-required
                     type="text"
                     name="fname"
                     placeholder="First Name"
@@ -67,7 +68,8 @@ export default class NewsletterForm extends Component {
                 </div>
                 <div className="col-sm-6 col-xs-12">
                   <input
-                    required
+                    aria-label="Last Name"
+                    aria-required
                     type="text"
                     name="lname"
                     placeholder="Last Name"
@@ -77,7 +79,8 @@ export default class NewsletterForm extends Component {
                 </div>
                 <div className="col-sm-8  col-xs-12">
                   <input
-                    required
+                    aria-label="Email Address"
+                    aria-required
                     type="email"
                     name="email"
                     placeholder="Enter your email address ......"

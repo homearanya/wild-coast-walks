@@ -59,12 +59,12 @@ export default function ContactDetails() {
                                   <img
                                     className="primary-img"
                                     src={contact_2}
-                                    alt=""
+                                    alt="phone number"
                                   />
                                   <img
                                     className="secondary-img"
                                     src={contact_2_hover}
-                                    alt=""
+                                    alt="phone number"
                                   />
                                 </a>
                               </div>
@@ -97,12 +97,12 @@ export default function ContactDetails() {
                                   <img
                                     className="primary-img"
                                     src={contact_4}
-                                    alt=""
+                                    alt="email address"
                                   />
                                   <img
                                     className="secondary-img"
                                     src={contact_4_hover}
-                                    alt=""
+                                    alt="email address"
                                   />
                                 </a>
                               </div>

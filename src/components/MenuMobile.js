@@ -277,6 +277,7 @@ export default class MenuMobile extends Component {
                   unmountOnExit
                 >
                   <button
+                    aria-label="hamburger menu"
                     type="button"
                     className="a-to-button meanmenu-reveal"
                     style={{ right: "0", left: "auto" }}
