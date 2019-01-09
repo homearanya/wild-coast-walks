@@ -294,7 +294,7 @@ export default ({ data }) => {
                   </div>
                   <div className="blog-button-links">
                     <a href="blog-details.html" className="blog-button">
-                      Learn More
+                      More Info
                     </a>
                     {/* <div className="blog-links">
                                             <a href="#"><i className="fa fa-facebook"></i></a>
@@ -343,7 +343,7 @@ export default ({ data }) => {
                   </div>
                   <div className="blog-button-links">
                     <a href="blog-details.html" className="blog-button">
-                      Learn More
+                      More Info
                     </a>
                     {/* <div className="blog-links">
                                             <a href="#"><i className="fa fa-facebook"></i></a>
@@ -392,7 +392,7 @@ export default ({ data }) => {
                   </div>
                   <div className="blog-button-links">
                     <a href="blog-details.html" className="blog-button">
-                      Learn More
+                      More Info
                     </a>
                     {/* <div className="blog-links">
                                             <a href="#"><i className="fa fa-facebook"></i></a>
@@ -441,7 +441,7 @@ export default ({ data }) => {
                   </div>
                   <div className="blog-button-links">
                     <a href="blog-details.html" className="blog-button">
-                      Learn More
+                      More Info
                     </a>
                     {/* <div className="blog-links">
                                             <a href="#"><i className="fa fa-facebook"></i></a>

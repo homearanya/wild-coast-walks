@@ -211,7 +211,7 @@ const BlogArea = props => {
                             the asking.
                           </p>
                           <a href="blog-details.html" className="button-one">
-                            Learn More
+                            More Info
                           </a>
                         </div>
                       </div>
@@ -246,7 +246,7 @@ const BlogArea = props => {
                             the asking.
                           </p>
                           <a href="blog-details.html" className="button-one">
-                            Learn More
+                            More Info
                           </a>
                         </div>
                       </div>

@@ -137,7 +137,7 @@ const Event = props => {
                 </p>
                 <div className="list-buttons">
                   <Link to={props.tourSlug} className="button-one button-blue">
-                    Learn More
+                    More Info
                   </Link>
                   <div className="trip-booking-info">
                     <BookButton
