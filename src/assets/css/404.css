@@ -48,5 +48,6 @@
 }
 
 .error-text-container>a:hover {
-    background: #212227 none repeat scroll 0 0
+    background: #043b6c none repeat scroll 0 0;
+    color: #fff;
 }
