@@ -28,6 +28,8 @@ exports.createPages = ({ actions, graphql, getNode }) => {
             }
             frontmatter {
               templateKey
+              destination
+              activity
             }
           }
         }
@@ -122,7 +124,15 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
     // console.log('oncreatenode', node.fileAbsolutePath)
-    const value = createFilePath({ node, getNode });
+    let value = createFilePath({ node, getNode });
+    if (value.includes("/tours/")) {
+      value = `/tours/${node.frontmatter.destination
+        .replace(/\s+/g, "-")
+        .toLowerCase()}/${node.frontmatter.activity
+        .replace(/\s+/g, "-")
+        .toLowerCase()}${value.substring(6)}`;
+    }
+    console.log(value);
     createNodeField({
       name: `slug`,
       node,

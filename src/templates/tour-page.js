@@ -361,7 +361,9 @@ export default class TourPage extends Component {
       frontmatter: upcomingEventsInfo
     } = this.props.data.UpcomingEventsQuery.childMarkdownRemark;
     const postMeta = {
-      title: `${tourInfo.frontmatter.title} - Tours - ${siteMetadata.title}`,
+      title: `${tourInfo.frontmatter.title} - ${
+        tourInfo.frontmatter.destination
+      } - ${tourInfo.frontmatter.activity} - Tours - ${siteMetadata.title}`,
       description: `${tourInfo.frontmatter.shortdescription}`,
       slug: tourInfo.fields.slug,
       datePublished: false
