@@ -192,7 +192,7 @@ export default ({ data }) => {
     }
   });
   const postMeta = {
-    title: `Tour Calendar - ${siteTitle}`,
+    title: `Tour Calendar - Slackpacking, Walks & Cycle Tours`,
     description: `Find your tour. If the dates don't suit you we can still organise it for you`,
     slug: fields.slug,
     datePublished: false

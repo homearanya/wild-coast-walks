@@ -363,7 +363,7 @@ export default class TourPage extends Component {
     const postMeta = {
       title: `${tourInfo.frontmatter.title} - ${
         tourInfo.frontmatter.destination
-      } - ${tourInfo.frontmatter.activity} - Tours - ${siteMetadata.title}`,
+      } - ${tourInfo.frontmatter.activity} - Tours`,
       description: `${tourInfo.frontmatter.shortdescription}`,
       slug: tourInfo.fields.slug,
       datePublished: false

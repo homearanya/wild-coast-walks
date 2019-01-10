@@ -42,7 +42,7 @@ export default ({ data }) => {
   const { backgroundimage } = data.NotFoundQuery.frontmatter;
   console.log("backgroundimage", backgroundimage);
   const postMeta = {
-    title: `Page Not Found - ${siteMetadata.title}`,
+    title: `Page Not Found - Slackpacking, Walks & Cycle Tours`,
     description: `Page not found. Go back to home page`,
     slug: "/404/",
     datePublished: false

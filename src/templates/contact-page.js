@@ -17,7 +17,7 @@ export default class ContactPage extends Component {
     const { siteMetadata } = this.props.data.siteMetaDataQuery;
     const { fields, frontmatter } = this.props.data.ContactPageQuery;
     const postMeta = {
-      title: `Contact Us - ${siteMetadata.title}`,
+      title: `Contact Us - Slackpacking, Walks & Cycle Tours`,
       description: `Contact us by email, phone or through our web form`,
       slug: fields.slug,
       datePublished: false
