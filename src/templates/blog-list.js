@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 
+import Layout from "../components/Layout";
 import Banner from "../components/Banner";
 
 import "../assets/css/blog.css";
@@ -10,7 +11,7 @@ export default ({ data }) => {
   const { frontmatter } = data.blogList;
   const enableBlog = data.switch.frontmatter.blogswitch;
   return (
-    <div>
+    <Layout>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Blog - Wild Coast Walks</title>
@@ -491,7 +492,7 @@ export default ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

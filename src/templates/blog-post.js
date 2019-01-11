@@ -12,6 +12,7 @@ export default () => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Blog - Wild Coast Walks</title>
+      <meta name="robots" content="noindex" />
     </Helmet>
 
     <Banner
@@ -265,10 +266,12 @@ export default () => (
                 <h4>How's the weather? Best times to travel.....</h4>
                 <div className="author-comments">
                   <span>
-                    <i className="fa fa-user" />ALICE HINES
+                    <i className="fa fa-user" />
+                    ALICE HINES
                   </span>
                   <span>
-                    <i className="fa fa-comment" />15 Comments
+                    <i className="fa fa-comment" />
+                    15 Comments
                   </span>
                 </div>
                 <p>
@@ -330,7 +333,8 @@ export default () => (
                     </h4>
                     <span className="reply">
                       <a href="#">
-                        <i className="fa fa-reply" />Reply
+                        <i className="fa fa-reply" />
+                        Reply
                       </a>
                     </span>
                     <span className="comment-time">45 Minutes Ago</span>
@@ -354,7 +358,8 @@ export default () => (
                     </h4>
                     <span className="reply">
                       <a href="#">
-                        <i className="fa fa-reply" />Reply
+                        <i className="fa fa-reply" />
+                        Reply
                       </a>
                     </span>
                     <span className="comment-time">8 Minutes Ago</span>
@@ -378,7 +383,8 @@ export default () => (
                     </h4>
                     <span className="reply">
                       <a href="#">
-                        <i className="fa fa-reply" />Reply
+                        <i className="fa fa-reply" />
+                        Reply
                       </a>
                     </span>
                     <span className="comment-time">10 Minutes Ago</span>
