@@ -79,7 +79,8 @@ https://trails.netlify.com/* https://www.trails.co.za/:splat 301!
 /tours/mini-break	/tours/wild-coast/slackpack/mini-break
 /tours/nhlosane-hiike	/tours/midlands/slackpack/nhlosane-hike
 /tours/dargle-samango	/tours/midlands/slackpack/dargle-samango
-/tours/giants-cup	/tours/drakensberg/slackpack/giants-cup
+/tours/giants-cup	/tours/drakensberg/slackpack/giants-cup-trail
+/tours/drakensberg/slackpack/giants-cup	/tours/drakensberg/slackpack/giants-cup-trail
 /tours/karkloof-falls2fallls	/tours/midlands/slackpack/karkloof-falls2falls
 /tours/midlands/slackpack/karkloof-falls2fallls /tours/midlands/slackpack/karkloof-falls2falls
 /tours/mehloding	/tours/drakensberg/slackpack/mehloding
