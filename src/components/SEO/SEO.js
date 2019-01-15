@@ -2,16 +2,16 @@ import path from "path";
 import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
 import SchemaOrg from "./SchemaOrg";
 
-const SEO = ({ postData, postImage, isBlogPost }) => (
+const SEO = ({ pageData, postImage, pageType }) => (
   <StaticQuery
     query={graphql`
       {
-        site {
+        SEOQuery: site {
           siteMetadata {
             title
+            defaultTitle
             description
             canonicalUrl
             image
@@ -25,34 +25,82 @@ const SEO = ({ postData, postImage, isBlogPost }) => (
             }
           }
         }
+        PhoneDetailsQuery: file(relativePath: { eq: "contact.md" }) {
+          childMarkdownRemark {
+            frontmatter {
+              contact_details {
+                phone {
+                  phonedisplay
+                }
+              }
+            }
+          }
+        }
       }
     `}
-    render={({ site: { siteMetadata: seo } }) => {
-      const postMeta = postData || {};
+    render={data => {
+      // data for SEO & schemaOrg
+      const { siteMetadata: seo } = data.SEOQuery;
+      // data for organization schemaOrg
+      let organization = seo.organization;
+      organization.phone =
+        data.PhoneDetailsQuery.childMarkdownRemark.frontmatter.contact_details.phone.phonedisplay;
+      const pageMeta = pageData || {};
 
-      const title = postMeta.title || seo.title;
-      const description =
-        postMeta.description || postData.excerpt || seo.description;
-      const image = postImage ? `${seo.canonicalUrl}${postImage}` : seo.image;
-      const url = postMeta.slug
-        ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}`
+      const metaTitle = pageMeta.title || seo.title;
+      const metaDescription =
+        pageMeta.description || pageData.excerpt || seo.description;
+      const url = pageMeta.slug
+        ? `${seo.canonicalUrl}${path.sep}${pageMeta.slug}`
         : seo.canonicalUrl;
-      const datePublished = isBlogPost ? postMeta.datePublished : false;
+      // tour data for schemaOrg
+      let tour = {};
+      if (pageType === "tour") {
+        tour.name = pageMeta.tourName;
+        tour.description = pageMeta.description;
+        tour.images = pageMeta.tourImages;
+        tour.price = pageMeta.tourPrice;
+        tour.url = `${seo.canonicalUrl}${path.sep}${pageMeta.slug}`;
+      }
+      // post data for schemaOrg
+      let post = {};
+      if (pageType === "post") {
+        post.name = pageMeta.name;
+        post.alternateName = seo.defaultTitle;
+        post.description = pageMeta.description;
+        post.image = postImage ? `${seo.canonicalUrl}${postImage}` : seo.image;
+        post.dataPublished = pageMeta.datePublished;
+        post.url = `${seo.canonicalUrl}${path.sep}${pageMeta.slug}`;
+        post.author = seo.author;
+      }
+
+      // Meta image
+      let metaImage = seo.image;
+      if (pageType === "post") {
+        metaImage = postImage ? `${seo.canonicalUrl}${postImage}` : seo.image;
+      } else if (pageType === "tour") {
+        metaImage =
+          pageMeta.tourImages.length > 0
+            ? `${seo.canonicalUrl}/img${pageMeta.tourImages[0]}`
+            : seo.image;
+      }
 
       return (
         <React.Fragment>
           <Helmet>
             {/* General tags */}
-            <title>{title}</title>
-            <meta name="description" content={description} />
-            <meta name="image" content={image} />
+            <title>{metaTitle}</title>
+            <meta name="description" content={metaDescription} />
+            <meta name="image" content={metaImage} />
 
             {/* OpenGraph tags */}
             <meta property="og:url" content={url} />
-            {isBlogPost ? <meta property="og:type" content="article" /> : null}
-            <meta property="og:title" content={title} />
-            <meta property="og:description" content={description} />
-            <meta property="og:image" content={image} />
+            {pageType === "post" ? (
+              <meta property="og:type" content="article" />
+            ) : null}
+            <meta property="og:title" content={metaTitle} />
+            <meta property="og:description" content={metaDescription} />
+            <meta property="og:image" content={metaImage} />
             {/* <meta property="fb:app_id" content={seo.social.fbAppID} /> */}
 
             {/* Twitter Card tags */}
@@ -63,38 +111,16 @@ const SEO = ({ postData, postImage, isBlogPost }) => (
             <meta name="twitter:image" content={image} /> */}
           </Helmet>
           <SchemaOrg
-            isBlogPost={isBlogPost}
-            url={url}
-            title={title}
-            image={image}
-            description={description}
-            datePublished={datePublished}
+            pageType={pageType}
             canonicalUrl={seo.canonicalUrl}
-            author={seo.author}
-            organization={seo.organization}
-            defaultTitle={seo.defaultTitle}
+            organization={organization}
+            tour={tour}
+            post={post}
           />
         </React.Fragment>
       );
     }}
   />
 );
-
-SEO.propTypes = {
-  isBlogPost: PropTypes.bool,
-  postData: PropTypes.shape({
-    childMarkdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.any,
-      excerpt: PropTypes.any
-    })
-  }),
-  postImage: PropTypes.string
-};
-
-SEO.defaultProps = {
-  isBlogPost: false,
-  postData: { childMarkdownRemark: {} },
-  postImage: null
-};
 
 export default SEO;

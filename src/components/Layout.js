@@ -60,12 +60,13 @@ export default function Layout({ children, tourPage }) {
       `}
       render={data => {
         const siteTitle = data.SiteMetaDataQuery.siteMetadata.title;
+        const titleTemplate = `%s · ${siteTitle}`;
         return (
           <div>
             <Helmet
               key="app-head"
-              titleTemplate="%s · SA Adventure Trails"
-              defaultTitle="SA Adventure Trails"
+              titleTemplate={titleTemplate}
+              defaultTitle={siteTitle}
             >
               <html lang="en" />
 

@@ -355,22 +355,34 @@ const UpcomingEvent = props => {
 
 export default class TourPage extends Component {
   render() {
-    const { siteMetadata } = this.props.data.siteMetaDataQuery;
     const { TourPageQuery: tourInfo } = this.props.data;
+    // build image array for schema.org
+    let schemaImages = [];
+    if (tourInfo.frontmatter.imagebanner.image) {
+      schemaImages.push(tourInfo.frontmatter.imagebanner.image.relativePath);
+    }
+    tourInfo.frontmatter.photoGallery.photo.map(photo =>
+      schemaImages.push(photo.image.relativePath)
+    );
+    //
     const {
       frontmatter: upcomingEventsInfo
     } = this.props.data.UpcomingEventsQuery.childMarkdownRemark;
-    const postMeta = {
-      title: `${tourInfo.frontmatter.title} - ${
+    // Meta Info for SEO and schemaOrg
+    const pageMeta = {
+      title: `${tourInfo.frontmatter.title} . ${
         tourInfo.frontmatter.destination
-      } - ${tourInfo.frontmatter.activity} - Tours`,
+      } . ${tourInfo.frontmatter.activity} . Tours`,
       description: `${tourInfo.frontmatter.shortdescription}`,
       slug: tourInfo.fields.slug,
+      tourName: tourInfo.frontmatter.title,
+      tourPrice: tourInfo.frontmatter.price,
+      tourImages: schemaImages,
       datePublished: false
     };
     return (
       <Layout tourPage>
-        <SEO postData={postMeta} />
+        <SEO pageData={pageMeta} pageType="tour" />
         <Banner
           extraClass="details-one"
           title1={tourInfo.frontmatter.title}
@@ -393,43 +405,6 @@ export default class TourPage extends Component {
     );
   }
 }
-// export default function TourPage({ data }) {
-//   const { siteMetadata } = data.siteMetaDataQuery;
-//   const { TourPageQuery: tourInfo } = data;
-//   const {
-//     frontmatter: upcomingEventsInfo
-//   } = data.UpcomingEventsQuery.childMarkdownRemark;
-//   const postMeta = {
-//     title: `${tourInfo.frontmatter.title} - Tours - ${siteMetadata.title}`,
-//     description: `${tourInfo.frontmatter.shortdescription}`,
-//     slug: tourInfo.fields.slug,
-//     datePublished: false
-//   };
-//   return (
-//     <div>
-//       <SEO postData={postMeta} />
-//       <Banner
-//         extraClass="details-one"
-//         title1={tourInfo.frontmatter.title}
-//         title2=""
-//         text={tourInfo.frontmatter.bannerblurb}
-//         breadcrumb="tour"
-//         imageBanner={tourInfo.frontmatter.imagebanner}
-//       />
-
-//       <TripInformation tourInfo={tourInfo} />
-//       {tourInfo.fields.tourevents && tourInfo.fields.tourevents.length > 0 ? (
-//         <UpcomingEvents
-//           backgroundImage={tourInfo.frontmatter.backgroundimage}
-//           upcomingEventsInfo={upcomingEventsInfo}
-//           tourEvents={tourInfo.fields.tourevents}
-//           tour={tourInfo.frontmatter.title}
-//         />
-//       ) : null}
-//     </div>
-//   );
-// }
-
 export const tourPageQuery = graphql`
   query TourPage($id: String!) {
     TourPageQuery: markdownRemark(id: { eq: $id }) {
@@ -452,6 +427,7 @@ export const tourPageQuery = graphql`
         shortdescription
         imagebanner {
           image {
+            relativePath
             childImageSharp {
               fluid(maxWidth: 1600, maxHeight: 750) {
                 ...GatsbyImageSharpFluid_tracedSVG
@@ -465,6 +441,7 @@ export const tourPageQuery = graphql`
             alt
             caption
             image {
+              relativePath
               childImageSharp {
                 fluid(maxWidth: 800) {
                   ...GatsbyImageSharpFluid
@@ -482,11 +459,6 @@ export const tourPageQuery = graphql`
           heading2
           blurb
         }
-      }
-    }
-    siteMetaDataQuery: site {
-      siteMetadata {
-        title
       }
     }
   }

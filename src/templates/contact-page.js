@@ -14,17 +14,17 @@ export default class ContactPage extends Component {
     super(props);
   }
   render() {
-    const { siteMetadata } = this.props.data.siteMetaDataQuery;
     const { fields, frontmatter } = this.props.data.ContactPageQuery;
-    const postMeta = {
-      title: `Contact Us - Slackpacking, Walks & Cycle Tours`,
+
+    const pageMeta = {
+      title: `Contact Us . Slackpacking, Walks & Cycle Tours`,
       description: `Contact us by email, phone or through our web form`,
       slug: fields.slug,
       datePublished: false
     };
     return (
       <Layout>
-        <SEO postData={postMeta} />
+        <SEO pageData={pageMeta} />
         <Banner
           extraClass="contact-banner"
           title1="Contact"
@@ -93,11 +93,6 @@ export const contactPageQuery = graphql`
           }
           alt
         }
-      }
-    }
-    siteMetaDataQuery: site {
-      siteMetadata {
-        title
       }
     }
   }

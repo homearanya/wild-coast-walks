@@ -165,17 +165,16 @@ const Associate = props => {
 };
 
 export default ({ data }) => {
-  const { siteMetadata } = data.siteMetaDataQuery;
   const { fields, frontmatter } = data.AboutPageQuery;
-  const postMeta = {
-    title: `About Us - Slackpacking, Walks & Cycle Tours`,
+  const pageMeta = {
+    title: `About Us . Slackpacking, Walks & Cycle Tours`,
     description: `SA Adventure Trails is a marketing association between Paul Colvin of Wild Coast Walks and Julia Colvin of Spekboom Tours.`,
     slug: fields.slug,
     datePublished: false
   };
   return (
     <Layout>
-      <SEO postData={postMeta} />
+      <SEO pageData={pageMeta} />
       <Banner
         extraClass="about-banner"
         title1="About"
@@ -269,11 +268,6 @@ export const aboutPageQuery = graphql`
             }
           }
         }
-      }
-    }
-    siteMetaDataQuery: site {
-      siteMetadata {
-        title
       }
     }
   }

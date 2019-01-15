@@ -173,7 +173,6 @@ export default ({ data }) => {
   const {
     blurb: upcomingEventsBlurb
   } = data.UpcomingEventsQuery.childMarkdownRemark.frontmatter;
-  const { title: siteTitle } = data.siteMetaDataQuery.siteMetadata;
   const { fields, frontmatter } = data.calendarQuery;
   const enableCalendar = data.switch.frontmatter.calendarswitch;
 
@@ -191,15 +190,15 @@ export default ({ data }) => {
       });
     }
   });
-  const postMeta = {
-    title: `Tour Calendar - Slackpacking & Cycle Tours`,
+  const pageMeta = {
+    title: `Tour Calendar . Slackpacking & Cycle Tours`,
     description: `Find your tour. If the dates don't suit you we can still organise it for you`,
     slug: fields.slug,
     datePublished: false
   };
   return (
     <Layout>
-      <SEO postData={postMeta} />
+      <SEO pageData={pageMeta} />
       <Banner
         extraClass="grid"
         title1="Tour"
@@ -331,11 +330,6 @@ export const CalendarPageQuery = graphql`
             date
           }
         }
-      }
-    }
-    siteMetaDataQuery: site {
-      siteMetadata {
-        title
       }
     }
   }

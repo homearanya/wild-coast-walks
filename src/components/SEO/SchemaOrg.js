@@ -1,77 +1,102 @@
-import React from 'react';
-import Helmet from 'react-helmet';
+import path from "path";
+import React from "react";
+import Helmet from "react-helmet";
 
 export default React.memo(
-  ({
-    author,
-    canonicalUrl,
-    datePublished,
-    defaultTitle,
-    description,
-    image,
-    isBlogPost,
-    organization,
-    title,
-    url,
-  }) => {
+  ({ pageType, canonicalUrl, organization, tour, post }) => {
+    console.log(tour);
     const baseSchema = [
       {
-        '@context': 'http://schema.org',
-        '@type': 'WebSite',
-        url,
-        name: title,
-        alternateName: defaultTitle,
-      },
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        url: organization.url,
+        name: organization.name,
+        logo: organization.logo,
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            telephone: organization.phone,
+            contactType: "reservations"
+          }
+        ]
+      }
     ];
 
-    const schema = isBlogPost
-      ? [
+    let schema;
+
+    switch (pageType) {
+      case "tour":
+        schema = [
           ...baseSchema,
           {
-            '@context': 'http://schema.org',
-            '@type': 'BreadcrumbList',
+            "@context": "http://schema.org",
+            "@type": "Product",
+            name: tour.name,
+            image: tour.images.map(
+              image => `${canonicalUrl}${path.sep}img${path.sep}${image}`
+            ),
+            description: tour.description,
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "ZAR",
+              price: tour.price.replace(/[^0-9$.,]/g, ""),
+              url: tour.url
+            }
+          }
+        ];
+        break;
+      case "post":
+        schema = [
+          ...baseSchema,
+          {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
             itemListElement: [
               {
-                '@type': 'ListItem',
+                "@type": "ListItem",
                 position: 1,
                 item: {
-                  '@id': url,
-                  name: title,
-                  image,
-                },
-              },
-            ],
+                  "@id": post.url,
+                  name: post.name,
+                  image: post.image
+                }
+              }
+            ]
           },
           {
-            '@context': 'http://schema.org',
-            '@type': 'BlogPosting',
-            url,
-            name: title,
-            alternateName: defaultTitle,
-            headline: title,
+            "@context": "http://schema.org",
+            "@type": "BlogPosting",
+            url: post.url,
+            name: post.name,
+            alternateName: post.alternateName,
+            headline: post.name,
             image: {
-              '@type': 'ImageObject',
-              url: image,
+              "@type": "ImageObject",
+              url: post.image
             },
-            description,
+            description: post.description,
             author: {
-              '@type': 'Person',
-              name: author.name,
+              "@type": "Person",
+              name: post.author.name
             },
             publisher: {
-              '@type': 'Organization',
+              "@type": "Organization",
               url: organization.url,
               logo: organization.logo,
-              name: organization.name,
+              name: organization.name
             },
             mainEntityOfPage: {
-              '@type': 'WebSite',
-              '@id': canonicalUrl,
+              "@type": "WebSite",
+              "@id": canonicalUrl
             },
-            datePublished,
-          },
-        ]
-      : baseSchema;
+            datePublished: post.datePublished
+          }
+        ];
+        break;
+      default:
+        schema = baseSchema;
+    }
+    console.log("schema", JSON.stringify(schema));
 
     return (
       <Helmet>
@@ -79,5 +104,5 @@ export default React.memo(
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
     );
-  },
+  }
 );

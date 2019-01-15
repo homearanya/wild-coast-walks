@@ -8,6 +8,7 @@ var netlifyCmsPaths = {
 module.exports = {
   siteMetadata: {
     title: "SA Adventure Trails",
+    defaultTitle: "Adventure Trails in SA",
     description: `
     SA Adventure Trails is a marketing association between Paul Colvin of Wild Coast Walks and Julia Colvin of Spekboom Tours. Together we offer the best selection of fully supported hiking and cycling tours in KwaZulu Natal and the Eastern Cape Wild Coast`,
     canonicalUrl: "https://www.trails.co.za",
@@ -20,9 +21,9 @@ module.exports = {
       `
     },
     organization: {
-      name: "Carlos Gonzalez",
-      url: "https://github.com/homearanya",
-      logo: "https://avatars1.githubusercontent.com/u/30703943?s=460&v=4"
+      name: "SA Adventure Trail",
+      url: "https://www.trails.co.za",
+      logo: "https://www.trails.co.za/img/new-trails-logo-new-colors.png"
     },
     siteUrl: "https://www.trails.co.za" // for gatsby plugin sitemap
   },

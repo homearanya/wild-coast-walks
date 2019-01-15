@@ -263,7 +263,6 @@ const BlogArea = props => {
 };
 
 export default function Index({ data }) {
-  const { siteMetadata } = data.siteMetaDataQuery;
   const { fields, frontmatter } = data.homePageQuery;
   const { hometours } = data.homePageQuery.fields;
   const { blogswitch } = data.blogAreaQuery.childMarkdownRemark.frontmatter;
@@ -271,15 +270,15 @@ export default function Index({ data }) {
     obj[tour.frontmatter.title.trim().toLowerCase()] = tour;
     return obj;
   }, {});
-  const postMeta = {
-    title: `Slackpacking, Walks & Cycle Tours`,
-    description: `SA Adventure Trails is a marketing association between Paul Colvin of Wild Coast Walks and Julia Colvin of Spekboom Tours.`,
-    slug: fields.slug,
-    datePublished: false
+  const pageMeta = {
+    pageTitle: `Slackpacking, Walks & Cycle Tours`,
+    pageDescription:
+      "SA Adventure Trails is a marketing association between Paul Colvin of Wild Coast Walks and Julia Colvin of Spekboom Tours.",
+    pageSlug: fields.slug
   };
   return (
     <Layout>
-      <SEO postData={postMeta} />
+      <SEO pageData={pageMeta} pageType="home" />
       <SliderArea slider={frontmatter.slider} />
       <AboutArea aboutArea={frontmatter.aboutarea} />
       <ToursPopular
@@ -377,11 +376,6 @@ export const homePageQuery = graphql`
         frontmatter {
           blogswitch
         }
-      }
-    }
-    siteMetaDataQuery: site {
-      siteMetadata {
-        title
       }
     }
   }

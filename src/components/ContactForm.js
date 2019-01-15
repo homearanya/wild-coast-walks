@@ -91,7 +91,6 @@ export default class ContactForm extends Component {
     };
 
     // subscribe to newsletter
-    console.log("subscribe to newwsletter", this.state.subscribeNewsletter);
     if (this.state.subscribeNewsletter) {
       const result = await addToMailchimp(this.state.email, {
         FNAME: this.state.fname,

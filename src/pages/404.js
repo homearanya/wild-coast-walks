@@ -38,18 +38,16 @@ const Wrapper = styled.div`
 `;
 
 export default ({ data }) => {
-  const { siteMetadata } = data.siteMetaDataQuery;
   const { backgroundimage } = data.NotFoundQuery.frontmatter;
-  console.log("backgroundimage", backgroundimage);
-  const postMeta = {
-    title: `Page Not Found - Slackpacking, Walks & Cycle Tours`,
+  const pageMeta = {
+    title: `Page Not Found . Slackpacking, Walks & Cycle Tours`,
     description: `Page not found. Go back to home page`,
     slug: "/404/",
     datePublished: false
   };
   return (
     <Layout>
-      <SEO postData={postMeta} />
+      <SEO pageData={pageMeta} />
       <Helmet>
         <meta name="robots" content="noindex" />
       </Helmet>
@@ -94,11 +92,6 @@ export const notFoundPageQuery = graphql`
           }
           alt
         }
-      }
-    }
-    siteMetaDataQuery: site {
-      siteMetadata {
-        title
       }
     }
   }
