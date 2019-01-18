@@ -21,7 +21,6 @@ exports.createPages = ({ actions, graphql, getNode }) => {
       ) {
         edges {
           node {
-            fileAbsolutePath
             id
             fields {
               slug
@@ -45,8 +44,6 @@ exports.createPages = ({ actions, graphql, getNode }) => {
 
     posts.forEach(edge => {
       const id = edge.node.id;
-      const fileAbsolutePath = edge.node.fileAbsolutePath;
-      // if (fileAbsolutePath.includes('/src/pages/')) {
       createPage({
         path: edge.node.fields.slug,
         // tags: edge.node.frontmatter.tags,
@@ -123,7 +120,6 @@ exports.createPages = ({ actions, graphql, getNode }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    // console.log('oncreatenode', node.fileAbsolutePath)
     let value = createFilePath({ node, getNode });
     if (value.includes("/tours/")) {
       value = `/tours/${node.frontmatter.destination
@@ -132,7 +128,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         .replace(/\s+/g, "-")
         .toLowerCase()}${value.substring(6)}`;
     }
-    console.log(value);
     createNodeField({
       name: `slug`,
       node,
