@@ -29,6 +29,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.trails.co.za",
+        sitemap: "https://www.trails.co.za/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }]
+      }
+    },
+    {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
         id: "GTM-NHC6XS7",
