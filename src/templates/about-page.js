@@ -167,7 +167,7 @@ const Associate = props => {
 export default ({ data }) => {
   const { fields, frontmatter } = data.AboutPageQuery;
   const pageMeta = {
-    title: `About Us . Slackpacking, Walks & Cycle Tours`,
+    title: `About Us · Slackpacking, Walks & Cycle Tours`,
     description: `SA Adventure Trails is a marketing association between Paul Colvin of Wild Coast Walks and Julia Colvin of Spekboom Tours.`,
     slug: fields.slug,
     datePublished: false

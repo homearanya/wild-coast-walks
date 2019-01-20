@@ -370,9 +370,9 @@ export default class TourPage extends Component {
     } = this.props.data.UpcomingEventsQuery.childMarkdownRemark;
     // Meta Info for SEO and schemaOrg
     const pageMeta = {
-      title: `${tourInfo.frontmatter.title} . ${
+      title: `${tourInfo.frontmatter.title} · ${
         tourInfo.frontmatter.destination
-      } . ${tourInfo.frontmatter.activity} . Tours`,
+      } · ${tourInfo.frontmatter.activity} · Tours`,
       description: `${tourInfo.frontmatter.shortdescription}`,
       slug: tourInfo.fields.slug,
       tourName: tourInfo.frontmatter.title,

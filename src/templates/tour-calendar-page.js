@@ -191,7 +191,7 @@ export default ({ data }) => {
     }
   });
   const pageMeta = {
-    title: `Tour Calendar . Slackpacking & Cycle Tours`,
+    title: `Tour Calendar · Slackpacking & Cycle Tours`,
     description: `Find your tour. If the dates don't suit you we can still organise it for you`,
     slug: fields.slug,
     datePublished: false
