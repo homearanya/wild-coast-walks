@@ -271,10 +271,10 @@ export default function Index({ data }) {
     return obj;
   }, {});
   const pageMeta = {
-    pageTitle: `Slackpacking, Walks & Cycle Tours`,
-    pageDescription:
+    title: `Slackpacking, Walks & Cycle Tours`,
+    description:
       "SA Adventure Trails is a marketing association between Paul Colvin of Wild Coast Walks and Julia Colvin of Spekboom Tours.",
-    pageSlug: fields.slug
+    slug: fields.slug
   };
   return (
     <Layout>
