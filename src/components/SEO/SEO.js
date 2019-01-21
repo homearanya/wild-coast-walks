@@ -99,7 +99,10 @@ const SEO = ({ pageData, postImage, pageType }) => (
             <meta property="og:url" content={url} />
             {pageType === "post" ? (
               <meta property="og:type" content="article" />
-            ) : null}
+            ) : (
+              <meta property="og:type" content="website" />
+            )}
+            <meta property="og:site_name" content={seo.title} />
             <meta property="og:title" content={metaTitle} />
             <meta property="og:description" content={metaDescription} />
             <meta property="og:image" content={metaImage} />
