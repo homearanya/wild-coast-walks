@@ -84,7 +84,6 @@ const SEO = ({ pageData, postImage, pageType }) => (
             ? `${seo.canonicalUrl}/img${pageMeta.tourImages[0]}`
             : seo.image;
       }
-
       return (
         <React.Fragment>
           <Helmet>
@@ -92,6 +91,9 @@ const SEO = ({ pageData, postImage, pageType }) => (
             <title>{metaTitle}</title>
             <meta name="description" content={metaDescription} />
             <meta name="image" content={metaImage} />
+
+            {/* Establish canonical url */}
+            <link rel="canonical" href={url} />
 
             {/* OpenGraph tags */}
             <meta property="og:url" content={url} />

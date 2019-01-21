@@ -4,7 +4,6 @@ import Helmet from "react-helmet";
 
 export default React.memo(
   ({ pageType, canonicalUrl, organization, tour, post }) => {
-    console.log(tour);
     const baseSchema = [
       {
         "@context": "http://schema.org",
@@ -96,7 +95,6 @@ export default React.memo(
       default:
         schema = baseSchema;
     }
-    console.log("schema", JSON.stringify(schema));
 
     return (
       <Helmet>
