@@ -111,6 +111,7 @@ export default class ContactForm extends Component {
               <input
                 aria-label="First Name"
                 aria-required
+                required
                 name="f_name"
                 type="text"
                 className="form-box"
@@ -123,6 +124,7 @@ export default class ContactForm extends Component {
               <input
                 aria-label="Last Name"
                 aria-required
+                required
                 name="l_name"
                 type="text"
                 className="form-box"
@@ -135,6 +137,7 @@ export default class ContactForm extends Component {
               <input
                 aria-label="Email Address"
                 aria-required
+                required
                 name="email"
                 type="email"
                 className="form-box"
@@ -158,6 +161,7 @@ export default class ContactForm extends Component {
               <input
                 aria-label="Subject"
                 aria-required
+                required
                 name="subject"
                 type="text"
                 className="form-box"
@@ -170,6 +174,7 @@ export default class ContactForm extends Component {
               <textarea
                 aria-label="Message"
                 aria-required
+                required
                 name="message"
                 className="yourmessage"
                 placeholder="Your message"
