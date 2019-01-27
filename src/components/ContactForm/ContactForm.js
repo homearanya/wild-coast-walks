@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import addToMailchimp from "gatsby-plugin-mailchimp";
-import { CSSTransition } from "react-transition-group";
 import Loader from "react-loader-spinner";
 import styled from "styled-components";
 
 import "./contactForm.css";
+import { AjaxMessage } from "../AjaxMessage";
 
-const ContactFormWrapper = styled.form`
+const ContactFormWrapper = styled.div`
   && {
     margin-bottom: -50px;
     @media (min-width: 768px) {
@@ -15,39 +15,6 @@ const ContactFormWrapper = styled.form`
     @media (min-width: 992px) {
       margin-bottom: -120px;
     }
-  }
-`;
-
-const ResultWrapper = styled.div`
-  height: 60px;
-  margin-top: -10px;
-  margin-bottom: 20px;
-  position: relative;
-`;
-const ResultMessage = styled.div`
-  background: rgba(9, 103, 185, 0.7);
-  bottom: 0;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-`;
-const StyledText = styled.div`
-  color: white;
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
-  font-size: 0.9em;
-  @media (min-width: 768px) {
-    font-size: 1em;
-  }
-
-  a {
-    color: white;
-    font-weight: 700;
-    text-decoration: underline;
   }
 `;
 
@@ -332,36 +299,17 @@ export class ContactForm extends Component {
             </ButtonContainer>
           </div>
         </form>
-        <ResultWrapper>
-          <CSSTransition
-            in={this.state.contactFormSubmissionResult !== null}
-            classNames="slideUp"
-            timeout={300}
-            unmountOnExit
-          >
-            <ResultMessage>
-              <StyledText>{this.state.contactFormSubmissionResult}</StyledText>
-            </ResultMessage>
-          </CSSTransition>
-        </ResultWrapper>
-        <ResultWrapper>
-          <CSSTransition
-            in={this.state.newsletterSubmissionResult !== null}
-            classNames="slideUp"
-            timeout={300}
-            unmountOnExit
-          >
-            <ResultMessage>
-              {this.state.newsletterSubmissionResult ? (
-                <StyledText
-                  dangerouslySetInnerHTML={{
-                    __html: this.state.newsletterSubmissionResult.msg
-                  }}
-                />
-              ) : null}
-            </ResultMessage>
-          </CSSTransition>
-        </ResultWrapper>
+        <AjaxMessage
+          in={this.state.contactFormSubmissionResult !== null}
+          dangerouslySetInnerHTML={this.state.contactFormSubmissionResult}
+        />
+        <AjaxMessage
+          in={this.state.newsletterSubmissionResult !== null}
+          dangerouslySetInnerHTML={
+            this.state.newsletterSubmissionResult &&
+            this.state.newsletterSubmissionResult.msg
+          }
+        />
       </ContactFormWrapper>
     );
   }

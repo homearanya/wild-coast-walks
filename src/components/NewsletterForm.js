@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import addToMailchimp from "gatsby-plugin-mailchimp";
+import styled from "styled-components";
+
+import { AjaxMessage } from "./AjaxMessage";
+
+const AjaxMessageContainer = styled.div`
+  margin-top: 30px;
+`;
 
 export default class NewsletterForm extends Component {
   constructor(props) {
@@ -40,6 +47,7 @@ export default class NewsletterForm extends Component {
   };
 
   render() {
+    console.log("NewsletterForm", this.state.submissionResult);
     return (
       <div className="newsletter-area">
         <div className="col-md-7">
@@ -59,6 +67,7 @@ export default class NewsletterForm extends Component {
                   <input
                     aria-label="First Name"
                     aria-required
+                    required
                     type="text"
                     name="fname"
                     placeholder="First Name"
@@ -70,6 +79,7 @@ export default class NewsletterForm extends Component {
                   <input
                     aria-label="Last Name"
                     aria-required
+                    required
                     type="text"
                     name="lname"
                     placeholder="Last Name"
@@ -81,6 +91,7 @@ export default class NewsletterForm extends Component {
                   <input
                     aria-label="Email Address"
                     aria-required
+                    required
                     type="email"
                     name="email"
                     placeholder="Enter your email address ......"
@@ -96,16 +107,14 @@ export default class NewsletterForm extends Component {
               </div>
             </div>
           </form>
-          <div className="result-submission">
-            {this.state.submissionResult ? (
-              <div
-                className="result-message"
-                dangerouslySetInnerHTML={{
-                  __html: this.state.submissionResult.msg
-                }}
-              />
-            ) : null}
-          </div>
+          <AjaxMessageContainer>
+            <AjaxMessage
+              in={this.state.submissionResult !== null}
+              dangerouslySetInnerHTML={
+                this.state.submissionResult && this.state.submissionResult.msg
+              }
+            />
+          </AjaxMessageContainer>
         </div>
       </div>
     );
