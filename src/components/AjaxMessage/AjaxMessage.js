@@ -36,6 +36,9 @@ const StyledText = styled.div`
     font-weight: 700;
     text-decoration: underline;
   }
+  a:hover {
+    color: #ccb821;
+  }
 `;
 
 export function AjaxMessage(props) {
