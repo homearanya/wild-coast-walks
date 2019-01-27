@@ -1,10 +1,89 @@
 import React, { Component } from "react";
 import addToMailchimp from "gatsby-plugin-mailchimp";
 import { CSSTransition } from "react-transition-group";
+import Loader from "react-loader-spinner";
+import styled from "styled-components";
 
-import "../assets/css/contactForm.css";
+import "./contactForm.css";
 
-export default class ContactForm extends Component {
+const ContactFormWrapper = styled.form`
+  && {
+    margin-bottom: -50px;
+    @media (min-width: 768px) {
+      margin-bottom: -100px;
+    }
+    @media (min-width: 992px) {
+      margin-bottom: -120px;
+    }
+  }
+`;
+
+const ResultWrapper = styled.div`
+  height: 60px;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  position: relative;
+`;
+const ResultMessage = styled.div`
+  background: rgba(9, 103, 185, 0.7);
+  bottom: 0;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+`;
+const StyledText = styled.div`
+  color: white;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  font-size: 0.9em;
+  @media (min-width: 768px) {
+    font-size: 1em;
+  }
+
+  a {
+    color: white;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+`;
+
+const LoaderContainer = styled.div`
+  color: white;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+`;
+
+const ButtonContainer = styled.div`
+  position: relative;
+  text-align: center;
+`;
+
+const StyledButton = styled.input`
+  &&& {
+    margin-bottom: 20px;
+    color: ${props => (props.loadSpinner ? "#0967B9 " : "#ffffff")};
+    background-color: #0967b9;
+    :focus {
+      color: ${props => (props.loadSpinner ? "#0967B9 " : "#ffffff")};
+      background-color: #0967b9;
+    }
+    :hover,
+    :active {
+      color: ${props => (props.loadSpinner ? "#043B6C" : "#ffffff")};
+      background-color: #043b6c;
+    }
+  }
+`;
+
+export class ContactForm extends Component {
   constructor(props) {
     super(props);
     let subject = "";
@@ -20,7 +99,8 @@ export default class ContactForm extends Component {
       message: "",
       contactFormSubmissionResult: null,
       subscribeNewsletter: true,
-      newsletterSubmissionResult: null
+      newsletterSubmissionResult: null,
+      loadSpinner: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -53,9 +133,30 @@ export default class ContactForm extends Component {
         console.log("Wrong Case in Switch HandleChange");
     }
   }
-  handleSubmit = async event => {
-    event.preventDefault();
 
+  subscribeNewsletter() {
+    if (this.state.subscribeNewsletter) {
+      this.setState(
+        {
+          loadSpinner: true
+        },
+        async () => {
+          const result = await addToMailchimp(this.state.email, {
+            FNAME: this.state.fname,
+            LNAME: this.state.lname
+          });
+          // I recommend setting `result` to React state
+          // but you can do whatever you want
+          this.setState({
+            newsletterSubmissionResult: result,
+            loadSpinner: false
+          });
+        }
+      );
+    }
+  }
+
+  sendEmail() {
     // Construct an HTTP request
     var xhr = new XMLHttpRequest();
     xhr.open(
@@ -73,38 +174,47 @@ export default class ContactForm extends Component {
     xhr.onloadend = response => {
       if (response.target.status === 200) {
         // The form submission was successful
-        this.setState({
-          f_name: "",
-          l_name: "",
-          email: "",
-          phone_number: "",
-          subject: "",
-          message: "",
-          contactFormSubmissionResult:
-            "Thanks for the message. I’ll be in touch shortly."
-        });
+        this.setState(
+          {
+            f_name: "",
+            l_name: "",
+            email: "",
+            phone_number: "",
+            subject: "",
+            message: "",
+            contactFormSubmissionResult:
+              "Thanks for the message. I’ll be in touch shortly.",
+            loadSpinner: false
+          },
+          this.subscribeNewsletter()
+        );
       } else {
         // The form submission failed
-        this.setState({ contactFormSubmissionResult: "Something went wrong" });
+        this.setState({
+          contactFormSubmissionResult: "Something went wrong",
+          loadSpinner: false
+        });
         console.error(JSON.parse(response.target.response).message);
       }
     };
+  }
 
-    // subscribe to newsletter
-    if (this.state.subscribeNewsletter) {
-      const result = await addToMailchimp(this.state.email, {
-        FNAME: this.state.fname,
-        LNAME: this.state.lname
-      });
-      // I recommend setting `result` to React state
-      // but you can do whatever you want
-      this.setState({ newsletterSubmissionResult: result });
-    }
+  handleSubmit = async event => {
+    event.preventDefault();
+    this.setState(
+      {
+        loadSpinner: true,
+        contactFormSubmissionResult: null,
+        newsletterSubmissionResult: null
+      },
+      // Callback funtion to be called after component has been updated with the new state
+      this.sendEmail()
+    );
   };
 
   render() {
     return (
-      <div className="contact-form-area">
+      <ContactFormWrapper className="contact-form-area">
         <form onSubmit={this.handleSubmit}>
           <div className="row">
             <div className="col-sm-6">
@@ -199,60 +309,60 @@ export default class ContactForm extends Component {
                 <span className="checkmark" />
               </label>
             </div>
-            <div className="col-sm-12">
-              <input
+            <ButtonContainer className="col-sm-12">
+              {this.state.loadSpinner && (
+                <LoaderContainer>
+                  <Loader
+                    type="ThreeDots"
+                    color="#ffffff"
+                    height={18}
+                    width={80}
+                  />
+                </LoaderContainer>
+              )}
+
+              <StyledButton
                 aria-label="Submit Button"
                 type="submit"
                 value="Send Message"
                 className="submit-button"
+                loadSpinner={this.state.loadSpinner}
+                disabled={this.state.loadSpinner}
               />
-            </div>
+            </ButtonContainer>
           </div>
         </form>
-        <div className="result-submission">
+        <ResultWrapper>
           <CSSTransition
             in={this.state.contactFormSubmissionResult !== null}
-            classNames="fade-dropdown-menu"
+            classNames="slideUp"
             timeout={300}
             unmountOnExit
           >
-            <div className="result-message">
-              {this.state.contactFormSubmissionResult}
-            </div>
+            <ResultMessage>
+              <StyledText>{this.state.contactFormSubmissionResult}</StyledText>
+            </ResultMessage>
           </CSSTransition>
+        </ResultWrapper>
+        <ResultWrapper>
           <CSSTransition
             in={this.state.newsletterSubmissionResult !== null}
-            classNames="fade-dropdown-menu"
+            classNames="slideUp"
             timeout={300}
             unmountOnExit
           >
-            <div className="result-message">
+            <ResultMessage>
               {this.state.newsletterSubmissionResult ? (
-                <div
+                <StyledText
                   dangerouslySetInnerHTML={{
                     __html: this.state.newsletterSubmissionResult.msg
                   }}
                 />
               ) : null}
-            </div>
+            </ResultMessage>
           </CSSTransition>
-        </div>
-        {/* {this.state.contactFormSubmissionResult ||
-        this.state.newsletterSubmissionResult ? (
-          <div className="result-submission">
-            <div className="result-message">
-              {this.state.contactFormSubmissionResult}
-              {this.state.newsletterSubmissionResult ? (
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: this.state.newsletterSubmissionResult.msg
-                  }}
-                />
-              ) : null}
-            </div>
-          </div>
-        ) : null} */}
-      </div>
+        </ResultWrapper>
+      </ContactFormWrapper>
     );
   }
 }

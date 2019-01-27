@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import Banner from "../components/Banner";
-import ContactForm from "../components/ContactForm";
+import { ContactForm } from "../components/ContactForm";
 import ContactDetails from "../components/ContactDetails";
 import SEO from "../components/SEO/SEO";
 
@@ -87,7 +87,8 @@ export const contactPageQuery = graphql`
           image {
             childImageSharp {
               fluid(maxWidth: 1600, maxHeight: 750) {
-                ...GatsbyImageSharpFluid...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid
               }
             }
           }

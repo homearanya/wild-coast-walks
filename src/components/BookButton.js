@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactModal from "react-modal";
 import { Link } from "gatsby";
 
-import ContactForm from "../components/ContactForm";
+import { ContactForm } from "./ContactForm";
 import "../assets/css/bookButton.css";
 
 ReactModal.setAppElement("#___gatsby");
