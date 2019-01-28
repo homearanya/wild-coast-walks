@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import addToMailchimp from "gatsby-plugin-mailchimp";
 import Loader from "react-loader-spinner";
 import styled from "styled-components";
+import Recaptcha from "react-recaptcha";
 
 import "./contactForm.css";
 import { AjaxMessage } from "../AjaxMessage";
@@ -50,6 +51,13 @@ const StyledButton = styled.input`
   }
 `;
 
+const RecaptchaContainer = styled.div`
+  text-align: center;
+`;
+const StyledRecaptcha = styled.div`
+  display: inline-block;
+`;
+
 export class ContactForm extends Component {
   constructor(props) {
     super(props);
@@ -67,10 +75,13 @@ export class ContactForm extends Component {
       contactFormSubmissionResult: null,
       subscribeNewsletter: true,
       newsletterSubmissionResult: null,
+      verified: false,
       loadSpinner: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.verifyCallback = this.verifyCallback.bind(this);
+    this.callback = this.callback.bind(this);
   }
 
   handleChange(event) {
@@ -168,6 +179,15 @@ export class ContactForm extends Component {
 
   handleSubmit = async event => {
     event.preventDefault();
+
+    // confirmation not a robot
+    if (!this.state.verified) {
+      this.setState({
+        contactFormSubmissionResult: "Please, confirm you are not a robot"
+      });
+      return;
+    }
+
     this.setState(
       {
         loadSpinner: true,
@@ -177,6 +197,16 @@ export class ContactForm extends Component {
       // Callback funtion to be called after component has been updated with the new state
       this.sendEmail()
     );
+  };
+
+  callback = function() {
+    console.log("Done!!!!");
+  };
+
+  verifyCallback = function(response) {
+    if (response) {
+      this.setState({ verified: true, contactFormSubmissionResult: null });
+    }
   };
 
   render() {
@@ -297,6 +327,16 @@ export class ContactForm extends Component {
                 disabled={this.state.loadSpinner}
               />
             </ButtonContainer>
+            <RecaptchaContainer>
+              <StyledRecaptcha>
+                <Recaptcha
+                  sitekey="6LfQMI0UAAAAAFJCg43F0uVN1gPKFozH1_fvwRuG"
+                  render="explicit"
+                  verifyCallback={this.verifyCallback}
+                  onloadCallback={this.callback}
+                />
+              </StyledRecaptcha>
+            </RecaptchaContainer>
           </div>
         </form>
         <AjaxMessage

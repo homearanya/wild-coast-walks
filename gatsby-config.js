@@ -29,6 +29,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-recaptcha`,
+      options: {
+        async: true,
+        defer: true,
+        args: `?onload=onloadCallback&render=explicit`
+      }
+    },
+    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://www.trails.co.za",

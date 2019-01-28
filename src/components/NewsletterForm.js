@@ -47,7 +47,6 @@ export default class NewsletterForm extends Component {
   };
 
   render() {
-    console.log("NewsletterForm", this.state.submissionResult);
     return (
       <div className="newsletter-area">
         <div className="col-md-7">

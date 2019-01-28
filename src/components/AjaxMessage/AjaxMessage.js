@@ -6,8 +6,7 @@ import "./ajaxMessage.css";
 
 const ResultWrapper = styled.div`
   height: 60px;
-  margin-top: -10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   position: relative;
 `;
 const ResultMessage = styled.div`
