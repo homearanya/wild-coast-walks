@@ -13,7 +13,7 @@ const ContactFormWrapper = styled.div`
       margin-bottom: -100px;
     }
     @media (min-width: 992px) {
-      margin-bottom: -120px;
+      margin-bottom: -110px;
     }
   }
 `;
@@ -26,6 +26,14 @@ const LoaderContainer = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 1;
+
+  svg {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -58,11 +66,17 @@ export class ContactForm extends Component {
       subject = this.props.subject;
     }
     this.state = {
+      f_namefjkdls: "",
+      l_namefjkdls: "",
+      emailfjkdls: "",
+      phone_numberfjkdls: "",
+      subjectfjkdls: subject,
+      messagefjkdls: "",
       f_name: "",
       l_name: "",
       email: "",
       phone_number: "",
-      subject: subject,
+      subject: "",
       message: "",
       contactFormSubmissionResult: null,
       subscribeNewsletter: true,
@@ -75,6 +89,26 @@ export class ContactForm extends Component {
 
   handleChange(event) {
     switch (event.target.name) {
+      // Real fields
+      case "f_namefjkdls":
+        this.setState({ f_namefjkdls: event.target.value });
+        break;
+      case "l_namefjkdls":
+        this.setState({ l_namefjkdls: event.target.value });
+        break;
+      case "emailfjkdls":
+        this.setState({ emailfjkdls: event.target.value });
+        break;
+      case "subjectfjkdls":
+        this.setState({ subjectfjkdls: event.target.value });
+        break;
+      case "phone_numberfjkdls":
+        this.setState({ phone_numberfjkdls: event.target.value });
+        break;
+      case "messagefjkdls":
+        this.setState({ messagefjkdls: event.target.value });
+        break;
+      // h o n e y p o t fields
       case "f_name":
         this.setState({ f_name: event.target.value });
         break;
@@ -108,9 +142,9 @@ export class ContactForm extends Component {
           loadSpinner: true
         },
         async () => {
-          const result = await addToMailchimp(this.state.email, {
-            FNAME: this.state.fname,
-            LNAME: this.state.lname
+          const result = await addToMailchimp(this.state.emailfjkdls, {
+            FNAME: this.state.fnamefjkdls,
+            LNAME: this.state.lnamefjkdls
           });
           // I recommend setting `result` to React state
           // but you can do whatever you want
@@ -124,11 +158,42 @@ export class ContactForm extends Component {
   }
 
   sendEmail() {
-    // Construct an HTTP request
+    // Check is not spam
+    if (
+      (this.state.f_name && this.state.f_name.length > 0) ||
+      (this.state.l_name && this.state.l_name.length > 0) ||
+      (this.state.email && this.state.email.length > 0) ||
+      (this.state.subject && this.state.subject.length > 0) ||
+      (this.state.phone_number && this.state.phone_number.length > 0) ||
+      (this.state.message && this.state.message.length > 0)
+    ) {
+      // it's spam but let's pretend it's a successful submission!!!
+      setTimeout(() => {
+        this.setState({
+          f_namefjkdls: "",
+          l_namefjkdls: "",
+          emailfjkdls: "",
+          phone_numberfjkdls: "",
+          subjectfjkdls: "",
+          messagefjkdls: "",
+          f_name: "",
+          l_name: "",
+          email: "",
+          phone_number: "",
+          subject: "",
+          message: "",
+          contactFormSubmissionResult:
+            "Thanks for the message. I’ll be in touch shortly.",
+          loadSpinner: false
+        });
+      }, 2000);
+      return;
+    }
+    // It's not spam. Let's construct an HTTP request
     var xhr = new XMLHttpRequest();
     xhr.open(
       "POST",
-      "https://lbp7i4kzl4.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer",
+      "https://lyjj57jnmf.execute-api.us-east-1.amazonaws.com/production/static-site-mailer-trails",
       true
     );
     xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
@@ -143,12 +208,12 @@ export class ContactForm extends Component {
         // The form submission was successful
         this.setState(
           {
-            f_name: "",
-            l_name: "",
-            email: "",
-            phone_number: "",
-            subject: "",
-            message: "",
+            f_namefjkdls: "",
+            l_namefjkdls: "",
+            emailfjkdls: "",
+            phone_numberfjkdls: "",
+            subjectfjkdls: "",
+            messagefjkdls: "",
             contactFormSubmissionResult:
               "Thanks for the message. I’ll be in touch shortly.",
             loadSpinner: false
@@ -161,7 +226,8 @@ export class ContactForm extends Component {
           contactFormSubmissionResult: "Something went wrong",
           loadSpinner: false
         });
-        console.error(JSON.parse(response.target.response).message);
+        console.error(response);
+        // console.error(JSON.parse(response.target.response).message);
       }
     };
   }
@@ -185,16 +251,17 @@ export class ContactForm extends Component {
       <ContactFormWrapper className="contact-form-area">
         <form onSubmit={this.handleSubmit}>
           <div className="row">
+            {/* Real fields */}
             <div className="col-sm-6">
               <input
                 aria-label="First Name"
                 aria-required
                 required
-                name="f_name"
+                name="f_namefjkdls"
                 type="text"
                 className="form-box"
                 placeholder="First name"
-                value={this.state.f_name}
+                value={this.state.f_namefjkdls}
                 onChange={this.handleChange}
               />
             </div>
@@ -203,11 +270,11 @@ export class ContactForm extends Component {
                 aria-label="Last Name"
                 aria-required
                 required
-                name="l_name"
+                name="l_namefjkdls"
                 type="text"
                 className="form-box"
                 placeholder="Last name"
-                value={this.state.l_name}
+                value={this.state.l_namefjkdls}
                 onChange={this.handleChange}
               />
             </div>
@@ -216,22 +283,22 @@ export class ContactForm extends Component {
                 aria-label="Email Address"
                 aria-required
                 required
-                name="email"
-                type="email"
+                name="emailfjkdls"
+                type="emailfjkdls"
                 className="form-box"
                 placeholder="Email"
-                value={this.state.email}
+                value={this.state.emailfjkdls}
                 onChange={this.handleChange}
               />
             </div>
             <div className="col-sm-6">
               <input
                 aria-label="Phone Number"
-                name="phone_number"
+                name="phone_numberfjkdls"
                 type="text"
                 className="form-box"
                 placeholder="Phone number"
-                value={this.state.phone_number}
+                value={this.state.phone_numberfjkdls}
                 onChange={this.handleChange}
               />
             </div>
@@ -240,11 +307,11 @@ export class ContactForm extends Component {
                 aria-label="Subject"
                 aria-required
                 required
-                name="subject"
+                name="subjectfjkdls"
                 type="text"
                 className="form-box"
                 placeholder="Subject"
-                value={this.state.subject}
+                value={this.state.subjectfjkdls}
                 onChange={this.handleChange}
               />
             </div>
@@ -253,13 +320,80 @@ export class ContactForm extends Component {
                 aria-label="Message"
                 aria-required
                 required
+                name="messagefjkdls"
+                className="yourmessage"
+                placeholder="Your message"
+                value={this.state.messagefjkdls}
+                onChange={this.handleChange}
+              />
+            </div>
+            {/* h o n e y p o t fields */}
+            <div className="col-sm-6 ohnohoney">
+              <input
+                name="f_name"
+                type="text"
+                className="form-box"
+                placeholder="First name"
+                autoComplete="off"
+                value={this.state.f_name}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-sm-6 ohnohoney">
+              <input
+                name="l_name"
+                type="text"
+                className="form-box"
+                placeholder="Last name"
+                autoComplete="off"
+                value={this.state.l_name}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-sm-6 ohnohoney">
+              <input
+                name="email"
+                type="email"
+                className="form-box"
+                placeholder="Email"
+                autoComplete="off"
+                value={this.state.email}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-sm-6 ohnohoney">
+              <input
+                name="phone_number"
+                type="text"
+                className="form-box"
+                placeholder="Phone number"
+                autoComplete="off"
+                value={this.state.phone_number}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-sm-12 ohnohoney">
+              <input
+                name="subject"
+                type="text"
+                className="form-box"
+                placeholder="Subject"
+                autoComplete="off"
+                value={this.state.subject}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="col-sm-12 ohnohoney">
+              <textarea
                 name="message"
                 className="yourmessage"
                 placeholder="Your message"
+                autoComplete="off"
                 value={this.state.message}
                 onChange={this.handleChange}
               />
             </div>
+            {/* Newsletter option */}
             <div className="col-sm-12">
               <label
                 htmlFor="subscribe_newsletter"
@@ -277,6 +411,7 @@ export class ContactForm extends Component {
                 <span className="checkmark" />
               </label>
             </div>
+            {/* Button Area */}
             <ButtonContainer className="col-sm-12">
               {this.state.loadSpinner && (
                 <LoaderContainer>
