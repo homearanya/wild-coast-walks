@@ -34,25 +34,25 @@ aboutarea:
     image: /img/hikers-and-porters786x426-min.jpg
 toursarea:
   heading1: Our Popular Tours
-  heading2: ''
+  heading2: ""
   introduction: >-
     Not sure what you’re looking for and need a little inspiration? We can help.
     Check out our handpicked
 
     lists of topical trips you can take right now.
   section:
-    - heading1: Wild Coast Slackpack
-      heading2: ''
+    - heading1: Wild Coast Slackpacking
+      heading2: ""
       tours:
-        - tour: Wild Coast Meander
-        - tour: Wild Coast Sunshine
-        - tour: Wild Coast Mini Break
-    - heading1: Drakensberg Slackpack
+        - tour: Meander Hike
+        - tour: Sunshine Hike
+        - tour: Mini Break
+    - heading1: Drakensberg Slackpacking
       tours:
-        - tour: Giants Cup
+        - tour: Giants Cup Trail
         - tour: Amphitheatre Hike
         - tour: Mehloding
-    - heading1: Midlands Slackpack
+    - heading1: Midlands Slackpacking
       tours:
         - tour: Karkloof Falls2Falls
         - tour: Dargle Samango
@@ -71,4 +71,3 @@ blogarea:
   heading2: Blog Posts
   switch: true
 ---
-

@@ -280,7 +280,7 @@ export const CalendarPageQuery = graphql`
           image {
             childImageSharp {
               fluid(maxWidth: 1600, maxHeight: 750) {
-                ...GatsbyImageSharpFluid...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid
               }
             }
           }

@@ -3,12 +3,12 @@ templateKey: tour-page
 featured: true
 title: Nhlosane Hike
 destination: Midlands
-activity: Slackpack
-duration: 2 day
+activity: Slackpacking
+duration: 2 days
 price: R800
 bannerblurb: Nhlosane 2 day hike - KZN Midlands
 shortdescription: >-
-  A 2 day, 2 night weekend or midweek slackpack using a guest farm situated at
+  A 2 day, 2 night weekend or midweek slackpacking using a guest farm situated at
   the foot of the iNhlosane mountain in upper Dargle.  Offers a diverse
   combination of  KZN Midlands scenery and panoramic views.  Includes all
   meals,  entry fees, farmstyle accommodation and vehicle transfers.

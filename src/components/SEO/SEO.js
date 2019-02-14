@@ -51,7 +51,7 @@ const SEO = ({ pageData, postImage, pageType }) => (
       const metaDescription =
         pageMeta.description || pageData.excerpt || seo.description;
       const url = pageMeta.slug
-        ? `${seo.canonicalUrl}${path.sep}${pageMeta.slug}`
+        ? `${seo.canonicalUrl}${pageMeta.slug}`
         : seo.canonicalUrl;
       // tour data for schemaOrg
       let tour = {};
@@ -60,7 +60,7 @@ const SEO = ({ pageData, postImage, pageType }) => (
         tour.description = pageMeta.description;
         tour.images = pageMeta.tourImages;
         tour.price = pageMeta.tourPrice;
-        tour.url = `${seo.canonicalUrl}${path.sep}${pageMeta.slug}`;
+        tour.url = `${seo.canonicalUrl}${pageMeta.slug}`;
       }
       // post data for schemaOrg
       let post = {};
@@ -70,7 +70,7 @@ const SEO = ({ pageData, postImage, pageType }) => (
         post.description = pageMeta.description;
         post.image = postImage ? `${seo.canonicalUrl}${postImage}` : seo.image;
         post.dataPublished = pageMeta.datePublished;
-        post.url = `${seo.canonicalUrl}${path.sep}${pageMeta.slug}`;
+        post.url = `${seo.canonicalUrl}${pageMeta.slug}`;
         post.author = seo.author;
       }
 

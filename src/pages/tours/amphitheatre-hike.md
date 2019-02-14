@@ -3,7 +3,7 @@ templateKey: tour-page
 featured: true
 title: Amphitheatre Hike
 destination: Drakensberg
-activity: Slackpack
+activity: Slackpacking
 duration: 4 nights
 price: R 6900
 bannerblurb: 3 day ascent of the Amphitheatre peak in the  Northern Drakensberg

@@ -31,9 +31,9 @@ export default React.memo(
             "@context": "http://schema.org",
             "@type": "Product",
             name: tour.name,
-            image: tour.images.map(
-              image => `${canonicalUrl}${path.sep}img${path.sep}${image}`
-            ),
+            image: tour.images.map(image => {
+              return `${canonicalUrl}${path.sep}img${path.sep}${image}`;
+            }),
             description: tour.description,
             offers: {
               "@type": "Offer",

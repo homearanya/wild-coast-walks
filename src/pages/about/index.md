@@ -136,7 +136,7 @@ destinationsarea:
       heading1: Customising
       heading2: Your Tour
       image:
-        alt: Giants Cup Hike
+        alt: Giants Cup Trail Hike
         image: /img/kd1_005.jpg
   heading1: Our
   heading2: Services
@@ -156,7 +156,7 @@ partnersarea:
               full back-up support. Hike or ride  in beautiful natural scenery
               while your bags are transferred between lodges with comfortable
               beds and good food and drink at the end of the day.  The Wild
-              Coast Walk, Giants Cup Hikeathon and Amphitheatre Heritage hike
+              Coast Walk, Giants Cup Trail Hikeathon and Amphitheatre Heritage hike
               are 3 examples which are now firmly established on the active
               travellers “must-do” list as a result.
           - text: >-

@@ -1,9 +1,9 @@
 ---
 templateKey: tour-page
 featured: true
-title: Wild Coast Mini Break
+title: Mini Break
 destination: Wild Coast
-activity: Slackpack
+activity: Slackpacking
 duration: 3 days
 price: R 4800
 bannerblurb: 2 days 3 nights from Morgan Bay to Chintsa
@@ -28,4 +28,3 @@ photoGallery:
     - image: /img/wc3_mb.jpg
     - image: /img/wc3_ferry.jpg
 ---
-
