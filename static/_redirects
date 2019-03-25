@@ -9,71 +9,71 @@
 https://trails.netlify.com/* https://www.trails.co.za/:splat 301!
 
 # Redirect with a 301 (default)
-/about/backpack.html	/
-/about/binoculars.html	/
-/about/camp_check.html	/
-/about/gps.html	/
-/about/tent.html	/
-/enquiry.html	/contact
-/hikes/ecape/page22.htm	/about
-/hikes/ecape/page27.htm	/about
-/hikes/ecape/strandloper.html	/about
-/hikes/ecape/wartrail.htm	/about
-/hikes/gauteng/hennops.html	/about
-/hikes/gauteng/windybrow.html	/about
+# /about/backpack.html	/
+# /about/binoculars.html	/
+# /about/camp_check.html	/
+# /about/gps.html	/
+# /about/tent.html	/
+# /enquiry.html	/contact
+# /hikes/ecape/page22.htm	/about
+# /hikes/ecape/page27.htm	/about
+# /hikes/ecape/strandloper.html	/about
+# /hikes/ecape/wartrail.htm	/about
+# /hikes/gauteng/hennops.html	/about
+# /hikes/gauteng/windybrow.html	/about
 /hikes/kzn/AHH_Itinerary.pdf	/tours/drakensberg/slackpacking/amphitheatre-hike
 /hikes/kzn/amphitheatre.html	/tours/drakensberg/slackpacking/amphitheatre-hike
-/hikes/kzn/blackwil.html	/about
-/hikes/kzn/chaletinfo.htm	/about
+# /hikes/kzn/blackwil.html	/about
+# /hikes/kzn/chaletinfo.htm	/about
 /hikes/kzn/hikeathon.html	/tours/drakensberg/slackpacking/giants-cup
-/hikes/kzn/ithala.html	/about
-/hikes/kzn/izemfene.html	/about
-/hikes/kzn/map.htm	/about
+# /hikes/kzn/ithala.html	/about
+# /hikes/kzn/izemfene.html	/about
+# /hikes/kzn/map.htm	/about
 /hikes/kzn/mehloding.html	/tours/drakensberg/slackpacking/mehloding
-/hikes/kzn/vergezient.html	/about
-/hikes/limpopo/mashatu.html	/about
-/hikes/limpopo/spreeuwal.html	/about
-/hikes/limpopo/stamvrug.html	/about
-/hikes/limpopo/thabapha.html	/about
-/hikes/moz/machampane.html	/about
-/hikes/mpuma/assegais.html	/about
-/hikes/mpuma/brook.html	/about
-/hikes/mpuma/Kransklf.html	/about
-/hikes/mpuma/safcol_trails.html	/about
-/hikes/ofs/koranna.html	/about
-/hikes/wcape/chacma.html	/about
-/hikes/wcape/dolphintrail.html	/about
-/hikes/wcape/gardenroutetrail.html	/about
-/hikes/wcape/images/	/about
-/hikes/wcape/karoo/	/about
-/hikes/wcape/karoo/hosts.htm	/about
-/hikes/wcape/oystercatcher.html	/about
-/hikes/wcape/tsitsikamma.html	/about
-/links.html	/
+# /hikes/kzn/vergezient.html	/about
+# /hikes/limpopo/mashatu.html	/about
+# /hikes/limpopo/spreeuwal.html	/about
+# /hikes/limpopo/stamvrug.html	/about
+# /hikes/limpopo/thabapha.html	/about
+# /hikes/moz/machampane.html	/about
+# /hikes/mpuma/assegais.html	/about
+# /hikes/mpuma/brook.html	/about
+# /hikes/mpuma/Kransklf.html	/about
+# /hikes/mpuma/safcol_trails.html	/about
+# /hikes/ofs/koranna.html	/about
+# /hikes/wcape/chacma.html	/about
+# /hikes/wcape/dolphintrail.html	/about
+# /hikes/wcape/gardenroutetrail.html	/about
+# /hikes/wcape/images/	/about
+# /hikes/wcape/karoo/	/about
+# /hikes/wcape/karoo/hosts.htm	/about
+# /hikes/wcape/oystercatcher.html	/about
+# /hikes/wcape/tsitsikamma.html	/about
+# /links.html	/
 /mtb/AE_mehlodingcycle.htm	/tours/drakensberg/slackpacking/mehloding
-/mtb/AE_WildCoast%20Cycle%20Tour.pdf	/about
-/mtb/AE_wildride.html	/about
-/mtb/clearwatertrails.html	/about
-/mtb/cyclemashatu.html	/about
-/Pondo%20Explorer_5days__2010.pdf	/about
-/result_set.php?action=MTB+Cycle&terrain=Coastal&region=Gauteng	/about
-/ride/bhangazi.html	/about
-/ride/chubeka.html	/about
-/ride/horizon.html	/about
-/ride/molweni.html	/about
-/ride/ponies_top1.htm	/about
-/ride/ponieskrantz.html	/about
-/trailinfo.html	/
-/cbhikes.html	/
-/nqabara	/
-/nqabara/index.html	/
-/wcw_reservations.html	/
-/wcw_maps.html	/
-/SERENDIPITY%20COTTAGE.pdf	/
-/WC%20Hotel-hopping%20trail_2012.pdf	/
-/WC%20Hotel-hopping%20trail_2013.pdf	/
-/WC%20Hotel-hopping%20trail_2015.pdf	/
-/nqabara/scripts/Hiking%20Notes%20for%20Haven%20Hotel%20to%20Kob%20Inn%20Trail.pdf	/
+# /mtb/AE_WildCoast%20Cycle%20Tour.pdf	/about
+# /mtb/AE_wildride.html	/about
+# /mtb/clearwatertrails.html	/about
+# /mtb/cyclemashatu.html	/about
+# /Pondo%20Explorer_5days__2010.pdf	/about
+# /result_set.php?action=MTB+Cycle&terrain=Coastal&region=Gauteng	/about
+# /ride/bhangazi.html	/about
+# /ride/chubeka.html	/about
+# /ride/horizon.html	/about
+# /ride/molweni.html	/about
+# /ride/ponies_top1.htm	/about
+# /ride/ponieskrantz.html	/about
+# /trailinfo.html	/
+# /cbhikes.html	/
+# /nqabara	/
+# /nqabara/index.html	/
+# /wcw_reservations.html	/
+# /wcw_maps.html	/
+# /SERENDIPITY%20COTTAGE.pdf	/
+# /WC%20Hotel-hopping%20trail_2012.pdf	/
+# /WC%20Hotel-hopping%20trail_2013.pdf	/
+# /WC%20Hotel-hopping%20trail_2015.pdf	/
+# /nqabara/scripts/Hiking%20Notes%20for%20Haven%20Hotel%20to%20Kob%20Inn%20Trail.pdf	/
 /tours/battlefields	/tours/midlands/cycle-tour/battlefields
 /tours/amphitheatre-hike	/tours/drakensberg/slackpacking/amphitheatre-hike
 /tours/mini-break	/tours/wild-coast/slackpacking/mini-break
