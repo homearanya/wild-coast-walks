@@ -1,7 +1,7 @@
 ---
 templateKey: tour-page
 featured: true
-title: Giants Cup Trail
+tour_id: Giants Cup Trail
 destination: Drakensberg
 activity: Slackpacking
 duration: 4 nights

@@ -120,7 +120,7 @@ const Event = props => {
               </div>
               <div className="adventure-list-text">
                 <h1>
-                  <a href="#">{`${props.tourInfo.title} / ${
+                  <a href="#">{`${props.tourInfo.tour_id} / ${
                     props.tourInfo.duration
                   } Trip`}</a>
                 </h1>
@@ -142,7 +142,7 @@ const Event = props => {
                   <div className="trip-booking-info">
                     <BookButton
                       text="Book this trip"
-                      tour={props.tourInfo.title}
+                      tour={props.tourInfo.tour_id}
                       date={dateformat(props.eventDate, "dd mmm yyyy")}
                     />
                   </div>
@@ -297,7 +297,7 @@ export const CalendarPageQuery = graphql`
     }
     EventsQuery: allMarkdownRemark(
       sort: { order: ASC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "event-page" } } }
+      filter: { frontmatter: { templateKey: { eq: "upcoming-events" } } }
     ) {
       edges {
         node {
@@ -307,7 +307,7 @@ export const CalendarPageQuery = graphql`
                 slug
               }
               frontmatter {
-                title
+                tour_id
                 destination
                 activity
                 duration

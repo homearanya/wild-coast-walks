@@ -138,7 +138,7 @@ const TripInformation = props => {
                 <div className="trip-booking-info">
                   <BookButton
                     text="Book this trip"
-                    tour={props.tourInfo.frontmatter.title}
+                    tour={props.tourInfo.frontmatter.tour_id}
                   />
                 </div>
               </div>
@@ -169,7 +169,7 @@ const TripInformation = props => {
                 <div className="trip-booking-info">
                   <BookButton
                     text="Book this trip"
-                    tour={props.tourInfo.frontmatter.title}
+                    tour={props.tourInfo.frontmatter.tour_id}
                   />
                 </div>
               </div>
@@ -370,12 +370,12 @@ export default class TourPage extends Component {
     } = this.props.data.UpcomingEventsQuery.childMarkdownRemark;
     // Meta Info for SEO and schemaOrg
     const pageMeta = {
-      title: `${tourInfo.frontmatter.title} · ${
+      title: `${tourInfo.frontmatter.tour_id} · ${
         tourInfo.frontmatter.destination
       } · ${tourInfo.frontmatter.activity} · Tours`,
       description: `${tourInfo.frontmatter.shortdescription}`,
       slug: tourInfo.fields.slug,
-      tourName: tourInfo.frontmatter.title,
+      tourName: tourInfo.frontmatter.tour_id,
       tourPrice: tourInfo.frontmatter.price,
       tourImages: schemaImages,
       datePublished: false
@@ -385,7 +385,7 @@ export default class TourPage extends Component {
         <SEO pageData={pageMeta} pageType="tour" />
         <Banner
           extraClass="details-one"
-          title1={tourInfo.frontmatter.title}
+          title1={tourInfo.frontmatter.tour_id}
           title2=""
           text={tourInfo.frontmatter.bannerblurb}
           breadcrumb="tour"
@@ -398,7 +398,7 @@ export default class TourPage extends Component {
             backgroundImage={tourInfo.frontmatter.backgroundimage}
             upcomingEventsInfo={upcomingEventsInfo}
             tourEvents={tourInfo.fields.tourevents}
-            tour={tourInfo.frontmatter.title}
+            tour={tourInfo.frontmatter.tour_id}
           />
         ) : null}
       </Layout>
@@ -418,7 +418,7 @@ export const tourPageQuery = graphql`
       }
       html
       frontmatter {
-        title
+        tour_id
         destination
         activity
         duration

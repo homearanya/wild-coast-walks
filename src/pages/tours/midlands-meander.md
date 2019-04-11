@@ -1,7 +1,7 @@
 ---
 templateKey: tour-page
 featured: true
-title: Midlands Meander
+tour_id: Midlands Meander
 destination: Midlands
 activity: Cycle Tour
 duration: 3 nights

@@ -115,7 +115,7 @@ const Tour = props => {
           <Link to={tourSlug}>
             <div className="transparent-overlay">
               <h4>
-                {tourDetails.title} | <span>{tourDetails.destination}</span>
+                {tourDetails.tour_id} | <span>{tourDetails.destination}</span>
               </h4>
               <span className="trip-time">
                 <i className="fa fa-clock-o" />
@@ -138,21 +138,6 @@ const Tour = props => {
             </div>
           </Link>
         </div>
-        {/* <Link to={tourSlug}><Img fluid={imageFluid} alt={imageAlt} /></Link>
-        <div className="adventure-text effect-bottom">
-          <div className="transparent-overlay">
-            <h4><Link to={tourSlug}>{tourDetails.title} | <span>{tourDetails.destination}</span></Link></h4>
-            <span className="trip-time"><i className="fa fa-clock-o"></i>{tourDetails.duration}</span>
-            <span className="trip-level"><i className="fa fa-send-o"></i>{tourDetails.level}</span>
-            <p>{tourDetails.shortdescription.substring(0, 230) + '...'}</p>
-          </div>
-          <div className="adventure-price-link">
-            <span className="trip-person">From</span>
-            <span className="trip-person"><span>{tourDetails.price}</span></span>
-            <span className="trip-person">per person</span>
-            <span className="trip-price">&nbsp;</span>
-          </div>
-        </div> */}
       </div>
     </div>
   );
@@ -267,7 +252,7 @@ export default function Index({ data }) {
   const { hometours } = data.homePageQuery.fields;
   const { blogswitch } = data.blogAreaQuery.childMarkdownRemark.frontmatter;
   const toursObject = hometours.reduce((obj, tour) => {
-    obj[tour.frontmatter.title.trim().toLowerCase()] = tour;
+    obj[tour.frontmatter.tour_id.trim().toLowerCase()] = tour;
     return obj;
   }, {});
   const pageMeta = {
@@ -300,7 +285,7 @@ export const homePageQuery = graphql`
             slug
           }
           frontmatter {
-            title
+            tour_id
             destination
             activity
             duration

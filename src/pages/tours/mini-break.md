@@ -1,7 +1,7 @@
 ---
 templateKey: tour-page
 featured: true
-title: Mini Break
+tour_id: Mini Break
 destination: Wild Coast
 activity: Slackpacking
 duration: 3 days

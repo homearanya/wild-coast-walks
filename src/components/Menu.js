@@ -46,7 +46,7 @@ export default function Menu(props) {
                   slug
                 }
                 frontmatter {
-                  title
+                  tour_id
                   duration
                 }
               }
@@ -79,7 +79,7 @@ export default function Menu(props) {
         const { section } = data.tourMenu.frontmatter;
         const { menutours } = data.tourMenu.fields;
         const toursObject = menutours.reduce((obj, tour) => {
-          obj[tour.frontmatter.title.trim().toLowerCase()] = tour;
+          obj[tour.frontmatter.tour_id.trim().toLowerCase()] = tour;
           return obj;
         }, {});
         section.forEach(section => {

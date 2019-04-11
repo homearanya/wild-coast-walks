@@ -1,7 +1,7 @@
 ---
 templateKey: tour-page
 featured: true
-title: Nhlosane Hike
+tour_id: Nhlosane Hike
 destination: Midlands
 activity: Slackpacking
 duration: 2 days

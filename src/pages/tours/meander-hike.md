@@ -1,7 +1,7 @@
 ---
 templateKey: tour-page
 featured: true
-title: Meander Hike
+tour_id: Meander Hike
 destination: Wild Coast
 activity: Slackpacking
 duration: 5 days

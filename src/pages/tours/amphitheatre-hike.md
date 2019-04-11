@@ -1,7 +1,7 @@
 ---
 templateKey: tour-page
 featured: true
-title: Amphitheatre Hike
+tour_id: Amphitheatre Hike
 destination: Drakensberg
 activity: Slackpacking
 duration: 4 nights

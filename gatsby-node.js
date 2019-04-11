@@ -149,10 +149,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node.frontmatter.templateKey &&
       node.frontmatter.templateKey.includes("tour-page")
     ) {
-      toursObject[node.frontmatter.title.trim().toLowerCase()] = node.id;
+      toursObject[node.frontmatter.tour_id.trim().toLowerCase()] = node.id;
     } else if (
       node.frontmatter.templateKey &&
-      node.frontmatter.templateKey.includes("event-page")
+      node.frontmatter.templateKey.includes("upcoming-events")
     ) {
       if (eventsObject[node.frontmatter.tour.trim().toLowerCase()]) {
         eventsObject[node.frontmatter.tour.trim().toLowerCase()].push(node.id);

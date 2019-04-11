@@ -1,7 +1,7 @@
 ---
 templateKey: tour-page
 featured: true
-title: Mehloding
+tour_id: Mehloding
 destination: Drakensberg
 activity: Slackpacking
 duration: "4 day Community Trail near Matatiele, Southern Drakensberg"

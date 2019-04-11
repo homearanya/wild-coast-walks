@@ -1,7 +1,7 @@
 ---
 templateKey: tour-page
 featured: true
-title: Dargle Samango
+tour_id: Dargle Samango
 destination: Midlands
 activity: Slackpacking
 duration: 3 nights

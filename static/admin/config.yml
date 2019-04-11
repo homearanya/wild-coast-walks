@@ -21,7 +21,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "event-page",
+          default: "upcoming-events",
         }
       - {
         label: "Title",
@@ -97,7 +97,7 @@ collections:
           widget: "boolean",
           default: false,
         }
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Title", name: "tour_id", widget: "string" }
       - label: "Destination"
         name: "destination"
         widget: "relation"

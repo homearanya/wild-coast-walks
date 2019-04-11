@@ -1,7 +1,7 @@
 ---
 templateKey: tour-page
 featured: true
-title: Sunshine Hike
+tour_id: Sunshine Hike
 destination: Wild Coast
 activity: Slackpacking
 duration: 5 days
