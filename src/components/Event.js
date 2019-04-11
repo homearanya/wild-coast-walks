@@ -44,9 +44,9 @@ const Event = ({ eventInfo }) => {
               </div>
               <div className="adventure-list-text">
                 <h1>
-                  <a href="#">{`${tourInfo.tour_id} / ${
+                  <Link to={fields.slug}>{`${tourInfo.tour_id} / ${
                     tourInfo.duration
-                  } Trip`}</a>
+                  } Trip`}</Link>
                 </h1>
                 <h2>
                   <span className="persons">From </span>

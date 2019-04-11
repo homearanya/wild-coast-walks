@@ -10,9 +10,6 @@ import SEO from "../components/SEO/SEO";
 import "../assets/css/contact.css";
 
 export default class ContactPage extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { fields, frontmatter } = this.props.data.ContactPageQuery;
 

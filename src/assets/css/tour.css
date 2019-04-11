@@ -2,274 +2,266 @@
 /*----------------------------------------*/
 
 .details-button button#btn-search-category {
-    background: #212227 none repeat scroll 0 0;
-    margin: 0;
+  background: #212227 none repeat scroll 0 0;
+  margin: 0;
 }
 
 .details-button button#btn-search-category:hover {
-    background: #000000 none repeat scroll 0 0
+  background: #000000 none repeat scroll 0 0;
 }
 
-
 /*----------------------------------------*/
-
 
 /*  20.1 Trip Information Area
 /*----------------------------------------*/
 
 .trip-information {
-    /* background: #edecec url(../img/banner/26.png) no-repeat scroll right top / 58% 100%; */
-    /* padding-bottom: 96px; */
-    padding-top: 80px;
+  /* padding-bottom: 96px; */
+  padding-top: 80px;
 }
 
 .adventures-grid form#banner-searchbox.details-form {
-    margin-bottom: 0
+  margin-bottom: 0;
 }
 
 .trip-info-left-text .section-title {
-    margin-bottom: 46px
+  margin-bottom: 46px;
 }
 
 .trip-info-left-text p {
-    line-height: 30px;
-    margin-top: 12px;
-    text-align: left;
+  line-height: 30px;
+  margin-top: 12px;
+  text-align: left;
 }
 
 .details-social-link a {
-    border-color: #606060;
-    margin-right: 26px;
+  border-color: #606060;
+  margin-right: 26px;
 }
 
 .details-social-link a:hover {
-    border-color: #000;
-    color: #000;
+  border-color: #000;
+  color: #000;
 }
 
 .details-info li span {
-    display: inline-block;
-    font-weight: 700;
-    width: 100px;
+  display: inline-block;
+  font-weight: 700;
+  width: 100px;
 }
 
-.details-info>li {
-    float: left;
-    line-height: 30px;
-    text-transform: uppercase;
-    width: 50%;
+.details-info > li {
+  float: left;
+  line-height: 30px;
+  text-transform: uppercase;
+  width: 50%;
 }
 
 .details-info {
-    margin-bottom: 51px;
-    overflow: hidden
+  margin-bottom: 51px;
+  overflow: hidden;
 }
 
 .trip-booking-info h2 {
-    color: #ffffff;
-    font-size: 20px;
-    margin-bottom: 24px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 400
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .trip-booking-info {
-    /* padding-top: 127px */
-    text-align: center;
+  /* padding-top: 127px */
+  text-align: center;
 }
 
 .single-trip-content,
 .trip-level-content {
-    float: left;
-    text-align: center;
-    width: 33.33%;
+  float: left;
+  text-align: center;
+  width: 33.33%;
 }
 
 .trip-booking-info h4 {
-    color: #85868e;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    margin-top: 13px;
-    text-transform: uppercase;
+  color: #85868e;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 13px;
+  text-transform: uppercase;
 }
 
-.trip-level-content>h4 {
-    margin-top: 8px
+.trip-level-content > h4 {
+  margin-top: 8px;
 }
 
 .row.divider {
-    border-bottom: 1px solid #2e2f36;
-    border-top: 1px solid #16171a;
-    margin-bottom: 25px;
-    margin-top: 15px;
-    overflow: hidden;
+  border-bottom: 1px solid #2e2f36;
+  border-top: 1px solid #16171a;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  overflow: hidden;
 }
 
 .trip-rating i {
-    color: #85868e
+  color: #85868e;
 }
 
 .trip-text-container p {
-    color: #8d8d8d;
-    padding-top: 6px
+  color: #8d8d8d;
+  padding-top: 6px;
 }
 
 .trip-text-container p span {
-    color: #0967B9
+  color: #0967b9;
 }
 
 .trip-text-container h3 {
-    color: #8d8d8d;
-    font-family: "Open Sans", sans-serif;
-    font-size: 25px;
-    line-height: 22px;
+  color: #8d8d8d;
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  line-height: 22px;
 }
 
-.trip-text-container>h1 {
-    color: #0967B9;
-    font-family: "Open Sans", sans-serif;
-    font-size: 35px;
-    font-weight: 700;
-    line-height: 32px;
-    margin-bottom: 0;
+.trip-text-container > h1 {
+  color: #0967b9;
+  font-family: "Open Sans", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 0;
 }
 
-.trip-text-container.budget>p {
-    font-size: 15px;
-    padding-top: 0
+.trip-text-container.budget > p {
+  font-size: 15px;
+  padding-top: 0;
 }
 
 .react-photo-gallery--gallery {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .react-photo-gallery--gallery img {
-    height: 100%;
+  height: 100%;
 }
 
-
 /*----------------------------------------*/
-
 
 /*  20.2 Trip Inclution
 /*----------------------------------------*/
 
 .include-icon {
-    border-left: 1px solid #000000;
-    border-right: 1px solid #000000;
-    border-top: 1px solid #000000;
-    float: left;
-    font-size: 40px;
-    height: 78px;
-    margin-right: 19px;
-    padding-top: 13px;
-    position: relative;
-    text-align: center;
-    width: 79px;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-top: 1px solid #000000;
+  float: left;
+  font-size: 40px;
+  height: 78px;
+  margin-right: 19px;
+  padding-top: 13px;
+  position: relative;
+  text-align: center;
+  width: 79px;
 }
 
 .include-icon::before {
-    background: #000000 none repeat scroll 0 0;
-    bottom: 4px;
-    content: "";
-    height: 1px;
-    left: -1px;
-    position: absolute;
-    transform: rotate(-13deg);
-    width: 41px;
-    transition: all 0.3s ease-in 0s
+  background: #000000 none repeat scroll 0 0;
+  bottom: 4px;
+  content: "";
+  height: 1px;
+  left: -1px;
+  position: absolute;
+  transform: rotate(-13deg);
+  width: 41px;
+  transition: all 0.3s ease-in 0s;
 }
 
 .include-icon::after {
-    background: #000000 none repeat scroll 0 0;
-    bottom: 4px;
-    content: "";
-    height: 1px;
-    position: absolute;
-    right: -1px;
-    transform: rotate(13deg);
-    width: 41px;
-    transition: all 0.3s ease-in 0s
+  background: #000000 none repeat scroll 0 0;
+  bottom: 4px;
+  content: "";
+  height: 1px;
+  position: absolute;
+  right: -1px;
+  transform: rotate(13deg);
+  width: 41px;
+  transition: all 0.3s ease-in 0s;
 }
 
 .include-text {
-    overflow: hidden
+  overflow: hidden;
 }
 
-.include-text>h4,
-.contact-text>h4,
-.about-text-container>h4 {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 25px;
-    margin-bottom: 5px;
-    margin-top: 4px;
-    text-transform: uppercase;
+.include-text > h4,
+.contact-text > h4,
+.about-text-container > h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 5px;
+  margin-top: 4px;
+  text-transform: uppercase;
 }
 
-.include-text>p {
-    margin-bottom: 0
+.include-text > p {
+  margin-bottom: 0;
 }
 
 .include-item {
-    overflow: hidden
+  overflow: hidden;
 }
 
 .include-item:hover .include-text h4 {
-    color: #0967B9
+  color: #0967b9;
 }
 
 .include-item:hover .include-icon {
-    color: #ffffff
+  color: #ffffff;
 }
 
 .include-item:hover .include-icon {
-    background: #0967B9 none repeat scroll 0 0;
-    border-color: #0967B9;
+  background: #0967b9 none repeat scroll 0 0;
+  border-color: #0967b9;
 }
 
 .include-item:hover .include-icon::before,
 .include-item:hover .include-icon::after {
-    display: none;
+  display: none;
 }
 
-
 /*----------------------------------------*/
-
 
 /*  20.3 Trip Pricing Area
 /*----------------------------------------*/
 
 .trip-pricing-area {
-    background: #edecec none repeat scroll 0 0;
+  background: #edecec none repeat scroll 0 0;
 }
 
 .trip-pricing-area table td {
-    color: #ffffff;
-    font-weight: 300;
-    line-height: 44px;
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 44px;
 }
 
 .trip-pricing-area table thead td {
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .trip-pricing-area table thead td span {
-    color: #a0a0a0;
-    font-size: 12px;
-    font-weight: 300;
+  color: #a0a0a0;
+  font-size: 12px;
+  font-weight: 300;
 }
 
 .trip-pricing-area thead tr:first-child {
-    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
-    border: 1px solid #000000;
-    height: 61px;
+  background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+  border: 1px solid #000000;
+  height: 61px;
 }
-
 
 /* .trip-date {
     padding-left: 28px;
@@ -278,34 +270,32 @@
 
 .trip-date,
 .trip-action {
-    text-align: center;
+  text-align: center;
 }
 
 .trip-pricing-area table {
-    width: 100%
+  width: 100%;
 }
 
 .trip-status,
 .trip-price {
-    width: 25%
+  width: 25%;
 }
-
 
 /* .trip-action {
     width: 16%
 } */
 
 .trip-pricing-area tbody {
-    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
-    border: 1px solid #000000;
+  background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+  border: 1px solid #000000;
 }
 
 .trip-pricing-area td.transparent {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    overflow: hidden;
-    padding-top: 1px;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  overflow: hidden;
+  padding-top: 1px;
 }
-
 
 /* .trip-pricing-area table tbody tr:first-child td {
     padding-top: 18px
@@ -320,176 +310,164 @@
 } */
 
 .trip-pricing-area table tbody tr:nth-child(odd) {
-    /* background: rgb(151, 243, 57, 0.2); */
-    background: rgb(0, 0, 0, 0.3);
+  /* background: rgb(151, 243, 57, 0.2); */
+  background: rgb(0, 0, 0, 0.3);
 }
 
 #lightboxBackdrop {
-    z-index: 9999 !important;
+  z-index: 9999 !important;
 }
 
 .trip-information-left {
-    padding-right: 40px;
+  padding-right: 40px;
 }
 
 .trip-information-right {
-    padding-left: 40px;
+  padding-left: 40px;
 }
-
 
 /* Large desktop :1920px. */
 
 @media (min-width: 1920px) {
-    .trip-information {
-        background-size: 49.8% 100%
-    }
-    .trip-information.details-two {
-        background-size: 49.5% 100%
-    }
+  .trip-information {
+    background-size: 49.8% 100%;
+  }
+  .trip-information.details-two {
+    background-size: 49.5% 100%;
+  }
 }
-
 
 /* Normal desktop :992px. */
 
 @media (min-width: 992px) and (max-width: 1169px) {
-    .trip-info-left-text .section-title {
-        margin-bottom: 30px
-    }
-    .trip-info-left-text p {
-        line-height: 26px
-    }
-    .trip-status,
-    .trip-price {
-        width: 23%
-    }
-    /* .trip-action {
+  .trip-info-left-text .section-title {
+    margin-bottom: 30px;
+  }
+  .trip-info-left-text p {
+    line-height: 26px;
+  }
+  .trip-status,
+  .trip-price {
+    width: 23%;
+  }
+  /* .trip-action {
         width: 18%
     } */
-    .details-button button#btn-search-category {
-        padding: 0 30px
-    }
-    .details-info {
-        margin-bottom: 35px
-    }
-    .details-info li span {
-        width: auto;
-        margin-right: 10px;
-    }
+  .details-button button#btn-search-category {
+    padding: 0 30px;
+  }
+  .details-info {
+    margin-bottom: 35px;
+  }
+  .details-info li span {
+    width: auto;
+    margin-right: 10px;
+  }
 }
-
 
 /* Tablet desktop :768px. */
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .trip-information {
-        background: rgba(0, 0, 0, 0) none repeat scroll 0 0
-    }
-    /* .trip-action {
+  .trip-information {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  }
+  /* .trip-action {
         width: 20%
     } */
-    .trip-information.details-two,
-    .details-two .trip-info-left-text {
-        padding-top: 100px;
-        padding-bottom: 100px
-    }
-    /* .trip-action>div {
+  .trip-information.details-two,
+  .details-two .trip-info-left-text {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  /* .trip-action>div {
         width: 162px;
     } */
-    .trip-information-right {
-        padding-top: 50px;
-        padding-left: 15px;
-    }
-    .trip-information-left {
-        padding-right: 15px;
-    }
+  .trip-information-right {
+    padding-top: 50px;
+    padding-left: 15px;
+  }
+  .trip-information-left {
+    padding-right: 15px;
+  }
 }
-
 
 /* small mobile :320px. */
 
 @media (max-width: 767px) {
-    .trip-information {
-        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-    }
-    .trip-information.details-two {
-        background: rgba(33, 34, 39, 0.15) none repeat scroll 0 0
-    }
-    .details-two .trip-info-left-text {
-        padding-bottom: 60px;
-        padding-top: 60px;
-    }
-    .details-info>li {
-        width: 100%
-    }
-    .details-social-link a {
-        height: 45px;
-        line-height: 45px;
-        margin-right: 5px;
-        width: 45px;
-    }
-    .trip-status>div {
-        width: 120px
-    }
-    /* .trip-date div {
+  .trip-information {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  }
+  .trip-information.details-two {
+    background: rgba(33, 34, 39, 0.15) none repeat scroll 0 0;
+  }
+  .details-two .trip-info-left-text {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+  .details-info > li {
+    width: 100%;
+  }
+  .details-social-link a {
+    height: 45px;
+    line-height: 45px;
+    margin-right: 5px;
+    width: 45px;
+  }
+  .trip-status > div {
+    width: 120px;
+  }
+  /* .trip-date div {
         width: 205px
     } */
-    .trip-price>div {
-        width: 144px
-    }
-    /* .trip-action>div {
+  .trip-price > div {
+    width: 144px;
+  }
+  /* .trip-action>div {
         width: 162px
     } */
-    .trip-information-right {
-        padding-top: 50px;
-        padding-left: 15px;
-    }
-    .trip-information-left {
-        padding-right: 15px;
-    }
+  .trip-information-right {
+    padding-top: 50px;
+    padding-left: 15px;
+  }
+  .trip-information-left {
+    padding-right: 15px;
+  }
 }
-
 
 /* Large Mobile :480px. */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .single-portfolio img,
-    .blog-carousel .blog-image img,
-    .team-image img,
-    .single-gallery-item .gallery-image a img,
-    .list .adventure-img img,
-    .blog-post-two .blog-image a img,
-    .blog-post-two .blog-image a {
-        width: 100%;
-    }
-    .header-top-right {
-        float: none;
-        margin: 0 auto;
-        text-align: center;
-        width: 59%;
-    }
-    .single-sidebar-widget .hover-effect a img {
-        display: none
-    }
-    .adventures-grid.grid-two-tab .adventure-cat.box-small {
-        margin-left: 10px;
-        margin-top: 16px;
-    }
-    .list-buttons .button-one {
-        margin-right: 15px
-    }
-    .blog-links,
-    .blog-post-two .blog-links {
-        float: right;
-        margin-top: 0;
-    }
-    .blog-two-text-container {
-        padding: 0 10px 30px
-    }
-    .blog-post-details .blog-links {
-        margin-top: 25px
-    }
-    .contact-container {
-        padding-left: 22%;
-        padding-right: 22%;
-    }
+  .single-portfolio img,
+  .blog-carousel .blog-image img,
+  .team-image img,
+  .single-gallery-item .gallery-image a img,
+  .list .adventure-img img,
+  .blog-post-two .blog-image a img,
+  .blog-post-two .blog-image a {
+    width: 100%;
+  }
+  .header-top-right {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    width: 59%;
+  }
+  .single-sidebar-widget .hover-effect a img {
+    display: none;
+  }
+  .list-buttons .button-one {
+    margin-right: 15px;
+  }
+  .blog-links,
+  .blog-post-two .blog-links {
+    float: right;
+    margin-top: 0;
+  }
+  .blog-post-details .blog-links {
+    margin-top: 25px;
+  }
+  .contact-container {
+    padding-left: 22%;
+    padding-right: 22%;
+  }
 }

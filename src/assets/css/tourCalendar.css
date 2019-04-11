@@ -2,544 +2,531 @@
 /*----------------------------------------*/
 
 .header-three.list .header-logo-menu {
-    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0
+  background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
 }
 
 .list .section-title.title-three.text-center {
-    margin-bottom: 25px
+  margin-bottom: 25px;
 }
 
 .single-list-item {
-    margin-bottom: 75px
+  margin-bottom: 75px;
 }
 
 .list .shop-item-filter {
-    margin-bottom: 56px
+  margin-bottom: 56px;
 }
 
 .list .adventure-tab li a.grid-view:hover:after,
 .list .adventure-tab li.active a.grid-view:after,
 .list .adventure-tab li a.list-view:hover:after,
 .list .adventure-tab li.active a.list-view:after {
-    background: url(../img/icon/grid-three-hover.png) no-repeat scroll 0 0 !important;
+  background: url(../img/icon/grid-three-hover.png) no-repeat scroll 0 0 !important;
 }
 
 .list .adventure-tab li a.list-view:hover:after,
 .list .adventure-tab li.active a.list-view:after {
-    background: url(../img/icon/list-three-hover.png) no-repeat scroll 0 0 !important;
+  background: url(../img/icon/list-three-hover.png) no-repeat scroll 0 0 !important;
 }
 
 .adventure-img {
-    border-left: 3px solid #f0f0f0;
-    border-top: 3px solid #f0f0f0;
-    border-bottom: 3px solid #f0f0f0;
-    position: relative;
-    margin-left: 12px;
+  border-left: 3px solid #f0f0f0;
+  border-top: 3px solid #f0f0f0;
+  border-bottom: 3px solid #f0f0f0;
+  position: relative;
+  margin-left: 12px;
 }
 
 .adventure-img::after {
-    background: #f0f0f0 none repeat scroll 0 0;
-    content: "";
-    height: 24px;
-    margin-top: -12px;
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: rotate(45deg);
-    width: 24px;
+  background: #f0f0f0 none repeat scroll 0 0;
+  content: "";
+  height: 24px;
+  margin-top: -12px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: rotate(45deg);
+  width: 24px;
 }
 
 .adventure-img a {
-    display: block
+  display: block;
 }
 
 .single-list-item .col-md-8 {
-    padding-left: 0
+  padding-left: 0;
 }
 
 .single-list-item .col-md-4 {
-    padding-right: 0
+  padding-right: 0;
 }
 
 .col-md-8.margin-left-list {
-    margin-left: -28px
+  margin-left: -28px;
 }
 
 .adventure-list-container {
-    background: #f0f0f0 none repeat scroll 0 0;
-    display: inline-block;
-    margin-right: -28px;
-    position: relative;
-    height: 300.4px;
+  background: #f0f0f0 none repeat scroll 0 0;
+  display: inline-block;
+  margin-right: -28px;
+  position: relative;
+  height: 300.4px;
 }
 
-.adventure-list-text>h1 {
-    color: #181818;
-    font-family: "Open Sans", sans-serif;
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 15px;
+.adventure-list-text > h1 {
+  color: #181818;
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-.adventure-list-text>h1 a {
-    color: #181818
+.adventure-list-text > h1 a {
+  color: #181818;
 }
 
-.adventure-list-text>h1 a:hover {
-    color: #0967B9;
+.adventure-list-text > h1 a:hover {
+  color: #0967b9;
 }
 
-.adventure-list-text>h2 {
-    color: #181818;
-    font-family: "Open Sans", sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 15px;
+.adventure-list-text > h2 {
+  color: #181818;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .adventure-list-text span.light {
-    color: #8d8d8d;
-    font-weight: 300;
-    margin: 0 4px;
+  color: #8d8d8d;
+  font-weight: 300;
+  margin: 0 4px;
 }
 
-.adventure-list-text>h2 span.persons {
-    font-size: 23px;
-    font-weight: 300;
-    position: relative;
-    top: -2px;
+.adventure-list-text > h2 span.persons {
+  font-size: 23px;
+  font-weight: 300;
+  position: relative;
+  top: -2px;
 }
 
-.adventure-list-text>p {
-    color: #181818;
-    font-weight: 300;
-    line-height: 30px;
+.adventure-list-text > p {
+  color: #181818;
+  font-weight: 300;
+  line-height: 30px;
 }
 
 .list-buttons .button-one {
-    font-size: 16px;
-    line-height: 38px;
-    margin: 0;
-    padding: 0 26px;
+  font-size: 16px;
+  line-height: 38px;
+  margin: 0;
+  padding: 0 26px;
 }
 
 .list-buttons .booking-button-two {
-    font-size: 16px;
-    line-height: 38px;
-    margin: 0;
-    padding: 0 26px;
+  font-size: 16px;
+  line-height: 38px;
+  margin: 0;
+  padding: 0 26px;
 }
 
 .adventure-list-container .trip-booking-info {
-    float: right;
+  float: right;
 }
 
 .list-buttons {
-    margin-top: 20px;
-    overflow: hidden;
+  margin-top: 20px;
+  overflow: hidden;
 }
 
 .list-rating {
-    display: inline-block;
-    margin-left: 16px;
-    position: relative;
-    top: -4px;
+  display: inline-block;
+  margin-left: 16px;
+  position: relative;
+  top: -4px;
 }
 
 .list-rating i {
-    color: #8d8d8d
+  color: #8d8d8d;
 }
 
 .list-rating i.color {
-    color: #00c0ff
+  color: #00c0ff;
 }
 
 .adventure-list-link a i {
-    color: #8d8d8d;
-    font-size: 16px;
-    padding-right: 10px;
+  color: #8d8d8d;
+  font-size: 16px;
+  padding-right: 10px;
 }
 
 .adventure-list-link {
-    display: inline-block;
-    margin-left: 21px;
-    position: relative;
-    top: -3px;
+  display: inline-block;
+  margin-left: 21px;
+  position: relative;
+  top: -3px;
 }
 
 .adventure-list-link a:hover i {
-    color: #0967B9;
+  color: #0967b9;
 }
 
 .adventure-list-link::after {
-    color: #181818;
-    content: "/";
-    font-size: 14px;
-    left: -15px;
-    position: absolute;
-    top: 0;
+  color: #181818;
+  content: "/";
+  font-size: 14px;
+  left: -15px;
+  position: absolute;
+  top: 0;
 }
 
 .adventure-list-text {
-    float: right;
-    width: 75%;
-    padding: 30px;
+  float: right;
+  width: 75%;
+  padding: 30px;
 }
 
 .adventure-list-image {
-    display: inline-block;
-    padding: 22px 15px;
-    position: relative;
-    text-align: center;
-    width: 25%;
+  display: inline-block;
+  padding: 22px 15px;
+  position: relative;
+  text-align: center;
+  width: 25%;
 }
 
 .adventure-list-image::after {
-    background: #d7d7d7 none repeat scroll 0 0;
-    content: "";
-    height: 280px;
-    right: 0;
-    position: absolute;
-    top: 10px;
-    width: 1px;
-    z-index: 9;
+  background: #d7d7d7 none repeat scroll 0 0;
+  content: "";
+  height: 280px;
+  right: 0;
+  position: absolute;
+  top: 10px;
+  width: 1px;
+  z-index: 9;
 }
 
-.adventure-list-image>h2 {
-    border-bottom: 1px solid #edecec;
-    color: #181818;
-    font-size: 40px;
-    font-weight: 700;
-    margin: 40px 10px 30px;
-    text-transform: uppercase;
-    text-align: center;
+.adventure-list-image > h2 {
+  border-bottom: 1px solid #edecec;
+  color: #181818;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 40px 10px 30px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .list .pagination-content {
-    margin-top: 58px
+  margin-top: 58px;
 }
 
 .list .pagination li.current {
-    background: #00c0ff none repeat scroll 0 0;
-    border-color: #00c0ff;
+  background: #00c0ff none repeat scroll 0 0;
+  border-color: #00c0ff;
 }
 
 .list .pagination li a {
-    font-weight: 300
+  font-weight: 300;
 }
 
 .list .pagination li:hover a {
-    color: #0967B9;
+  color: #0967b9;
 }
-
 
 /* Normal desktop :992px. */
 
 @media (min-width: 992px) and (max-width: 1169px) {
-    .adventure-list-container {
-        height: 248.95px;
-    }
-    .adventure-list-text>h2 {
-        font-size: 26px;
-        margin-bottom: 5px;
-    }
-    .adventure-list-text>p {
-        line-height: 24px
-    }
-    .adventure-list-image::after {
-        height: 228.95px;
-    }
-    .adventure-list-image>h2 {
-        font-size: 35px;
-        margin: 20px 9px 20px;
-    }
-    .adventure-list-image h3 {
-        font-size: 20px;
-    }
-    .adventure-img {
-        margin-left: 0px;
-    }
-    .adventure-list-text {
-        padding: 15px;
-    }
+  .adventure-list-container {
+    height: 248.95px;
+  }
+  .adventure-list-text > h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+  }
+  .adventure-list-text > p {
+    line-height: 24px;
+  }
+  .adventure-list-image::after {
+    height: 228.95px;
+  }
+  .adventure-list-image > h2 {
+    font-size: 35px;
+    margin: 20px 9px 20px;
+  }
+  .adventure-list-image h3 {
+    font-size: 20px;
+  }
+  .adventure-img {
+    margin-left: 0px;
+  }
+  .adventure-list-text {
+    padding: 15px;
+  }
 }
-
 
 /* Tablet desktop :768px. */
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .single-list-item .col-sm-6 {
-        padding-right: 0px;
-    }
-    .adventure-list-image {
-        padding: 10px 0px;
-        width: 100%;
-    }
-    .adventure-list-image::after {
-        bottom: 0px;
-        height: 1px;
-        position: absolute;
-        right: 20px;
-        top: auto;
-        width: 90%;
-    }
-    .adventure-list-image>h2 {
-        display: inline-block;
-        font-size: 23px;
-        margin: 0px;
-        width: 20%;
-    }
-    .adventure-list-image ul {
-        display: inline-block;
-        line-height: 51.6px;
-        vertical-align: top;
-        width: 80%;
-    }
-    .adventure-list-image li {
-        display: inline-block;
-        width: 50%;
-        vertical-align: middle;
-    }
-    .adventure-list-image h3 {
-        font-size: 20px;
-        margin-bottom: 0px;
-    }
-    .adventure-list-text {
-        width: 100%;
-        float: none;
-        padding: 0px;
-    }
-    .adventure-list-text>h1 {
-        font-size: 20px;
-        margin-bottom: 5px;
-        padding-top: 10px;
-        position: relative;
-        z-index: 999;
-    }
-    .adventure-list-text>h2 {
-        font-size: 21px;
-        margin-bottom: 3px;
-    }
-    .adventure-list-text>h2 span.persons {
-        font-size: 19px;
-        font-weight: 300;
-        position: relative;
-        top: -1px;
-    }
-    .adventure-list-text>p {
-        line-height: 26px
-    }
-    .list-buttons {
-        margin-top: 10px
-    }
-    .list-buttons .button-one {
-        line-height: 35px;
-        margin-bottom: 10px;
-        padding: 0 20px;
-        position: relative;
-        z-index: 9;
-    }
-    .list-buttons .booking-button-two {
-        line-height: 35px;
-        margin-bottom: 10px;
-        padding: 0 20px;
-        position: relative;
-        z-index: 9;
-    }
-    .adventure-list-container .trip-booking-info {
-        margin-right: 20px;
-    }
-    .adventure-list-container::before {
-        top: -5px
-    }
-    .single-list-item {
-        margin-bottom: 50px
-    }
-    .adventure-list-container {
-        padding-left: 20px;
-        height: 290.05px;
-    }
-    .adventure-img {
-        margin-left: 0px;
-    }
+  .single-list-item .col-sm-6 {
+    padding-right: 0px;
+  }
+  .adventure-list-image {
+    padding: 10px 0px;
+    width: 100%;
+  }
+  .adventure-list-image::after {
+    bottom: 0px;
+    height: 1px;
+    position: absolute;
+    right: 20px;
+    top: auto;
+    width: 90%;
+  }
+  .adventure-list-image > h2 {
+    display: inline-block;
+    font-size: 23px;
+    margin: 0px;
+    width: 20%;
+  }
+  .adventure-list-image ul {
+    display: inline-block;
+    line-height: 51.6px;
+    vertical-align: top;
+    width: 80%;
+  }
+  .adventure-list-image li {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+  }
+  .adventure-list-image h3 {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+  .adventure-list-text {
+    width: 100%;
+    float: none;
+    padding: 0px;
+  }
+  .adventure-list-text > h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    position: relative;
+    z-index: 999;
+  }
+  .adventure-list-text > h2 {
+    font-size: 21px;
+    margin-bottom: 3px;
+  }
+  .adventure-list-text > h2 span.persons {
+    font-size: 19px;
+    font-weight: 300;
+    position: relative;
+    top: -1px;
+  }
+  .adventure-list-text > p {
+    line-height: 26px;
+  }
+  .list-buttons {
+    margin-top: 10px;
+  }
+  .list-buttons .button-one {
+    line-height: 35px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 9;
+  }
+  .list-buttons .booking-button-two {
+    line-height: 35px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 9;
+  }
+  .adventure-list-container .trip-booking-info {
+    margin-right: 20px;
+  }
+  .adventure-list-container::before {
+    top: -5px;
+  }
+  .single-list-item {
+    margin-bottom: 50px;
+  }
+  .adventure-list-container {
+    padding-left: 20px;
+    height: 290.05px;
+  }
+  .adventure-img {
+    margin-left: 0px;
+  }
 }
-
 
 /* small mobile :320px. */
 
 @media (max-width: 767px) {
-    .adventure-list-image {
-        padding: 10px 0px;
-        width: 100%;
-    }
-    .adventure-list-image::after {
-        bottom: 0px;
-        height: 1px;
-        position: absolute;
-        right: 20px;
-        top: auto;
-        width: 90%;
-    }
-    .adventure-list-image>h2 {
-        display: inline-block;
-        font-size: 30px;
-        margin: 0px;
-        width: 20%;
-    }
-    .adventure-list-image ul {
-        display: inline-block;
-        line-height: 67px;
-        vertical-align: top;
-        width: 80%;
-    }
-    .adventure-list-image li {
-        display: inline-block;
-        width: 50%;
-        vertical-align: middle;
-    }
-    .adventure-list-image h3 {
-        font-size: 22px;
-        margin-bottom: 0px;
-    }
-    .adventure-list-text {
-        width: 100%;
-        float: none;
-        padding: 20px 0 0 0;
-    }
-    .adventure-list-text>h1 {
-        font-size: 25px;
-        margin-bottom: 15px;
-        position: relative;
-        z-index: 999;
-    }
-    .adventure-list-text>h2 {
-        font-size: 26px;
-        margin-bottom: 15px;
-    }
-    .adventure-list-text>h2 span.persons {
-        font-size: 24px;
-        font-weight: 300;
-        position: relative;
-        top: -1px;
-    }
-    .adventure-list-text>p {
-        line-height: 26px
-    }
-    .list-buttons {
-        margin-top: 20px
-    }
-    .list-buttons .button-one {
-        line-height: 35px;
-        margin-bottom: 10px;
-        padding: 0 20px;
-        position: relative;
-        z-index: 9;
-    }
-    .list-buttons .booking-button-two {
-        line-height: 35px;
-        margin-bottom: 10px;
-        padding: 0 20px;
-        position: relative;
-        z-index: 9;
-    }
-    .adventure-list-container .trip-booking-info {
-        margin-right: 0px;
-    }
-    .shop-item-filter .adventure-cat {
-        margin-bottom: 20px
-    }
-    .shop-item-filter .adventure-tab {
-        float: left
-    }
-    .shop-item-filter .adventure-tab ul.nav li:first-child a {
-        margin-left: 0
-    }
-    .pagination li {
-        height: 30px;
-        line-height: 25px;
-        margin: 0 2px;
-        width: 30px;
-    }
-    .adventure-tab {
-        margin-top: 15px
-    }
-    .adventures-grid.grid-two-tab .adventure-cat.box-small {
-        float: left;
-        margin-top: 20px;
-    }
-    .col-md-8.margin-left-list {
-        margin-left: 0;
-        margin-top: 30px;
-        padding-left: 15px;
-    }
-    .adventure-list-text {
-        width: 100%
-    }
-    .adventure-list-container {
-        height: auto;
-        margin-right: 0;
-        padding: 20px;
-    }
-    .single-list-item .col-md-4 {
-        padding-right: 15px
-    }
-    .single-list-item {
-        margin-bottom: 30px
-    }
-    .adventure-list-link {
-        margin: 15px 0;
-        position: inherit;
-    }
-    /* .list .adventure-img {
+  .adventure-list-image {
+    padding: 10px 0px;
+    width: 100%;
+  }
+  .adventure-list-image::after {
+    bottom: 0px;
+    height: 1px;
+    position: absolute;
+    right: 20px;
+    top: auto;
+    width: 90%;
+  }
+  .adventure-list-image > h2 {
+    display: inline-block;
+    font-size: 30px;
+    margin: 0px;
+    width: 20%;
+  }
+  .adventure-list-image ul {
+    display: inline-block;
+    line-height: 67px;
+    vertical-align: top;
+    width: 80%;
+  }
+  .adventure-list-image li {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+  }
+  .adventure-list-image h3 {
+    font-size: 22px;
+    margin-bottom: 0px;
+  }
+  .adventure-list-text {
+    width: 100%;
+    float: none;
+    padding: 20px 0 0 0;
+  }
+  .adventure-list-text > h1 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 999;
+  }
+  .adventure-list-text > h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .adventure-list-text > h2 span.persons {
+    font-size: 24px;
+    font-weight: 300;
+    position: relative;
+    top: -1px;
+  }
+  .adventure-list-text > p {
+    line-height: 26px;
+  }
+  .list-buttons {
+    margin-top: 20px;
+  }
+  .list-buttons .button-one {
+    line-height: 35px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 9;
+  }
+  .list-buttons .booking-button-two {
+    line-height: 35px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 9;
+  }
+  .adventure-list-container .trip-booking-info {
+    margin-right: 0px;
+  }
+  .shop-item-filter .adventure-cat {
+    margin-bottom: 20px;
+  }
+  .shop-item-filter .adventure-tab {
+    float: left;
+  }
+  .shop-item-filter .adventure-tab ul.nav li:first-child a {
+    margin-left: 0;
+  }
+  .pagination li {
+    height: 30px;
+    line-height: 25px;
+    margin: 0 2px;
+    width: 30px;
+  }
+  .adventure-tab {
+    margin-top: 15px;
+  }
+  .col-md-8.margin-left-list {
+    margin-left: 0;
+    margin-top: 30px;
+    padding-left: 15px;
+  }
+  .adventure-list-text {
+    width: 100%;
+  }
+  .adventure-list-container {
+    height: auto;
+    margin-right: 0;
+    padding: 20px;
+  }
+  .single-list-item .col-md-4 {
+    padding-right: 15px;
+  }
+  .single-list-item {
+    margin-bottom: 30px;
+  }
+  .adventure-list-link {
+    margin: 15px 0;
+    position: inherit;
+  }
+  /* .list .adventure-img {
         border: 3px solid #f0f0f0
     }
     .adventure-img {
         margin-left: 0px;
     } */
-    .adventure-img {
-        display: none
-    }
+  .adventure-img {
+    display: none;
+  }
 }
-
 
 /* Large Mobile :480px. */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    /* .list .adventure-img img {
+  /* .list .adventure-img img {
         width: 100%;
     } */
-    .adventures-grid.grid-two-tab .adventure-cat.box-small {
-        margin-left: 10px;
-        margin-top: 16px;
-    }
-    .list-buttons .button-one {
-        margin-right: 15px
-    }
+  .list-buttons .button-one {
+    margin-right: 15px;
+  }
 }
-
 
 /* Small Mobile :320px. */
 
 @media (max-width: 479px) {
-    .adventure-list-image {
-        padding: 0 0 10px 0;
-    }
-    .adventure-list-image>h2 {
-        width: 35%;
-    }
-    .adventure-list-image h3 {
-        font-size: 22px;
-        margin-bottom: 10px;
-    }
-    .adventure-list-image ul {
-        line-height: normal;
-        padding: 5px 0;
-        width: 65%;
-    }
-    .adventure-list-image li {
-        width: 100%;
-    }
-    .adventure-list-container .trip-booking-info {
-        float: left;
-    }
+  .adventure-list-image {
+    padding: 0 0 10px 0;
+  }
+  .adventure-list-image > h2 {
+    width: 35%;
+  }
+  .adventure-list-image h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .adventure-list-image ul {
+    line-height: normal;
+    padding: 5px 0;
+    width: 65%;
+  }
+  .adventure-list-image li {
+    width: 100%;
+  }
+  .adventure-list-container .trip-booking-info {
+    float: left;
+  }
 }
