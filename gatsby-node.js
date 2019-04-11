@@ -1,6 +1,7 @@
 const _ = require("lodash");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
+const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 
 // variables to collect information for homepage/tours & tourmenu/tours relation
 let homeTourTitles = [];
@@ -118,6 +119,7 @@ exports.createPages = ({ actions, graphql, getNode }) => {
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
+  fmImagesToRelative(node); // convert image paths for gatsby images
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
     let value = createFilePath({ node, getNode });

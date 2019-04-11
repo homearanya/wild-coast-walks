@@ -1,10 +1,3 @@
-var netlifyCmsPaths = {
-  resolve: `gatsby-plugin-netlify-cms-paths`,
-  options: {
-    cmsConfig: `/static/admin/config.yml`
-  }
-};
-
 module.exports = {
   siteMetadata: {
     title: "SA Adventure Trails",
@@ -105,8 +98,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages"
+        path: `${__dirname}/static/img`,
+        name: "uploads"
       }
     },
     {
@@ -119,8 +112,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/static/img`,
-        name: "staticimages"
+        path: `${__dirname}/src/pages`,
+        name: "pages"
       }
     },
     {
@@ -130,8 +123,6 @@ module.exports = {
         path: `${__dirname}/src/assets/img/`
       }
     },
-    netlifyCmsPaths, // Including in your Gatsby plugins will transform any paths in your frontmatter
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -139,11 +130,17 @@ module.exports = {
         stripMetadata: true
       }
     },
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          netlifyCmsPaths, // Including in your Remark plugins will transform any paths in your markdown body
+          {
+            resolve: "gatsby-remark-relative-images",
+            options: {
+              name: "uploads"
+            }
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -152,6 +149,12 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 930,
               backgroundColor: "transparent" // required to display blurred image first
+            }
+          },
+          {
+            resolve: "gatsby-remark-copy-linked-files",
+            options: {
+              destinationDir: "static"
             }
           }
         ]
