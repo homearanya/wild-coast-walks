@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import Img from "gatsby-image";
 
 import "../assets/css/animate.css";
 import "../assets/lib/nivo-slider/css/nivo-slider.css";
@@ -8,37 +7,7 @@ import "../assets/lib/nivo-slider/css/preview.css";
 import "../assets/css/slick-theme.css";
 import "../assets/css/slick.css";
 
-const Slide = props => {
-  return (
-    <div>
-      <Img
-        fluid={props.imageFluid}
-        alt={props.imageAlt}
-        title={props.imageTitle}
-      />
-      <div className="nivo-caption" style={{ display: "block" }}>
-        <div className="banner-content slider-1">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <div className="text-content">
-                  {/* <h1 className="title1"><span style={{ color: '#0967B9' }}>{props.heading1}</span> <span style={{ color: '#98F339' }}>{props.heading2}</span></h1> */}
-                  <h1 className="title1">
-                    {props.heading1} {props.heading2}
-                  </h1>
-                  <h2 className="sub-title">{props.subheading1}</h2>
-                  <h2 className="sub-title">
-                    <span>{props.subheading2}</span>
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+import Slide from "./Slide";
 
 export default function SliderArea(props) {
   const settings = {

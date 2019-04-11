@@ -178,8 +178,8 @@ module.exports = {
   ],
   mapping: {
     "MarkdownRemark.frontmatter.tour": `MarkdownRemark.frontmatter.tour_id`,
-    "MarkdownRemark.fields.hometours": `MarkdownRemark`,
-    "MarkdownRemark.fields.menutours": `MarkdownRemark`,
+    "MarkdownRemark.frontmatter.toursarea.section.tours.tour": `MarkdownRemark.frontmatter.tour_id`,
+    "MarkdownRemark.frontmatter.section.tours.tour": `MarkdownRemark.frontmatter.tour_id`,
     "MarkdownRemark.fields.tourevents": `MarkdownRemark`
     // "MarkdownRemark.fields.eventtour": `MarkdownRemark`
   }

@@ -40,17 +40,6 @@ export default function Menu(props) {
             }
           }
           tourMenu: markdownRemark(fields: { slug: { eq: "/tour-menu/" } }) {
-            fields {
-              menutours {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  tour_id
-                  duration
-                }
-              }
-            }
             frontmatter {
               section {
                 heading1
@@ -66,7 +55,15 @@ export default function Menu(props) {
                   alt
                 }
                 tours {
-                  tour
+                  tour {
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      tour_id
+                      duration
+                    }
+                  }
                 }
               }
             }
@@ -77,25 +74,6 @@ export default function Menu(props) {
         const switches = data.switches.frontmatter;
         const { frontmatter: logos } = data.LogoQuery;
         const { section } = data.tourMenu.frontmatter;
-        const { menutours } = data.tourMenu.fields;
-        const toursObject = menutours.reduce((obj, tour) => {
-          obj[tour.frontmatter.tour_id.trim().toLowerCase()] = tour;
-          return obj;
-        }, {});
-        section.forEach(section => {
-          section.tours.forEach((tour, index) => {
-            if (toursObject[tour.tour.trim().toLowerCase()]) {
-              section.tours[index]["slug"] =
-                toursObject[tour.tour.trim().toLowerCase()].fields.slug;
-              section.tours[index]["duration"] =
-                toursObject[
-                  tour.tour.trim().toLowerCase()
-                ].frontmatter.duration;
-            } else {
-              console.log("issue with tour:", tour.tour.trim().toLowerCase());
-            }
-          });
-        });
         return (
           <div>
             <MenuDesktop

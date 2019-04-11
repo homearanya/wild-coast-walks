@@ -5,7 +5,7 @@ import { StaticQuery, graphql, Link } from "gatsby";
 
 import "../assets/css/open-sans.css";
 import "../assets/css/raleway.css";
-import "../assets/css/bootstrap.css";
+import "../assets/css/bootstrap.min.css";
 import "../assets/css/font-awesome.min.css";
 
 import "../assets/css/globalStyles.css";

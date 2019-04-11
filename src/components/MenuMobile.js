@@ -44,10 +44,13 @@ class ToursMenuSection extends Component {
                 return (
                   <li key={index}>
                     <Link
-                      to={tour.slug}
+                      to={tour.tour.fields.slug}
                       onClick={this.props.toggleToursMenuSection}
                     >
-                      {tour.tour + " (" + tour.duration + ")"}
+                      {tour.tour.frontmatter.tour_id +
+                        " (" +
+                        tour.tour.frontmatter.duration +
+                        ")"}
                     </Link>
                   </li>
                 );
