@@ -97,13 +97,13 @@ exports.createPages = ({ actions, graphql, getNode }) => {
             name: `tourevents`,
             value: eventsObject[key]
           });
-          eventsObject[key].forEach(eventNodeId => {
-            createNodeField({
-              node: getNode(eventNodeId),
-              name: `eventtour`,
-              value: toursObject[key]
-            });
-          });
+          // eventsObject[key].forEach(eventNodeId => {
+          //   createNodeField({
+          //     node: getNode(eventNodeId),
+          //     name: `eventtour`,
+          //     value: toursObject[key]
+          //   });
+          // });
         }
       }
     }

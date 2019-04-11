@@ -1,3 +1,10 @@
+var netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`
+  }
+};
+
 module.exports = {
   siteMetadata: {
     title: "SA Adventure Trails",
@@ -98,8 +105,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/static/img`,
-        name: "uploads"
+        path: `${__dirname}/src/pages`,
+        name: "pages"
       }
     },
     {
@@ -112,8 +119,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages"
+        path: `${__dirname}/static/img`,
+        name: "staticimages"
       }
     },
     {
@@ -123,6 +130,8 @@ module.exports = {
         path: `${__dirname}/src/assets/img/`
       }
     },
+    netlifyCmsPaths, // Including in your Gatsby plugins will transform any paths in your frontmatter
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -130,17 +139,11 @@ module.exports = {
         stripMetadata: true
       }
     },
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: "gatsby-remark-relative-images",
-            options: {
-              name: "uploads"
-            }
-          },
+          netlifyCmsPaths, // Including in your Remark plugins will transform any paths in your markdown body
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -149,12 +152,6 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 930,
               backgroundColor: "transparent" // required to display blurred image first
-            }
-          },
-          {
-            resolve: "gatsby-remark-copy-linked-files",
-            options: {
-              destinationDir: "static"
             }
           }
         ]
@@ -177,10 +174,9 @@ module.exports = {
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ],
   mapping: {
-    "MarkdownRemark.frontmatter.tour": `MarkdownRemark.frontmatter.tour_id`,
     "MarkdownRemark.fields.hometours": `MarkdownRemark`,
     "MarkdownRemark.fields.menutours": `MarkdownRemark`,
-    "MarkdownRemark.fields.tourevents": `MarkdownRemark`
-    // "MarkdownRemark.fields.eventtour": `MarkdownRemark`
+    "MarkdownRemark.fields.tourevents": `MarkdownRemark`,
+    "MarkdownRemark.fields.eventtour": `MarkdownRemark`
   }
 };
