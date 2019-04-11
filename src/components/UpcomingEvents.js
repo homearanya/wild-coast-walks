@@ -32,7 +32,7 @@ const UpcomingEvents = () => {
                         image {
                           childImageSharp {
                             fluid(maxWidth: 370, maxHeight: 294) {
-                              ...GatsbyImageSharpFluid
+                              ...GatsbyImageSharpFluid_withWebp
                             }
                           }
                         }

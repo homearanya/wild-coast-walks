@@ -87,7 +87,7 @@ export const tourPageQuery = graphql`
             relativePath
             childImageSharp {
               fluid(maxWidth: 1600, maxHeight: 750) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -101,7 +101,7 @@ export const tourPageQuery = graphql`
               relativePath
               childImageSharp {
                 fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
@@ -147,7 +147,7 @@ export const tourPageQuery = graphql`
 //             relativePath
 //             childImageSharp {
 //               fluid(maxWidth: 1600, maxHeight: 750) {
-//                 ...GatsbyImageSharpFluid
+//                 ...GatsbyImageSharpFluid_withWebp
 //               }
 //             }
 //           }
@@ -161,7 +161,7 @@ export const tourPageQuery = graphql`
 //               relativePath
 //               childImageSharp {
 //                 fluid(maxWidth: 800) {
-//                   ...GatsbyImageSharpFluid
+//                   ...GatsbyImageSharpFluid_withWebp
 //                 }
 //               }
 //             }

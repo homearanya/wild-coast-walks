@@ -21,7 +21,7 @@ export default function Menu(props) {
                 image {
                   childImageSharp {
                     fluid(maxWidth: 150) {
-                      ...GatsbyImageSharpFluid_noBase64
+                      ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                   }
                 }
@@ -31,7 +31,7 @@ export default function Menu(props) {
                 image {
                   childImageSharp {
                     fluid(maxWidth: 150) {
-                      ...GatsbyImageSharpFluid_noBase64
+                      ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                   }
                 }
@@ -48,7 +48,7 @@ export default function Menu(props) {
                   image {
                     childImageSharp {
                       fluid(maxWidth: 450) {
-                        ...GatsbyImageSharpFluid_noBase64
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                       }
                     }
                   }

@@ -86,7 +86,7 @@ export const notFoundPageQuery = graphql`
           image {
             childImageSharp {
               fluid(maxWidth: 785) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
