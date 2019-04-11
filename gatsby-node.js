@@ -2,7 +2,6 @@ const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 
-let toursObject = new Object();
 let eventsObject = new Object();
 
 exports.createPages = ({ actions, graphql, getNode }) => {
@@ -50,18 +49,6 @@ exports.createPages = ({ actions, graphql, getNode }) => {
         }
       });
     });
-    // create tour/events relationships
-    for (let key in toursObject) {
-      if (toursObject.hasOwnProperty(key) && eventsObject[key]) {
-        if (eventsObject[key].length > 0) {
-          createNodeField({
-            name: `tourevents`,
-            node: getNode(toursObject[key]),
-            value: eventsObject[key]
-          });
-        }
-      }
-    }
   });
 };
 
@@ -84,21 +71,27 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value
     });
 
-    // collect nodes for homepage/tours & tourmenu/tours relation
+    // collect nodes for tour - events relationship
     if (
       node.frontmatter.templateKey &&
       node.frontmatter.templateKey.includes("tour-page")
     ) {
-      toursObject[node.frontmatter.tour_id.trim().toLowerCase()] = node.id;
+      if (eventsObject[node.frontmatter.tour_id]) {
+        createNodeField({
+          name: `tourevents`,
+          node,
+          value: eventsObject[node.frontmatter.tour_id]
+        });
+      }
     } else if (
       node.frontmatter.templateKey &&
       node.frontmatter.templateKey.includes("upcoming-events")
     ) {
-      if (eventsObject[node.frontmatter.tour.trim().toLowerCase()]) {
-        eventsObject[node.frontmatter.tour.trim().toLowerCase()].push(node.id);
+      if (eventsObject[node.frontmatter.tour]) {
+        eventsObject[node.frontmatter.tour].push(node.id);
       } else {
-        eventsObject[node.frontmatter.tour.trim().toLowerCase()] = [];
-        eventsObject[node.frontmatter.tour.trim().toLowerCase()].push(node.id);
+        eventsObject[node.frontmatter.tour] = [];
+        eventsObject[node.frontmatter.tour].push(node.id);
       }
     }
   }

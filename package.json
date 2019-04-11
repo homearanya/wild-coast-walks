@@ -11,7 +11,7 @@
     "babel-plugin-styled-components": "^1.10.0",
     "braces": "^2.3.2",
     "dateformat": "^3.0.3",
-    "gatsby": "2.1.39",
+    "gatsby": "^2.3.17",
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-google-tagmanager": "^2.0.12",
