@@ -34,9 +34,9 @@ collections:
         name: "tour",
         widget: "relation",
         collection: "tours",
-        searchFields: ["title"],
-        valueField: "title",
-        displayFields: ["title"],
+        searchFields: ["tour_id"],
+        valueField: "tour_id",
+        displayFields: ["tour_id"],
         hint: Very important!!!! It has to be exactly the same name as of the tour on the tours colection
       }
       - {
