@@ -1328,8 +1328,8 @@ header.fixed .header-logo-menu {
 
 .footer-link,
 .payment-image {
-  padding-bottom: 100px;
-  padding-top: 80px;
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 
 .footer-link a:hover {

@@ -1,8 +1,23 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
 
 import NewsletterForm from "./NewsletterForm";
 import ContactDetails from "./ContactDetails";
+
+const FooterLinksWrapper = styled.div`
+  text-align: center;
+
+  a {
+    color: white;
+    border-color: white;
+  }
+
+  a:hover {
+    color: #0967b9;
+    border-color: #0967b9;
+  }
+`;
 
 export default function FooterWidgetArea() {
   return (
@@ -74,6 +89,19 @@ export default function FooterWidgetArea() {
                 {/* <FooterContactDetails contactDetails={contact_details} /> */}
                 <ContactDetails />
                 <NewsletterForm newsletterArea={newsletterarea} />
+              </div>
+              <div className="row">
+                <div className="col-md-12 col-sm-12">
+                  <FooterLinksWrapper className="footer-link">
+                    <a
+                      href="https://www.facebook.com/SAHikingTrails/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fa fa-facebook" />
+                    </a>
+                  </FooterLinksWrapper>
+                </div>
               </div>
             </div>
           </div>
