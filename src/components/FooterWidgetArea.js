@@ -97,6 +97,7 @@ export default function FooterWidgetArea() {
                       href="https://www.facebook.com/SAHikingTrails/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="Go to Facebook Page"
                     >
                       <i className="fa fa-facebook" />
                     </a>
