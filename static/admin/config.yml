@@ -231,9 +231,9 @@ collections:
                         name: "tour"
                         widget: "relation"
                         collection: "tours"
-                        searchFields: ["title"]
-                        valueField: "title"
-                        displayFields: ["title"]
+                        searchFields: ["tour_id"]
+                        valueField: "tour_id"
+                        displayFields: ["tour_id"]
                         hint: Very important!!!! It has to be exactly the same name as of the tour on the tours colection
           - label: "Blog Area"
             name: blogarea
@@ -424,7 +424,7 @@ collections:
                 }
               - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
     editor:
-      preview: false
+      preview: true
 
   - name: "destinations"
     label: "Destinations"
@@ -493,9 +493,9 @@ collections:
                     name: "tour"
                     widget: "relation"
                     collection: "tours"
-                    searchFields: ["title"]
-                    valueField: "title"
-                    displayFields: ["title"]
+                    searchFields: ["tour_id"]
+                    valueField: "tour_id"
+                    displayFields: ["tour_id"]
       - file: "src/general/contact.md"
         label: "Contact Details"
         name: "contact"
