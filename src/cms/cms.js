@@ -8,4 +8,4 @@ import TourCalendarPagePreview from "./preview-templates/TourCalendarPagePreview
 CMS.registerPreviewTemplate("homepage", HomePagePreview);
 CMS.registerPreviewTemplate("about", AboutPagePreview);
 CMS.registerPreviewTemplate("contact", ContactPagePreview);
-CMS.registerPreviewTemplate("contourcalendartact", TourCalendarPagePreview);
+CMS.registerPreviewTemplate("tourcalendar", TourCalendarPagePreview);
