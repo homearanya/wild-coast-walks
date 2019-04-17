@@ -13,7 +13,7 @@ export default function ContactDetails() {
     <StaticQuery
       query={graphql`
         query ContactDetails {
-          file(relativePath: { eq: "contact.md" }) {
+          file(relativePath: { eq: "contact-details/contact.md" }) {
             childMarkdownRemark {
               frontmatter {
                 contact_details {

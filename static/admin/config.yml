@@ -379,6 +379,14 @@ collections:
                   hint: "size 1600 x 596",
                 }
               - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+              - label: "Contact Details Origin"
+                name: contactDetails
+                widget: "relation"
+                collection: "contacDetails"
+                searchFields: ["title"]
+                valueField: "title"
+                displayFields: ["title"]
+                required: false
       - file: "src/pages/tour-calendar/index.md"
         label: "Tour Calendar Page"
         name: tourcalendar
@@ -496,21 +504,6 @@ collections:
                     searchFields: ["tour_id"]
                     valueField: "tour_id"
                     displayFields: ["tour_id"]
-      - file: "src/general/contact.md"
-        label: "Contact Details"
-        name: "contact"
-        fields:
-          - label: "Contact Details"
-            name: contact-details
-            widget: object
-            fields:
-              - { label: Email Address, name: email, widget: string }
-              - label: Phone Number 
-                name: phone
-                widget: object
-                fields:
-                 - {label: Display, name: phonedisplay, widget: string, hint: "Example: 033 330 6121",}
-                 - {label: Number, name: phonenumber, widget: string, hint: "Example: +27333306121",}
       - file: "src/general/footer.md"
         label: "Footer"
         name: "footer"
@@ -556,5 +549,21 @@ collections:
             fields:
               - { label: Image, name: image, widget: image }
               - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+    editor:
+      preview: false
+  - name: contacDetails
+    label: "Contact Details"
+    folder: "src/general/contact-details/"
+    create: false
+    fields:
+      - {label: "Contact Details",name: title, widget: hidden, default: contact}
+      - { label: Email Address, name: email, widget: string }
+      - label: Phone Number 
+        name: phone
+        widget: object
+        fields:
+          - {label: Display, name: phonedisplay, widget: string, hint: "Example: 033 330 6121",}
+          - {label: Number, name: phonenumber, widget: string, hint: "Example: +27333306121",}      
+
     editor:
       preview: false

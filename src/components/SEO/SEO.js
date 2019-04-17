@@ -24,7 +24,9 @@ const SEO = ({ pageData, postImage, pageType }) => (
             }
           }
         }
-        PhoneDetailsQuery: file(relativePath: { eq: "contact.md" }) {
+        PhoneDetailsQuery: file(
+          relativePath: { eq: "contact-details/contact.md" }
+        ) {
           childMarkdownRemark {
             frontmatter {
               contact_details {

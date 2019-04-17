@@ -45,7 +45,9 @@ export default function FooterWidgetArea() {
               }
             }
           }
-          ContactDetails: file(relativePath: { eq: "contact.md" }) {
+          ContactDetails: file(
+            relativePath: { eq: "contact-details/contact.md" }
+          ) {
             childMarkdownRemark {
               frontmatter {
                 contact_details {

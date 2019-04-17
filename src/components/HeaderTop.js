@@ -8,7 +8,7 @@ export default function HeaderTop() {
     <StaticQuery
       query={graphql`
         query HeadingQuery {
-          file(relativePath: { eq: "contact.md" }) {
+          file(relativePath: { eq: "contact-details/contact.md" }) {
             childMarkdownRemark {
               frontmatter {
                 contact_details {
