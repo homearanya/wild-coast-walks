@@ -5,20 +5,20 @@ slider:
     heading2: SLACKPACKING
     image:
       alt: Wild Coast Slackpacking
-      image: /img/wild-coast1600x790.jpg
+      image: /img/wild-coast-1600x750.jpg
     subheading1: TAKE A WALK ON THE
     subheading2: WILD SIDE
   - heading1: MIDLANDS
     heading2: WALKS & CYCLE TOURS
     image:
       alt: Midlands Walks and Cycle Tours
-      image: /img/midlands-cycling1600x790.jpg
+      image: /img/midlands-cycling-1600x750.jpg
     subheading1: MEANDERING THROUGH THE
     subheading2: NATAL MIDLANDS
   - heading1: DRAKENSBERG
     heading2: SLACKPACKING
     image:
-      image: /img/giants-cup-banner1600x596-min.jpg
+      image: /img/giants-cup-trail-1600x750.jpg
     subheading1: HIKE
     subheading2: THE HERITAGE TRAIL
 aboutarea:

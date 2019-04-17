@@ -16,7 +16,7 @@ module.exports = {
     organization: {
       name: "SA Adventure Trail",
       url: "https://www.trails.co.za",
-      logo: "https://www.trails.co.za/img/new-trails-logo-new-colors.png"
+      logo: "https://www.trails.co.za/img/sa-trails-logo-color.png"
     },
     siteUrl: "https://www.trails.co.za" // for gatsby plugin sitemap
   },

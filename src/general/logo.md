@@ -1,9 +1,8 @@
 ---
 colorlogo:
   alt: SA Adventure Trails logo colour
-  image: /img/new-trails-logo-new-colors.png
+  image: /img/sa-trails-logo-color.png
 whitelogo:
   alt: SA Adventure Trails logo white
-  image: /img/new-trails-logo-white.png
+  image: /img/sa-trails-logo-white.png
 ---
-
