@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Location } from "@reach/router";
 import { slugify } from "../../assets/utils/helpers";
 
 import "../../assets/css/open-sans.css";
@@ -58,18 +57,11 @@ const HomePagePreview = props => {
       });
     });
     return (
-      <Location>
-        {({ location }) => {
-          return (
-            <React.Fragment>
-              <SliderArea slider={data.slider} />
-              <AboutArea aboutArea={data.aboutarea} />
-              <ToursPopular toursArea={data.toursarea} />
-            </React.Fragment>
-          );
-          // return <HomePageTemplate frontmatter={data} location={location} />;
-        }}
-      </Location>
+      <React.Fragment>
+        <SliderArea slider={data.slider} />
+        <AboutArea aboutArea={data.aboutarea} />
+        <ToursPopular toursArea={data.toursarea} />
+      </React.Fragment>
     );
   } else {
     return <div>Loading...</div>;
