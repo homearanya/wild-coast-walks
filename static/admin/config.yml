@@ -379,14 +379,14 @@ collections:
                   hint: "size 1600 x 596",
                 }
               - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
-              - label: "Contact Details Origin"
-                name: contactDetailsOrigin  
-                widget: "relation"
-                collection: "contactDetails"
-                searchFields: ["title"]
-                valueField: "title"
-                displayFields: ["title"]
-                hint: "Please, don't change!!!!!"
+          - label: "Contact Details Origin"
+            name: contactDetailsOrigin  
+            widget: "relation"
+            collection: "contactDetails"
+            searchFields: ["title"]
+            valueField: "title"
+            displayFields: ["title"]
+            hint: "Please, don't change!!!!!"
       - file: "src/pages/tour-calendar/index.md"
         label: "Tour Calendar Page"
         name: tourcalendar
