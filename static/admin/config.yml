@@ -556,14 +556,18 @@ collections:
     folder: "src/general/contact-details/"
     create: false
     fields:
-      - {label: "Contact Details",name: title, widget: hidden, default: contact}
-      - { label: Email Address, name: email, widget: string }
-      - label: Phone Number 
-        name: phone
+      - {label: "Title", name: title, widget: string, default: contact, hint: "Please, don't change!!!!!"}
+      - label: "Contact Details"
+        name: contact-details
         widget: object
         fields:
-          - {label: Display, name: phonedisplay, widget: string, hint: "Example: 033 330 6121",}
-          - {label: Number, name: phonenumber, widget: string, hint: "Example: +27333306121",}      
+          - { label: Email Address, name: email, widget: string }
+          - label: Phone Number 
+            name: phone
+            widget: object
+            fields:
+              - {label: Display, name: phonedisplay, widget: string, hint: "Example: 033 330 6121",}
+              - {label: Number, name: phonenumber, widget: string, hint: "Example: +27333306121",}      
 
     editor:
       preview: false

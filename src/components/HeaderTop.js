@@ -31,17 +31,13 @@ export default function HeaderTop() {
                 <div className="contact-details">
                   <div className="email-address">
                     <i className="fa fa-envelope" />
-                    {
-                      data.file.childMarkdownRemark.frontmatter.contact_details
-                        .email
-                    }
+                    {data.file.childMarkdownRemark.frontmatter.contact -
+                      details.email}
                   </div>
                   <div className="phone-number">
                     <i className="fa fa-phone-square" />
-                    {
-                      data.file.childMarkdownRemark.frontmatter.contact_details
-                        .phone
-                    }
+                    {data.file.childMarkdownRemark.frontmatter.contact -
+                      details.phone}
                   </div>
                 </div>
               </div>

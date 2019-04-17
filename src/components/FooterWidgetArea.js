@@ -67,7 +67,7 @@ export default function FooterWidgetArea() {
           image: backgroundImage
         } = data.FooterDetails.childMarkdownRemark.frontmatter.image;
         // const {
-        //   contact_details
+        //   contact-details
         // } = data.ContactDetails.childMarkdownRemark.frontmatter;
         const {
           newsletterarea
@@ -88,7 +88,7 @@ export default function FooterWidgetArea() {
           >
             <div className="container">
               <div className="row">
-                {/* <FooterContactDetails contactDetails={contact_details} /> */}
+                {/* <FooterContactDetails contactDetails={contact-details} /> */}
                 <ContactDetails />
                 <NewsletterForm newsletterArea={newsletterarea} />
               </div>
