@@ -386,7 +386,7 @@ collections:
                 searchFields: ["title"]
                 valueField: "title"
                 displayFields: ["title"]
-                required: false
+                hint: "Please, don't change!!!!!"
       - file: "src/pages/tour-calendar/index.md"
         label: "Tour Calendar Page"
         name: tourcalendar
