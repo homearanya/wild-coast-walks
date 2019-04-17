@@ -11,8 +11,8 @@ const ToursSection = props => {
           <span>{props.sectionDetails.heading2}</span>
         </h2>
       </div>
-      {tours.map((tour, index) => {
-        return <TourThumbnail key={index} tourDetails={tour.tour} />;
+      {tours.map(tour => {
+        return <TourThumbnail key={tour.tour.id} tourDetails={tour.tour} />;
       })}
     </div>
   );

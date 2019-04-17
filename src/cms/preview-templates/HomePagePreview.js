@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Location } from "@reach/router";
-// import { slugify } from "../../assets/utils/helpers";
+import { slugify } from "../../assets/utils/helpers";
 
 import "../../assets/css/open-sans.css";
 import "../../assets/css/raleway.css";
@@ -24,33 +24,47 @@ const HomePagePreview = props => {
   const { entry, fieldsMetaData } = props;
   const data = entry.getIn(["data"]).toJS();
 
-  // data.servicesArea.services.forEach(service => {
-  //   const serviceObject = fieldsMetaData.getIn([
-  //     "servicesArea",
-  //     "services",
-  //     "service",
-  //     "services",
-  //     service.service
-  //   ]);
-  //   servicesObject[service.service] = serviceObject;
-  // });
+  data.toursarea.section.forEach(section => {
+    section.tours.forEach(tour => {
+      const tourObject = fieldsMetaData.getIn([
+        "toursarea",
+        "section",
+        "tours",
+        "tour",
+        "tours",
+        tour.tour
+      ]);
+      toursObject[tour.tour] = tourObject;
+    });
+  });
+  // if (data) {
 
-  if (data) {
-    // if (data && !Object.values(servicesObject).some(e => !e)) {
-    //   data.servicesArea.services.forEach((service, index) => {
-    //     const serviceName = service.service;
-    //     service.service = {};
-    //     service.service.frontmatter = servicesObject[serviceName].toJS();
-    //     service.service.id = index;
-    //     service.service.fields = {};
-    //     service.service.fields.slug = "/services/" + slugify(serviceName) + "/";
-    //   });
+  if (data && !Object.values(toursObject).some(e => !e)) {
+    data.toursarea.section.forEach(section => {
+      section.tours.forEach((tour, index) => {
+        const tourName = tour.tour;
+        tour.tour = {};
+        tour.tour.frontmatter = toursObject[tourName].toJS();
+        tour.tour.id = index;
+        tour.tour.fields = {};
+        tour.tour.fields.slug =
+          "/tours/" +
+          slugify(tour.tour.frontmatter.destination) +
+          "/" +
+          slugify(tour.tour.frontmatter.activity) +
+          "/" +
+          slugify(tourName) +
+          "/";
+      });
+    });
     return (
       <Location>
         {({ location }) => {
           return (
             <React.Fragment>
-              <SliderArea slider={data.slider} />;
+              <SliderArea slider={data.slider} />
+              <AboutArea aboutArea={data.aboutarea} />
+              <ToursPopular toursArea={data.toursarea} />
             </React.Fragment>
           );
           // return <HomePageTemplate frontmatter={data} location={location} />;

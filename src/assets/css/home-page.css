@@ -826,6 +826,12 @@ button#btn-search-category:hover {
   pointer-events: none;
 }
 
+.single-adventure img {
+  height: 375px;
+  width: 375px;
+  object-fit: cover;
+}
+
 /* Large desktop :1920px. */
 
 @media (min-width: 1920px) {

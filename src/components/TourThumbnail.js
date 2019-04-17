@@ -11,14 +11,20 @@ const TourThumbnail = props => {
   let imageFluid = "";
   let imageAlt = "";
   if (tourDetails.imagethumbnail) {
-    imageFluid = tourDetails.imagethumbnail.image.childImageSharp.fluid;
+    imageFluid = tourDetails.imagethumbnail.image.childImageSharp
+      ? tourDetails.imagethumbnail.image.childImageSharp.fluid
+      : tourDetails.imagethumbnail.image;
     imageAlt = tourDetails.imagethumbnail.alt;
   }
   return (
     <div className="col-md-4 col-sm-6 col-xs-12">
       <div className="single-adventure">
         <Link to={tourSlug}>
-          <Img fluid={imageFluid} alt={imageAlt} />
+          {typeof imageFluid === "string" ? (
+            <img src={imageFluid} alt={imageAlt} />
+          ) : (
+            <Img fluid={imageFluid} alt={imageAlt} />
+          )}
         </Link>
         <div className="adventure-text effect-bottom">
           <Link to={tourSlug}>

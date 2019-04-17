@@ -74,6 +74,7 @@ export const homePageQuery = graphql`
             heading2
             tours {
               tour {
+                id
                 fields {
                   slug
                 }

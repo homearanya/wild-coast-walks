@@ -8,10 +8,17 @@ const AboutArea = props => {
       <div className="container">
         <div className="row">
           <div className="col-md-6 hidden-sm hidden-xs">
-            <Img
-              fluid={props.aboutArea.image.image.childImageSharp.fluid}
-              alt={props.aboutArea.image.alt}
-            />
+            {props.aboutArea.image.image.childImageSharp ? (
+              <Img
+                fluid={props.aboutArea.image.image.childImageSharp.fluid}
+                alt={props.aboutArea.image.alt}
+              />
+            ) : (
+              <img
+                fluid={props.aboutArea.image.image}
+                alt={props.aboutArea.image.alt}
+              />
+            )}
           </div>
           <div className="col-md-6">
             <div className="about-container">
