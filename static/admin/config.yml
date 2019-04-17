@@ -558,7 +558,7 @@ collections:
     fields:
       - {label: "Title", name: title, widget: string, default: contact, hint: "Please, don't change!!!!!"}
       - label: "Contact Details"
-        name: contact-details
+        name: contact_details
         widget: object
         fields:
           - { label: Email Address, name: email, widget: string }
