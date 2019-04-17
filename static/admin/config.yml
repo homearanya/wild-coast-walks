@@ -551,7 +551,7 @@ collections:
               - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
     editor:
       preview: false
-  - name: contacDetails
+  - name: contactDetails
     label: "Contact Details"
     folder: "src/general/contact-details/"
     create: false
