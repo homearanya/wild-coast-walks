@@ -409,6 +409,14 @@ collections:
                   hint: "size 1600 x 596",
                 }
               - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+          - label: "Events Origin"
+            name: eventsOrigin  
+            widget: "relation"
+            collection: "events"
+            searchFields: ["title"]
+            valueField: "title"
+            displayFields: ["title"]
+            hint: "Please, don't change!!!!!"
       - file: "src/pages/blog/index.md"
         label: "Blog Page"
         name: bloglist

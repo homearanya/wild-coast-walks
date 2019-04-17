@@ -15,9 +15,18 @@ import { ContactFormTemplate } from "../../templates/contact-page";
 import "../../assets/css/contact.css";
 
 const ContactPagePreview = props => {
-  const { entry } = props;
+  const { entry, fieldsMetaData } = props;
   const data = entry.getIn(["data"]).toJS();
-  if (data) {
+
+  const contactDetails = fieldsMetaData.getIn([
+    "contactDetailsOrigin",
+    "contactDetails",
+    "contact",
+    "contact_details"
+  ]);
+  if (data && contactDetails) {
+    const contactDetailsToJS = contactDetails.toJS();
+    console.log("contactDetailsToJS", contactDetailsToJS);
     return (
       <React.Fragment>
         <Banner
@@ -28,7 +37,7 @@ const ContactPagePreview = props => {
           breadcrumb="Contact us"
           imageBanner={data.imagebanner}
         />
-        <ContactFormTemplate />
+        <ContactFormTemplate contact_details={contactDetailsToJS} />
       </React.Fragment>
     );
   } else {
