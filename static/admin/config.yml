@@ -380,7 +380,7 @@ collections:
                 }
               - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
               - label: "Contact Details Origin"
-                name: contactDetails  
+                name: contactDetailsOrigin  
                 widget: "relation"
                 collection: "contactDetails"
                 searchFields: ["title"]
