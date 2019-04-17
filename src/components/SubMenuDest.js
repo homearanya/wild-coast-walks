@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 const SubMenuDest = props => {
-  console.log("SubMenuDest", props);
   let imageFluid = "";
   let imageAlt = "";
   if (props.section.image) {

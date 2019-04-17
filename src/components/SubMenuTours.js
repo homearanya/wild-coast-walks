@@ -3,7 +3,6 @@ import React from "react";
 import SubMenuDest from "./SubMenuDest";
 
 const SubMenuTours = props => {
-  console.log("SubMenuTours", props);
   return (
     <div className="megamenu">
       {props.tourMenuSections.map((section, index) => {
