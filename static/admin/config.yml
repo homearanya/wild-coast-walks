@@ -409,7 +409,7 @@ collections:
                   hint: "size 1600 x 596",
                 }
               - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
-          - label: "Select Events to display"
+          - label: "Select Events to display on preview"
             name: eventsOrigin  
             widget: "relation"
             collection: "events"
@@ -417,7 +417,7 @@ collections:
             valueField: "title"
             displayFields: ["title"]
             multiple: true
-          - label: "Select Tours to display"
+          - label: "Select Tours to display on preview"
             name: toursOrigin  
             widget: "relation"
             collection: "tours"
