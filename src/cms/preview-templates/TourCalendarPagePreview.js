@@ -32,6 +32,7 @@ const TourCalendarPagePreview = props => {
       .filter(event => {
         return toursObject[event.tour];
       })
+      .sort((a, b) => a.date - b.date)
       .forEach(event => {
         const eventObject = {};
         eventObject.node = {};
