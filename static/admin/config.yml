@@ -37,7 +37,6 @@ collections:
         searchFields: ["tour_id"],
         valueField: "tour_id",
         displayFields: ["tour_id"],
-        hint: Very important!!!! It has to be exactly the same name as of the tour on the tours colection
       }
       - {
           label: "Date of Event",
@@ -105,7 +104,6 @@ collections:
         searchFields: ["title"]
         valueField: "title"
         displayFields: ["title"]
-        hint: Very important!!!! It has to be exactly the same name as of the destination on the destinations colection
       - label: "Activity"
         name: "activity"
         widget: "relation"
@@ -113,7 +111,6 @@ collections:
         searchFields: ["title"]
         valueField: "title"
         displayFields: ["title"]
-        hint: Very important!!!! It has to be exactly the same name as of the activity on the activities colection
       - { label: "Duration", name: "duration", widget: "string" }
       - { label: "Price", name: "price", widget: "string", hint: 'Only amount. Example: R 6400' }
       - { label: "Banner Blurb", name: "bannerblurb", widget: "text" }
@@ -155,7 +152,7 @@ collections:
               - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
               - { label: Caption, name: caption, widget: text, required: false }
     editor:
-      preview: false
+      preview: true
 
   - name: "pages"
     label: "Pages"
@@ -234,7 +231,6 @@ collections:
                         searchFields: ["tour_id"]
                         valueField: "tour_id"
                         displayFields: ["tour_id"]
-                        hint: Very important!!!! It has to be exactly the same name as of the tour on the tours colection
           - label: "Blog Area"
             name: blogarea
             widget: object

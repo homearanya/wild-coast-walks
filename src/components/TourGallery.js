@@ -12,15 +12,23 @@ export default class TourGallery extends React.Component {
     this.gotoPrevious = this.gotoPrevious.bind(this);
 
     this.photos = this.props.photos.map((photo, index) => {
-      return {
-        src: photo.image.childImageSharp.fluid.src,
-        srcSet: photo.image.childImageSharp.fluid.srcSet,
-        sizes: photo.image.childImageSharp.fluid.sizes,
-        width: photo.image.childImageSharp.fluid.aspectRatio,
-        height: 1,
-        alt: photo.alt,
-        key: index
-      };
+      return photo.image.childImageSharp
+        ? {
+            src: photo.image.childImageSharp.fluid.src,
+            srcSet: photo.image.childImageSharp.fluid.srcSet,
+            sizes: photo.image.childImageSharp.fluid.sizes,
+            width: photo.image.childImageSharp.fluid.aspectRatio,
+            height: 1,
+            alt: photo.alt,
+            key: index
+          }
+        : {
+            src: photo.image,
+            width: 1,
+            height: 1,
+            alt: photo.alt,
+            key: index
+          };
     });
 
     this.images = this.props.photos.map((photo, index) => {
@@ -30,12 +38,18 @@ export default class TourGallery extends React.Component {
       } else {
         photoCaption = photo.alt;
       }
-      return {
-        src: photo.image.childImageSharp.fluid.src,
-        srcSet: photo.image.childImageSharp.fluid.srcSet,
-        alt: photo.alt,
-        caption: photoCaption
-      };
+      return photo.image.childImageSharp
+        ? {
+            src: photo.image.childImageSharp.fluid.src,
+            srcSet: photo.image.childImageSharp.fluid.srcSet,
+            alt: photo.alt,
+            caption: photoCaption
+          }
+        : {
+            src: photo.image,
+            alt: photo.alt,
+            caption: photoCaption
+          };
     });
   }
 

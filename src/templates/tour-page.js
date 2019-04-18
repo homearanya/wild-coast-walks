@@ -7,6 +7,7 @@ import Banner from "../components/Banner";
 import SEO from "../components/SEO/SEO";
 import TourInformation from "../components/TourInformation";
 import TourUpcomingEvents from "../components/TourUpcomingEvents";
+import { HTMLContent } from "../components/Content";
 
 import "../assets/css/tour.css";
 
@@ -49,7 +50,7 @@ export default class TourPage extends Component {
           imageBanner={tourInfo.frontmatter.imagebanner}
         />
 
-        <TourInformation tourInfo={tourInfo} />
+        <TourInformation tourInfo={tourInfo} contentComponent={HTMLContent} />
         {tourInfo.fields.tourevents && tourInfo.fields.tourevents.length > 0 ? (
           <TourUpcomingEvents
             backgroundImage={tourInfo.frontmatter.backgroundimage}
@@ -122,61 +123,3 @@ export const tourPageQuery = graphql`
     }
   }
 `;
-// export const tourPageQuery = graphql`
-//   query TourPage($id: String!) {
-//     TourPageQuery: markdownRemark(id: { eq: $id }) {
-//       fields {
-//         slug
-//         tourevents {
-//           frontmatter {
-//             date
-//           }
-//         }
-//       }
-//       html
-//       frontmatter {
-//         title
-//         destination
-//         activity
-//         duration
-//         price
-//         bannerblurb
-//         shortdescription
-//         imagebanner {
-//           image {
-//             relativePath
-//             childImageSharp {
-//               fluid(maxWidth: 1600, maxHeight: 750) {
-//                 ...GatsbyImageSharpFluid_withWebp
-//               }
-//             }
-//           }
-//           alt
-//         }
-//         photoGallery {
-//           photo {
-//             alt
-//             caption
-//             image {
-//               relativePath
-//               childImageSharp {
-//                 fluid(maxWidth: 800) {
-//                   ...GatsbyImageSharpFluid_withWebp
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     UpcomingEventsQuery: file(relativePath: { eq: "upcoming-events.md" }) {
-//       childMarkdownRemark {
-//         frontmatter {
-//           heading1
-//           heading2
-//           blurb
-//         }
-//       }
-//     }
-//   }
-// `;

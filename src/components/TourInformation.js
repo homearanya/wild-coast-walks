@@ -1,11 +1,11 @@
 import React from "react";
 
 import BookButton from "../components/BookButton";
-import Content, { HTMLContent } from "../components/Content";
+import Content from "../components/Content";
 import TourGallery from "../components/TourGallery";
 
 const TourInformation = props => {
-  const TourContent = HTMLContent || Content;
+  const TourContent = props.contentComponent || Content;
   return (
     <div className="trip-information section-padding">
       <div className="container">
