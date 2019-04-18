@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import { ContactForm } from "./ContactForm";
 import "../assets/css/bookButton.css";
 
-ReactModal.setAppElement("#___gatsby");
+// ReactModal.setAppElement("#___gatsby");
 
 export default class BookButton extends Component {
   constructor(props) {

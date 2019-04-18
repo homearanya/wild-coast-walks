@@ -409,14 +409,22 @@ collections:
                   hint: "size 1600 x 596",
                 }
               - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
-          - label: "Events Origin"
+          - label: "Select Events to display"
             name: eventsOrigin  
             widget: "relation"
             collection: "events"
             searchFields: ["title"]
             valueField: "title"
             displayFields: ["title"]
-            hint: "Please, don't change!!!!!"
+            multiple: true
+          - label: "Select Tours to display"
+            name: toursOrigin  
+            widget: "relation"
+            collection: "tours"
+            searchFields: ["tour_id"]
+            valueField: "tour_id"
+            displayFields: ["tour_id"]
+            multiple: true
       - file: "src/pages/blog/index.md"
         label: "Blog Page"
         name: bloglist

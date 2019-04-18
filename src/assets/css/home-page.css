@@ -830,6 +830,7 @@ button#btn-search-category:hover {
   height: 375px;
   width: 375px;
   object-fit: cover;
+  object-position: center center;
 }
 
 /* Large desktop :1920px. */

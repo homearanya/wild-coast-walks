@@ -3,9 +3,11 @@ import { StaticQuery, graphql } from "gatsby";
 
 import Event from "../components/Event";
 
-const UpcomingEventsTemplate = ({ data }) => {
+export const UpcomingEventsTemplate = ({ data, upcomingEvents }) => {
   let today = new Date();
-  const { edges: upcomingEvents } = data.allMarkdownRemark;
+  if (!upcomingEvents) {
+    upcomingEvents = data.allMarkdownRemark.edges;
+  }
   return (
     <div className="tour-calendar adventures-grid section-padding list">
       <div className="container">
@@ -67,28 +69,7 @@ const UpcomingEvents = () => {
           }
         }
       `}
-      render={data => {
-        let today = new Date();
-        const { edges: upcomingEvents } = data.allMarkdownRemark;
-        return (
-          <div className="tour-calendar adventures-grid section-padding list">
-            <div className="container">
-              <div className="row">
-                <div>
-                  {upcomingEvents
-                    .filter(
-                      event => new Date(event.node.frontmatter.date) > today
-                    )
-                    .map(event => {
-                      const { frontmatter, id } = event.node;
-                      return <Event key={id} eventInfo={frontmatter} />;
-                    })}
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-      }}
+      render={data => <UpcomingEventsTemplate data={data} />}
     />
   );
 };

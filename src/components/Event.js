@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import dateformat from "dateformat";
 
 import BookButton from "../components/BookButton";
+import { relative } from "path";
 
 const Event = ({ eventInfo }) => {
   const { date: eventDate, tour } = eventInfo;
@@ -11,7 +12,9 @@ const Event = ({ eventInfo }) => {
   let imageFluid = "";
   let imageAlt = "";
   if (tourInfo.imagethumbnail) {
-    imageFluid = tourInfo.imagethumbnail.image.childImageSharp.fluid;
+    imageFluid = tourInfo.imagethumbnail.image.childImageSharp
+      ? tourInfo.imagethumbnail.image.childImageSharp.fluid
+      : tourInfo.imagethumbnail.image;
     imageAlt = tourInfo.imagethumbnail.alt;
   }
   return (
@@ -21,7 +24,13 @@ const Event = ({ eventInfo }) => {
           <div className="col-md-4 col-sm-6">
             <div className="adventure-img">
               <Link to={fields.slug}>
-                <Img fluid={imageFluid} alt={imageAlt} />
+                {typeof imageFluid === "string" ? (
+                  <div className="custom-preview">
+                    <img src={imageFluid} alt={imageAlt} />
+                  </div>
+                ) : (
+                  <Img fluid={imageFluid} alt={imageAlt} />
+                )}
               </Link>
             </div>
           </div>

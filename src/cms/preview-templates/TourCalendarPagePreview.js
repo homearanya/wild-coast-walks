@@ -12,50 +12,45 @@ import "../../assets/css/layout.css";
 import "../../assets/css/responsive.css";
 
 import Banner from "../../components/Banner";
+import { UpcomingEventsTemplate } from "../../components/UpcomingEvents";
 
 import "../../assets/css/tourCalendar.css";
 
-let eventsObject = new Object();
+let upcomingEvents = [];
 
 const TourCalendarPagePreview = props => {
-  const { entry, fieldsMetaData } = props;
+  const { entry, widgetFor, fieldsMetaData } = props;
   const data = entry.getIn(["data"]).toJS();
 
-  // data.eventsarea.section.forEach(section => {
-  //   section.events.forEach(event => {
-  //     const eventObject = fieldsMetaData.getIn([
-  //       "eventsarea",
-  //       "section",
-  //       "events",
-  //       "event",
-  //       "events",
-  //       event.event
-  //     ]);
-  //     eventsObject[event.event] = eventObject;
-  //   });
-  // });
-  // if (data) {
+  const eventsSelection = fieldsMetaData.getIn(["eventsOrigin", "events"]);
+  const toursSelection = fieldsMetaData.getIn(["toursOrigin", "tours"]);
 
-  // if (data && !Object.values(eventsObject).some(e => !e)) {
-  //   data.eventsarea.section.forEach(section => {
-  //     section.events.forEach((event, index) => {
-  //       const eventName = event.event;
-  //       event.event = {};
-  //       event.event.frontmatter = eventsObject[eventName].toJS();
-  //       event.event.id = index;
-  //       event.event.fields = {};
-  //       event.event.fields.slug =
-  //         "/events/" +
-  //         slugify(event.event.frontmatter.destination) +
-  //         "/" +
-  //         slugify(event.event.frontmatter.activity) +
-  //         "/" +
-  //         slugify(eventName) +
-  //         "/";
-  //     });
-  //   });
-  if (data && fieldsMetaData) {
-    console.log("fieldsMetaData", fieldsMetaData);
+  if (data && eventsSelection && toursSelection) {
+    const eventsArray = Object.values(eventsSelection.toJS());
+    const toursObject = toursSelection.toJS();
+    eventsArray
+      .filter(event => {
+        return toursObject[event.tour];
+      })
+      .forEach(event => {
+        const eventObject = {};
+        eventObject.node = {};
+        eventObject.node.id = event.date.toISOString();
+        eventObject.node.frontmatter = {};
+        eventObject.node.frontmatter.date = eventObject.node.id;
+        eventObject.node.frontmatter.tour = {};
+        eventObject.node.frontmatter.tour.frontmatter = toursObject[event.tour];
+        eventObject.node.frontmatter.tour.fields = {};
+        eventObject.node.frontmatter.tour.fields.slug =
+          "/tours/" +
+          slugify(toursObject[event.tour].destination) +
+          "/" +
+          slugify(toursObject[event.tour].activity) +
+          "/" +
+          slugify(event.tour) +
+          "/";
+        upcomingEvents.push(eventObject);
+      });
     return (
       <React.Fragment>
         <Banner
@@ -66,6 +61,7 @@ const TourCalendarPagePreview = props => {
           breadcrumb="Calendar"
           imageBanner={data.imagebanner}
         />
+        <UpcomingEventsTemplate upcomingEvents={upcomingEvents} />
       </React.Fragment>
     );
   } else {
