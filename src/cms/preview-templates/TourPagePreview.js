@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import getRenderedSize from "react-rendered-size";
 import PropTypes from "prop-types";
 
 import "../../assets/css/open-sans.css";
@@ -15,75 +16,70 @@ import TourInformation from "../../components/TourInformation";
 
 import "../../assets/css/tour.css";
 
+const Image = ({ imageSource }) => {
+  return <img src={imageSource} />;
+};
+
 export default class TourPagePreview extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      photoGalleryObject: {},
-      photoGalleryLoaded: false
+      data: undefined,
+      photoGalleryObject: {}
     };
-    this.sizeImage = this.sizeImage.bind(this);
   }
-  sizeImage(e) {
-    if (e) {
-      const imageAspect =
-        e.naturalHeight === 0 ? 1 : e.naturalWidth / e.naturalHeight;
-      this.setState(prevState => {
-        return (prevState.photoGalleryObject[
-          e.getAttribute("src")
-        ] = imageAspect);
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.data) {
+      prevState.data.photoGallery.photo.forEach(photo => {
+        const ImageComponent = <Image imageSource={photo.image} />;
+        if (!prevState.photoGalleryObject[photo.image]) {
+          const imageSize = getRenderedSize(ImageComponent);
+          if (imageSize.height > 0 && imageSize.width > 0) {
+            const imageAspect = imageSize.width / imageSize.height;
+            this.setState(
+              prevState =>
+                (prevState.photoGalleryObject[photo.image] = imageAspect)
+            );
+          }
+        }
       });
+    } else {
+      const { entry } = prevProps;
+      this.setState(
+        prevState => (prevState.data = entry.getIn(["data"]).toJS())
+      );
     }
   }
-  photoGalleryLoaded() {
-    this.setState({ photoGalleryLoaded: true });
-  }
-  render() {
-    const { entry, widgetFor } = this.props;
-    const data = entry.getIn(["data"]).toJS();
 
-    if (data) {
+  render() {
+    const { widgetFor } = this.props;
+    if (this.state.data) {
       if (
         Object.values(this.state.photoGalleryObject).length ===
-        data.photoGallery.photo.length
+        this.state.data.photoGallery.photo.length
       ) {
         return (
           <React.Fragment>
             <Banner
               extraClass="details-one"
-              title1={data.tour_id}
+              title1={this.state.data.tour_id}
               title2=""
-              text={data.bannerblurb}
+              text={this.state.data.bannerblurb}
               breadcrumb="tour"
-              imageBanner={data.imagebanner}
+              imageBanner={this.state.data.imagebanner}
             />
             <TourInformation
-              tourInfo={{ html: widgetFor("body"), frontmatter: data }}
+              tourInfo={{
+                html: widgetFor("body"),
+                frontmatter: this.state.data
+              }}
               photoGalleryObject={this.state.photoGalleryObject}
             />
           </React.Fragment>
         );
       } else {
-        if (!this.state.photoGalleryLoaded) {
-          this.photoGalleryLoaded();
-          return (
-            <React.Fragment>
-              {data.photoGallery.photo.map(photo => {
-                return (
-                  <img
-                    key={photo.image}
-                    ref={this.sizeImage}
-                    src={photo.image}
-                    style={{ display: "none" }}
-                  />
-                );
-              })}
-              <div>Loading...</div>
-            </React.Fragment>
-          );
-        } else {
-          return <div>Loading...</div>;
-        }
+        return <div>Loading...</div>;
       }
     } else {
       return <div>Loading...</div>;
