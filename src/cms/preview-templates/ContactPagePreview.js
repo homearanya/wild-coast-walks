@@ -26,7 +26,6 @@ const ContactPagePreview = props => {
   ]);
   if (data && contactDetails) {
     const contactDetailsToJS = contactDetails.toJS();
-    console.log("contactDetailsToJS", contactDetailsToJS);
     return (
       <React.Fragment>
         <Banner

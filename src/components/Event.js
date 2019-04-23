@@ -4,7 +4,6 @@ import Img from "gatsby-image";
 import dateformat from "dateformat";
 
 import BookButton from "../components/BookButton";
-import { relative } from "path";
 
 const Event = ({ eventInfo }) => {
   const { date: eventDate, tour } = eventInfo;

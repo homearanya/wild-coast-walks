@@ -17,7 +17,7 @@ import ToursPopular from "../../components/ToursPopular";
 
 import "../../assets/css/home-page.css";
 
-let toursObject = new Object();
+let toursObject = {};
 
 const HomePagePreview = props => {
   const { entry, fieldsMetaData } = props;

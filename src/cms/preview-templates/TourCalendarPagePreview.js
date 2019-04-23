@@ -19,7 +19,7 @@ import "../../assets/css/tourCalendar.css";
 let upcomingEvents = [];
 
 const TourCalendarPagePreview = props => {
-  const { entry, widgetFor, fieldsMetaData } = props;
+  const { entry, fieldsMetaData } = props;
   const data = entry.getIn(["data"]).toJS();
 
   const eventsSelection = fieldsMetaData.getIn(["eventsOrigin", "events"]);

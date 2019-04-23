@@ -56,6 +56,7 @@ const TourInformation = props => {
               props.tourInfo.frontmatter.photoGallery.photo.length > 0 ? (
                 <TourGallery
                   photos={props.tourInfo.frontmatter.photoGallery.photo}
+                  photoGalleryObject={props.photoGalleryObject}
                 />
               ) : null}
             </div>

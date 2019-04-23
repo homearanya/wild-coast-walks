@@ -2,7 +2,7 @@ const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 
-let eventsObject = new Object();
+let eventsObject = {};
 
 exports.createPages = ({ actions, graphql, getNode }) => {
   const { createPage, createNodeField } = actions;

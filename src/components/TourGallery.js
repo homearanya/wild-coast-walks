@@ -24,7 +24,11 @@ export default class TourGallery extends React.Component {
           }
         : {
             src: photo.image,
-            width: 1,
+            width: this.props.photoGalleryObject
+              ? this.props.photoGalleryObject[photo.image]
+                ? this.props.photoGalleryObject[photo.image]
+                : 1
+              : 1,
             height: 1,
             alt: photo.alt,
             key: index
