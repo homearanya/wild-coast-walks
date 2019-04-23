@@ -24,19 +24,24 @@ export default class TourPagePreview extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: undefined,
       photoGalleryObject: {}
     };
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.data) {
-      prevState.data.photoGallery.photo.forEach(photo => {
+    console.log(
+      "component did update",
+      this.props.entry.getIn(["data"]).toJS()
+    );
+    const data = prevProps.entry.getIn(["data"]).toJS();
+    if (data) {
+      data.photoGallery.photo.forEach(photo => {
         const ImageComponent = <Image imageSource={photo.image} />;
         if (!prevState.photoGalleryObject[photo.image]) {
           const imageSize = getRenderedSize(ImageComponent);
           if (imageSize.height > 0 && imageSize.width > 0) {
-            const imageAspect = imageSize.width / imageSize.height;
+            const imageAspect =
+              Math.round((imageSize.width / imageSize.height) * 1000) / 1000;
             this.setState(
               prevState =>
                 (prevState.photoGalleryObject[photo.image] = imageAspect)
@@ -44,43 +49,33 @@ export default class TourPagePreview extends Component {
           }
         }
       });
-    } else {
-      const { entry } = prevProps;
-      this.setState(
-        prevState => (prevState.data = entry.getIn(["data"]).toJS())
-      );
     }
   }
 
   render() {
-    const { widgetFor } = this.props;
-    if (this.state.data) {
-      if (
-        Object.values(this.state.photoGalleryObject).length ===
-        this.state.data.photoGallery.photo.length
-      ) {
-        return (
-          <React.Fragment>
-            <Banner
-              extraClass="details-one"
-              title1={this.state.data.tour_id}
-              title2=""
-              text={this.state.data.bannerblurb}
-              breadcrumb="tour"
-              imageBanner={this.state.data.imagebanner}
-            />
-            <TourInformation
-              tourInfo={{
-                html: widgetFor("body"),
-                frontmatter: this.state.data
-              }}
-              photoGalleryObject={this.state.photoGalleryObject}
-            />
-          </React.Fragment>
-        );
-      } else {
-        return <div>Loading...</div>;
-      }
+    const { entry, widgetFor } = this.props;
+    const data = entry.getIn(["data"]).toJS();
+    console.log("tour page preview - data ", data);
+    if (data) {
+      return (
+        <React.Fragment>
+          <Banner
+            extraClass="details-one"
+            title1={data.tour_id}
+            title2=""
+            text={data.bannerblurb}
+            breadcrumb="tour"
+            imageBanner={data.imagebanner}
+          />
+          <TourInformation
+            tourInfo={{
+              html: widgetFor("body"),
+              frontmatter: data
+            }}
+            photoGalleryObject={this.state.photoGalleryObject}
+          />
+        </React.Fragment>
+      );
     } else {
       return <div>Loading...</div>;
     }

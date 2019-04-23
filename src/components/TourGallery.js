@@ -2,6 +2,55 @@ import React from "react";
 import Gallery from "react-photo-gallery";
 import Lightbox from "react-images";
 
+function convertPhotos(photos, photoGalleryObject) {
+  return photos.map((photo, index) => {
+    return photo.image.childImageSharp
+      ? {
+          src: photo.image.childImageSharp.fluid.src,
+          srcSet: photo.image.childImageSharp.fluid.srcSet,
+          sizes: photo.image.childImageSharp.fluid.sizes,
+          width: photo.image.childImageSharp.fluid.aspectRatio,
+          height: 1,
+          alt: photo.alt,
+          key: index
+        }
+      : {
+          src: photo.image,
+          width: photoGalleryObject
+            ? photoGalleryObject[photo.image]
+              ? photoGalleryObject[photo.image]
+              : 1
+            : 1,
+          height: 1,
+          alt: photo.alt,
+          key: index
+        };
+  });
+}
+
+function convertImages(photos) {
+  return photos.map((photo, index) => {
+    let photoCaption = "";
+    if (photo.caption && photo.caption.length > 0) {
+      photoCaption = photo.caption;
+    } else {
+      photoCaption = photo.alt;
+    }
+    return photo.image.childImageSharp
+      ? {
+          src: photo.image.childImageSharp.fluid.src,
+          srcSet: photo.image.childImageSharp.fluid.srcSet,
+          alt: photo.alt,
+          caption: photoCaption
+        }
+      : {
+          src: photo.image,
+          alt: photo.alt,
+          caption: photoCaption
+        };
+  });
+}
+
 export default class TourGallery extends React.Component {
   constructor(props) {
     super(props);
@@ -10,51 +59,6 @@ export default class TourGallery extends React.Component {
     this.openLightbox = this.openLightbox.bind(this);
     this.gotoNext = this.gotoNext.bind(this);
     this.gotoPrevious = this.gotoPrevious.bind(this);
-
-    this.photos = this.props.photos.map((photo, index) => {
-      return photo.image.childImageSharp
-        ? {
-            src: photo.image.childImageSharp.fluid.src,
-            srcSet: photo.image.childImageSharp.fluid.srcSet,
-            sizes: photo.image.childImageSharp.fluid.sizes,
-            width: photo.image.childImageSharp.fluid.aspectRatio,
-            height: 1,
-            alt: photo.alt,
-            key: index
-          }
-        : {
-            src: photo.image,
-            width: this.props.photoGalleryObject
-              ? this.props.photoGalleryObject[photo.image]
-                ? this.props.photoGalleryObject[photo.image]
-                : 1
-              : 1,
-            height: 1,
-            alt: photo.alt,
-            key: index
-          };
-    });
-
-    this.images = this.props.photos.map((photo, index) => {
-      let photoCaption = "";
-      if (photo.caption && photo.caption.length > 0) {
-        photoCaption = photo.caption;
-      } else {
-        photoCaption = photo.alt;
-      }
-      return photo.image.childImageSharp
-        ? {
-            src: photo.image.childImageSharp.fluid.src,
-            srcSet: photo.image.childImageSharp.fluid.srcSet,
-            alt: photo.alt,
-            caption: photoCaption
-          }
-        : {
-            src: photo.image,
-            alt: photo.alt,
-            caption: photoCaption
-          };
-    });
   }
 
   openLightbox(event, obj) {
@@ -84,11 +88,16 @@ export default class TourGallery extends React.Component {
   }
 
   render() {
+    const photos = convertPhotos(
+      this.props.photos,
+      this.props.photoGalleryObject
+    );
+    const images = convertImages(this.props.photos);
     return (
       <div>
-        <Gallery photos={this.photos} columns={3} onClick={this.openLightbox} />
+        <Gallery photos={photos} columns={3} onClick={this.openLightbox} />
         <Lightbox
-          images={this.images}
+          images={images}
           onClose={this.closeLightbox}
           onClickPrev={this.gotoPrevious}
           onClickNext={this.gotoNext}
