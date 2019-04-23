@@ -29,10 +29,6 @@ export default class TourPagePreview extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(
-      "component did update",
-      this.props.entry.getIn(["data"]).toJS()
-    );
     const data = prevProps.entry.getIn(["data"]).toJS();
     if (data) {
       data.photoGallery.photo.forEach(photo => {
@@ -55,12 +51,10 @@ export default class TourPagePreview extends Component {
   render() {
     const { entry, widgetFor } = this.props;
     const data = entry.getIn(["data"]).toJS();
-    console.log("tour page preview - data ", data);
     if (data) {
       return (
         <React.Fragment>
           <Banner
-            extraClass="details-one"
             title1={data.tour_id}
             title2=""
             text={data.bannerblurb}
