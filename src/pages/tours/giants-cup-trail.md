@@ -5,26 +5,38 @@ tour_id: Giants Cup Trail
 destination: Drakensberg
 activity: Slackpacking
 duration: 4 nights
-price: R 6400
-bannerblurb: "3 or 4 day hike in the Southern Drakensberg, Sani Pass to Bushmans Nek"
+price: R 7500
+bannerblurb: '3 or 4 day hike in the Southern Drakensberg, Sani Pass to Bushmans Nek'
 shortdescription: >-
   Hike the 60km National Hiking Way in the foothills of the Drakenberg from Sani
   Pass to Bushmans Nek.  Self guided well marked trail with daily shuttles from
   the trail head to small hotels and  lodges for overnight accommodation.
 imagethumbnail:
-  alt: Giants Cup Trail
+  alt: Cobham - Start of Day 2
   image: /img/kd1_thumb.jpg
 imagebanner:
-  alt: Giants Cup Trail - Winterhoek Huts
-  image: /img/hikeathon-oct-2005-062.jpg
+  alt: Giants Cup Trail - View from Swiman's Hut
+  image: /img/20190314_084912.jpg
 photoGallery:
   photo:
-    - image: /img/giantsmonk-cowl-129-2-.jpg
-    - image: /img/kd1_008.jpg
-    - image: /img/kd1_005.jpg
-    - image: /img/kd1_001.jpg
-    - image: /img/kd1_003.jpg
-    - image: /img/giants-cup375x375-min.jpg
+    - alt: Summer walking
+      caption: Summer walking
+      image: /img/giantsmonk-cowl-129-2-.jpg
+    - alt: Looking towards the Rhino
+      caption: Looking towards the Rhino
+      image: /img/kd1_008.jpg
+    - alt: Group on Day 2
+      caption: Group on Day 2
+      image: /img/kd1_005.jpg
+    - alt: Climbing Black Eagle Pass
+      caption: Climbing Black Eagle Pass
+      image: /img/kd1_001.jpg
+    - alt: Trekking on Day 1
+      caption: Trekking on Day 1
+      image: /img/kd1_003.jpg
+    - alt: 'Winter hiking '
+      caption: 'Winter hiking '
+      image: /img/giants-cup375x375-min.jpg
 ---
 
 The Giants Cup Hiking Trail is part of the National Hiking Way. The hike follows a well established and clearly marked trail that runs southwards from Sani Pass in the north to Bushmans Nek in the south, the full trail being approximately 60km in length. It falls within the Ukahlamba Wilderness Area (a World Heritage Site) and is administered by KZN Wildlife who provide 5 overnight huts along the route - at Pholela (Cobham valley), Mzimkhulwana, Winterhoek and Swimans (in the Drakensberg Gardens valley) and at Bushmans Nek.
