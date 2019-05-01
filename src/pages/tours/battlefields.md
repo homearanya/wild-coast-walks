@@ -15,21 +15,29 @@ shortdescription: >-
   catered meals, support vehicle and luggage transfers as well as all park entry
   fees
 imagethumbnail:
-  alt: Battlefields
+  alt: Isandlwana monument
   image: /img/battlefields375x375-min.jpg
 imagebanner:
   alt: Battlefields - Isandlwana
   image: /img/battlefields-banner1600x596-min.jpg
 photoGallery:
   photo:
-    - image: /img/ct1_007.jpg
-    - image: /img/ct1_009.jpg
-    - image: /img/ct1_011.jpg
-    - alt: Battlefields cycle tour
+    - alt: Rorkes Drift siege
+      caption: Rorkes Drift siege
+      image: /img/ct1_007.jpg
+    - alt: Isandlwana mountain
+      caption: Isandlwana mountain
+      image: /img/ct1_009.jpg
+    - alt: Spioenkop Monument
+      caption: Spioenkop Monument
+      image: /img/ct1_011.jpg
+    - alt: Thukela River Lodge
       caption: Thukela River Lodge
       image: /img/20181026_082533.jpg
-    - image: /img/ekuthuleni-lodge-game-drive-rhino-590x390.jpg
-    - alt: Battlefields Cycle Tour
+    - alt: Rhino at Nambithi Reserve
+      caption: Rhino at Nambithi Reserve
+      image: /img/ekuthuleni-lodge-game-drive-rhino-590x390.jpg
+    - alt: On the road towards Maria Ratchitz
       caption: On the road towards Maria Ratchitz
       image: /img/img-20181021-wa0044.jpg
 ---
