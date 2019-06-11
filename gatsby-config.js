@@ -173,7 +173,12 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
-    'gatsby-plugin-netlify-cache',
+    {
+      resolve: "gatsby-plugin-netlify-cache",
+      options: {
+        cachePublic: true
+      }
+    },
     "gatsby-plugin-netlify-identity-widget",
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ],
