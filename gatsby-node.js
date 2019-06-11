@@ -4,8 +4,8 @@ const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 
 let eventsObject = {};
 
-exports.createPages = ({ actions, graphql, getNode }) => {
-  const { createPage, createNodeField } = actions;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
   return graphql(`
     {
       allMarkdownRemark(

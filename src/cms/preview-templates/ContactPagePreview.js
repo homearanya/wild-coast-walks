@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "../../assets/css/open-sans.css";
-import "../../assets/css/raleway.css";
-import "../../assets/css/bootstrap.min.css";
-import "../../assets/css/font-awesome.min.css";
+// import "../../assets/css/open-sans.css";
+// import "../../assets/css/raleway.css";
+// import "../../assets/css/bootstrap.min.css";
+// import "../../assets/css/font-awesome.min.css";
 
-import "../../assets/css/globalStyles.css";
-import "../../assets/css/layout.css";
-import "../../assets/css/responsive.css";
+// import "../../assets/css/globalStyles.css";
+// import "../../assets/css/layout.css";
+// import "../../assets/css/responsive.css";
 
 import Banner from "../../components/Banner";
 import { ContactFormTemplate } from "../../templates/contact-page";
