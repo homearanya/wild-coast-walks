@@ -4,7 +4,7 @@ featured: true
 tour_id: Amphitheatre Hike
 destination: Drakensberg
 activity: Slackpacking
-duration: 4 nights
+duration: 3 nights
 price: R 6900
 bannerblurb: 3 day ascent of the Amphitheatre peak in the  Northern Drakensberg
 shortdescription: >-
@@ -44,7 +44,12 @@ photoGallery:
     - alt: A glorious day on the Amphitheatre
       caption: A glorious day on the Amphitheatre
       image: /img/ampthitheatre-gallery_8.jpg
-    - image: /img/amphitheatre375x375-min.jpg
+    - alt: |+
+        Solitary Splendour
+
+      caption: |
+        Solitary Splendour
+      image: /img/amphitheatre375x375-min.jpg
 ---
 
 The Amphitheatre is the most recognisable and dramatically imposing feature of the Northern Drakensberg mountain range. A World Heritage Site of outstanding environmental and cultural significance which rises over 1000 metres from the Tugela Valley to the Lesotho plateau nearly 3000 metres above sea level. The Tugela Falls, the world's second tallest falls (and the highest in Africa), plunges 948m over the basalt face of the Amphitheatre, down to Royal Natal National Park below.
