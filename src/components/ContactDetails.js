@@ -30,10 +30,10 @@ export const ContactDetailsTemplate = ({ data, contact_details }) => {
               <div className="row">
                 <div className="contact-info text-center">
                   <div className="col-md-6">
-                    <div className="contact-image">
-                      <div className="contact-icon">
-                        <div className="icon-table-cell">
-                          <a href={`tel:${contact_details.phone.phonenumber}`}>
+                    <a href={`tel:${contact_details.phone.phonenumber}`}>
+                      <div className="contact-image">
+                        <div className="contact-icon">
+                          <div className="icon-table-cell">
                             <img
                               className="primary-img"
                               src={contact_2}
@@ -44,18 +44,18 @@ export const ContactDetailsTemplate = ({ data, contact_details }) => {
                               src={contact_2_hover}
                               alt="phone number"
                             />
-                          </a>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div className="col-md-6">
-                    <div className="contact-text">
-                      <h4>Phone</h4>
-                      <a href={`tel:${contact_details.phone.phonenumber}`}>
+                    <a href={`tel:${contact_details.phone.phonenumber}`}>
+                      <div className="contact-text">
+                        <h4>Phone</h4>
                         <p>{contact_details.phone.phonedisplay}</p>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -66,10 +66,10 @@ export const ContactDetailsTemplate = ({ data, contact_details }) => {
               <div className="row">
                 <div className="contact-info text-center">
                   <div className="col-md-6">
-                    <div className="contact-image">
-                      <div className="contact-icon">
-                        <div className="icon-table-cell">
-                          <a href={`mailto:${contact_details.email}`}>
+                    <a href={`mailto:${contact_details.email}`}>
+                      <div className="contact-image">
+                        <div className="contact-icon">
+                          <div className="icon-table-cell">
                             <img
                               className="primary-img"
                               src={contact_4}
@@ -80,18 +80,18 @@ export const ContactDetailsTemplate = ({ data, contact_details }) => {
                               src={contact_4_hover}
                               alt="email address"
                             />
-                          </a>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div className="col-md-6">
-                    <div className="contact-text">
-                      <h4>Email</h4>
-                      <a href={`mailto:${contact_details.email}`}>
+                    <a href={`mailto:${contact_details.email}`}>
+                      <div className="contact-text">
+                        <h4>Email</h4>
                         <p>{contact_details.email}</p>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
