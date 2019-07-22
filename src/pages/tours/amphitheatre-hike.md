@@ -32,24 +32,11 @@ photoGallery:
     - alt: Going up the Chainladders
       caption: Going up the Chainladders
       image: /img/ampthitheatre-gallery_4.jpg
-    - alt: The Chainladders
-      caption: The Chainladders
-      image: /img/ampthitheatre-gallery_5.jpg
     - alt: The Tugela Falls
       caption: The Tugela Falls
       image: /img/ampthitheatre-gallery_6.jpg
-    - alt: Enjoying the heights
-      caption: Enjoying the heights
-      image: /img/ampthitheatre-gallery_7.JPG
-    - alt: A glorious day on the Amphitheatre
-      caption: A glorious day on the Amphitheatre
-      image: /img/ampthitheatre-gallery_8.jpg
-    - alt: |+
-        Solitary Splendour
-
-      caption: |
-        Solitary Splendour
-      image: /img/amphitheatre375x375-min.jpg
+    - alt: Ishandlwana mountain and battlefield
+      image: /img/ct1_009.jpg
 ---
 
 The Amphitheatre is the most recognisable and dramatically imposing feature of the Northern Drakensberg mountain range. A World Heritage Site of outstanding environmental and cultural significance which rises over 1000 metres from the Tugela Valley to the Lesotho plateau nearly 3000 metres above sea level. The Tugela Falls, the world's second tallest falls (and the highest in Africa), plunges 948m over the basalt face of the Amphitheatre, down to Royal Natal National Park below.
