@@ -91,8 +91,8 @@ module.exports = {
         icon: "src/assets/img/icon.png" // This path is relative to the root of the site.
       }
     },
-    `gatsby-plugin-offline`,
-    // "gatsby-plugin-remove-serviceworker",
+    // `gatsby-plugin-offline`,
+    "gatsby-plugin-remove-serviceworker",
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
