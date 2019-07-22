@@ -10,7 +10,7 @@ const Event = ({ eventInfo }) => {
   const { fields, frontmatter: tourInfo } = tour;
   let imageFluid = "";
   let imageAlt = "";
-  if (tourInfo.imagethumbnail) {
+  if (tourInfo.imagethumbnail.image) {
     imageFluid = tourInfo.imagethumbnail.image.childImageSharp
       ? tourInfo.imagethumbnail.image.childImageSharp.fluid
       : tourInfo.imagethumbnail.image;

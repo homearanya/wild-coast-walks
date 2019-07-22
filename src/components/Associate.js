@@ -8,17 +8,19 @@ const Associate = props => {
         <div className="row">
           <div className="col-md-3 col-sm-4">
             <div className="associate-image">
-              {props.partner.image.image.childImageSharp ? (
-                <Img
-                  fluid={props.partner.image.image.childImageSharp.fluid}
-                  alt={props.partner.image.alt}
-                />
-              ) : (
-                <img
-                  src={props.partner.image.image}
-                  alt={props.partner.image.alt}
-                />
-              )}
+              {props.partner.image.image ? (
+                props.partner.image.image.childImageSharp ? (
+                  <Img
+                    fluid={props.partner.image.image.childImageSharp.fluid}
+                    alt={props.partner.image.alt}
+                  />
+                ) : (
+                  <img
+                    src={props.partner.image.image}
+                    alt={props.partner.image.alt}
+                  />
+                )
+              ) : null}
             </div>
           </div>
           <div className="col-md-9 col-sm-8 margin-left">

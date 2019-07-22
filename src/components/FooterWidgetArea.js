@@ -77,9 +77,11 @@ export default function FooterWidgetArea() {
             className="footer-widget-area"
             style={{
               backgroundColor: "rgba(0, 0, 0, 0)",
-              backgroundImage: `url(${
-                backgroundImage.childImageSharp.fluid.src
-              })`,
+              backgroundImage: backgroundImage
+                ? backgroundImage.childImageSharp
+                  ? `url(${backgroundImage.childImageSharp.fluid.src})`
+                  : `url(${backgroundImage})`
+                : "",
               backgroundRepeat: "no-repeat",
               backgroundAttachment: "scroll",
               backgroundPosition: "center top",

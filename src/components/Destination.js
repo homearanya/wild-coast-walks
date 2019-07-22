@@ -6,17 +6,19 @@ const Destination = props => {
     <div className="col-md-6">
       <div className="single-destinations">
         <div className="destinations-image">
-          {props.destination.image.image.childImageSharp ? (
-            <Img
-              fluid={props.destination.image.image.childImageSharp.fluid}
-              alt={props.destination.image.alt}
-            />
-          ) : (
-            <img
-              src={props.destination.image.image}
-              alt={props.destination.image.alt}
-            />
-          )}
+          {props.destination.image.image ? (
+            props.destination.image.image.childImageSharp ? (
+              <Img
+                fluid={props.destination.image.image.childImageSharp.fluid}
+                alt={props.destination.image.alt}
+              />
+            ) : (
+              <img
+                src={props.destination.image.image}
+                alt={props.destination.image.alt}
+              />
+            )
+          ) : null}
         </div>
         <div className="destinations-text">
           <h4>

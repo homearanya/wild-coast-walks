@@ -4,19 +4,21 @@ import Img from "gatsby-image";
 const Slide = props => {
   return (
     <div>
-      {typeof props.imageFluid === "string" ? (
-        <img
-          src={props.imageFluid}
-          alt={props.imageAlt}
-          title={props.imageTitle}
-        />
-      ) : (
-        <Img
-          fluid={props.imageFluid}
-          alt={props.imageAlt}
-          title={props.imageTitle}
-        />
-      )}
+      {props.imageFluid ? (
+        typeof props.imageFluid === "string" ? (
+          <img
+            src={props.imageFluid}
+            alt={props.imageAlt}
+            title={props.imageTitle}
+          />
+        ) : (
+          <Img
+            fluid={props.imageFluid}
+            alt={props.imageAlt}
+            title={props.imageTitle}
+          />
+        )
+      ) : null}
       <div className="nivo-caption" style={{ display: "block" }}>
         <div className="banner-content slider-1">
           <div className="container">

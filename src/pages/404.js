@@ -53,7 +53,13 @@ export default ({ data }) => {
       </Helmet>
       <Wrapper
         className="error-area"
-        backgroundImage={backgroundimage.image.childImageSharp.fluid.src}
+        backgroundImage={
+          backgroundimage.image
+            ? backgroundimage.image.childImageSharp
+              ? backgroundimage.image.childImageSharp.fluid.src
+              : backgroundimage.image
+            : ""
+        }
       >
         <div className="container">
           <div className="row">

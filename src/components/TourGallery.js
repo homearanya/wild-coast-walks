@@ -3,52 +3,61 @@ import Gallery from "react-photo-gallery";
 import Lightbox from "react-images";
 
 function convertPhotos(photos, photoGalleryObject) {
-  return photos.map((photo, index) => {
-    return photo.image.childImageSharp
-      ? {
-          src: photo.image.childImageSharp.fluid.src,
-          srcSet: photo.image.childImageSharp.fluid.srcSet,
-          sizes: photo.image.childImageSharp.fluid.sizes,
-          width: photo.image.childImageSharp.fluid.aspectRatio,
-          height: 1,
-          alt: photo.alt,
-          key: index
-        }
-      : {
-          src: photo.image,
-          width: photoGalleryObject
-            ? photoGalleryObject[photo.image]
-              ? photoGalleryObject[photo.image]
-              : 1
-            : 1,
-          height: 1,
-          alt: photo.alt,
-          key: index
-        };
-  });
+  return photos
+    .filter(photo => photo.image)
+    .map((photo, index) => {
+      console.log("convertphotos", photo);
+      return photo.image
+        ? photo.image.childImageSharp
+          ? {
+              src: photo.image.childImageSharp.fluid.src,
+              srcSet: photo.image.childImageSharp.fluid.srcSet,
+              sizes: photo.image.childImageSharp.fluid.sizes,
+              width: photo.image.childImageSharp.fluid.aspectRatio,
+              height: 1,
+              alt: photo.alt,
+              key: index
+            }
+          : {
+              src: photo.image,
+              width: photoGalleryObject
+                ? photoGalleryObject[photo.image]
+                  ? photoGalleryObject[photo.image]
+                  : 1
+                : 1,
+              height: 1,
+              alt: photo.alt
+            }
+        : null;
+    });
 }
 
 function convertImages(photos) {
-  return photos.map((photo, index) => {
-    let photoCaption = "";
-    if (photo.caption && photo.caption.length > 0) {
-      photoCaption = photo.caption;
-    } else {
-      photoCaption = photo.alt;
-    }
-    return photo.image.childImageSharp
-      ? {
-          src: photo.image.childImageSharp.fluid.src,
-          srcSet: photo.image.childImageSharp.fluid.srcSet,
-          alt: photo.alt,
-          caption: photoCaption
-        }
-      : {
-          src: photo.image,
-          alt: photo.alt,
-          caption: photoCaption
-        };
-  });
+  return photos
+    .filter(photo => photo.image)
+    .map((photo, index) => {
+      console.log("convertimages", photo);
+      let photoCaption = "";
+      if (photo.caption && photo.caption.length > 0) {
+        photoCaption = photo.caption;
+      } else {
+        photoCaption = photo.alt;
+      }
+      return photo.image
+        ? photo.image.childImageSharp
+          ? {
+              src: photo.image.childImageSharp.fluid.src,
+              srcSet: photo.image.childImageSharp.fluid.srcSet,
+              alt: photo.alt,
+              caption: photoCaption
+            }
+          : {
+              src: photo.image,
+              alt: photo.alt,
+              caption: photoCaption
+            }
+        : null;
+    });
 }
 
 export default class TourGallery extends React.Component {

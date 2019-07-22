@@ -8,23 +8,23 @@ const TourThumbnail = props => {
   }
   const tourSlug = props.tourDetails.fields.slug;
   const tourDetails = props.tourDetails.frontmatter;
-  let imageFluid = "";
-  let imageAlt = "";
-  if (tourDetails.imagethumbnail) {
-    imageFluid = tourDetails.imagethumbnail.image.childImageSharp
-      ? tourDetails.imagethumbnail.image.childImageSharp.fluid
-      : tourDetails.imagethumbnail.image;
-    imageAlt = tourDetails.imagethumbnail.alt;
-  }
   return (
     <div className="col-md-4 col-sm-6 col-xs-12">
       <div className="single-adventure">
         <Link to={tourSlug}>
-          {typeof imageFluid === "string" ? (
-            <img src={imageFluid} alt={imageAlt} />
-          ) : (
-            <Img fluid={imageFluid} alt={imageAlt} />
-          )}
+          {tourDetails.imagethumbnail.image ? (
+            tourDetails.imagethumbnail.image.childImageSharp ? (
+              <Img
+                fluid={tourDetails.imagethumbnail.image.childImageSharp.fluid}
+                alt={tourDetails.imagethumbnail.alt}
+              />
+            ) : (
+              <img
+                src={tourDetails.imagethumbnail.image}
+                alt={tourDetails.imagethumbnail.alt}
+              />
+            )
+          ) : null}
         </Link>
         <div className="adventure-text effect-bottom">
           <Link to={tourSlug}>

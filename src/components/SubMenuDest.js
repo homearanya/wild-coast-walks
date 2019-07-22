@@ -3,17 +3,23 @@ import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 const SubMenuDest = props => {
-  let imageFluid = "";
-  let imageAlt = "";
-  if (props.section.image) {
-    imageFluid = props.section.image.image.childImageSharp.fluid;
-    imageAlt = props.section.image.alt;
-  }
   return (
     <div>
       <span className="border-hover">
         <div className="mega-image">
-          <Img fluid={imageFluid} alt={imageAlt} />
+          {props.section.image.image ? (
+            props.section.image.image.childImageSharp ? (
+              <Img
+                fluid={props.section.image.image.childImageSharp.fluid}
+                alt={props.section.image.alt}
+              />
+            ) : (
+              <img
+                src={props.section.image.image}
+                alt={props.section.image.alt}
+              />
+            )
+          ) : null}
         </div>
       </span>
       <span>
