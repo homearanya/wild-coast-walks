@@ -1,7 +1,7 @@
 ---
 section:
   - heading1: Wild Coast Slackpacking
-    heading2: ""
+    heading2: ' '
     image:
       alt: Wild Coast Slackpacking
       image: /img/wild-coast-slackpack450x300.jpg
@@ -10,6 +10,7 @@ section:
       - tour: Sunshine Hike
       - tour: Mini Break
   - heading1: Midlands Walks
+    heading2: ' '
     image:
       alt: Midlands Walks
       image: /img/midlands-walks450x300.jpg
@@ -18,6 +19,7 @@ section:
       - tour: Dargle Samango
       - tour: Nhlosane Hike
   - heading1: Drakensberg Slackpacking
+    heading2: ' '
     image:
       alt: Giants Cup Trail
       image: /img/giants-cup-trail450x300.jpg
@@ -26,6 +28,7 @@ section:
       - tour: Amphitheatre Hike
       - tour: Mehloding
   - heading1: KZN Cycle Tours
+    heading2: ' '
     image:
       alt: KZN Cycle Tours
       image: /img/cycle-tours450x300.jpg
@@ -34,3 +37,4 @@ section:
       - tour: Midlands Meander
       - tour: Trappist Monastery
 ---
+
