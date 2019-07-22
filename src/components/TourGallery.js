@@ -6,7 +6,6 @@ function convertPhotos(photos, photoGalleryObject) {
   return photos
     .filter(photo => photo.image)
     .map((photo, index) => {
-      console.log("convertphotos", photo);
       return photo.image
         ? photo.image.childImageSharp
           ? {
@@ -36,7 +35,6 @@ function convertImages(photos) {
   return photos
     .filter(photo => photo.image)
     .map((photo, index) => {
-      console.log("convertimages", photo);
       let photoCaption = "";
       if (photo.caption && photo.caption.length > 0) {
         photoCaption = photo.caption;
