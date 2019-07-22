@@ -8,7 +8,7 @@ section:
     tours:
       - tour: Meander Hike
       - tour: Sunshine Hike
-      - tour: Coffee Bay Hike
+      - tour: Mini Break
   - heading1: Midlands Walks
     heading2: ' '
     image:
