@@ -9,7 +9,7 @@ slider:
     subheading1: TAKE A WALK ON THE
     subheading2: WILD SIDE
   - heading1: MIDLANDS WALKS
-    heading2: "& CYCLE TOURS"
+    heading2: '& CYCLE TOURS'
     image:
       alt: Midlands Walks and Cycle Tours
       image: /img/midlands-cycling-1600x750.jpg
@@ -18,6 +18,7 @@ slider:
   - heading1: DRAKENSBERG
     heading2: SLACKPACKING
     image:
+      alt: Winterhoek Huts along the Giants Cup Trail
       image: /img/giants-cup-trail-1600x750.jpg
     subheading1: HIKE
     subheading2: THE HERITAGE TRAIL
@@ -34,7 +35,7 @@ aboutarea:
     image: /img/hikers-and-porters786x426-min.jpg
 toursarea:
   heading1: Our Popular Tours
-  heading2: ""
+  heading2: ''
   introduction: >-
     Not sure what you’re looking for and need a little inspiration? We can help.
     Check out our handpicked
@@ -42,7 +43,7 @@ toursarea:
     lists of topical trips you can take right now.
   section:
     - heading1: Wild Coast Slackpacking
-      heading2: ""
+      heading2: ''
       tours:
         - tour: Meander Hike
         - tour: Sunshine Hike
@@ -71,3 +72,4 @@ blogarea:
   heading2: Blog Posts
   switch: true
 ---
+
