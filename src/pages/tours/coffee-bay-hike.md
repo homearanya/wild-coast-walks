@@ -19,6 +19,13 @@ photoGallery:
   photo:
     - alt: Lwandile Swimming beach
       image: /img/lwandile-beach-swimming.jpg
+    - alt: Swell Lodge at Mdumbi
+      caption: Swell Lodge at Mdumbi
+      image: /img/swell_lodge-mdumbi.jpg
+    - alt: Wild Coast Sunset
+      image: /img/wild-coast-sunset-1.jpg
+    - alt: Lwandile Estuary - Coffee Bay hike
+      image: /img/coffeebay_lwandile.jpg
 ---
 Immerse yourself in the warm heart of the Eastern Cape’s Wild Coast with this 3 day 4 night hike centred on Ocean View Hotel at Coffee Bay.
 
