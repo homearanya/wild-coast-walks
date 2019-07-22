@@ -17,7 +17,8 @@ export default function SliderArea(props) {
     autoplay: true,
     speed: 1500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    lazyLoad: true
   };
   return (
     <div className="slider-area">

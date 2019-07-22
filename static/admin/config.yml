@@ -83,6 +83,7 @@ collections:
     folder: "src/pages/tours"
     create: true
     slug: "{{slug}}"
+    identifier_field: tour_id
     fields:
       - {
           label: "Template Key",
