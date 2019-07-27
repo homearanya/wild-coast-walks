@@ -7,7 +7,7 @@ activity: Slackpacking
 duration: 3-4 days
 price: R 5400
 bannerblurb: Long Weekend Special - Coffee Bay or Morgan Bay
-shortdescription: >-
+shortdescription: >+
   A 3 day 4 night long weekend slackpacking hike on the Wild Coast with pleasant
   daily  walking and overnight  comfort.  Self drive to start hotel or fly into
   East London or Umthata airport on a Thursday and be back home on Sunday with
@@ -24,11 +24,9 @@ shortdescription: >-
   Hikes depart from Ocean View hotel at Coffee Bay or Morgan Bay hotel on the
   lower Wild Coast. 
 
-
-  Price:  From R 5400 per person sharing  
 imagethumbnail:
   alt: Mini Break
-  image: /img/meander-hike-gallery_6.jpg
+  image: /img/wild-coast-slackpack450x300.jpg
 imagebanner:
   alt: Mini Break
   image: /img/wc_minibreak.jpg
@@ -40,6 +38,15 @@ photoGallery:
       image: /img/wc3_mb.jpg
     - alt: The pont at Kei Mouth
       image: /img/wc3_ferry.jpg
+    - alt: Maphuzi
+      caption: 'Maphuzi on Coffee Bay '
+      image: /img/coffeebay_maphuzi.jpg
+    - alt: Ferry Boat at Umthata Mouth
+      caption: Ferry Boat at Umthata Mouth
+      image: /img/coffeebay_umthataferry.jpg
+    - alt: 'Presleys Bay '
+      caption: Presleys Bay
+      image: /img/coffeebay_presleys.jpg
 ---
 The **lower Wild Coast Mini-break** hike takes in the last 2 or 3 days of the Sunshine route between Wavecrest and Chintsa.   Fly into East London on a Thursday for the 2 hour shuttle to either Morgan Bay or Seagulls/Trennerys to start your hike the next day.  The hike runs for 15km south to Morgan Bay crossing the Kei River by pont for your second night at Morgan Bay. 
 
