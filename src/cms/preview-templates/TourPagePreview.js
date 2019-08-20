@@ -17,7 +17,7 @@ import TourInformation from "../../components/TourInformation";
 import "../../assets/css/tour.css";
 
 const Image = ({ imageSource }) => {
-  return <img src={imageSource} />;
+  return <img src={imageSource} alt="alt text" />;
 };
 
 export default class TourPagePreview extends Component {
