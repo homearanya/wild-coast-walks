@@ -2,20 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import { slugify } from "../../assets/utils/helpers";
 
-import "../../assets/css/open-sans.css";
-import "../../assets/css/raleway.css";
-import "../../assets/css/bootstrap.min.css";
-import "../../assets/css/font-awesome.min.css";
+// import "../../assets/css/open-sans.css";
+// import "../../assets/css/raleway.css";
+// import "../../assets/css/bootstrap.min.css";
+// import "../../assets/css/font-awesome.min.css";
 
-import "../../assets/css/globalStyles.css";
-import "../../assets/css/layout.css";
-import "../../assets/css/responsive.css";
+// import "../../assets/css/globalStyles.css";
+// import "../../assets/css/layout.css";
+// import "../../assets/css/responsive.css";
 
 import SliderArea from "../../components/SliderArea";
 import AboutArea from "../../components/AboutArea";
 import ToursPopular from "../../components/ToursPopular";
 
-import "../../assets/css/home-page.css";
+// import "../../assets/css/home-page.css";
 
 let toursObject = {};
 

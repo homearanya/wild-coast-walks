@@ -5,8 +5,6 @@ import Banner from "../../components/Banner";
 import DestinationsArea from "../../components/DestinationsArea";
 import AssociatesArea from "../../components/AssociatesArea";
 
-import "../../assets/css/about.css";
-
 const AboutPagePreview = props => {
   const { entry } = props;
   const data = entry.getIn(["data"]).toJS();

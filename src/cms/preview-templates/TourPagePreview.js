@@ -1,24 +1,32 @@
 import React, { Component } from "react";
-import getRenderedSize from "react-rendered-size";
 import PropTypes from "prop-types";
-
-import "../../assets/css/open-sans.css";
-import "../../assets/css/raleway.css";
-import "../../assets/css/bootstrap.min.css";
-import "../../assets/css/font-awesome.min.css";
-
-import "../../assets/css/globalStyles.css";
-import "../../assets/css/layout.css";
-import "../../assets/css/responsive.css";
 
 import Banner from "../../components/Banner";
 import TourInformation from "../../components/TourInformation";
 
-import "../../assets/css/tour.css";
-
-const Image = ({ imageSource }) => {
-  return <img src={imageSource} alt="alt text" />;
-};
+const DummyPhotoGallery = ({ handleLoadedImages, photoGallery }) => (
+  <div
+    style={{
+      display: "none"
+    }}
+  >
+    {photoGallery.photo.map(photo =>
+      photo.image ? (
+        <img
+          onLoad={event =>
+            handleLoadedImages(
+              photo.image,
+              event.target.width,
+              event.target.height
+            )
+          }
+          src={photo.image}
+          alt="alt text"
+        />
+      ) : null
+    )}
+  </div>
+);
 
 export default class TourPagePreview extends Component {
   constructor(props) {
@@ -28,25 +36,16 @@ export default class TourPagePreview extends Component {
     };
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    const data = prevProps.entry.getIn(["data"]).toJS();
-    if (data) {
-      data.photoGallery.photo.forEach(photo => {
-        const ImageComponent = <Image imageSource={photo.image} />;
-        if (!prevState.photoGalleryObject[photo.image]) {
-          const imageSize = getRenderedSize(ImageComponent);
-          if (imageSize.height > 0 && imageSize.width > 0) {
-            const imageAspect =
-              Math.round((imageSize.width / imageSize.height) * 1000) / 1000;
-            this.setState(
-              prevState =>
-                (prevState.photoGalleryObject[photo.image] = imageAspect)
-            );
-          }
-        }
-      });
+  handleLoadedImages = (src, width, height) => {
+    if (!this.state.photoGalleryObject[src]) {
+      if (height > 0 && width > 0) {
+        const imageAspect = Math.round((width / height) * 1000) / 1000;
+        this.setState(
+          prevState => (prevState.photoGalleryObject[src] = imageAspect)
+        );
+      }
     }
-  }
+  };
 
   render() {
     const { entry, widgetFor } = this.props;
@@ -67,6 +66,10 @@ export default class TourPagePreview extends Component {
               frontmatter: data
             }}
             photoGalleryObject={this.state.photoGalleryObject}
+          />
+          <DummyPhotoGallery
+            handleLoadedImages={this.handleLoadedImages}
+            photoGallery={data.photoGallery}
           />
         </React.Fragment>
       );
