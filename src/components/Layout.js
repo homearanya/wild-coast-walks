@@ -25,8 +25,6 @@ const Header = props => {
 };
 
 const Footer = props => {
-  let currentDate = new Date();
-  let currentYear = currentDate.getFullYear();
   return (
     <div className="footer-area">
       <div className="container">
@@ -36,7 +34,7 @@ const Footer = props => {
             style={{ display: "flex", justifyContent: "center" }}
           >
             <span>
-              {`Copyright © ${currentYear} - `}
+              {`Copyright © ${new Date().getFullYear()} - `}
               <Link to="/">{props.siteTitle}</Link>
             </span>
           </div>
