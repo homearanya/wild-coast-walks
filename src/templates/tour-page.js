@@ -1,43 +1,43 @@
 // import React from "react";
-import React, { Component } from "react";
-import { graphql } from "gatsby";
+import React, { Component } from "react"
+import { graphql } from "gatsby"
 
-import Layout from "../components/Layout";
-import Banner from "../components/Banner";
-import SEO from "../components/SEO/SEO";
-import TourInformation from "../components/TourInformation";
-import TourUpcomingEvents from "../components/TourUpcomingEvents";
-import { HTMLContent } from "../components/Content";
+import Layout from "../components/Layout"
+import Banner from "../components/Banner"
+import SEO from "../components/SEO/SEO"
+import TourInformation from "../components/TourInformation"
+import TourUpcomingEvents from "../components/TourUpcomingEvents"
+import { HTMLContent } from "../components/Content"
 
-import "../assets/css/tour.css";
+import "../assets/css/tour.css"
 
 export default class TourPage extends Component {
   render() {
-    const { TourPageQuery: tourInfo } = this.props.data;
+    const { TourPageQuery: tourInfo } = this.props.data
     // build image array for schema.org
-    let schemaImages = [];
+    let schemaImages = []
     if (tourInfo.frontmatter.imagebanner.image) {
-      schemaImages.push(tourInfo.frontmatter.imagebanner.image.relativePath);
+      schemaImages.push(tourInfo.frontmatter.imagebanner.image.relativePath)
     }
-    tourInfo.frontmatter.photoGallery.photo.map(photo =>
-      schemaImages.push(photo.image.relativePath)
-    );
+    if (tourInfo.frontmatter.photoGallery) {
+      tourInfo.frontmatter.photoGallery.photo.map(photo =>
+        schemaImages.push(photo.image.relativePath)
+      )
+    }
     //
     const {
       frontmatter: upcomingEventsInfo
-    } = this.props.data.UpcomingEventsHeadingQuery.childMarkdownRemark;
+    } = this.props.data.UpcomingEventsHeadingQuery.childMarkdownRemark
     // Meta Info for SEO and schemaOrg
     const pageMeta = {
-      title: `${tourInfo.frontmatter.tour_id} · ${
-        tourInfo.frontmatter.destination
-      } · ${tourInfo.frontmatter.activity} · Tours`,
+      title: `${tourInfo.frontmatter.tour_id} · ${tourInfo.frontmatter.destination} · ${tourInfo.frontmatter.activity} · Tours`,
       description: `${tourInfo.frontmatter.shortdescription}`,
       slug: tourInfo.fields.slug,
       tourName: tourInfo.frontmatter.tour_id,
       tourPrice: tourInfo.frontmatter.price,
       tourImages: schemaImages,
       datePublished: false
-    };
+    }
     return (
       <Layout tourPage>
         <SEO pageData={pageMeta} pageType="tour" />
@@ -60,7 +60,7 @@ export default class TourPage extends Component {
           />
         ) : null}
       </Layout>
-    );
+    )
   }
 }
 export const tourPageQuery = graphql`
@@ -122,4 +122,4 @@ export const tourPageQuery = graphql`
       }
     }
   }
-`;
+`

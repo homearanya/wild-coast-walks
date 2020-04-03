@@ -7,7 +7,7 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-# publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 
 collections:
   - name: events
@@ -24,20 +24,20 @@ collections:
           default: "upcoming-events",
         }
       - {
-        label: "Title",
-        name: "title",
-        widget: "string",
-        hint: "tip: use a combination of tour name and date of event"
-      }
+          label: "Title",
+          name: "title",
+          widget: "string",
+          hint: "tip: use a combination of tour name and date of event",
+        }
       - {
-        label: "Tour",
-        name: "tour",
-        widget: "relation",
-        collection: "tours",
-        searchFields: ["tour_id"],
-        valueField: "tour_id",
-        displayFields: ["tour_id"],
-      }
+          label: "Tour",
+          name: "tour",
+          widget: "relation",
+          collection: "tours",
+          searchFields: ["tour_id"],
+          valueField: "tour_id",
+          displayFields: ["tour_id"],
+        }
       - {
           label: "Date of Event",
           name: "date",
@@ -45,8 +45,8 @@ collections:
           default: "",
           dateFormat: "YYYY-MM-DD",
           hint: "YYYY-MM-DD",
-          # format: "DD-MM-YYYY",
         }
+    # format: "DD-MM-YYYY",
     editor:
       preview: false
 
@@ -69,8 +69,8 @@ collections:
           name: "date",
           widget: "date",
           dateFormat: "YYYY-MM-DD",
-          # format: "DD MM YYYY",
         }
+      # format: "DD MM YYYY",
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list", required: false }
@@ -113,7 +113,12 @@ collections:
         valueField: "title"
         displayFields: ["title"]
       - { label: "Duration", name: "duration", widget: "string" }
-      - { label: "Price", name: "price", widget: "string", hint: 'Only amount. Example: R 6400' }
+      - {
+          label: "Price",
+          name: "price",
+          widget: "string",
+          hint: "Only amount. Example: R 6400",
+        }
       - { label: "Banner Blurb", name: "bannerblurb", widget: "text" }
       - { label: "Short Description", name: "shortdescription", widget: "text" }
       - { label: "Long Description", name: "body", widget: "markdown" }
@@ -122,7 +127,12 @@ collections:
         widget: object
         fields:
           - { label: Image, name: image, widget: image, hint: "size 375 x 375" }
-          - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+          - {
+              label: Title,
+              name: alt,
+              widget: text,
+              hint: "Please inform. Important for SEO",
+            }
       - label: "Banner Image"
         name: imagebanner
         widget: object
@@ -133,7 +143,12 @@ collections:
               widget: image,
               hint: "size 1600 x 596",
             }
-          - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+          - {
+              label: Title,
+              name: alt,
+              widget: text,
+              hint: "Please inform. Important for SEO",
+            }
       - label: "Photo Gallery"
         name: photoGallery
         widget: object
@@ -150,7 +165,12 @@ collections:
                   widget: image,
                   hint: "size 800 x 600",
                 }
-              - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+              - {
+                  label: Title,
+                  name: alt,
+                  widget: text,
+                  hint: "Please inform. Important for SEO",
+                }
               - { label: Caption, name: caption, widget: text, required: false }
     editor:
       preview: true
@@ -174,9 +194,19 @@ collections:
             widget: list
             fields:
               - { label: Heading 1, name: heading1, widget: string }
-              - { label: Heading 2, name: heading2, widget: string, required: false }
+              - {
+                  label: Heading 2,
+                  name: heading2,
+                  widget: string,
+                  required: false,
+                }
               - { label: Subheading 1, name: subheading1, widget: string }
-              - { label: Subheading 2, name: subheading2, widget: string, required: false }
+              - {
+                  label: Subheading 2,
+                  name: subheading2,
+                  widget: string,
+                  required: false,
+                }
               - label: Image
                 name: image
                 widget: object
@@ -187,13 +217,23 @@ collections:
                       widget: image,
                       hint: "size 1600 x 987",
                     }
-                  - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+                  - {
+                      label: Title,
+                      name: alt,
+                      widget: text,
+                      hint: "Please inform. Important for SEO",
+                    }
           - label: "About Area"
             name: aboutarea
             widget: object
             fields:
               - { label: Heading 1, name: heading1, widget: string }
-              - { label: Heading 2, name: heading2, widget: string, required: false }
+              - {
+                  label: Heading 2,
+                  name: heading2,
+                  widget: string,
+                  required: false,
+                }
               - { label: Blurb, name: blurb, widget: text }
               - label: "Image"
                 name: image
@@ -205,13 +245,23 @@ collections:
                       widget: image,
                       hint: "size 786 x 426",
                     }
-                  - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+                  - {
+                      label: Title,
+                      name: alt,
+                      widget: text,
+                      hint: "Please inform. Important for SEO",
+                    }
           - label: "Tours Area"
             name: toursarea
             widget: object
             fields:
               - { label: Heading 1, name: heading1, widget: string }
-              - { label: Heading 2, name: heading2, widget: string, required: false }
+              - {
+                  label: Heading 2,
+                  name: heading2,
+                  widget: string,
+                  required: false,
+                }
               - { label: Blurb, name: introduction, widget: text }
               - label: "Sections"
                 label_singular: "Section"
@@ -219,7 +269,12 @@ collections:
                 widget: list
                 fields:
                   - { label: Heading 1, name: heading1, widget: string }
-                  - { label: Heading 2, name: heading2, widget: string, required: false }
+                  - {
+                      label: Heading 2,
+                      name: heading2,
+                      widget: string,
+                      required: false,
+                    }
                   - label: Tours
                     label_singular: "Tour"
                     name: tours
@@ -238,7 +293,12 @@ collections:
             fields:
               - { label: Switch, name: switch, widget: boolean }
               - { label: Heading 1, name: heading1, widget: string }
-              - { label: Heading 2, name: heading2, widget: string, required: false }
+              - {
+                  label: Heading 2,
+                  name: heading2,
+                  widget: string,
+                  required: false,
+                }
               - { label: Blurb, name: blurb, widget: text }
       - file: "src/pages/about/index.md"
         label: "About Page"
@@ -265,13 +325,23 @@ collections:
                       widget: image,
                       hint: "size 1600 x 596",
                     }
-                  - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+                  - {
+                      label: Title,
+                      name: alt,
+                      widget: text,
+                      hint: "Please inform. Important for SEO",
+                    }
           - label: "About Area"
             name: aboutarea
             widget: object
             fields:
               - { label: Heading 1, name: heading1, widget: string }
-              - { label: Heading 2, name: heading2, widget: string, required: false }
+              - {
+                  label: Heading 2,
+                  name: heading2,
+                  widget: string,
+                  required: false,
+                }
               - label: "Image"
                 name: image
                 widget: object
@@ -282,14 +352,24 @@ collections:
                       widget: image,
                       hint: "size 785 x 647",
                     }
-                  - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+                  - {
+                      label: Title,
+                      name: alt,
+                      widget: text,
+                      hint: "Please inform. Important for SEO",
+                    }
               - { label: Text, name: text, widget: text }
           - label: Destinations Area
             name: destinationsarea
             widget: object
             fields:
               - { label: Heading 1, name: heading1, widget: string }
-              - { label: Heading 2, name: heading2, widget: string, required: false }
+              - {
+                  label: Heading 2,
+                  name: heading2,
+                  widget: string,
+                  required: false,
+                }
               - { label: Blurb, name: introduction, widget: text }
               - label: "Destinations"
                 label_singular: "Destination"
@@ -306,9 +386,19 @@ collections:
                           widget: image,
                           hint: "size 540 x 300",
                         }
-                      - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+                      - {
+                          label: Title,
+                          name: alt,
+                          widget: text,
+                          hint: "Please inform. Important for SEO",
+                        }
                   - { label: Heading 1, name: heading1, widget: string }
-                  - { label: Heading 2, name: heading2, widget: string, required: false }
+                  - {
+                      label: Heading 2,
+                      name: heading2,
+                      widget: string,
+                      required: false,
+                    }
                   - label: Content
                     name: content
                     widget: object
@@ -324,7 +414,12 @@ collections:
             widget: object
             fields:
               - { label: Heading 1, name: heading1, widget: string }
-              - { label: Heading 2, name: heading2, widget: string, required: false }
+              - {
+                  label: Heading 2,
+                  name: heading2,
+                  widget: string,
+                  required: false,
+                }
               - { label: Blurb, name: introduction, widget: text }
               - label: "Partners"
                 label_singular: "Partner"
@@ -341,9 +436,19 @@ collections:
                           widget: image,
                           hint: "size 540 x 300",
                         }
-                      - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+                      - {
+                          label: Title,
+                          name: alt,
+                          widget: text,
+                          hint: "Please inform. Important for SEO",
+                        }
                   - { label: Heading 1, name: heading1, widget: string }
-                  - { label: Heading 2, name: heading2, widget: string, required: false }
+                  - {
+                      label: Heading 2,
+                      name: heading2,
+                      widget: string,
+                      required: false,
+                    }
                   - label: Content
                     name: content
                     widget: object
@@ -375,9 +480,14 @@ collections:
                   widget: image,
                   hint: "size 1600 x 596",
                 }
-              - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+              - {
+                  label: Title,
+                  name: alt,
+                  widget: text,
+                  hint: "Please inform. Important for SEO",
+                }
           - label: "Contact Details Origin"
-            name: contactDetailsOrigin  
+            name: contactDetailsOrigin
             widget: "relation"
             collection: "contactDetails"
             searchFields: ["title"]
@@ -405,9 +515,14 @@ collections:
                   widget: image,
                   hint: "size 1600 x 596",
                 }
-              - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+              - {
+                  label: Title,
+                  name: alt,
+                  widget: text,
+                  hint: "Please inform. Important for SEO",
+                }
           - label: "Select Events to display on preview"
-            name: eventsOrigin  
+            name: eventsOrigin
             widget: "relation"
             collection: "events"
             searchFields: ["title"]
@@ -415,7 +530,7 @@ collections:
             displayFields: ["title"]
             multiple: true
           - label: "Select Tours to display on preview"
-            name: toursOrigin  
+            name: toursOrigin
             widget: "relation"
             collection: "tours"
             searchFields: ["tour_id"]
@@ -443,7 +558,12 @@ collections:
                   widget: image,
                   hint: "size 1600 x 596",
                 }
-              - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+              - {
+                  label: Title,
+                  name: alt,
+                  widget: text,
+                  hint: "Please inform. Important for SEO",
+                }
     editor:
       preview: true
 
@@ -481,13 +601,23 @@ collections:
             widget: object
             fields:
               - { label: Image, name: image, widget: image }
-              - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+              - {
+                  label: Title,
+                  name: alt,
+                  widget: text,
+                  hint: "Please inform. Important for SEO",
+                }
           - label: "White Logo"
             name: whitelogo
             widget: object
             fields:
               - { label: Image, name: image, widget: image }
-              - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+              - {
+                  label: Title,
+                  name: alt,
+                  widget: text,
+                  hint: "Please inform. Important for SEO",
+                }
       - file: "src/general/tour-menu.md"
         label: "Tour Menu"
         name: "tourmenu"
@@ -498,13 +628,23 @@ collections:
             widget: list
             fields:
               - { label: Heading 1, name: heading1, widget: string }
-              - { label: Heading 2, name: heading2, widget: string, required: false }
+              - {
+                  label: Heading 2,
+                  name: heading2,
+                  widget: string,
+                  required: false,
+                }
               - label: "Image"
                 name: image
                 widget: object
                 fields:
                   - { label: Image, name: image, widget: image }
-                  - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+                  - {
+                      label: Title,
+                      name: alt,
+                      widget: text,
+                      hint: "Please inform. Important for SEO",
+                    }
               - label: "Tours"
                 label_singular: "Tour"
                 name: "tours"
@@ -531,20 +671,35 @@ collections:
                   widget: image,
                   hint: "size 1600 x 553",
                 }
-              - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+              - {
+                  label: Title,
+                  name: alt,
+                  widget: text,
+                  hint: "Please inform. Important for SEO",
+                }
           - label: Newsletter Area
             name: newsletterarea
             widget: object
             fields:
               - { label: Heading 1, name: heading1, widget: string }
-              - { label: Heading 2, name: heading2, widget: string, required: false }
+              - {
+                  label: Heading 2,
+                  name: heading2,
+                  widget: string,
+                  required: false,
+                }
               - { label: Blurb, name: blurb, widget: text }
       - file: "src/general/upcoming-events.md"
         label: "Upcoming Events Area on Tour Pages"
         name: "upcomingevents"
         fields:
           - { label: Heading 1, name: heading1, widget: string }
-          - { label: Heading 2, name: heading2, widget: string, required: false }
+          - {
+              label: Heading 2,
+              name: heading2,
+              widget: string,
+              required: false,
+            }
           - { label: Blurb, name: blurb, widget: text }
       - file: "src/general/config.md"
         label: "Switches"
@@ -561,7 +716,12 @@ collections:
             widget: object
             fields:
               - { label: Image, name: image, widget: image }
-              - { label: Title, name: alt, widget: text, hint: "Please inform. Important for SEO" }
+              - {
+                  label: Title,
+                  name: alt,
+                  widget: text,
+                  hint: "Please inform. Important for SEO",
+                }
     editor:
       preview: false
   - name: contactDetails
@@ -569,18 +729,34 @@ collections:
     folder: "src/general/contact-details/"
     create: false
     fields:
-      - {label: "Title", name: title, widget: string, default: contact, hint: "Please, don't change!!!!!"}
+      - {
+          label: "Title",
+          name: title,
+          widget: string,
+          default: contact,
+          hint: "Please, don't change!!!!!",
+        }
       - label: "Contact Details"
         name: contact_details
         widget: object
         fields:
           - { label: Email Address, name: email, widget: string }
-          - label: Phone Number 
+          - label: Phone Number
             name: phone
             widget: object
             fields:
-              - {label: Display, name: phonedisplay, widget: string, hint: "Example: 033 330 6121",}
-              - {label: Number, name: phonenumber, widget: string, hint: "Example: +27333306121",}      
+              - {
+                  label: Display,
+                  name: phonedisplay,
+                  widget: string,
+                  hint: "Example: 033 330 6121",
+                }
+              - {
+                  label: Number,
+                  name: phonenumber,
+                  widget: string,
+                  hint: "Example: +27333306121",
+                }
 
     editor:
       preview: false
