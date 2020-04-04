@@ -10,7 +10,9 @@ bannerblurb: 3 day Slackpack in the Maluti Mountains around Clarens
 shortdescription: >-
   Manageable daily hikes in the hills and valleys around Clarens. Fully guided
   walks with stories of local folklore, San traditions and painting and a
-  historical tour of Clarens town.  
+  historical tour of Clarens town.
+
+  Overnight in charming sandstone farmhouses with dinner, bed and breakfast  
 imagethumbnail:
   alt: On the trail above Clarens
   image: /img/clarens_thumb.jpg
