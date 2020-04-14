@@ -438,9 +438,7 @@ button#btn-search-category:hover {
 
 .single-adventure:hover .adventure-text p,
 .single-adventure:hover .adventure-text h4 a,
-.single-adventure:hover .adventure-text .adventure-link a,
-.single-adventure:hover .adventure-price-link span,
-.single-adventure:hover .adventure-price-link span,
+.single-adventure:hover .adventure-price-link .trip-person,
 .trip-time,
 .trip-level {
   color: #fff;
@@ -479,7 +477,31 @@ button#btn-search-category:hover {
 }
 
 .adventure-price-link {
-  padding: 0 14px 11px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 11px 10px;
+}
+
+.adventure-price {
+  display: flex;
+  align-items: center;
+}
+
+.adventure-link {
+  background: #0967b9 none repeat scroll 0 0;
+  color: #ffffff;
+  display: none;
+  padding: 7px 15px;
+}
+
+.adventure-link:hover {
+  background: #043b6c none repeat scroll 0 0;
+  color: white;
+}
+
+.single-adventure:hover .adventure-link {
+  display: inline-block;
 }
 
 .transparent-overlay > h4 {
@@ -512,7 +534,7 @@ button#btn-search-category:hover {
 
 .adventure-price-link .trip-person {
   color: #4e4f54;
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 4px;
   position: relative;
   text-transform: uppercase;
@@ -523,18 +545,8 @@ button#btn-search-category:hover {
   font-weight: 700;
 }
 
-.adventure-link {
-  /* display: inline-block; */
-  float: right;
-}
-
-.adventure-link > a {
-  font-size: 20px;
-  margin-right: 5px;
-}
-
-.adventure-link > a:last-child {
-  margin-right: 0;
+.single-adventure:hover .adventure-price-link .trip-person {
+  top: 0;
 }
 
 .single-adventure:hover .adventure-price-link span,
@@ -544,8 +556,8 @@ button#btn-search-category:hover {
 
 .single-adventure:hover .adventure-price-link {
   background: #212227 none repeat scroll 0 0;
-  padding-bottom: 14px;
-  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .adventure-text p,
@@ -593,7 +605,6 @@ button#btn-search-category:hover {
   transform: rotate(9.5deg) scale(1.4);
 }
 
-.adventure-price-link-two .adventure-link,
 .adventure-text-container > a,
 .adventure-text-container > span,
 .adventure-text-container > p {
@@ -629,7 +640,6 @@ button#btn-search-category:hover {
   top: -3px;
 }
 
-.adventure-price-link-two .adventure-link,
 .adventure-text-container > a,
 .adventure-text-container > span,
 .adventure-text-container > p {
@@ -697,25 +707,6 @@ button#btn-search-category:hover {
 
 .single-adventure-two:hover .adventure-price-link-two span.trip-person {
   font-size: 17px;
-}
-
-.single-adventure-two:hover .adventure-price-link-two .adventure-link {
-  display: block;
-  padding-top: 9px;
-}
-
-.adventure-price-link-two .adventure-link {
-  float: none;
-  text-align: center;
-}
-
-.adventure-price-link-two .adventure-link > a {
-  color: #000000;
-  margin-right: 14px;
-}
-
-.adventure-price-link-two .adventure-link a:last-child {
-  margin-right: 0;
 }
 
 .single-adventure-two:hover .adventure-text-container p {
@@ -788,10 +779,6 @@ button#btn-search-category:hover {
   z-index: 2;
 }
 
-.adventure-price-link-two .adventure-link > a:hover {
-  color: #ffae00;
-}
-
 .single-adventure-two:hover .adventure-text-container h4 a:hover {
   color: #fff;
 }
@@ -815,13 +802,6 @@ button#btn-search-category:hover {
   width: 0;
 }
 
-.single-adventure:hover .transparent-overlay > h4:hover,
-.single-adventure:hover .adventure-text p:hover,
-.trip-time:hover,
-.single-adventure:hover .adventure-price-link span:hover {
-  color: #0967b9;
-}
-
 .slider-area:hover .adventure-text a {
   pointer-events: none;
 }
@@ -836,9 +816,6 @@ button#btn-search-category:hover {
 /* Large desktop :1920px. */
 
 @media (min-width: 1920px) {
-  .adventure-price-link-two .adventure-link > a {
-    margin-right: 20px;
-  }
   .single-adventure-two:hover .adventure-price-link-two span.trip-price,
   .single-adventure-two:hover .adventure-price-link-two span.trip-person {
     font-size: 30px;
@@ -868,9 +845,6 @@ button#btn-search-category:hover {
   }
   .transparent-overlay {
     padding: 0 7px;
-  }
-  .adventure-link > a {
-    font-size: 17px;
   }
   .single-adventure:hover .trip-time,
   .single-adventure:hover .trip-level {
@@ -922,10 +896,6 @@ button#btn-search-category:hover {
     font-size: 15px;
     padding-left: 2px;
     top: -1px;
-  }
-  .adventure-link > a {
-    font-size: 17px;
-    margin-right: 3px;
   }
   .adventure-price-link {
     padding: 0 5px 11px;

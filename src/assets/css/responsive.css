@@ -185,6 +185,14 @@
   #googleMap {
     height: 676px !important;
   }
+
+  .single-adventure:hover .adventure-price-link .trip-person {
+    font-size: 13px;
+  }
+  .single-adventure:hover .adventure-link {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
 }
 
 /* Tablet desktop :768px. */
@@ -248,10 +256,6 @@
   .google-map-area {
     display: none;
   }
-  .adventure-link > a {
-    font-size: 17px;
-    margin-right: 4px;
-  }
   .widget-icon span {
     width: 20%;
   }
@@ -294,6 +298,14 @@
   }
   .single-footer-widget.contact-text-info {
     margin-bottom: 40px;
+  }
+
+  .single-adventure:hover .adventure-price-link .trip-person {
+    font-size: 15px;
+  }
+  .single-adventure:hover .adventure-link {
+    font-size: 15px;
+    padding: 7px 10px;
   }
 }
 
@@ -396,6 +408,15 @@
   .portfolio-area.portfolio-three {
     padding-top: 40px;
   }
+
+  .single-adventure:hover .adventure-price-link .trip-person {
+    font-size: 13px;
+  }
+  .single-adventure:hover .adventure-link {
+    font-size: 13px;
+    padding: 3px 5px;
+  }
+
   .include-item {
     margin-bottom: 25px;
   }
