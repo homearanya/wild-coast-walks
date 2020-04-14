@@ -466,7 +466,7 @@ button#btn-search-category:hover {
   background: rgba(255, 255, 255, 0.85) none repeat scroll 0 0;
   border: 0 none;
   bottom: -70px;
-  height: 165px;
+  height: 180px;
   left: -18px;
   top: auto;
   transform: rotate(5deg) scale(1.1);
@@ -600,7 +600,7 @@ button#btn-search-category:hover {
 .single-adventure:hover .adventure-text.effect-bottom::after {
   background: rgba(33, 34, 39, 0.8) none repeat scroll 0 0;
   bottom: 69px;
-  left: -59px;
+  left: -115px;
   top: auto;
   transform: rotate(9.5deg) scale(1.4);
 }

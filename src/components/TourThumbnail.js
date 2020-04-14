@@ -1,8 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
+import { textTruncate } from "../utils/helpers"
+import useMediaQuery from "../utils/hooks/useMediaQuery"
 
-const TourThumbnail = (props) => {
+const TourThumbnail = props => {
+  const isLessThan480 = useMediaQuery("(max-width: 479px)")
   if (!props.tourDetails) {
     return null
   }
@@ -34,9 +37,10 @@ const TourThumbnail = (props) => {
               {tourDetails.duration}
             </span>
             <p>
-              {tourDetails.shortdescription.length > 233
-                ? tourDetails.shortdescription.substring(0, 230) + "..."
-                : tourDetails.shortdescription}
+              {textTruncate(
+                tourDetails.shortdescription,
+                isLessThan480 ? 150 : 230
+              )}
             </p>
           </div>
           <div className="adventure-price-link">
